@@ -1,0 +1,7 @@
+{
+  "version": "2.2.0",
+  "wheel": "narr-2.2.0-py3-none-any.whl",
+  "sha256": "515167da2a20d2c74dec2a6d62e3275bfb012f349c4d44dfef169b1cc310580f",
+  "constraints": "constraints.txt",
+  "constraints_sha256": "0db10e0facb525ee7c6475f2bc2c1bb5b96a809f2bf323ab07b386f291984538"
+}
