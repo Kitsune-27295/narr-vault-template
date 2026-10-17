@@ -1,0 +1,13 @@
+{
+  "$schema": "https://narrative-bible.schema/preset/v2",
+  "name": "bleach",
+  "display_name": "Bleach / Shinigami Lore",
+  "version": "2.0",
+  "fandom": "Bleach",
+  "genre": "Supernatural Shonen Battle",
+  "locales": { "draft": "pt-BR", "publish": "es" },
+  "description": "Overlay for Bleach universe: Zanpakuto releases, Bankai names, Reiatsu colors, Gotei 13 divisions and Hollow forms.",
+  "features": ["zanpakuto_mechanics", "reiatsu_scaling", "gotei_divisions"],
+  "properties": ["zanpakuto", "shikai_command", "bankai_name", "reiatsu_color", "division", "hollow_form"],
+  "required_tags": ["#fandom/bleach"]
+}

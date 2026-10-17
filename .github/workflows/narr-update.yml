@@ -1,0 +1,20 @@
+name: narr-update
+
+# Keeps this narrative vault's skills and rules current. It opens a pull request; nothing changes until you
+# merge it. Your manuscripts, canon baselines, lore, and continuity memory are never touched, and a file
+# you edited is kept. The logic lives in the public template repository, so this small file never needs to change.
+# (Managed by `narr upgrade`. Delete it if you do not want automatic update pull requests.)
+
+on:
+  schedule:
+    - cron: "23 5 * * 1" # Mondays 05:23 UTC
+  workflow_dispatch:
+
+jobs:
+  update:
+    # The template repository carries this file too, and must not update itself.
+    if: ${{ github.repository != 'Kitsune-27295/narr-vault-template' }}
+    permissions:
+      contents: write
+      pull-requests: write
+    uses: Kitsune-27295/narr-vault-template/.github/workflows/update-vault.yml@stable

@@ -1,0 +1,9 @@
+# Golden queries for narrative retrieval evaluation (Recall@5, MRR, NDCG)
+- query: "power system rules and limitations"
+  expect: ["SYS-Power_System"]
+- query: "protagonist profile and status"
+  expect: ["CHR-Protagonist"]
+- query: "tone bible and core atmosphere"
+  expect: ["SCP-Tone_and_Identity_Bible"]
+- query: "localization termbase and honorifics"
+  expect: ["TRM-Termbase"]

@@ -1,0 +1,1 @@
+{"timestamp": "2026-10-17T13:26:21.881707+00:00", "queries": 4, "k": 5, "recall_at_k": 0.5, "mrr": 0.5, "hit_rate": 0.5, "ndcg_at_k": 0.5, "p95_ms": 42.16}

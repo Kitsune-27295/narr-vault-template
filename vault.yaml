@@ -1,0 +1,47 @@
+version: "3.0"
+vault_id: "narrative-story-bible-template"
+title: "Narrative Story Bible Template"
+description: "Framework-template for long-form narrative fiction vaults (fanfic, original)"
+
+narr:
+  version: ">=2.0"
+
+locales:
+  draft: "pt-BR"
+  publish: "es"
+  system: "en-US"
+
+budgets:
+  agents_md_max_lines: 200
+  hot_memory_max_lines: 60
+  chapter_target_words: 4500
+  max_context_tokens: 3500
+  operational_file_max_bytes: 307200
+
+rag:
+  model: "minishlab/potion-multilingual-128M"
+  dimensions: 256
+  rrf_k: 60
+  chunk_size: 1500
+  chunk_overlap: 225
+
+scopes:
+  default: "fanfic_canon"
+  hierarchy:
+    source_canon:
+      parent: null
+      can_see: ["source_canon"]
+    fanfic_canon:
+      parent: "source_canon"
+      can_see: ["source_canon", "fanfic_canon"]
+    au_alternate:
+      parent: "source_canon"
+      can_see: ["source_canon", "au_alternate"]
+    sandbox:
+      parent: null
+      can_see: ["sandbox"]
+
+git:
+  commit_types: ["canon", "source", "bible", "timeline", "manuscript", "pod", "ledger", "meta", "fix", "refactor", "chore"]
+  require_lint_pass: true
+  co_author: "Antigravity <noreply@google.com>"

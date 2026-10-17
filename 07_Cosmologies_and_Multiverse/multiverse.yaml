@@ -1,0 +1,11 @@
+version: "2.0"
+primary_universe: "universe_prime"
+universes:
+  universe_prime:
+    title: "Prime Narrative Reality"
+    scope: "source_canon"
+    cosmological_constants:
+      - "[[SCP-Tone_and_Identity_Bible]]"
+transit_rules:
+  cross_dimensional_travel: restricted
+  memory_retention: full
