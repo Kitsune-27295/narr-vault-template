@@ -1,2 +1,7 @@
+# Git line-ending configuration: force LF across all environments (Windows and Linux)
 * text=auto eol=lf
 *.whl binary
+*.png binary
+*.jpg binary
+*.pdf binary
+*.sqlite binary
