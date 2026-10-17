@@ -1,3 +1,0 @@
-#!/bin/sh
-narr lint || exit 1
-narr crosscheck || exit 1
