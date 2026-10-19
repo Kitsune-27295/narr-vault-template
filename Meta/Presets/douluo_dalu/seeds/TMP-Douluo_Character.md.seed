@@ -1,0 +1,349 @@
+---
+uid: "TMP-Character"
+type: character
+title: "<Character Name>"
+aliases:
+  - "<Alias / Dao Title / Epithet>"
+status: active # active | deceased | sealed | retired | missing
+gender: unknown # male | female | non-binary | other
+age: 0
+birth_year: 0
+primary_faction: "<FAC-Faction_Name>"
+power_system: "<SYS-Power_System>"
+tier_rank: "<Rank Title> (Rank <Level Number>)"
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - character/active
+  - supporting # protagonist | antagonist | supporting | deuteragonist
+---
+# <Character Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentence high-level summary of the character's narrative function, core archetype, defining talent/lineage, and current continental position.>
+
+---
+
+## 1. Narrative Persona & Living Presence
+<!-- 2 to 5 paragraphs of organic, immersive prose describing who this person is, how they carry themselves, how their inner thoughts shape their behavior, and what impression they leave on observers. -->
+
+<Paragraph 1: In-depth introduction to the character's core identity, psychological weight, and baseline mood. How they exist in ordinary moments versus martial tension.>
+
+<Paragraph 2: Sensory texture of their presence. How their physical movements, breathing rhythm, and eye contact reflect their internal cultivation and lived experiences.>
+
+<Paragraph 3: Social interaction dynamic. How they treat superiors, peers, working commoners, and enemies. Their conversational rhythm and authentic voice.>
+
+<Paragraph 4 (Optional): Core existential motivation, internal conflicts, and how they navigate moral compromise in the competitive Douluo continent.>
+
+---
+
+## 2. Pre-Canon Backstory & Formative History (Free-Form Narrative)
+<!-- 2 to 5 paragraphs of free-form narrative prose chronicling the character's origins, upbringing, and critical milestones prior to their initial appearance or Chapter 01 of the fanfiction. -->
+
+<Paragraph 1: Origins, birth circumstances, familial heritage, ancestral clan/sect conditions, or pre-transmigration context (Earth / previous existence) if applicable.>
+
+<Paragraph 2: Formative childhood environment, early survival conditions, mentors, and the emergence of foundational trauma or defining personal ambitions.>
+
+<Paragraph 3: The Martial Soul Awakening Ceremony (Age 6) and immediate aftermath: innate soul power discovery, societal reaction, clan dynamics, or departure from home.>
+
+<Paragraph 4: Early cultivation training, independent hunts, sectarian education, or pivotal pre-canon events that established their current rank and reputation.>
+
+<Paragraph 5: Immediate context leading directly into Chapter 01 or their debut scene: current continental movements, pending obligations, and immediate motivations.>
+
+---
+
+## 3. Visual Settei & Demeanor HUD (Visual-First)
+- **Combat Silhouette:** <Clear description of physical build, stance, signature weapon silhouette, and distinctive hair/proportions under combat illumination.>
+- **Comparative Height:** `<Height in cm>` (Scale: <Comparison with reference characters, e.g. +5 cm taller than Tang San>).
+- **Color Palette:**
+  - Primary: `<Color Name> (<Hex Code>)`
+  - Secondary: `<Color Name> (<Hex Code>)`
+  - Metallic / Accent: `<Color Name> (<Hex Code>)`
+- **Everyday Attire:** <Fabric type, martial practicality, travel garments, ornaments, academy/clan heraldry, footwear.>
+- **Key Facial Expressions:** <Shape of gaze, brow tension, resting mouth line, birthmarks, scars, or spiritual marks.>
+- **Eastern Demeanor & Aura (*Qizhi*):** <Aura archetype, e.g. Unsheathed Blade (Fengmang Bilu), Transcendent Jade (Wenrun Ru Yu), Aloof Immortal (Chuchen), Tyrannical Sovereign (Baqi), or Return to Plainness (Fanpu Guizhen). How ambient atmosphere reacts to their mere presence.>
+- **Resting Demeanor:** <Facial expression and posture when unobserved or deep in thought; baseline composure.>
+- **Stress & Threat Posture:** <Instantaneous micro-adjustments under mortal danger: muscle tightening, footwork root, respiratory shift, and pupil dilation.>
+
+---
+
+## 4. Voice & Mannerisms
+- **Catchphrase / Verbal Tic:** <Distinctive speech pattern, rhetorical habit, or philosophical idiom.>
+- **Formality Register:** <Formality tiers: respectful/reverent to elders, neutral/egalitarian to peers, cold/terse under pressure or to antagonists.>
+- **Dialogue & Internal Monologue:** Dialogue formatted in double quotes `"..."`; internal thoughts formatted in single quotes `'...'`.
+- **Stress Micro-Expressions:** <Subtle physical manifestations of acute stress or tactical focus.>
+
+---
+
+## 5. Core Psychology & Narrative Engine
+*Built on Brandon Sanderson, Robert McKee, K.M. Weiland, and Lisa Cron narrative principles.*
+
+### 5.1 Internal Architecture (The Ghost, The Lie & The Need)
+- **The Ghost (Formative Wound):** <The past tragedy, failure, rejection, or transmigration displacement that established their foundational fear.>
+- **The Lie Believed:** <The false worldview or self-limiting belief the character adopted to survive the Ghost (e.g., "Strength alone guarantees absolute autonomy", "Trusting others invites vulnerability").>
+- **The Truth to Learn:** <The counter-truth required for psychological maturation and character arc completion.>
+- **Archetypal Want (Outer Goal):** <Concrete, tangible external objective (e.g., Reach Titled Douluo, protect the orphanage, topple Spirit Hall).>
+- **Archetypal Need (Inner Growth):** <Internal psychological necessity required to become whole (e.g., Learn to accept help, forgive past shortcomings).>
+- **Dao Heart (*Daoxin*):** <Status: Crystal Clear | Tempered | Shaken | Fractured. Core philosophical bedrock: the non-negotiable principle they refuse to sacrifice.>
+
+### 5.2 True Character vs. Characterization (The McKee Matrix)
+- **Surface Characterization:** <How the character presents themselves socially: habits, speech quirks, apparent cynicism, etiquette, humor.>
+- **True Character (Choice Under Pressure):** <Who they reveal themselves to be when stripped of comfort and forced to choose between two bad outcomes at gunpoint.>
+- **Defining Contradictions:**
+  - *Contradiction 1:* <e.g., Ruthlessly efficient in lethal combat, yet meticulously gentle when tending to wounded animals or commoner children.>
+  - *Contradiction 2:* <e.g., Fiercely independent and suspicious of authority, yet selflessly protective of their sworn unit.>
+
+### 5.3 Dynamic Behavioral Sliders (Sanderson Axes)
+| Axis | Rating (1–10) | Behavioral Justification & Expression |
+|:---|:---:|:---|
+| **Likeability** | <Score> | <Why the audience and allies relate to or empathize with them; warmth, fairness, loyalty.> |
+| **Competence** | <Score> | <Mastery of martial craft, intellectual rigor, battlefield execution, problem-solving.> |
+| **Proactivity** | <Score> | <Degree of personal initiative; actively drives the plot forward rather than merely reacting.> |
+- **Primary Action Trigger:** <The specific stimulus or boundary violation that instantly shifts them from contemplation to decisive, uncompromising action.>
+
+---
+
+## 6. Cultivation & Progression Matrix
+*Grounded in `CAN-Spirit_Ranks_and_Cultivation` and `CAN-Energy_Dynamics_and_Spiritual_Power`.*
+
+### 6.1 Soul Power Status
+- **Current Decile Rank:** <Rank Level Number> (<Rank Title: Spirit Scholar (1-10) | Spirit Master (11-20) | Spirit Grandmaster (21-30) | Spirit Elder (31-40) | Spirit Ancestor (41-50) | Spirit King (51-60) | Spirit Emperor (61-70) | Spirit Saint (71-80) | Spirit Douluo (81-90) | Titled Douluo (91-98) | Limit Douluo (99) | Godhood (100+)>)
+- **Innate Soul Power at Awakening:** <Rank 1 to 10 (or Rank 20 for God-blessed Seraphim)>
+- **Soul Power Density & Texture:** <e.g., Liquid mercury density, radiant solar flame, biting arctic mist, calm starlight>
+- **Bottleneck / Breakthrough Triggers:** <Current cultivation threshold, physical meridian limit, or pill/alchemy requirement.>
+
+### 6.2 Spiritual Power (Mental Realm)
+- **Spiritual Realm Tier:** <Spirit Origin (1–100) | Spirit Connection (101–500) | Spirit Sea (501–5,000) | Spirit Abyss (5,001–20,000) | Spirit Domain (20,001–50,000) | Divine Origin (50,000+)>
+- **Spiritual Score:** `<Estimated Numerical Value>` points
+- **Perceptual Range:** `<Radius in meters/kilometers of active mental scan>`
+- **Mental Resistance / Resilience:** <Immunity to illusions, spiritual backlash, or charm skills.>
+
+### 6.3 Soul Cores & Biological Foundation
+- **Soul Core (Hunhe):**
+  - *Dantian Core:* <None | Elemental / Soul Power Core | Rotation Dynamics>
+  - *Spiritual Sea Core:* <None | Mental Core | Yin-Yang Complementary Rotation>
+  - *Chest / Blood Core:* <None | Bloodline Core | Qi-Blood Circulation>
+- **Physical / Bloodline Strength:** <Normal Mortal | Dragon Marrow Vitality | Titan Lineage | Golden Body Marrow Refinement. Physical resistance and weight-bearing threshold in jin/tons.>
+
+---
+
+## 7. Martial Souls & Manifestations Matrix
+*Grounded in `CAN-Martial_Soul_System` and `CAN-Spirit_Rings_and_Absorption_Laws`.*
+
+### 7.1 Primary Martial Soul: <Martial Soul Name>
+- **Classification:** <Tool / Beast / Plant / Body / Elemental / Variant>
+- **Combat System Role:** <Assault / Control / Agility-Attack / Defense / Auxiliary-Support / Food / Healing>
+- **Awakening Form & Visuals:** <Visual description upon summoning; halos, totems, weapons, biological shifts.>
+- **Innate Trait / Passive Characteristic:** <Inherent quality, e.g. Extreme Cold, Divine Light, Kinetic Absorption, Toxic Immunity.>
+
+#### Spirit Rings Configuration
+| Ring # | Age / Color | Beast Source | Skill Name | Tactical Effect | Cost & Sanderson Limitations |
+|:---:|:---|:---|:---|:---|:---|
+| **1st** | <e.g., 420y (Yellow)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **2nd** | <e.g., 760y (Yellow)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **3rd** | <e.g., 1,800y (Purple)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **4th** | <e.g., 5,000y (Purple)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **5th** | <e.g., 12,000y (Black)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **6th** | <e.g., 25,000y (Black)> | <Beast Species> | <Skill Name> | <Primary active combat effect> | <Soul power drain, range, cooldown, vulnerability> |
+| **7th** | <e.g., 50,000y (Black)> | <Beast Species> | **Martial Soul Avatar** | <True Body transformation, +100% stat boost> | <Severe exhaustion post-activation; 7-day penalty if shattered> |
+| **8th** | <e.g., 85,000y (Black)> | <Beast Species> | <Skill Name (2 Skills if 100k)> | <Primary active combat effect> | <Massive soul power consumption> |
+| **9th** | <e.g., 100,000y (Red)> | <Beast Species> | <Skill Name (Skill A & B)> | <Devastating continent-tier ability> | <Requires Spirit Douluo foundation; cooldown> |
+
+### 7.2 Secondary Martial Soul (Twin Souls — If Applicable)
+<!-- If character has only one martial soul, keep this section marked as N/A or commented out -->
+- **Martial Soul:** <Secondary Soul Name>
+- **Classification & Role:** <Classification and Role>
+- **Current State:** <Active | Hidden / Unawakened | Ringless to delay absorption strain>
+- **Rings Absorbed:** <0/9 or list of rings>
+
+### 7.3 Domains & Special Manifestations
+- **Domain Name:** <e.g., Blue Silver Domain, Deathgod Domain, Spatial Lock Domain>
+  - *Origin:* <Innate / Trial Award / 7th Ring Avatar Awakening>
+  - *Field Effect:* <Aura radius, buffs to user, debuffs to adversaries.>
+  - *Sanderson Cost & Constraint:* <Mental focus requirement, exhaustion rate, cannot overlap with conflicting domains.>
+- **Martial Soul Fusion Skills (if applicable):**
+  - *Fusion Partner:* `<CHR-Partner_Name>`
+  - *Fusion Name:* `<Name of Fusion Skill>`
+  - *Resulting Entity / Strike:* `<Divine manifestation, avatar or kinetic strike>`
+
+---
+
+## 8. Anatomical Artifacts & Spirit Bones
+*Grounded in `CAN-Spirit_Bones_and_Anatomical_Artifacts`.*
+
+### 8.1 Six Standard Anatomical Slots
+| Bone Slot | Age & Source Beast | Bone Name / Epithet | Embedded Skill(s) | Tactical Significance & Stat Buffs |
+|:---|:---|:---|:---|:---|
+| **Head (Skull)** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Mental amplification, illusion defense> |
+| **Torso** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Core vitality, armor density, organ protection> |
+| **Left Arm** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Kinetic punch, energy channeling, weapon grip> |
+| **Right Arm** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Strike power, elemental projection> |
+| **Left Leg** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Burst footwork, aerial jump, balance> |
+| **Right Leg** | <Age / Beast> | <Bone Name> | <Skill Name & Effect> | <Flight, ground stomp, speed amplification> |
+
+### 8.2 External Spirit Bones (*Waifuhungu*)
+- **Slot / Structure:** <e.g., Eight Spider Lances, Dragon Wings, Tail, Armor Plates>
+- **Origin Beast & Age:** <Species and absorption age>
+- **Evolutionary Trait:** <Ability to grow and evolve alongside user cultivation breakthroughs.>
+- **Active Skills & Drain:** <Poisoning, soul power siphoning, flight maneuverability; biological strain.>
+
+---
+
+## 9. Auxiliary Arts, Crafting & Regalia Loadout
+*Enforcing SSOT architecture: Technical specifications, universal physics, and complete systemic rules live in dedicated Story Bible dossiers (`02_Story_Bible/`). This section tracks ONLY the character's personal attainment stage, unique operational customizations, and tactical loadout.*
+
+### 9.1 Inborn Traits, Consciousness States & Esoteric Vision (`PWR-*`)
+*Tracks innate physiological gifts, states of mind, and visual/sensory anomalies decoupled from martial soul rings.*
+
+| Inborn Power / Consciousness State | Authority Dossier (SSOT) | Attainment / Activation Stage | Tactical Utility & Sanderson Costs |
+|:---|:---|:---|:---|
+| `<e.g. Transparent World>` | [[PWR-Transparent_World]] | `<e.g. Fully Awakened / Continuous Passive>` | `<e.g. Sub-molecular perception; zero bloodlust; mental fatigue threshold>` |
+| `<e.g. Selfless State>` | [[PWR-Selfless_State]] | `<e.g. Combat Reflex / Full Immersion>` | `<e.g. Complete erasure of fighting spirit, emotion, and detectable intent>` |
+| `<e.g. Inborn Divine Strength / Physique>` | `<Physical Trait / Divine Marrow>` | `<e.g. Natural Bone Density 5x / Divine Marrow>` | `<e.g. Pure kinetic output without soul power expenditure; caloric demand>` |
+| `<e.g. Slayer Mark / Divine Crest>` | `<Esoteric Bloodline Mark>` | `<e.g. Dormant / Partial / Awakened>` | `<e.g. Physical acceleration; biological temperature spike / lifespan limitation>` |
+
+- **Awakening & Cognitive Origin:** `<Circumstances under which these innate traits were discovered or activated in the character.>`
+- **Personal Synergy:** `<How these traits interface with the character's martial soul perception, sensory reflexes, or physical durability.>`
+
+### 9.2 Cultivation Techniques, Breathing Styles & Combat Katas (`TEC-*`)
+*Tracks learned respiratory methods, internal energy cultivation, and martial arts/swordsmanship forms unified within their governing style.*
+
+| Technique / Breathing Style | Authority Dossier (SSOT) | Mastery Tier / Attainment | Mastered Forms & Tactical Profile |
+|:---|:---|:---|:---|
+| `<e.g. Cosmic Breathing>` | [[TEC-Cosmic_Breathing]] | `<e.g. Total Concentration Constant>` | `<e.g. Forms 1–5 mastered; integrates continuous respiratory flow with sword katas>` |
+| `<e.g. Kinesthetic Martial Art>` | `<Martial Art / Kinetic Skill>` | `<e.g. Veteran Instinct / Proficient>` | `<e.g. Close-quarters armor puncturing; formation deflection>` |
+
+- **Respiratory & Energy Baseline:** `<Diaphragmatic rhythm, continuous oxygen compression, thermal equilibrium, or meridian acceleration.>`
+- **Martial & Weapon Katas Attainment:** `<Specific forms/sub-styles mastered by the character, personal signature executions, and tactical weapon pairings (referencing the forms defined in the TEC-* dossier without duplicating their mechanical write-ups).>`
+
+### 9.3 Sub-Professions & Applied Crafts (`PRF-*`)
+*Tracks professional craftsmanship, guild ranking, and applied metallurgical/medical/engineering mastery.*
+
+| Craft Discipline | Authority Dossier (SSOT) | Guild Rank / Certification | Signature Application & Applied Techniques |
+|:---|:---|:---|:---|
+| `<e.g. Blacksmithing>` | [[PRF-Blacksmith]] | `<e.g. Rank 3 Master / Thousand Refinement>` | `<e.g. Kinetic vibration slag extraction; alloy synthesis; Starlight Transmutation>` |
+| `<e.g. Healer / Clinical Medicine>` | [[PRF-Healer]] | `<e.g. Rank 5 Chief Medical Officer>` | `<e.g. Cellular vitality transduction; acupuncture analgesia; non-invasive diagnosis>` |
+
+- **Apprenticeship & Craft Lineage:** `<Workshops, mentors, or independent empirical discoveries (e.g., reverse-engineered metallurgical principles like Disorder Splitting Wind Mechanics applied to forging).>`
+- **Production Feats & Narrative Legacy:** `<Specific masterworks forged, clinical cures developed, faith or reputation accumulated across the continent.>`
+
+### 9.4 Equipment, Weapons & Sacred Regalia (`ITM-*`)
+*Tracks physical weapons, soul-bound artifacts, defensive battle armors, and spatial tools equipped by the character.*
+
+| Equipment / Weapon / Regalia | Authority Dossier (SSOT) | Bond & Attunement Status | Tactical Combat Role & Loadout Slot |
+|:---|:---|:---|:---|
+| `<e.g. Star Holy Sword of Hope>` | [[ITM-Star_Holy_Sword_of_Hope]] | `<e.g. Lifelong Soul-Bonded Masterwork>` | `<e.g. Primary melee straight-sword; kinetic resonance anchor for swordsmanship>` |
+| `<e.g. Sacred Cloth Alloy>` | [[ITM-Sacred_Cloth_Alloy]] | `<e.g. Personal Material Base>` | `<e.g. Surgical needle arrays; modular armor plates; molecular self-repair>` |
+| `<e.g. Spatial Tool / Storage Ring>` | `<Storage Soul Tool>` | `<e.g. Equipped (Waist/Finger)>` | `<e.g. Storage capacity in m³; preservation of volatile reagents>` |
+| `<e.g. Battle Armor (Doukai)>` | `<Battle Armor Loadout>` | `<e.g. Prototype / 1-Word / N/A>` | `<e.g. Modular core circuitry, flight winglets, energy amplification>` |
+
+
+- **Combat Loadout Synergy:** `<How equipped artifacts interact in active battle (e.g., concealing martial soul identity under a masked persona, resonance between weapon and internal breathing).>`
+- **Maintenance & Attunement Protocol:** `<Specific spiritual meditation, energy circulation, or material feeding required by this character to keep equipment in peak operational condition.>`
+
+---
+
+## 10. Relational Matrix & Factional Stance
+*Tracks the character's dynamic interpersonal network, factional allegiances, and dramatic friction points using SSOT wikilinks to character and faction dossiers (e.g. `CHR-<Name>` or `CAN-CHR-<Name>`).*
+
+| Target Character (SSOT Wikilink) | Affiliation & Faction | Interpersonal Dynamic, History & Dramatic Friction | Stance & Trust Level |
+|:---|:---|:---|:---|
+| `<Allied Character>` (e.g. [[CAN-CHR-Xiao_Wu]]) | `<Affiliation>` (e.g. [[CAN-Shrek_Academy]]) / Ally | <Source of camaraderie, shared battles, personal history, or mutual loyalty.> | High (Unshakeable) |
+| `<Mentor Character>` (e.g. [[FAC-Nuoding_Primary_Academy]]) | `<Affiliation>` (e.g. [[FAC-Nuoding_Primary_Academy]]) / Mentor | <Pedagogical guidance, respect, ideological autonomy, and resistance to dogmatic overreach.> | Reverent / Loyal |
+| `<Foil / Rival>` (e.g. [[CAN-CHR-Tang_San]]) | `<Affiliation>` (e.g. [[CAN-Tang_Sect_and_Hidden_Weapons]]) / Foil | <Calculated politeness, observational distance, tactical vigilance of hidden weapons or competing ambitions.> | Guarded / Vigilant |
+| `<Antagonist / Adversary>` (e.g. [[CAN-Spirit_Hall_Organization_and_Empire]]) | `<Affiliation>` (e.g. [[CAN-Spirit_Hall_Organization_and_Empire]]) / Adversary | <Fundamental ideological opposition, existential stakes, blood feud, or strategic rivalry.> | Hostile / Adversarial |
+
+- **Interpersonal Dynamic Summary:** `<Concise synthesis of how the character navigates personal bonds, emotional investments, moral boundaries, and social relationships.>`
+- **Factional Alignment & Grand Strategy:** `<Clear articulation of neutrality, allegiance, opposition, or hidden subversion relative to continental superpowers (Spirit Hall, Imperial Courts, Major Sects).>`
+
+---
+
+## 11. Epistemic Horizon & Boundaries
+*Enforcing Rule 30: preventing omniscience and anchoring character knowledge strictly within canon bounds.*
+
+### 11.1 Secrets Known (True Intelligence)
+- <Confidential truth 1: e.g., Aware that Tang San possesses ancient transmigration memories.>
+- <Confidential truth 2: e.g., Understands the biological identity of Xiao Wu as a 100,000-year beast.>
+- <Confidential truth 3: e.g., Knows the structural flaws in Yu Xiaogang's Ten Great Core Competencies.>
+
+### 11.2 Critical Blindspots (False Assumptions & Unknowns)
+- <Blindspot 1: e.g., Completely unaware of Spirit Hall's secret mobilization in the Star Luo border.>
+- <Blindspot 2: e.g., Overestimates the loyalty of the Imperial Royal Guard in Heaven Dou City.>
+- <Blindspot 3: e.g., Unsure of how divergent butterfly changes will affect God Realm surveillance.>
+
+### 11.3 Negative Boundaries (Sanderson Hard Limits)
+- *What the character CANNOT do:*
+  - <Cannot absorb spirit rings exceeding their biological meridian threshold without lethal organ rupture.>
+  - <Cannot activate their Domain for more than 15 consecutive minutes without severe spiritual backlash.>
+  - <Cannot split attention across multiple martial soul manifestations without prior dual-control training.>
+
+---
+
+## 12. Chronological Timeline Log
+*Strictly append-only timeline. Newest events placed last.*
+
+- **Year 00 (Age 0):** <Birth location and circumstances confirmed in [[CAN-CHR-Characters_Timeline]].>
+- **Year 06 (Age 6):** <Martial Soul Awakening ceremony; initial soul power confirmed in `<C01-Chapter>`>.
+- **Year 06 (Age 6):** <Enrollment in Primary Spirit Master Academy; foundational mentor relationship established.>
+- **Year 09 (Age 9):** <Absorption of Second Spirit Ring; bottleneck breakthrough.>
+- **Year 12 (Age 12):** <Graduation and continental travel; entry into intermediate academy or sect warfare.>
+
+---
+
+## 13. Operational Implementation & Lifecycle Management Protocols
+
+### 13.1 Inception & Instantiation Protocol (Phase 1)
+When creating a new character note:
+1. **File Naming & Placement:** Always save under `02_Story_Bible/Characters/` with the exact filename `CHR-<Character_Name>.md` (zero spaces, Rule 10).
+2. **Metadata Integrity:** Fill YAML frontmatter completely (`uid`, `type: character`, `title`, `tier_rank`, `primary_faction`, `tags`).
+3. **Drafting Order:**
+   - First, complete **Section 1 (Narrative Persona)** in 2–5 paragraphs to cement the character's living voice and presence.
+   - Second, complete **Section 2 (Pre-Canon Backstory & Formative History)** in 2–5 paragraphs to establish their origin, awakening, and life context prior to Chapter 01.
+   - Third, configure **Section 3 & 4 (Settei, Qizhi, and Voice)** to anchor visual and dialogue consistency.
+   - Fourth, establish **Section 5 (Core Psychology)** detailing the Ghost, Lie, Want/Need, and Sanderson Sliders.
+   - Fifth, fill **Section 6, 7 & 8 (Cultivation, Rings, and Bones)** according to their current story arc stage.
+   - Sixth, establish **Section 10 & 11 (Relationships & Epistemic Horizon)** to guard against accidental authorial omniscience.
+4. **Validation:** Run `python tools/character_manager.py audit` and `narr lint` to verify zero syntax errors.
+
+### 13.2 Cultivation Breakthrough & Level-Up Protocol (Phase 2)
+When a character advances in cultivation during manuscript progression:
+1. **Summary & Frontmatter Sync:**
+   - Update `tier_rank` in YAML frontmatter and the header decile rank in Section 6.1.
+   - Rewrite the blockquote Executive Summary to reflect their new continental status and active combat tier.
+2. **Ring / Bone Addition:**
+   - Add the newly absorbed ring into the **Spirit Rings Configuration Table** in Section 7.1.
+   - Specify the source beast, age, exact tactical effect, and explicit Sanderson limitations (drain/cooldown).
+   - If an anatomical bone was acquired, add it to the corresponding row in Section 8.
+3. **Biological / Mental Recalculation:**
+   - Check if physical endurance or spiritual power realm tier shifted (e.g. Spirit Connection -> Spirit Sea).
+   - If Rank 70 is reached, ensure the **Martial Soul Avatar** row in Section 7.1 is activated.
+   - If Rank 80/90 is reached, record any newly condensed **Soul Core** in Section 6.3.
+4. **Timeline Append:**
+   - Add a single dated line at the bottom of **Section 12 (Chronological Timeline Log)** linking to the chapter where the breakthrough occurred (`- Year XX (Age YY): Absorbed [Ring/Bone] in <C##-Chapter>`).
+   - **Never delete past timeline logs.**
+
+### 13.3 Epistemic & Relational Audit Protocol (Phase 3)
+When dramatic shifts occur in the story:
+1. **Relational Matrix:** If alliances fracture or trust deepens, update the `Trust Level` and `Dynamic Tension` column in Section 10.
+2. **Epistemic Horizon:** If a secret is uncovered or a blindspot is resolved, remove it from `Critical Blindspots` and record it under `Secrets Known` in Section 11.
+3. **Ledger Synchronization:** Run `python tools/character_manager.py sync-ledger` to update `08_Ledgers/LDG-Character_Matrix.md`.
+
+---
+
+## 14. Standardized Lexicon & Taxonomy Glossary
+
+| Term / Taxonomy | Category | Clear & Accessible Definition |
+|:---|:---|:---|
+| **Aura / Bearing (*Qizhi*)** | Demeanor | The intangible aesthetic weight, psychological posture, and ambient presence projected by a cultivator (e.g., sharp as a drawn sword, serene as ancient jade, or tyrannical). |
+| **Dao Heart (*Daoxin*)** | Psychology | The core philosophical bedrock and moral resolve of a character. When fractured by betrayal or failure, leads to bottleneck stagnation or mental collapse. |
+| **The Ghost** | Psychology | A formative past trauma, loss, or displacement that generates a lingering fear and psychological vulnerability. |
+| **The Lie Believed** | Psychology | A false survival rule or rationalization adopted in response to the Ghost, which limits character growth until challenged by the plot. |
+| **Sanderson Sliders** | Psychology | Three numerical 1–10 axes evaluating **Likeability** (audience empathy), **Competence** (skill and effectiveness), and **Proactivity** (initiative). |
+| **Innate Soul Power** | Cultivation | The baseline soul power level (Rank 1 to 10) discovered during the Awakening ceremony at age 6, determining lifelong cultivation ceiling. |
+| **Spiritual Power Realm** | Cultivation | Six cognitive-mental tiers measuring soul awareness and sensory precision: Spirit Origin (1-100), Spirit Connection (101-500), Spirit Sea (501-5k), Spirit Abyss (5k-20k), Spirit Domain (20k-50k), and Divine Origin (50k+). |
+| **Soul Core (*Hunhe*)** | Cultivation | A condensed vortex of high-density energy formed in the Dantian, Chest, or Sea of Consciousness upon reaching high cultivation ranks (Rank 80+). |
+| **Martial Soul Avatar** | Power | The supreme manifestation unlocked with the 7th Spirit Ring, transforming the master into the living physical embodiment of their martial soul for a +100% stat boost. |
+| **External Spirit Bone (*Waifuhungu*)** | Anatomy | Rare anomalous spirit bones outside the 6 standard slots (e.g., spider legs, wings) that evolve alongside the host's personal cultivation breakthroughs. |
+| **Battle Armor (*Doukai*)** | Equipment | Fusion of spiritually refined metals, soul guidance circuits, and bloodline resonance (1-Word to 4-Word) acting as an external technological exoskeleton. |
+| **Epistemic Horizon** | Continuity | The strict boundary of what a character actually knows versus what they assume, preventing authorial omniscience and maintaining believable character choices. |

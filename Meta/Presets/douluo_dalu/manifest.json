@@ -1,7 +1,7 @@
 {
   "name": "douluo_dalu",
   "display_name": "Douluo Dalu (Soul Land) / Cultivation Fantasy",
-  "version": "1.1",
+  "version": "1.2",
   "fandom": "Douluo Dalu",
   "genre": "Xuanhuan / Cultivation Fantasy",
   "description": "Specialized framework preset for Douluo Dalu and related xianxia/xuanhuan fanfictions. Includes cultivation ranks, spiritual realms, martial souls, spirit beasts, alchemy, soul rings, and strict Pinyin romanization rules.",
@@ -47,6 +47,8 @@
     "Meta/Templates/TMP-Theory.md",
     "Meta/Templates/TMP-Martial_Soul.md",
     "Meta/Templates/TMP-Soul_Beast.md",
-    "02_Story_Bible/Terminology/TRM-Douluo_Terms.md"
+    "Meta/Templates/TMP-Douluo_Character.md",
+    "02_Story_Bible/Terminology/TRM-Douluo_Terms.md",
+    "eval/queries.yaml"
   ]
 }

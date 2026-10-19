@@ -37,6 +37,9 @@ scopes:
     au_alternate:
       parent: "source_canon"
       can_see: ["source_canon", "au_alternate"]
+    au_divergence:
+      parent: "source_canon"
+      can_see: ["source_canon", "fanfic_canon", "au_divergence"]
     sandbox:
       parent: null
       can_see: ["sandbox"]

@@ -4,14 +4,39 @@ type: terminology
 title: "Douluo Dalu Terminology Seed"
 status: active
 scope: source_canon
-tags: ["terminology/douluo"]
+tags:
+  - "terminology/douluo"
 ---
 # Douluo Dalu Terminology Seed
 
 Seeded by the `douluo_dalu` preset. The English spellings follow the Fandom captures of the vault this seed came from. Recheck each term against your own frozen sources before relying on it. Spanish and Portuguese values are proposals (`Status = proposed`) until the curator approves them.
 
+## Measurement & Currency Exchange
+| World Unit | Earth Metric / Context Equivalent | Currency Exchange Standard | Status |
+|---|---|---|---|
+| 1 Li (Pinyin: Li) | ~500 meters | 1 Gold Coin = 10 Silver = 1,000 Copper Coins | fanfic convention |
+| 1 Zhang (Pinyin: Zhang) | ~3.33 meters | 1 Tael of Gold ~ 100 Days of Commoner Rations | fanfic convention |
+| 1 Jin (Pinyin: Jin) | ~500 grams | Standard market grain weight | fanfic convention |
+
+The frozen sources give monthly stipends of 1, 10, and 100 gold coins for Soul Masters, Grandmasters, and Elders. Every silver and copper rate above is a fanfic convention.
+
+## Titles & Honorifics Governance
+| Original Term | Spanish Translation (es) | Portuguese Draft (pt-BR) | Rule / Context | Status |
+|---|---|---|---|---|
+| Sect Master (Men Zhu) | Maestro de Secta | Mestre da Seita | Always capitalize when preceding proper name | approved |
+| Elder (Zhang Lao) | Anciano | Ancião | Formal court title; never translate as "viejo". Do not use it for the rank Spirit Elder (see the rank table) | approved |
+| Senior Brother (Shi Xiong) | Hermano Mayor Marcial | Irmão Sênior | Preserved in martial academies; indicates seniority | approved |
+| Junior Sister (Shi Mei) | Hermana Menor Marcial | Irmã Júnior | Preserved in martial academies | approved |
+
+## Pronoun & Social Dynamic Matrix
+| Speaker | Target | Pronoun / Register | Social Tone | Status |
+|---|---|---|---|---|
+| Protagonist | Elders / Teachers | Usted / Vos (Respetuoso) | Filial deference; humble self-reference | approved |
+| Protagonist | Peers / Rivals | Tú (Cortante / Firme) | Competitive equality; no honorifics | approved |
+| Antagonists | Commoners | Vosotros / Tercera Persona | Imperial condescension; dismissive | approved |
+
 ## Spirit Rank Ladder
-Use "Spirit" (not "Soul") for rank titles when your sources do.
+Source: Canon baselines. The word "Spirit" is the preferred form; "Soul Elder" and similar variants are not used.
 
 | English Term | Rank Band | es | pt-BR | Status |
 |---|---|---|---|---|
@@ -28,8 +53,9 @@ Use "Spirit" (not "Soul") for rank titles when your sources do.
 | Average Titled Douluo (sub-band) | 91-94 | Douluo Titulado Común | Douluo Titulado Comum | proposed |
 | Super (Hyper) Douluo (sub-band) | 95-98 | Douluo Supremo | Douluo Supremo | proposed |
 | Limit Douluo (sub-band) | 99 | Douluo Límite | Douluo Limite | proposed |
+| Soul Master (generic) | any | Maestro de Almas | Mestre de Almas | proposed |
 
-Keep the rank "Spirit Elder" apart from the court title "Elder" (Zhang Lao).
+The es rank Venerable Espiritual keeps the rank apart from the court title Anciano (Zhang Lao).
 
 ## Refinement Stages
 | English Term | Pinyin | es | pt-BR | Status |

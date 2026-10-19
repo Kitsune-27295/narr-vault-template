@@ -1,0 +1,17 @@
+# Golden queries for narrative retrieval evaluation in Douluo Dalu
+- query: "twin martial soul awakening rules"
+  expect: ["CAN-Martial_Soul_System", "SYS-Power_System"]
+- query: "spirit ring age limits Yu Xiaogang"
+  expect: ["CAN-Spirit_Rings_and_Absorption_Laws"]
+- query: "Angel of Hope faith light healing martial soul"
+  expect: ["MSL-Angel_of_Hope", "CHR-Lin_Chen"]
+- query: "Nuoding graduation tournament duel Tang San"
+  expect: ["EVT-Nuoding_Graduation_Tournament", "ARC-Nuoding_Farewell_and_Suotuo_Interception"]
+- query: "Clear Sky Hammer martial soul Tang Hao"
+  expect: ["MSL-Clear_Sky_Hammer", "CAN-Clear_Sky_Clan_and_Hammer_Techniques"]
+- query: "Tang Sect hidden weapons"
+  expect: ["CAN-Tang_Sect_and_Hidden_Weapons"]
+- query: "Shrek Academy admission requirements"
+  expect: ["CAN-Shrek_Academy"]
+- query: "blacksmith ranks refinement"
+  expect: ["PRF-Blacksmith", "CAN-Blacksmithing_and_Spiritual_Metals"]
