@@ -20,5 +20,13 @@
     "power_equalization",
     "crossover_origin",
     "travel_method"
+  ],
+  "custom_types": [
+    "variant",
+    "reality_anchor"
+  ],
+  "seed_pages": [
+    "Meta/Templates/TMP-Variant.md",
+    "Meta/Templates/TMP-Reality_Anchor.md"
   ]
 }

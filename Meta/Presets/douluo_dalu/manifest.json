@@ -1,7 +1,7 @@
 {
   "name": "douluo_dalu",
   "display_name": "Douluo Dalu (Soul Land) / Cultivation Fantasy",
-  "version": "1.0",
+  "version": "1.1",
   "fandom": "Douluo Dalu",
   "genre": "Xuanhuan / Cultivation Fantasy",
   "description": "Specialized framework preset for Douluo Dalu and related xianxia/xuanhuan fanfictions. Includes cultivation ranks, spiritual realms, martial souls, spirit beasts, alchemy, soul rings, and strict Pinyin romanization rules.",
@@ -9,7 +9,9 @@
     "Martial Soul and Cultivation Art taxonomy",
     "Spirit Ring and Bone progression tracking",
     "Pinyin Romanization standard with Zero-CJK enforcement",
-    "Alchemy and Crafting tiered schemas"
+    "Alchemy and Crafting tiered schemas",
+    "Martial soul, soul beast, profession, theory, event and item page templates",
+    "Rank ladder, refinement stages and spelling decisions seed (es and pt-BR proposed)"
   ],
   "properties": [
     "wuhun",
@@ -31,5 +33,20 @@
     "excerpt_of",
     "reading",
     "reading_note"
+  ],
+  "custom_types": [
+    "martial_soul",
+    "soul_beast",
+    "profession",
+    "theory"
+  ],
+  "seed_pages": [
+    "Meta/Templates/TMP-Event.md",
+    "Meta/Templates/TMP-Item.md",
+    "Meta/Templates/TMP-Profession.md",
+    "Meta/Templates/TMP-Theory.md",
+    "Meta/Templates/TMP-Martial_Soul.md",
+    "Meta/Templates/TMP-Soul_Beast.md",
+    "02_Story_Bible/Terminology/TRM-Douluo_Terms.md"
   ]
 }

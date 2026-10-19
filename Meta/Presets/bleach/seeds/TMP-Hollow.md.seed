@@ -1,0 +1,35 @@
+---
+folder: 02_Story_Bible/Characters
+prefix: CHR-
+uid: "TMP-Hollow"
+type: hollow
+title: "<Hollow or Arrancar Name>"
+aliases:
+  - "<Alias or Number>"
+evolutionary_stage: "<Normal Hollow | Gillian | Adjuchas | Vasto Lorde | Arrancar | Espada>"
+espada_rank: "<None | Octava | Cuarta | Primera | etc.>"
+aspect_of_death: "<Loneliness | Despair | Destruction | Nihilism | etc.>"
+resurreccion_command: "<Release Command>"
+resurreccion_name: "<Resurreccion Name>"
+mask_remnant: "<Location and appearance of mask remnant>"
+tags:
+  - "#fandom/bleach"
+  - "#template/hollow"
+---
+
+# <Hollow or Arrancar Name>
+
+## Overview
+Origin, territory in Hueco Mundo, and evolution history.
+
+## Combat Abilities
+- **Hierro:** Density and durability level.
+- **Cero / Bala:** Firing point, color, and destructive potency.
+- **Sonido:** Movement speed and spatial compression mastery.
+- **Pesquisa:** Spiritual detection radius.
+
+## Resurrección
+- **Release Command:** `<resurreccion_command>`
+- **Release Name:** `<resurreccion_name>`
+- **Transformed Appearance:** Bestial or enhanced morphological traits.
+- **Augmented Abilities:** Unique powers unlocked in released state.

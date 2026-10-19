@@ -1,0 +1,133 @@
+---
+uid: "TMP-Item"
+type: item
+title: "<Item / Artifact / Metal Name>"
+aliases:
+  - "<Pinyin / Alternate Name>"
+  - "<Epithet / Title>"
+classification: "<Refined Metal / Alloy | Mechanical Hidden Weapon | Soul Tool (Storage / Combat) | Spirit Bone / External Bone | Divine Regalia / Relic>"
+crafting_discipline: "<Blacksmithing Metallurgy | Hidden Weapon Mechanism | Soul Array Inscription | Beast Bone Integration | Divine Bestowal>"
+rarity_tier: "<Common Grade | Thousand Refined | Spirit Refined | Soul Refined | Heavenly Refined / Apex Legend | Divine God-Tier>"
+wielder_custodian: "<CHR-Wielder_or_Bearer>"
+creator_origin: "<CHR-Craftsman_Name | FAC-Sect_Name | Ancient Era>"
+status: active
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - "item/artifact"
+  - "story_bible/item"
+---
+# <Item / Artifact / Metal Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentence technical overview of the item: material composition, crafting discipline, operational function, and continental prestige.>
+
+---
+
+## 1. Ontological Nature & Crafting Methodology
+<!-- 2 to 4 paragraphs establishing the metallurgical, mechanical, or metaphysical origin of this artifact. -->
+
+<Paragraph 1: Material composition and elemental foundation. What base ores, beast cores, or divine fragments constitute this item? (e.g., Deep-sea sinking silver, star-pattern titanium, 100,000-year soul beast skull, celestial meteor alloy).>
+
+<Paragraph 2: Forging and refinement methodology. How was this item forged or assembled? Which tier of refinement was achieved? (e.g., Thousand Refinement purifying impurities and producing basic metallic resonance; Spirit Refinement granting elemental intelligence and life; Heavenly Refinement surviving heavenly lightning tribulation).>
+
+<Paragraph 3: Operational philosophy and tactical integration. How does this tool complement a soul master's combat style? Does it compensate for lack of long-range attack, provide impervious spatial defense, or deliver silent armor-piercing lethality?>
+
+---
+
+## 2. Physical Specifications & Sensory HUD (Visual-First)
+- **Dimensions, Geometry & Mass:**
+  - Length / Wingspan / Caliber: `<Dimensions in cm or mm>`
+  - Weight: `<Exact weight in jin or kg (e.g., 500 jin Heavy Silver, or featherlight 3 liang)>`
+  - Balance Point / Grip Ergonomics: <Description of handle, trigger tension, or anatomical bone fusion point.>
+- **Visual Phantasm & Surface Aesthetics:**
+  - Base Material Luster: `<Color Name> (<Hex Code>)`
+  - Surface Pattern: <Damascus folded grain, celestial cloud clouds, or matte anti-reflective coating.>
+  - Inscribed Core Runes: <Luminescent circuit array channels glowing under soul power activation.>
+- **Sensory & Haptic Profile:**
+  - Tactile: <Cold jade smoothness, abrasive textured shark-skin grip, or living biological warmth.>
+  - Auditory: <Melodic metallic ringing upon impact, absolute silent flight, or pneumatic pressure hiss.>
+
+---
+
+## 3. Energetic & Tactical Mechanics Matrix
+
+### 3.1 Energetic Conductivity & Efficiency
+- **Soul Power Conductivity Rate:** `<% Efficiency (e.g., 85% Thousand Refined, 99.5% Heavenly Refined)>`
+- **Internal Storage / Energy Buffer:** <Capacity to store soul power or operate via compressed internal springs without user expenditure.>
+- **Elemental Affinity / Amplification:** <Multipliers for specific elements (e.g., +30% Fire amplification, conducts lightning without loss).>
+
+### 3.2 Tactical Abilities & Operational Effects
+- **Primary Active Function:**
+  - *Trigger Mechanism:* <Mental command, mechanical trigger, soul power injection, or kinetic impact.>
+  - *Combat Vector & Effect:* <High-speed ballistic penetration, localized spatial barrier, gravity field multiplication.>
+  - *Effective Range:* `<Point-blank / Mid-range (10-50m) / Extreme sniper distance (100-500m)>`
+- **Passive Properties & Regalia Buffs:**
+  - *Durability / Hardness Rating:* <Diamond-tier Mohs scale hardness, immune to standard soul saint blades.>
+  - *Memory / Self-Repair:* <Ability to slowly absorb ambient metal ions or soul power to heal micro-cracks.>
+  - *Spatial Volume (If Storage Tool):* `<Internal volume in cubic meters or segmented compartments.>`
+
+---
+
+## 4. Ammunition, Maintenance & Operational Logistics
+- **Ammunition / Fuel Requirements:** <Quenched poison steel bolts, dragon beard needles, standardized milk bottles (soul batteries).>
+- **Reload & Reset Cycle:** `<Time in seconds required to wind springs, insert ammunition, or recharge core array.>`
+- **Wear, Tear & Maintenance Protocol:**
+  - *Lubrication & Quenching:* <Requires specific beast blood, oil, or soul crystal baths every N activations.>
+  - *Degradation Threshold:* <Number of high-output discharges before internal arrays suffer thermal warping.>
+
+---
+
+## 5. Sanderson Hard Limits, Recoil & Operational Risks
+*Enforcing Rule 30 & Sanderson's Second Law: weaknesses, recoil, and physical costs.*
+
+- **Physical Recoil & Kinematic Shock:** <Kinetic blowback transmitted to the wielder's arm; minimum physical strength required to operate safely.>
+- **Thermal & Energetic Overload:** <Catastrophic failure mode if injected with incompatible elemental energy or excessive voltage (e.g., core array detonation).>
+- **Jamming & Environmental Vulnerabilities:** <Sensitivity to magnetic disruption, mud infiltration, extreme thermal contraction/expansion, or acid corrosion.>
+- **Targeting / Trajectory Constraints:** <Inability to adjust trajectory mid-flight; vulnerable to wide-area sonic deflection.>
+
+---
+
+## 6. Negative Boundaries & Absolute Functional Ceilings
+*Enforcing Rule 30: explicit documentation of what this item CANNOT do.*
+
+1. **Negative Boundary 1 (Absolute Planar Ceilings):** <The item CANNOT generate infinite kinetic energy or perpetual motion; all work requires mechanical spring tension, chemical propellant, or soul power.>
+2. **Negative Boundary 2 (Biological Storage Limits):** <Spatial storage tools CANNOT sustain living, breathing biological entities unless explicitly engineered with planar life arrays.>
+3. **Negative Boundary 3 (Material Hardness Ceilings):** <Mortal metals CANNOT resist God-level divine power; divine weapon clashes shatter sub-heavenly alloys instantaneously.>
+4. **Negative Boundary 4 (Sanderson Cost Hard Floor):** <Every activation consumes non-recoverable mechanical parts or energetic fuel; zero free utility permitted.>
+
+---
+
+## 7. Historical Lineage & Custodianship
+- **Master Crafter / Forging Epoch:** `<CHR-Master_Smith>` (Year / Dynasty of creation).
+- **Previous Illustrious Bearers:** <Notable historical soul masters who carried this weapon or bone.>
+- **Current Custody & Acquisition Vector:** <How the current bearer acquired it (e.g., auction, sect inheritance, lethal duel spoil).>
+
+---
+
+## 8. Operational Lifecycle & Management Protocols
+
+### 8.1 Inception Protocol (Phase 1)
+1. **File Placement:** Always save under `02_Story_Bible/Items_and_Artifacts/` with the exact filename `ITM-<Item_Name>.md` (zero spaces, Rule 10).
+2. **Metadata Integrity:** Fill YAML frontmatter completely (`uid`, `type: item`, `classification`, `crafting_discipline`, `rarity_tier`).
+3. **Drafting Sequence:** Define Metallurgy & Refinement (Section 1) -> Physical HUD (Section 2) -> Mechanics Matrix (Section 3) -> Sanderson Limits (Section 5).
+
+### 8.2 Scene Deployment & Inventory Tracking (Phase 2)
+1. **Ammunition Tracking:** Maintain strict count of consumed hidden weapon bolts or expended tool charges during combat scenes in `04_Manuscript/`.
+2. **Maintenance Realism:** Account for cleaning, wear, and physical recoil on characters' wrists/shoulders after major battles.
+3. **Continuous Ledger Sync:** Ensure bearer character profiles (`CHR-*.md`) list this item under Auxiliary Arts & Regalia.
+
+---
+
+## 9. Standardized Lexicon & Taxonomy Glossary
+
+| Term / Taxonomy | Category | Clear & Accessible Definition |
+|:---|:---|:---|
+| **Thousand Refinement (*Qianlian*)** | Metallurgy | Forging technique removing all impurities from metal, creating metallic resonance and basic soul power conductivity. |
+| **Spirit Refinement (*Linglian*)** | Metallurgy | Advanced forging imparting biological vitality and elemental intelligence into the metal, bonding with the smith's soul. |
+| **Soul Tool (*DaoHunqi / Hunqi*)** | Technology | Artifact embedded with precise soul power core arrays that produce magical, defensive, or spatial effects. |
+| **External Spirit Bone (*Waifu Hungu*)** | Anatomy | Extremely rare bone not bound to the 6 primary slots, capable of evolving alongside the host and fusing with weapons. |
+| **Hidden Weapon (*Anqi*)** | Ballistics | Mechanical or hand-thrown precision weaponry designed for lethal ambush, bypassing soul master defensive expectations. |
+| **Milk Bottle (*Nainping*)** | Storage | Specialized cylindrical soul tool used to store purified liquid soul power for rapid tactical field replenishment. |
+| **Sanderson Limitation** | Narrative | Explicit recoil, ammunition limit, or failure mode ensuring artifacts remain balanced tactical tools rather than story-breaking cheats. |

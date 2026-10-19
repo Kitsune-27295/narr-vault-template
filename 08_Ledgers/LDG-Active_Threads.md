@@ -8,6 +8,7 @@ tags: ["ledger/threads"]
 ---
 # LDG-Active_Threads — Active Plot Threads Ledger
 
+> No sample rows ship with the template. Add a row per dramatic thread once the curator confirms the arc beats.
+
 | Thread ID | Arc Introduced | Description | Driving Characters | Current Status | Target Resolution |
 |---|---|---|---|---|---|
-| THR-001 | Arc 1 | Initial mystery and protagonist awakening | [[CHR-Protagonist]] | active | Arc 2 Climax |

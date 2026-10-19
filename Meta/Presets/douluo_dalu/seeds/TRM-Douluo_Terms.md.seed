@@ -1,0 +1,66 @@
+---
+uid: "TRM-Douluo_Terms"
+type: terminology
+title: "Douluo Dalu Terminology Seed"
+status: active
+scope: source_canon
+tags: ["terminology/douluo"]
+---
+# Douluo Dalu Terminology Seed
+
+Seeded by the `douluo_dalu` preset. The English spellings follow the Fandom captures of the vault this seed came from. Recheck each term against your own frozen sources before relying on it. Spanish and Portuguese values are proposals (`Status = proposed`) until the curator approves them.
+
+## Spirit Rank Ladder
+Use "Spirit" (not "Soul") for rank titles when your sources do.
+
+| English Term | Rank Band | es | pt-BR | Status |
+|---|---|---|---|---|
+| Spirit Scholar | 1-10 | Erudito Espiritual | Erudito Espiritual | proposed |
+| Spirit Master | 11-20 | Maestro Espiritual | Mestre Espiritual | proposed |
+| Spirit Grandmaster | 21-30 | Gran Maestro Espiritual | Grão-Mestre Espiritual | proposed |
+| Spirit Elder | 31-40 | Venerable Espiritual | Venerável Espiritual | proposed |
+| Spirit Ancestor | 41-50 | Ancestro Espiritual | Ancestral Espiritual | proposed |
+| Spirit King | 51-60 | Rey Espiritual | Rei Espiritual | proposed |
+| Spirit Emperor | 61-70 | Emperador Espiritual | Imperador Espiritual | proposed |
+| Spirit Saint | 71-80 | Santo Espiritual | Santo Espiritual | proposed |
+| Spirit Douluo | 81-90 | Douluo Espiritual | Douluo Espiritual | proposed |
+| Titled Douluo (umbrella) | 91-99 | Douluo Titulado | Douluo Titulado | proposed |
+| Average Titled Douluo (sub-band) | 91-94 | Douluo Titulado Común | Douluo Titulado Comum | proposed |
+| Super (Hyper) Douluo (sub-band) | 95-98 | Douluo Supremo | Douluo Supremo | proposed |
+| Limit Douluo (sub-band) | 99 | Douluo Límite | Douluo Limite | proposed |
+
+Keep the rank "Spirit Elder" apart from the court title "Elder" (Zhang Lao).
+
+## Refinement Stages
+| English Term | Pinyin | es | pt-BR | Status |
+|---|---|---|---|---|
+| Hundred Refinement | Bailian | Refinamiento Centenario | Refinamento Centenário | proposed |
+| Thousand Refinement | Qianlian | Refinamiento Milenario | Refinamento Milenar | proposed |
+| Spirit Refinement | Lingduan | Refinamiento Espiritual | Refinamento Espiritual | proposed |
+| Soul Refinement | Hunduan | Refinamiento del Alma | Refinamento da Alma | proposed |
+| Heavenly Refinement | Tianduan | Refinamiento Celestial | Refinamento Celestial | proposed |
+| Divine Craftsman | Shenjiang | Artesano Divino | Artesão Divino | proposed |
+
+## Core Terms
+| English Term | es | pt-BR | Status |
+|---|---|---|---|
+| Martial Soul | Alma Marcial | Alma Marcial | proposed |
+| Soul Power | Poder del Alma | Poder da Alma | proposed |
+| Spirit Ring | Anillo Espiritual | Anel Espiritual | proposed |
+| Spirit Hall | Salón de los Espíritus | Salão dos Espíritos | proposed |
+| Soul Master (generic) | Maestro de Almas | Mestre de Almas | proposed |
+
+## Spelling Decisions
+Prefer the spelling your frozen sources use. Keep note titles stable once links exist.
+
+| Preferred | Variants seen | Status |
+|---|---|---|
+| Fasinuo Province | Fasino, Fashe | proposed |
+| Suotuo City | Soto City, Suotou, Suo Tuo | proposed |
+| Holy Spirit Village | Holy Soul Village | proposed |
+| Titled Douluo | Title Douluo | proposed |
+| Spirit Elder (and the other Spirit ranks) | Soul Elder | proposed |
+| Flying God Claw | Flying Sky Lock | proposed |
+| Dragon Beard Needle | Dragon Whisker Needle | proposed |
+| Eight Stage Drop | Eight Drop, Eight-Stage Throw | proposed |
+| Nine Heart Flowering Apple | Nine Heart Begonia, Nine-Heart Flowering Crabapple | proposed |

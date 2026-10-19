@@ -8,6 +8,7 @@ tags: ["ledger/knowledge"]
 ---
 # LDG-Character_Knowledge — Epistemic Horizon Ledger
 
+> No sample rows ship with the template. Add a row when a character learns or loses a fact, tied to a chapter or a planned event.
+
 | Chapter | Character | Knowledge Acquired / Discovered | Knowledge Lost / Deceived | Resulting State |
 |---|---|---|---|---|
-| C01 | [[CHR-Protagonist]] | Learns origin of family spirit bone | Unaware of rival clan movements | Focuses on academy entry |

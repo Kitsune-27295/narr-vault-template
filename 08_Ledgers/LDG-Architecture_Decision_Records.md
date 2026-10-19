@@ -93,3 +93,43 @@ This ledger records architectural decisions that govern vault topology, ingestio
 - **Context:** Large LLM context windows often get bloated by raw file dumps during session initialization.
 - **Decision:** Implement `narr memory brief` enforcing a strict character budget (<9,000 chars) that synthesizes working memory (`hot.md`), active plot threads, primed Chekhov guns, open decisions, pending inbox items, and vault health.
 - **Consequences:** Any agent cold-starts with perfect situational awareness in under 1,500 tokens.
+
+---
+
+## ADR-011: Deterministic Vault Guard Beyond the Linter (`tools/vault_audit.py`)
+- **Status:** Superseded by ADR-015 (2026-10-19)
+- **Context:** `narr lint` and `narr crosscheck` passed while baselines held unsourced numbers, quotes did not come from the cited source, tables had broken columns, scopes were undefined and ledgers held sample rows.
+- **Decision:** Ship `tools/vault_audit.py`. It fails on dead wikilinks, frozen-source SHA mismatch, italic quotes absent from the cited sources, `uid` not matching the filename, undefined `scope`, table column mismatch, ledger rows for unwritten chapters, absolute local links and CJK outside Sources.
+- **Consequences:** Run it with `narr lint` before every commit. `tools/build_atlas.py` rebuilds the Atlas so the hub cannot drift.
+
+---
+
+## ADR-012: Content-Level Multi-Agent Parity (`narr doctor`)
+- **Status:** Accepted (2026-10-18)
+- **Context:** The parity check compared only rule file names, so a drifted skill passed as "Synchronized".
+- **Decision:** `narr doctor` compares rules and skills by relative path and by line-ending-insensitive SHA-256, and names the drifting files.
+- **Consequences:** Edit a skill in both `.agents/` and `.claude/` in the same change, or the check fails.
+
+---
+
+## ADR-013: Author Voice Reaches the Chapter Prompt
+- **Status:** Accepted (2026-10-18)
+- **Context:** `narr prompt render write-chapter` ignored `context/author_voice.md`, and spent its token budget on frontmatter.
+- **Decision:** The prompt includes `context/author_voice.md` as a priority-1 section and strips YAML frontmatter from every injected note.
+- **Consequences:** The voice contract shapes every drafted chapter. Keep the file short; it is truncated at 2,200 characters.
+
+---
+
+## ADR-014: Presets Register Their Page Types
+- **Status:** Accepted (2026-10-18)
+- **Context:** Presets introduced page types (for example a profession or a theory) that `narr lint` rejected until the curator edited `vault.yaml` by hand.
+- **Decision:** A preset manifest may list `custom_types`. `narr preset apply` appends the missing ones to `vault.yaml` and reports them. The merge is idempotent.
+- **Consequences:** Applying a preset is enough to make its seeded templates lint-clean.
+
+---
+
+## ADR-015: Centralized Guard SSOT in `narr.checks` and Thin Audit Wrapper
+- **Status:** Accepted (2026-10-19)
+- **Context:** ADR-011 created `tools/vault_audit.py` as an independent script outside the core CLI engine, duplicating verification logic and diverging from `narr lint` / `narr crosscheck`.
+- **Decision:** Promote all vault invariant checks (VAL033–VAL038) directly into `src/narr/checks.py`. Refactor `template/tools/vault_audit.py` into a thin client delegating directly to `narr.checks.run_all_checks`. Supersede standalone guard logic in ADR-011.
+- **Consequences:** Single Source of Truth for all ontological rules across CLI, test suites, and template helper scripts.

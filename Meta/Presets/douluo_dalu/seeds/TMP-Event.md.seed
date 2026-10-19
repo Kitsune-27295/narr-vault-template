@@ -1,0 +1,145 @@
+---
+uid: "TMP-Event"
+type: event
+title: "<Event Name>"
+aliases:
+  - "<Alternate / Operational Codename>"
+date_in_universe: "<Timeline Year / Epoch - Season / Month>"
+duration: "<N hours | N days | Instantaneous>"
+location: "<LOC-Location_Name>"
+arc: "<ARC-Parent_Arc>"
+pod_reference: "<POD-Point_of_Divergence_If_Applicable | None>"
+characters_involved:
+  - "<CHR-Character_1>"
+  - "<CHR-Character_2>"
+factions_involved:
+  - "<FAC-Faction_1>"
+  - "<FAC-Faction_2>"
+status: active
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - "timeline/event"
+  - "continuity/event"
+---
+# <Event Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentence technical overview of the event: dramatic turning point, participating parties, location, and macro-continuity consequences across the timeline.>
+
+---
+
+## 1. Context, Dramatic Stakes & Proximate Cause
+<!-- 2 to 4 paragraphs establishing the historical background, motivating catalysts, and dramatic tension. -->
+
+<Paragraph 1: Historical context and tensions leading to this moment. What pre-existing rivalries, political directives, or cultivation breakthroughs set this event in motion?>
+
+<Paragraph 2: Proximate trigger and public staging. What immediate incident forced the confrontation or assembly? Was it a formal tournament challenge, a wilderness ambush, a diplomatic banquet revelation, or a scheduled sect graduation?>
+
+<Paragraph 3: Dramatic stakes and potential ramifications. What stood to be won or lost? (e.g., Loss of sect prestige, exposure of a hidden identity, acquisition of an immortal herb, irreversible fracture of protagonist-antagonist dynamic).>
+
+---
+
+## 2. Staging Topography & Participant Dispositions
+- **Staging Ground & Environmental Geometry:** `<LOC-Location_Name>` (Arena boundary, forest elevation, weather conditions, lighting, and spectator positioning).
+- **Participant Dispositions at Initiation:**
+  - `<CHR-Primary_Actor_1>`: <Rank, health state, active equipment, tactical mindset (e.g., confident, cautious, murderous).>
+  - `<CHR-Primary_Actor_2>`: <Rank, health state, active equipment, tactical mindset.>
+  - *Spectators & Arbitrators:* <Key observers present (e.g., Academy Deans, Spirit Hall Bishops, imperial scouts).>
+
+---
+
+## 3. Chronological Phase-by-Phase Progression
+
+### Phase 1: Incitement & Opening Gambits
+- **Triggering Dialogue / Motion:** <Opening words, formal bows, challenge issuance, or sudden ambush leap.>
+- **Initial Maneuvers:** <Martial soul summonings, aura release, probe strikes, footwork testing.>
+- **Spectator Reaction:** <Initial assessment by the crowd or supervising elders.>
+
+### Phase 2: Escalation & Tactical Counter-Play
+- **Escalation Trigger:** <Activation of higher-tier spirit rings, weapon unholstering, or unexpected defensive parry.>
+- **Clash of Techniques:** <Kinetic exchanges, elemental dominance shifts, terrain deformation.>
+- **Turning Point / Reversal:** <The critical flaw exploited or hidden trump card revealed that breaks the deadlock.>
+
+### Phase 3: Climax & Decisive Turning Point
+- **Apex Strike / Sovereign Manifestation:** <The climactic technique, domain deployment, or decisive psychological collapse.>
+- **Terminal Kinetic Impact:** <Sensory texture of the final impact (shockwave, blood mist, shattered weapon, absolute stillness).>
+- **Resulting Consequence:** <Knockout, yield, lethal strike, or external referee intervention.>
+
+### Phase 4: Immediate Resolution & Field Dispersal
+- **Post-Clash State:** <Physical condition of participants, medical triage, formal victory declaration.>
+- **Immediate Repercussions:** <Trophy awarded, betting payouts, humiliated withdrawal, or urgent departure.>
+
+---
+
+## 4. Continuity & Causal Divergence Analysis
+
+### 4.1 Canon Baseline vs. Fanfiction Divergence
+| Factor | Original Canon Baseline | Divergent Novel Timeline | Causal Driver / POD |
+|:---|:---|:---|:---|
+| **Combat Outcome** | <Original victor and outcome> | <New victor and altered outcome> | `<POD-Reference>` |
+| **Participant Dynamic** | <Original emotional relationship> | <New psychological distance or rivalry> | <Direct actions taken> |
+| **Material Spoils** | <Original item distribution> | <New owner of ring, bone, or herb> | <Tactical foresight> |
+
+### 4.2 Material & Psychological Fallout
+- **Injuries & Biological Impact:** <Meridian strains, broken bones, or permanent scars affecting future training.>
+- **Rank & Cultivation Milestones:** <Sudden bottleneck breakthrough triggered by battle pressure.>
+- **Chekhov Setups & Future Promises:** <Specific oaths sworn, debts incurred, or vendettas initiated for subsequent arcs.>
+
+---
+
+## 5. Sanderson Hard Limits & Power-Scale Verification
+*Enforcing Rule 30 & Sanderson's Second Law: validating that the event adheres to established limits.*
+
+- **Soul Power & Stamina Consumption Audit:** <Verification that energy spent aligns with characters' decile ranks without miraculous infinite energy.>
+- **Ring Skill Cooldown & Backlash Compliance:** <Confirmation that high-tier skills incurred appropriate fatigue and operational windows.>
+- **Environmental Collateral Damage:** <Realistic structural damage to the arena, forest trees, or municipal surroundings consistent with kinetic energy release.>
+
+---
+
+## 6. Negative Boundaries & Explicit Non-Occurrences
+*Enforcing Rule 30: explicit documentation of what DID NOT happen during this event.*
+
+1. **Negative Boundary 1 (Identity Preservation):** <The protagonist DID NOT reveal their deepest trump card or true dual-soul nature to public spectators.>
+2. **Negative Boundary 2 (Third-Party Non-Intervention):** <Imperial guards and external Title Douluo DID NOT intervene before the duel concluded.>
+3. **Negative Boundary 3 (Lethality Boundaries):** <The duel DID NOT cross into unauthorized lethal bloodshed inside the academy boundary.>
+4. **Negative Boundary 4 (Sanderson Cost Floor):** <The victor was NOT unharmed; incurred non-negligible muscle soreness and stamina depletion.>
+
+---
+
+## 7. Associated Manuscript Chapters & Cross-References
+- **Primary Manuscript Chapters:**
+  - pt-BR Draft: `<C##-Capitulo_pt-BR>` (Paragraphs `<!-- p:N -->` to `<!-- p:M -->`)
+  - es Publication: `<C##-Capitulo_es>` (1:1 parity)
+- **Direct Continuity Links:**
+  - Preceding Event: `<EVT-Preceding_Event>`
+  - Consequent Event: `<EVT-Consequent_Event>`
+  - Parent Arc: `<ARC-Parent_Arc>`
+
+---
+
+## 8. Operational Lifecycle & Management Protocols
+
+### 8.1 Inception Protocol (Phase 1)
+1. **File Placement:** Always save under `03_Continuity_and_Timeline/Events/` with the exact filename `EVT-<Event_Name>.md` (zero spaces, Rule 10).
+2. **Metadata Integrity:** Fill YAML frontmatter completely (`uid`, `type: event`, `date_in_universe`, `location`, `arc`, `characters_involved`).
+3. **Drafting Sequence:** Define Dramatic Stakes (Section 1) -> Topography (Section 2) -> Phase Progression (Section 3) -> Continuity Divergence (Section 4).
+
+### 8.2 Manuscript Sync & Verification Protocol (Phase 2)
+1. **Scene Validation:** Cross-reference manuscript chapter drafts against Section 3 to ensure sequential continuity.
+2. **Sanderson Audit:** Confirm character abilities in chapter drafts do not violate Section 5 limits.
+3. **Continuous Ledger Sync:** Update `08_Ledgers/` and timeline indexes to reference this event.
+
+---
+
+## 9. Standardized Lexicon & Taxonomy Glossary
+
+| Term / Taxonomy | Category | Clear & Accessible Definition |
+|:---|:---|:---|
+| **Timeline Event (*EVT*)** | Continuity | A distinct chronological milestone with specific participants, location, and permanent narrative consequences. |
+| **Point of Divergence (*POD*)** | Canon | The root causal intervention that splits the novel continuity from the original Douluo Dalu canon timeline. |
+| **Proximate Cause** | Narrative | The immediate triggering action or provocation that initiates an event, distinct from long-term background tensions. |
+| **Chekhov Setup** | Continuity | A dramatic element, weapon, or promise introduced during an event that must pay off in a subsequent arc. |
+| **Causal Ripple** | Timeline | The downstream systemic consequences across politics, character relationships, and power balances caused by an event. |
+| **Sanderson Limitation** | Power | Hard physical or energetic ceiling preventing combatants from exceeding their established cultivation limits. |

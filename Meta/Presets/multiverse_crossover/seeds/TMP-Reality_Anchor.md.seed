@@ -1,0 +1,27 @@
+---
+folder: 02_Story_Bible/Cosmology_and_Godhood
+prefix: SCP-
+uid: "TMP-Reality_Anchor"
+type: reality_anchor
+title: "<Anchor Name>"
+aliases:
+  - "<Coordinate Reference>"
+anchor_type: "<Artifact | Location | Entity | Cosmic Constant>"
+current_universe: "<Universe Designation>"
+dimensional_resonance: "<Resonance Frequency>"
+stability_index: 0.95
+tags:
+  - "#fandom/multiverse"
+  - "#template/reality_anchor"
+---
+
+# <Anchor Name>
+
+## Cosmological Function
+Role in maintaining localized space-time cohesion and preventing multiversal incursion or decay.
+
+## Coordinate Matrix
+Dimensional frequency, planar harmonics, and temporal anchoring parameters.
+
+## Threat Vectors & Vulnerabilities
+What forces, paradoxes, or cosmic beings can destabilize this anchor point.

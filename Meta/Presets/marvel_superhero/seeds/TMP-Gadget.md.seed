@@ -1,0 +1,30 @@
+---
+folder: 02_Story_Bible/Powers_and_Systems
+prefix: PWR-
+uid: "TMP-Gadget"
+type: gadget
+title: "<Gadget Name>"
+aliases:
+  - "<Model / Prototype Designation>"
+creator: "<Creator / Manufacturer>"
+user: "<Primary User / Operative>"
+tech_level: "<Standard | Advanced Stark Tech | Wakandan Vibranium | Pym Particle | Cosmic>"
+power_source: "<Arc Reactor | Battery | Mystical | None>"
+mass_produced: false
+tags:
+  - "#fandom/marvel"
+  - "#template/gadget"
+---
+
+# <Gadget Name>
+
+## Technical Overview
+Physical description, materials (Vibranium, Adamantium, Carbon Nanotubes), and design philosophy.
+
+## Specifications & Systems
+- **Primary Function:** Core utility or combat application.
+- **Power Consumption:** Operational run-time and recharge requirements.
+- **Failsafes & Countermeasures:** Biometric locks, EMP shielding, self-destruct mechanism.
+
+## Maintenance & Upgrades
+Iterative versions, known defects, and repair protocols.

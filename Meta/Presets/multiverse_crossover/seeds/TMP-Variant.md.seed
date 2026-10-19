@@ -1,0 +1,30 @@
+---
+folder: 02_Story_Bible/Characters
+prefix: CHR-
+uid: "TMP-Variant"
+type: variant
+title: "<Variant Name>"
+aliases:
+  - "<Designation / Timeline Tag>"
+variant_of: "<CHR-Prime_Canon_UID>"
+origin_universe: "<Earth-XXX | Alternate Timeline>"
+divergence_point: "<Point in history where this timeline branched>"
+cosmological_status: "<Stable | Paradoxical | Glitched | Exiled>"
+tags:
+  - "#fandom/multiverse"
+  - "#template/variant"
+---
+
+# <Variant Name>
+
+## Divergence Profile
+Detailed divergence catalyst explaining how this entity's history departed from the prime timeline.
+
+## Psychological & Moral Variations
+Contrasts in philosophy, ethics, personality, and behavioral patterns compared to the prime iteration.
+
+## Cross-Universal Equipment & Abilities
+Unique techniques, altered power expressions, or cross-pollinated skills acquired across dimensions.
+
+## Narrative Role in Crossover
+Status in current host reality, temporal anomalies generated, and interaction with native counterparts.

@@ -5,9 +5,36 @@
   "version": "2.0",
   "fandom": "Bleach",
   "genre": "Supernatural Shonen Battle",
-  "locales": { "draft": "pt-BR", "publish": "es" },
+  "locales": {
+    "draft": "pt-BR",
+    "publish": "es"
+  },
   "description": "Overlay for Bleach universe: Zanpakuto releases, Bankai names, Reiatsu colors, Gotei 13 divisions and Hollow forms.",
-  "features": ["zanpakuto_mechanics", "reiatsu_scaling", "gotei_divisions"],
-  "properties": ["zanpakuto", "shikai_command", "bankai_name", "reiatsu_color", "division", "hollow_form"],
-  "required_tags": ["#fandom/bleach"]
+  "features": [
+    "zanpakuto_mechanics",
+    "reiatsu_scaling",
+    "gotei_divisions"
+  ],
+  "properties": [
+    "zanpakuto",
+    "shikai_command",
+    "bankai_name",
+    "reiatsu_color",
+    "division",
+    "hollow_form",
+    "kido_number"
+  ],
+  "custom_types": [
+    "zanpakuto",
+    "hollow",
+    "kido"
+  ],
+  "seed_pages": [
+    "Meta/Templates/TMP-Zanpakuto.md",
+    "Meta/Templates/TMP-Hollow.md",
+    "Meta/Templates/TMP-Kido.md"
+  ],
+  "required_tags": [
+    "#fandom/bleach"
+  ]
 }

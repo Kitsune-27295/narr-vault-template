@@ -1,0 +1,26 @@
+# Multiverse Crossover Properties Overlay
+properties:
+  origin_universe:
+    type: text
+    description: "Designation of native home reality (e.g. Earth-616, Soul Society, Douluo Continent)."
+  current_reality:
+    type: text
+    description: "Current dimension or localized timeline coordinate."
+  variant_of:
+    type: text
+    description: "Base canonical entity of which this character is an alternate divergence."
+  anchor_point:
+    type: text
+    description: "Cosmological tether preventing dimensional dispersion or anchor decay."
+  reality_stability:
+    type: number
+    description: "Local dimensional integrity index (0.0 to 1.0 or percentage)."
+  power_equalization:
+    type: text
+    description: "Law mapping between magic, chakra, reiatsu, soul power, and physics."
+  crossover_origin:
+    type: text
+    description: "Narrative catalyst initiating cross-dimensional displacement."
+  travel_method:
+    type: text
+    description: "Vehicle or supernatural conduit (e.g. Portal, Bifrost, Void Rift)."

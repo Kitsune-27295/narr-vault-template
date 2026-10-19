@@ -1,0 +1,36 @@
+---
+folder: 02_Story_Bible/Characters
+prefix: CHR-
+uid: "TMP-Hero_Persona"
+type: hero_persona
+title: "<Hero Alias>"
+aliases:
+  - "<Civilian Name>"
+hero_alias: "<Hero Alias>"
+secret_identity: "<Civilian Name>"
+power_classification: "<Mutant | Mutate | Tech | Mystic | Cosmic | Peak Human>"
+power_tier: "<Street | City | Continental | Planetary | Cosmic>"
+team_affiliation:
+  - "<Avengers | X-Men | Defenders | Independent>"
+base_of_operations: "<City / Facility>"
+clearance_level: 1
+tags:
+  - "#fandom/marvel"
+  - "#template/hero_persona"
+---
+
+# <Hero Alias>
+
+## Civilian Identity & Persona
+Background, daytime occupation, cover story, and loved ones requiring protection.
+
+## Powers & Physiology
+- **Primary Abilities:** Detailed physiological or supernatural capabilities.
+- **Limitations & Weaknesses:** Physiological limits, vulnerabilities, sensory overload.
+
+## Equipment & Signature Arsenal
+- **Costume / Armor:** Protective materials, heads-up display, comms.
+- **Gadgets:** Key signature utility gear.
+
+## Operational History
+Key incidents, public perception, legal status (e.g. Sokovia Accords compliance), and rogues gallery.

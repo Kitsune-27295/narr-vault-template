@@ -1,0 +1,38 @@
+---
+folder: 02_Story_Bible/Powers_and_Systems
+prefix: PWR-
+uid: "TMP-Zanpakuto"
+type: zanpakuto
+title: "<Zanpakuto Name>"
+aliases:
+  - "<Alternate or Translated Name>"
+wielder: "<CHR-Wielder_UID>"
+element: "<Fire | Ice | Wind | Earth | Lightning | Water | Kido | Poison | Physical | Illusion>"
+shikai_command: "<Release Incantation>"
+bankai_name: "<Bankai Name>"
+bankai_mastery: "<None | Partial | True Bankai>"
+sealed_form: "<Katana | Wakizashi | Nodachi | Custom>"
+tags:
+  - "#fandom/bleach"
+  - "#template/zanpakuto"
+---
+
+# <Zanpakuto Name>
+
+## Summary
+Brief description of the Zanpakuto spirit, sealed blade appearance, and combat doctrine.
+
+## Shikai
+- **Command:** `<shikai_command>`
+- **Transformation:** Form and ability changes upon release.
+- **Special Techniques:**
+  - Technique 1: Details and Reiatsu cost.
+
+## Bankai
+- **Name:** `<bankai_name>`
+- **Domain / Manifestation:** Full materialization of the soul cutter's power.
+- **Drawbacks / Constraints:** Strain on the wielder's soul or stamina.
+
+## Spirit Persona
+- **Appearance:** Manifestation inside the inner world.
+- **Personality:** Relationship and inner dialogue with the wielder.

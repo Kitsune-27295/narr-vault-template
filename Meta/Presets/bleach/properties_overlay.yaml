@@ -1,0 +1,23 @@
+# Bleach / Shinigami Lore Properties Overlay
+properties:
+  zanpakuto:
+    type: text
+    description: "Name of the Zanpakuto spirit or blade."
+  shikai_command:
+    type: text
+    description: "Release incantation for Shikai (e.g. Roar, Zabimaru)."
+  bankai_name:
+    type: text
+    description: "Full Bankai release name (e.g. Senbonzakura Kageyoshi)."
+  reiatsu_color:
+    type: text
+    description: "Color and sensory manifestation of spiritual pressure."
+  division:
+    type: text
+    description: "Gotei 13 division or military branch."
+  hollow_form:
+    type: text
+    description: "Stage of Hollow evolution (e.g. Gillian, Adjuchas, Vasto Lorde, Arrancar)."
+  kido_number:
+    type: number
+    description: "Incantation number for Hado or Bakudo (1-99)."

@@ -34,6 +34,7 @@ narr prompt render translate-chapter -c <N>       # Assemble prompt for es publi
 narr translate check <N>                          # Verify paragraph parity (MSC004)
 narr lint                                         # Pre-commit invariant check (must exit 0)
 narr crosscheck                                   # Continuity and Chekhov ledger check
+python tools/vault_audit.py                       # Quote, uid, scope, table and link guard (must exit 0)
 narr doctor                                       # Environment and multi-agent parity check
 ```
 

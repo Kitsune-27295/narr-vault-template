@@ -1,0 +1,144 @@
+---
+uid: "TMP-Profession"
+type: profession
+title: "<Profession / Occupation Name>"
+aliases:
+  - "<Pinyin / Guild Title>"
+guild_authority: "<Blacksmith Association | Spirit Hall Healer Order | Imperial Medical Pavilion | Illustrious Virtue Hall | Independent Academy>"
+core_discipline: "<Metallurgy & Forging | Medicine & Healing | Soul Engineering | Alchemy & Botany | Mecha Crafting | Martial Tactics>"
+ranking_system_type: "<Dual-Era (SL1 7-Rank / SL3 9-Rank) | 9-Class System | Classical Guild Matrix>"
+stat_requisites: "<Physical Strength | Spiritual Power Realm | Elemental Affinity | Soul Power Rank Threshold>"
+continental_prestige: "<Mundane Craft | Respected Guild | Sovereign Strategic Pillar | Continental Monopoly>"
+status: active
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - "story_bible/profession"
+  - "douluo/occupation"
+---
+# <Profession / Occupation Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentence technical overview of the profession/occupation: historical guild origin, core discipline, technical methodology, societal standing across the Douluo eras, and symbiotic value to soul master cultivation.>
+
+---
+
+## 1. Professional Essence & Societal Mandate
+<!-- 2 to 4 paragraphs detailing the historical foundation, economic reality, and strategic importance of the craft. -->
+
+<Paragraph 1: Historical origin and institutional structure. How did this discipline evolve on Douluo Continent? Was it initially a mundane mortal trade that evolved through soul power integration, or was it founded by ancient Titled Douluos? What governing body (e.g., Blacksmith Association in Gengxin City, Spirit Hall Medical Order, Sun Moon Soul Engineering Academies) establishes industry standards, certification exams, and professional ethics?>
+
+<Paragraph 2: Metaphysical and technical mechanism. How does the practitioner interact with materials, biological organisms, or spiritual energy? What scientific or esoteric principles govern successful practice (e.g., crystalline lattice realignment, vibration resonance, meridian transduction, energetic resonance, alloy harmony rates)?>
+
+<Paragraph 3: Socio-political prestige and class dynamics across eras. How was this profession regarded during early eras (e.g., Soul Land I, where blacksmiths were looked down upon by noble soul masters) versus later technological eras (Soul Land II/III/IV, where blacksmiths, soul engineers, and mecha makers possessed elite continental prestige)? How do practitioners navigate imperial monopolies versus guild independence?>
+
+---
+
+## 2. Hierarchical Tier Matrix & Certification Ranks
+<!-- Comparison of recognized progression tiers across eras (e.g. SL1 7 ranks vs SL3 9 ranks, or 9 Classes). -->
+
+### 2.1 Standardized 9-Rank Continental Matrix
+| Rank Tier | Professional Title | Prerequisite Cultivation | Technical Mastery Benchmark | Continental Rarity & Prestige |
+|:---:|:---|:---|:---|:---|
+| **Rank 1** | **<Title (e.g., Junior / Apprentice)>** | <Rank 10+ Soul Power> | <Basic material purification / First-aid wound dressing / Class 1 array carving> | Common (Tens of thousands) |
+| **Rank 2** | **<Title (e.g., Intermediate / Primary)>**| <Rank 15–20+ Soul Power> | <Hundred Refinement (*Bailian*) / Basic antivenom synthesis / Class 2 assembly> | Widespread |
+| **Rank 3** | **<Title (e.g., Advanced / Master)>** | <Rank 25–30+ Soul Power> | <Thousand Refinement (*Qianlian* / Thought Forging) / Meridian acupuncture> | Respected municipal craftsman |
+| **Rank 4** | **<Title (e.g., Master / Senior)>** | <Rank 35–40+ Soul Power> | <Advanced Thousand Refinement / Complex surgical stasis / Class 4 core arrays> | Regional guild director |
+| **Rank 5** | **<Title (e.g., Grandmaster / Specialist)>**| <Rank 45–50+; Spirit Connection> | <Spirit Refinement (*Lingduan* - bestowing life) / Cellular revitalization> | Elite imperial consultant |
+| **Rank 6** | **<Title (e.g., Smith Scholar / Expert)>**| <Rank 55–60+; Spirit Connection> | <Alloy Forging & Multi-metal Spirit Refinement / Complete organ restoration> | Renowned across one empire |
+| **Rank 7** | **<Title (e.g., Saint Craftsman / Sage)>** | <Rank 65–70+; Spirit Sea> | <Soul Refinement (*Hunduan* - bestowing soul) / Reversing near-fatal trauma> | Rare national treasure (<20 continent-wide) |
+| **Rank 8** | **<Title (e.g., High Saint / Patriarch)>** | <Rank 75–80+; Spirit Sea> | <Advanced Soul Refinement with Life Feedback / Brain-death stasis surgery> | Continental apex authority (<5 alive) |
+| **Rank 9** | **<Title (e.g., Divine Craftsman / Miracle Sage)>**| <Rank 85–90+; Divine Realm intent>| <Heavenly Refinement (*Tianduan* - enduring tribulation) / Planar miracle restoration> | Singular generational legend (1–2 alive) |
+
+### 2.2 Historical Era Discrepancies & Divergences
+- **Soul Land I Era Mapping:** <Detail how the 7-Rank System of Soul Land I (Junior, Intermediate, Advanced, Master, Grandmaster, Smith Scholar, Divine Craftsman) maps to this progression, noting that Rank 7 Divine Craftsmen of SL1 like Lou Gao, Tai Tan, and Tang Hao predated modern Heavenly Refinement terminology.>
+- **Later Era Technological Integration:** <How Battle Armor, Mecha, and Soul Guidance Devices revolutionized the technical standards of this profession.>
+
+---
+
+## 3. Core Disciplines, Essential Tooling & Methodology
+<!-- Tools, equipment, and step-by-step procedures central to the craft. -->
+
+### 3.1 Essential Tools & Regalia
+- **Primary Instruments:** `<e.g., Heavy casting hammers, precision micro-chisels, sacred alloy acupuncture needles, cold distillation retorts>`
+- **Material Composition:** `<Tools forged from hundred-refined steel, cold silver, or sacred alloy to resist high-frequency wear>`
+- **Tool Resonance & Blood Sacrifice:** `<Traditions such as Blood Sacrifice on first Thousand-Refined work to bind tools to the practitioner's soul>`
+
+### 3.2 Technical Methodology & Step-by-Step Procedure
+1. **Material Selection & Diagnostic Preparation:** `<Assessing mineral purity, internal stress, or patient meridian occlusions>`
+2. **Kinetic / Energetic Processing:** `<Hammering rhythms, flame temperature modulation, spiritual micro-current injection>`
+3. **Sublimation & Refinement:** `<Extracting impurities, harmonizing medicinal essences, establishing life connections>`
+4. **Quenching, Sealing & Final Inspection:** `<Thermal locking, spiritual consecration, quality assurance testing>`
+
+---
+
+## 4. Energetic, Physical & Spiritual Prerequisites
+<!-- The physiological and metaphysical demands placed upon the practitioner. -->
+
+- **Physical Conditioning & Blood Essence:** `<High skeletal density, arm torque endurance, or delicate manual dexterity>`
+- **Soul Power Demands:** `<Continuous steady output without sudden fluctuations; stamina to endure hours of sustained crafting>`
+- **Spiritual Precision (*Jingshenli*):** `<Required spiritual sea depth (Spirit Origin, Spirit Connection, Spirit Sea) to perceive microscopic flaws, elemental veins, or cellular activity>`
+- **Specialized Sensory Talents:** `<Synergies with sensory gifts like Transparent World, Purple Demon Eyes, or microscopic vision>`
+
+---
+
+## 5. Synergies with Martial Souls & Soul Masters
+<!-- How cultivation enhances the profession, and how the profession empowers the soul master. -->
+
+### 5.1 Favorable Martial Soul Archetypes
+- **Tool Martial Souls:** `<Hammer, furnace, scalpel, cauldron, or needle spirits enjoy native 200% craft affinity>`
+- **Elemental Affinities:** `<Fire, Metal, Light, Life, and Earth elements accelerate heating, diagnosis, and purification>`
+
+### 5.2 Benefits to the Soul Master's Personal Combat
+- **Meridian Conditioning:** `<Prolonged craft focus thickens energy channels and accelerates natural soul power density>`
+- **Self-Sufficiency:** `<Ability to forge bespoke battle regalia, repair soul weapons, or heal internal injuries without external reliance>`
+
+---
+
+## 6. Economic Scale, Trade & Continental Guild Politics
+- **Primary Revenue Streams:** `<Commissions for elite soul weapons, imperial military supply contracts, clinic service fees>`
+- **Raw Material Supply Chains:** `<Dependence on mining cartels, rare metal veins, herb-gathering expeditions in Star Dou Forest>`
+- **Guild Autonomy vs Imperial / Spirit Hall Control:** `<How the guild maintains neutrality or resists imperial monopolies (e.g., Gengxin City resisting Spirit Hall annexation)>`
+
+---
+
+## 7. Negative Boundaries & Professional Ethical Ceilings
+*Enforcing Rule 30: non-negotiable operational and ethical limitations.*
+
+1. **Negative Boundary 1 (Absolute Operational Ceilings):** <The profession CANNOT create matter from nothing or reverse absolute brain death; forging cannot bypass laws of thermodynamics.>
+2. **Negative Boundary 2 (Biological / Spiritual Exhaustion Limits):** <Attempting refinement or surgery beyond one's spiritual sea realm causes mental backlash, spiritual sea collapse, or permanent soul degradation.>
+3. **Negative Boundary 3 (Material Degradation & Failure Backlash):** <Failed high-tier refinement or botched surgery destroys rare materials and inflicts violent elemental explosion or energetic toxicity.>
+4. **Negative Boundary 4 (Sanderson Cost Hard Floor):** <Zero free crafts; every strike, array engraving, and restorative transfusion consumes real energetic, physical, and financial capital.>
+
+---
+
+## 8. Known Masters & Historical Luminaries
+- **Classical Douluo I Luminaries:** `<e.g., Lou Gao (President of Blacksmith Association), Tai Tan, Tang Hao, Tang San>`
+- **Modern Continental Luminaries:** `<e.g., Zhen Hua (Divine Craftsman of SL3), Mang Tian, Mu Chen>`
+
+---
+
+## 9. Operational Lifecycle & Management Protocols
+
+### 9.1 Inception Protocol (Phase 1)
+1. **File Placement:** Permanent home in `02_Story_Bible/Professions/` with the exact filename `PRF-<Profession_Name>.md` (zero spaces, Rule 10).
+2. **Metadata Integrity:** Fill YAML frontmatter completely (`uid`, `type: profession`, `guild_authority`, `core_discipline`, `ranking_system_type`).
+
+### 9.2 Audit & Verification Protocol (Phase 2)
+1. **Linter Compliance:** Run `narr lint` to verify zero CJK outside Sources, zero broken links, and valid schema.
+2. **Character Cross-Referencing:** Ensure character dossiers (`CHR-*.md`) link to this profession in their secondary skill and occupation fields.
+
+---
+
+## 10. Standardized Lexicon & Taxonomy Glossary
+
+| Term / Taxonomy | Category | Clear & Accessible Definition |
+|:---|:---|:---|
+| **Hundred Refinement (*Bailian*)** | Refining | Purifying raw metal through repeated kinetic strikes to remove impurities and increase structural density. |
+| **Thousand Refinement (*Qianlian*)** | Refining | Elevating metal beyond ordinary density into Thought Forging, establishing energetic resonance and nascent vitality. |
+| **Spirit Refinement (*Lingduan*)** | Refining | Infusing soul power and personal life force to grant genuine life and primitive consciousness to metal. |
+| **Soul Refinement (*Hunduan*)** | Refining | Elevating living metal to possess a genuine soul and bilateral communication with its creator. |
+| **Heavenly Refinement (*Tianduan*)** | Refining | Guiding soul-refined metal through elemental lightning tribulation to achieve divine status. |
+| **Blood Sacrifice (*Xianxue Jisi*)** | Tradition | Permanent energetic bonding of a practitioner's blood to their first thousand-refined tool. |
+| **Harmony Rate (*Ronghe Lǜ*)** | Metallurgy | Percentage index measuring the structural and energetic integration between distinct metals in an alloy. |

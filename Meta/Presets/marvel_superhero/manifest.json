@@ -22,5 +22,13 @@
     "suit_tech",
     "nemesis",
     "origin_event"
+  ],
+  "custom_types": [
+    "hero_persona",
+    "gadget"
+  ],
+  "seed_pages": [
+    "Meta/Templates/TMP-Hero_Persona.md",
+    "Meta/Templates/TMP-Gadget.md"
   ]
 }

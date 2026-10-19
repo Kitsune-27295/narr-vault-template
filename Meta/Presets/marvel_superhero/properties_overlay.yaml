@@ -1,0 +1,32 @@
+# Marvel Superhero Properties Overlay
+properties:
+  secret_identity:
+    type: text
+    description: "Civilian name and identity (e.g. Peter Parker)."
+  hero_alias:
+    type: text
+    description: "Public vigilante or hero moniker (e.g. Spider-Man)."
+  power_classification:
+    type: text
+    description: "Origin category: Mutant, Mutate, Tech, Mystic, Cosmic, Alien, Peak Human."
+  power_tier:
+    type: text
+    description: "Power scale: Street, City, Continental, Planetary, Cosmic, Multiversal."
+  clearance_level:
+    type: number
+    description: "SHIELD or governmental security clearance level (1-10)."
+  team_affiliation:
+    type: multitext
+    description: "Teams or coalitions: Avengers, X-Men, Fantastic Four, Defenders, etc."
+  gadgets:
+    type: multitext
+    description: "Key signatures and proprietary tech items."
+  suit_tech:
+    type: text
+    description: "Fabrication, armor grade, and onboard systems."
+  nemesis:
+    type: text
+    description: "Primary antagonist or rogues gallery anchor."
+  origin_event:
+    type: text
+    description: "Catalyst event granting abilities or starting crusade."

@@ -1,0 +1,29 @@
+---
+folder: 02_Story_Bible/Powers_and_Systems
+prefix: PWR-
+uid: "TMP-Kido"
+type: kido
+title: "<Kido Name>"
+aliases:
+  - "<Incantation Name>"
+kido_class: "<Hado | Bakudo | Kaido | Barrier | Forbidden>"
+kido_number: 1
+incantation: "<Full lyrical chant for full power cast>"
+element: "<Force | Binding | Healing | Lightning | Fire | Gravity>"
+tags:
+  - "#fandom/bleach"
+  - "#template/kido"
+---
+
+# <Kido Name>
+
+## Overview
+Classification and standard operational tactical use.
+
+## Incantation
+Full incantation text required for 100% output without Eishohaki (incantation abandonment).
+
+## Effects & Variations
+- **Standard Cast:** Damage or binding effect with full incantation.
+- **Eishohaki (Abandoned Chant):** Reduced power cast without verbal incantation.
+- **Niju Eisho (Two-Fold Chant):** Combination or chain usage.
