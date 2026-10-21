@@ -48,7 +48,12 @@ narr doctor                                       # Environment and multi-agent 
 - Rule 50: Memory & context — hot.md <=60 lines, AGENTS.md <=200 lines
 - Rule 60: Framework governance — neutral template, presets for fandom overlays
 
-## 5. Session Close
+## 5. Agent Skills & Tooling
+- Issue tracker: Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+- Domain docs: Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
+
+## 6. Session Close
 ```pwsh
 narr session close --done "<completed items>" --next "<next priority>" --decided "<key decisions>"
 ```
+

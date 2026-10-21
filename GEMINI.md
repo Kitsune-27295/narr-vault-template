@@ -15,3 +15,13 @@ All operations must adhere to:
 - Strict non-manuscript technical writing style (Rule 15)
 - Termbase consistency in translations (Rule 20)
 - `narr lint` and `narr crosscheck` must exit 0 before completing tasks.
+## Agent skills
+
+### Issue tracker
+
+Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
+
+### Domain docs
+
+Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
+
