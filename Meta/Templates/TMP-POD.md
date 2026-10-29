@@ -6,7 +6,7 @@ aliases:
   - "<Operational Codename>"
 chapter_trigger: 1
 timeline_divergence_point: "<Timeline Year / Epoch - Season / Incident>"
-diverged_from: "[[CAN-Martial_Soul_System]]"
+diverged_from: "[[CAN-Innate_Power_System]]"
 causal_type: "<Transmigrator Intervention | Knowledge Leak | Alternate Choice | Biological Anomaly | Cosmic Anomaly>"
 impact_tier: "<Tier 1: Tactical Incident | Tier 2: Factional Disruption | Tier 3: Continental Shift | Tier 4: Godhood / Planar Realignment>"
 status: active
@@ -29,7 +29,7 @@ tags:
 
 <Paragraph 1: The precise historical pivot point. Where and when does this divergence branch from the prime timeline? Who are the active agents present at the exact moment of branching?>
 
-<Paragraph 2: The causal thesis and driving mechanism. Why did this outcome change? (e.g., Transmigrated foreknowledge preventing an impulsive error, manifestation of an anomalous martial soul, refusal to enter an exploitative master-disciple contract, empirical intervention during a critical spirit ring hunt).>
+<Paragraph 2: The causal thesis and driving mechanism. Why did this outcome change? (e.g., Transmigrated foreknowledge preventing an impulsive error, manifestation of an anomalous innate power, refusal to enter an exploitative master-disciple contract, empirical intervention during a critical power source hunt).>
 
 <Paragraph 3: Macro-thematic significance. How does this divergence alter the ideological or martial trajectory of the story? (e.g., Exposing theoretical flaws in established continental dogma, fracturing the monopoly of elite sects over commoner awakening, creating a multi-polar continental rivalry).>
 
@@ -77,7 +77,7 @@ graph TD
 |:---|:---|:---|:---:|
 | **Immediate (Days)** | <Local outcome altered; duels won/lost; early registries recorded> | `<CHR-Actor_1>`, `<LOC-Local_Town>` | Tactical |
 | **Medium-Term (Months)** | <Hunting forest discoveries, academic rankings, early intelligence leaks> | `<FAC-Regional_Branch>`, `<CHR-Allies>` | Institutional |
-| **Long-Term (Years)** | <Continental tournament rosters altered, sect alliances shifted, god trial probes> | `<FAC-Imperial_Court>`, `<FAC-Spirit_Hall>` | Continental |
+| **Long-Term (Years)** | <Continental tournament rosters altered, sect alliances shifted, god trial probes> | `<FAC-Imperial_Court>`, `<FAC-Orthodox_Hall>` | Continental |
 
 ### 4.2 Counterpart Adaptive Reactions (Non-NPC Dynamics)
 - **Primary Antagonist Reaction:** <How Yu Xiaogang, <Dominant Hegemonic Faction>, or rival factions rationally react to the anomaly rather than acting blind.>
@@ -97,8 +97,8 @@ graph TD
 ## 6. Negative Boundaries & Canonical Invariants
 *Enforcing Rule 30: explicit documentation of what this POD DOES NOT change.*
 
-1. **Negative Boundary 1 (Preserved Continental Realities):** <<Dominant Hegemonic Faction> STILL maintains overwhelming military dominance across the two empires; this POD does not weaken <Dominant Hegemonic Faction>'s existing Title Douluo elders.>
-2. **Negative Boundary 2 (Unaltered Character Baselines):** <Characters not directly impacted by this divergence retain their canon martial souls, backgrounds, and personality flaws.>
+1. **Negative Boundary 1 (Preserved Continental Realities):** <<Dominant Hegemonic Faction> STILL maintains overwhelming military dominance across the two empires; this POD does not weaken <Dominant Hegemonic Faction>'s existing Apex-Tier Practitioner elders.>
+2. **Negative Boundary 2 (Unaltered Character Baselines):** <Characters not directly impacted by this divergence retain their canon innate powers, backgrounds, and personality flaws.>
 3. **Negative Boundary 3 (Planar Laws Unbroken):** <Divine ascension STILL requires divine affinity and trial completion; zero instantaneous apotheosis.>
 4. **Negative Boundary 4 (Sanderson Cost Floor):** <The protagonist CANNOT escape the ripple effects of their actions; every changed event forces recalculation and risk.>
 
@@ -107,9 +107,9 @@ graph TD
 ## 7. Affected Story Bible Entities & Manuscript Hooks
 - **Affected Character Dossiers:**
   - `<CHR-Protagonist>`: <Nature of divergence impact.>
-  - `<CHR-Tang_San>`: <Shift in relationship, rival dynamic, or altered progression.>
+  - `<CHR-Character_Name>`: <Shift in relationship, rival dynamic, or altered progression.>
 - **Affected Factions & Systems:**
-  - `<FAC-Spirit_Hall>`: <Altered surveillance status.>
+  - `<FAC-Orthodox_Hall>`: <Altered surveillance status.>
   - `<SYS-Power_System>`: <Governing threshold mechanics.>
 - **Manuscript Chapters Deploying this POD:**
   - Initial Trigger: `<C01-Capitulo_pt-BR>` (Paragraphs `<!-- p:N -->`)

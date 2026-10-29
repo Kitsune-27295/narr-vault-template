@@ -1,0 +1,72 @@
+version: "1.0"
+framework: "narr-fiction"
+name: "Narrative Fiction Story Bible Vault Map"
+description: "Entity- and canon-first retrieval map for fiction worldbuilding and serialized storytelling."
+default_zone: "story_bible"
+zones:
+  canon:
+    paths:
+      - "01_Canon_and_Divergence/**"
+    priority_weight: 2.2
+    chunk_strategy: "header_hierarchical"
+    chunk_size: 1500
+    chunk_overlap: 200
+    extract_frontmatter:
+      - "uid"
+      - "title"
+      - "type"
+      - "status"
+      - "aliases"
+  story_bible:
+    paths:
+      - "02_Story_Bible/**"
+    priority_weight: 2.0
+    chunk_strategy: "header_hierarchical"
+    chunk_size: 1500
+    chunk_overlap: 200
+    extract_frontmatter:
+      - "uid"
+      - "title"
+      - "type"
+      - "status"
+      - "aliases"
+      - "tags"
+  continuity:
+    paths:
+      - "03_Continuity_and_Timeline/**"
+    priority_weight: 1.8
+    chunk_strategy: "header_hierarchical"
+    chunk_size: 1500
+    chunk_overlap: 200
+    extract_frontmatter:
+      - "uid"
+      - "title"
+      - "status"
+  atlas:
+    paths:
+      - "00_Atlas/**"
+    priority_weight: 1.5
+    chunk_strategy: "header_hierarchical"
+    chunk_size: 1500
+    chunk_overlap: 150
+  manuscript:
+    paths:
+      - "04_Manuscript/**"
+    priority_weight: 1.0
+    chunk_strategy: "paragraph"
+    chunk_size: 1200
+    chunk_overlap: 150
+  ledgers:
+    paths:
+      - "08_Ledgers/**"
+    priority_weight: 0.9
+    chunk_strategy: "paragraph"
+    chunk_size: 1000
+    chunk_overlap: 100
+  memory:
+    paths:
+      - "memory/**"
+    priority_weight: 0.8
+    chunk_strategy: "paragraph"
+    chunk_size: 1000
+    chunk_overlap: 100

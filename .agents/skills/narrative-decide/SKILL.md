@@ -1,6 +1,6 @@
 ---
 name: narrative-decide
-description: Record or supersede architectural and narrative choices (ADRs) in memory/decisions/ with context, alternatives, and consequences.
+description: "Record or supersede architectural and narrative choices (ADRs) in memory/decisions/ with context, alternatives, and consequences. Use when a narrative or architectural choice must be recorded or superseded in memory/decisions/."
 ---
 # Record a Narrative or Architectural Decision
 

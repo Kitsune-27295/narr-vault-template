@@ -51,6 +51,7 @@ narr doctor                                       # Environment and multi-agent 
 ## 5. Agent Skills & Tooling
 - Issue tracker: Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
 - Domain docs: Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
+- Decisions: record curator decisions with `narr decide` into `memory/decisions/`; `08_Ledgers/LDG-Architecture_Decision_Records.md` holds the framework's own ADRs.
 
 ## 6. Session Close
 ```pwsh

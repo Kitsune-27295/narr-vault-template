@@ -1,6 +1,6 @@
 ---
 name: continuity-postmortem
-description: Conduct a blameless postmortem when a manuscript chapter violates established canon baselines, power-scaling limits (Sanderson), character voice, or timeline causality.
+description: "Conduct a blameless postmortem when a manuscript chapter violates established canon baselines, power-scaling limits (Sanderson), character voice, or timeline causality. Use when a chapter breaks canon, a power limit, a character voice or the timeline and the cause must be traced."
 ---
 
 # Narrative Continuity Postmortem
@@ -27,6 +27,18 @@ Use when an author, editor, or linter flags a continuity break, character voice 
 - **Type A: Unintentional Hallucination / Fact Error:** The prose contradicts an immutable baseline (e.g., character absorbs a 10,000-year ring at Rank 10 without explanation).
 - **Type B: Intentional Fanfiction Divergence:** The change is an intentional AU element that was never formally declared in `01_Canon_and_Divergence/PODs/`.
 - **Type C: Character Voice / Settei Regression:** A character uses modern slang, acts out of alignment with their `Voice & Mannerisms`, or breaks their established knowledge horizon.
+
+---
+
+## 2b. Give Each Finding a Verdict and a Severity
+
+Every finding in the report carries one verdict, one severity and a quoted paragraph marker as evidence:
+- **Verdict `manuscript-bug`:** the chapter is wrong; fix the prose (with approval).
+- **Verdict `stale-canon`:** the chapter is right and the baseline, ledger or dossier is out of date; update the page.
+- **Verdict `retcon`:** the author means to change what was established; this needs `narr decide "<title>"` before any edit, so the reason is recorded.
+- **Severity:** *critical* (breaks canon or a character's death/knowledge), *moderate* (a visible inconsistency a reader may catch), *polish* (a small slip).
+
+Deterministic help: `narr crosscheck` (promises and ledgers), `CHR001` (a dead character in a later cast), `MSC005` (a gap in the chapter numbers).
 
 ---
 

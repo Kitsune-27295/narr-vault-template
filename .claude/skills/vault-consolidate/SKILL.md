@@ -1,6 +1,6 @@
 ---
 name: vault-consolidate
-description: Audit vault consolidation leads (near-duplicate notes, dead links, stale superseded links, open contradictions) using deterministic Jaccard token overlap (narr candidates).
+description: "Audit vault consolidation leads (near-duplicate notes, dead links, stale superseded links, open contradictions) using deterministic Jaccard token overlap (narr candidates). Use when the vault needs a consolidation pass for duplicate notes, dead links, superseded links or open contradictions."
 ---
 
 # Vault Consolidation Routine

@@ -1,6 +1,6 @@
 ---
 name: write-chapter
-description: Draft narrative chapters in pt-BR using hybrid prompt assembly, <!-- p:N --> paragraph delimiters, and continuous ledger synchronization
+description: "Draft narrative chapters in pt-BR using hybrid prompt assembly, <!-- p:N --> paragraph delimiters, and continuous ledger synchronization. Use when a chapter must be drafted in pt-BR with paragraph markers, continuity and ledger synchronisation."
 ---
 # write-chapter
 
@@ -56,8 +56,14 @@ Verifies:
 - Sequential integrity of `<!-- p:N -->` paragraph delimiters.
 - Wikilink bracket syntax balance (`[[...]]`).
 
+### Step 4b: Read the Prose Signals
+```bash
+narr stats <NN>
+```
+Look at sentence rhythm, filter words, -mente adverbs and repeated openers. These are advisory (STY001-STY005); fix real problems and explain the rest. Allow at most three revise-and-validate rounds per chapter; after that, record what is left in the handoff instead of looping.
+
 ### Step 5: Synchronize Operational Ledgers
-Immediately update the continuity ledgers in `08_Ledgers/`:
+First write the *state diff* of the chapter in the handoff: new facts, changed facts, and contradictions that stay open until the curator decides (log those in `LDG-Contradictions.md`). Then immediately update the continuity ledgers in `08_Ledgers/`:
 1. `08_Ledgers/LDG-Character_Knowledge.md`:
    - Append newly acquired knowledge or deceptions experienced by the characters.
 2. `08_Ledgers/LDG-Chekhov_Guns.md`:

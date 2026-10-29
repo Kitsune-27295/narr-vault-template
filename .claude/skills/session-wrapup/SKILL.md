@@ -1,6 +1,6 @@
 ---
 name: session-wrapup
-description: Close a working session, record daily journal, trim working memory (hot.md <= 60 lines), update handoff ledger, and log lessons.
+description: "Close a working session, record daily journal, trim working memory (hot.md <= 60 lines), update handoff ledger, and log lessons. Use when a working session ends and the handoff, hot memory and lessons must be updated."
 ---
 # Session Wrapup Routine
 

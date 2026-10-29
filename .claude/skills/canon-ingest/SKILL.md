@@ -1,6 +1,6 @@
 ---
 name: canon-ingest
-description: Capture raw canon sources, plan multi-source integrations, verify literal quotes, and freeze into immutable store with audit logging (Second_brain parity).
+description: "Capture raw canon sources, plan multi-source integrations, verify literal quotes, and freeze into immutable store with audit logging (Second_brain parity). Use when a raw source must be captured, verified against literal quotes and frozen into the canon store."
 ---
 # Canon Ingestion & Baseline Synthesis Routine
 

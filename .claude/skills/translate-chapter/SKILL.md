@@ -1,6 +1,6 @@
 ---
 name: translate-chapter
-description: Translate and localize manuscript chapters from pt-BR to es publication with 1:1 paragraph parity (MSC004) and TRM-Termbase compliance
+description: "Translate and localize manuscript chapters from pt-BR to es publication with 1:1 paragraph parity (MSC004) and TRM-Termbase compliance. Use when a pt-BR chapter must be translated to es with paragraph parity and termbase compliance."
 ---
 # translate-chapter
 
@@ -67,7 +67,7 @@ And execute deep invariant validation:
 narr prompt validate translate-chapter 04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md --source-file 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug_PT>.md
 ```
 Verifies:
-- MSC004: Paragraph count difference is within strict tolerance ($\le 10\%$).
+- MSC004: Every `<!-- p:N -->` marker of the source appears exactly once, in the same order (block counts with a 10 % tolerance apply only when neither file has markers).
 - Complete preservation of sequential `<!-- p:N -->` paragraph delimiters.
 - VAL010: Zero CJK characters in publication output.
 - VAL024: Zero conversational assistant preambles.

@@ -1,0 +1,3 @@
+#!/bin/sh
+V="$(cd "$(dirname "$0")/.." && pwd)"
+narr hook run commit-msg "$1" --vault "$V" || exit 1

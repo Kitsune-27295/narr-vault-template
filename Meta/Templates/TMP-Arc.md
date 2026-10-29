@@ -86,7 +86,7 @@ tags:
 
 - **Cultivation Rank Invariants:**
   - `<CHR-Protagonist>`: Starts at Rank `<N>` -> Concludes at Rank `<M>` (Max gain strictly limited by biological absorption time).
-  - New Spirit Rings / Soul Bones Acquired: `<Item / Beast taxa with verified age within physical limit>`.
+  - New Power Sources / Relics Acquired: `<Item / Beast taxa with verified age within physical limit>`.
 - **Physical & Material Costs Incurred:**
   - *Biological Backlash:* <Meridian damage, stamina exhaustion requiring N weeks of recovery.>
   - *Resource Depletion:* <Exhausted hidden weapon bolts, depleted pills, spent currency.>
@@ -96,7 +96,7 @@ tags:
 ## 6. Negative Boundaries & Explicit Scope Constraints
 *Enforcing Rule 30: explicit documentation of what this arc WILL NOT resolve or contain.*
 
-1. **Negative Boundary 1 (Scope Creep Prohibition):** <This arc WILL NOT escalate to continental war or premature Title Douluo confrontations.>
+1. **Negative Boundary 1 (Scope Creep Prohibition):** <This arc WILL NOT escalate to continental war or premature Apex-Tier Practitioner confrontations.>
 2. **Negative Boundary 2 (Unearned Breakthrough Ceiling):** <No character will advance more than their hard physiological cultivation limit without immortal herb catalyst.>
 3. **Negative Boundary 3 (Secret Preservation):** <The protagonist's deepest transmigration secrets WILL NOT be discovered by secondary characters.>
 4. **Negative Boundary 4 (Sanderson Cost Floor):** <The climactic victory CANNOT be achieved without exhausting core trump cards and incurring tactical trade-offs.>

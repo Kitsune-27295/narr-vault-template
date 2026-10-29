@@ -1,13 +1,13 @@
 ---
 name: framework-sync-governance
-description: Standardized bidirectional governance pipeline for upstream promotion (story vault -> neutral template framework) and downstream inheritance (template framework -> story vault). Enforces base framework neutrality, bifurcated change routing (neutral core vs. preset catalog), and zero-regression quality gates using the v2 narr CLI.
+description: "Standardized bidirectional governance pipeline for upstream promotion (story vault -> neutral template framework) and downstream inheritance (template framework -> story vault). Enforces base framework neutrality, bifurcated change routing (neutral core vs. preset catalog), and zero-regression quality gates using the v2 narr CLI. Use when a change must move between a story vault and the neutral template framework, in either direction."
 ---
 
 # Framework Synchronization & Preset Governance
 
 ## Mission
 
-Govern the bidirectional flow of infrastructure, schemas, rules, skills, and specialized lore between the central framework (`NARRATIVE_STORY_BIBLE_TEMPLATE_v2`) and individual story vaults (e.g. `Douluo_Dalu-`). Ensure that the upstream framework base remains **100% neutral and IP-agnostic**, while all fandom-specific innovations are cleanly routed into the **Modular Presets Catalog** (`Meta/Presets/`) without configuration drift or structural contamination.
+Govern the bidirectional flow of infrastructure, schemas, rules, skills, and specialized lore between the central framework (`NARRATIVE_STORY_BIBLE_TEMPLATE_v2`) and individual story vaults (e.g. `My_Fandom-`). Ensure that the upstream framework base remains **100% neutral and IP-agnostic**, while all fandom-specific innovations are cleanly routed into the **Modular Presets Catalog** (`Meta/Presets/`) without configuration drift or structural contamination.
 
 ---
 
@@ -24,7 +24,7 @@ graph TD
 
     Classify --> |Universal / Agnostic| Core["Merge into Template Neutral Core\n(NARRATIVE_STORY_BIBLE_TEMPLATE_v2)\n- CLI core (tools/src/narr/)\n- Universal linters & tests\n- Right-sized ingest protocol\n- Multi-agent skill sync (.agents / .claude)\n- Cognitive Memory ledgers (ADR-005)"]:::coreNode
 
-    Classify --> |Specialized / Fandom Lore| Catalog["Merge into Preset Catalog\n(Meta/Presets/<fandom>/)\n- Cultivation / Spirit ring types\n- Specialized termbase seeds\n- Visual concept art presets\n- Setting-specific rules & ledgers"]:::catalogNode
+    Classify --> |Specialized / Fandom Lore| Catalog["Merge into Preset Catalog\n(Meta/Presets/<fandom>/)\n- Cultivation / power-source types\n- Specialized termbase seeds\n- Visual concept art presets\n- Setting-specific rules & ledgers"]:::catalogNode
 ```
 
 ---
@@ -46,7 +46,7 @@ Every proposed enhancement must be classified under one of two mutually exclusiv
 ### Track B: Specialized Setting Lore (Harvest into Presets Catalog)
 - **Criteria:** Innovations tied directly to a specific intellectual property, magic system, cultivation hierarchy, or fandom lore.
 - **Examples:**
-  - Douluo Dalu spirit rank tables, martial souls, spirit bones, and godhood attributes.
+  - Setting-specific rank tables, innate powers, relics, and godhood attributes.
   - Type definitions for superhero power classes, chakra natures, or zanpakuto states.
   - Specialized fandom dictionaries and translation glossaries.
 - **Routing Invariant:** Never commit setting-specific lore directly to the neutral template root. Route exclusively to `Meta/Presets/<fandom>/manifest.json` and `Meta/Presets/<fandom>/seeds/`.

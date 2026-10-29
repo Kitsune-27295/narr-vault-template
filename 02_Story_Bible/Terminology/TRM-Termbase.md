@@ -3,7 +3,7 @@ uid: "TRM-Termbase"
 type: termbase
 title: "Master Localization, Terminology & Pronoun Matrix"
 status: active
-scope: source_canon
+scope: fanfic_canon
 ---
 # TRM-Termbase — Master Localization & Style Sheet
 

@@ -1,6 +1,6 @@
 ---
 name: conflict-arbitration
-description: Formal protocol for arbitrating canon collisions, source contradictions, and Point of Divergence (POD) branchings
+description: "Formal protocol for arbitrating canon collisions, source contradictions, and Point of Divergence (POD) branchings. Use when two sources, a baseline and a fanfic rule, or a point of divergence contradict each other."
 ---
 # conflict-arbitration
 

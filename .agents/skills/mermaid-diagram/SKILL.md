@@ -1,6 +1,6 @@
 ---
 name: mermaid-diagram
-description: Architect, generate, validate, and refactor clean, robust, and syntax-compliant Mermaid diagrams for narrative timelines, magic flows, factions, and lineages without ASCII bloat.
+description: "Architect, generate, validate, and refactor clean, robust, and syntax-compliant Mermaid diagrams for narrative timelines, magic flows, factions, and lineages without ASCII bloat. Use when a timeline, magic flow, faction map or lineage needs a Mermaid diagram instead of text art."
 ---
 # Mermaid Diagram Engineering for Narrative Vaults
 

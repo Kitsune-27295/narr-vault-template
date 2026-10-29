@@ -138,7 +138,11 @@ def wire_vault(home: Path) -> None:
     python = venv_python(home)
     if (VAULT / ".git").exists():
         run("git", "-C", str(VAULT), "config", "core.hooksPath", ".githooks")
-    run(python, "-m", "narr", "doctor", "--vault", str(VAULT))
+    # `narr doctor` exits non-zero when a diagnostic fails (for instance an older vault stamp): report it, do not abort the install.
+    command = [str(python), "-m", "narr", "doctor", "--vault", str(VAULT)]
+    print("$", " ".join(command), flush=True)
+    if subprocess.run(command, check=False).returncode != 0:
+        print("narr doctor reported problems above; run `narr upgrade` in the vault, then `narr doctor` again.", flush=True)
 
 
 def add_to_path(home: Path) -> None:

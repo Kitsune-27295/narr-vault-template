@@ -1,6 +1,6 @@
 ---
 name: lore-dossier
-description: Maintain authoritative character, faction, and world entity dossiers with rewritten Summary and strictly append-only Timeline.
+description: "Maintain authoritative character, faction, and world entity dossiers with rewritten Summary and strictly append-only Timeline. Use when a character, faction or world entity dossier must be created or updated."
 ---
 # Lore Dossier Maintenance
 

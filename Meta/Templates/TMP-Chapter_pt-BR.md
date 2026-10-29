@@ -9,6 +9,7 @@ status: draft
 pov: "<CHR-Nome_do_Personagem_POV>"
 timeline_event: "<EVT-Nome_do_Evento>"
 arc: "<ARC-Nome_do_Arco>"
+characters: [] # cast of this chapter, e.g. [CHR-Nome]; checked against died_in (CHR001)
 word_count: 0
 created: YYYY-MM-DD
 updated: YYYY-MM-DD

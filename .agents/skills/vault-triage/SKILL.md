@@ -1,6 +1,6 @@
 ---
 name: vault-triage
-description: Systematically triage pending raw sources in Sources/inbox/ awaiting compilation. Evaluates ontological category (worldbuilding vs character biography to enforce VAL031), era duplication, and relevance.
+description: "Systematically triage pending raw sources in Sources/inbox/ awaiting compilation. Evaluates ontological category (worldbuilding vs character biography to enforce VAL031), era duplication, and relevance. Use when raw sources are waiting in Sources/inbox/ and need a triage decision."
 ---
 
 # Vault Ingestion Triage Routine
@@ -28,11 +28,11 @@ For each pending source, inspect its title, origin, and the first 40-60 lines.
 For every pending source, answer:
 
 1. **Ontological Domain (VAL031 Purity):**
-   - Does this source describe a **Macro-Worldbuilding System** (cultivation ranks, soul rings, soul bones, geography, factions) or an **Individual Character Profile** (biography, personal timeline, individual abilities)?
+   - Does this source describe a **Macro-Worldbuilding System** (cultivation ranks, power sources, relics, geography, factions) or an **Individual Character Profile** (biography, personal timeline, individual abilities)?
    - *Rule:* Characters must NEVER be compiled into worldbuilding baselines. They require dedicated `CAN-CHR-*` profiles.
 
 2. **Topical Equivalence & Sister Clusters:**
-   - Does this source represent an era continuation or variant of an existing article (e.g., `Spirit_Ranks_II`, `Spirit_Ranks_III`)?
+   - Does this source represent an era continuation or variant of an existing article (e.g., `Power_Tiers_II`, `Power_Tiers_III`)?
    - *Action:* If yes, map to an existing baseline cluster (Jaccard $\ge 0.80$).
 
 3. **Canon Authority & Discrepancies:**

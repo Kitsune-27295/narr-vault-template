@@ -1,6 +1,6 @@
 ---
 name: sandbox-promote
-description: Sanitize, distill, and promote mature concepts from 06_Ideation_and_Unblocking into authoritative Story Bible layers.
+description: "Sanitize, distill, and promote mature concepts from 06_Ideation_and_Unblocking into authoritative Story Bible layers. Use when a mature idea in 06_Ideation_and_Unblocking must become a Story Bible page."
 ---
 # Sandbox Distillation & Promotion (`sandbox-promote`)
 

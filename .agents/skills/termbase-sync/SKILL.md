@@ -1,6 +1,6 @@
 ---
 name: termbase-sync
-description: Synchronize and govern multi-lingual terminology, cultivation ranks, proper nouns, and measurement units in TRM-Termbase.md
+description: "Synchronize and govern multi-lingual terminology, cultivation ranks, proper nouns, and measurement units in TRM-Termbase.md. Use when terminology, ranks, proper nouns or units must be kept consistent across languages in the termbase."
 ---
 # termbase-sync
 

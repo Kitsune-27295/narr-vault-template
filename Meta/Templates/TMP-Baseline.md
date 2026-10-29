@@ -5,15 +5,15 @@ title: "<Canonical Entity or System Name>"
 aliases:
   - "<Pinyin / Alternate Name>"
 source_ids:
-  - "SRC-Martial_Souls"
-  - "SRC-Soul_Power"
+  - "SRC-Innate_Powers"
+  - "SRC-Power_Reserve"
 status: confirmed
 scope: source_canon
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags:
   - "canon/baseline"
-  - "douluo-dalu"
+  - "fandom-slug"
 ---
 # <Canonical Entity or System Name>
 
@@ -27,7 +27,7 @@ tags:
 
 <Paragraph 1: Foundational definition and planar ontology. What is this entity, power, lineage, or system within the <Setting Name> universe? How does it originate in the celestial or biological history of the plane?>
 
-<Paragraph 2: Metaphysical and operational mechanics. How does this system interact with soul masters' meridians, soul power cultivation, or environmental essence? What universal laws govern its activation, breakthrough, or inheritance?>
+<Paragraph 2: Metaphysical and operational mechanics. How does this system interact with practitioners' meridians, power reserve cultivation, or environmental essence? What universal laws govern its activation, breakthrough, or inheritance?>
 
 <Paragraph 3: Societal and geopolitical footprint. How do continental factions (e.g., <Dominant Hegemonic Faction>, the Two Great Empires, the Upper Three Sects) evaluate, monopolize, or respond to this phenomenon?>
 
@@ -57,7 +57,7 @@ tags:
 ## 4. Tactical Combat Principles & Invariants
 - **Activation & Reaction Timings:** <Pre-activation requirements, physical transformation lag, or instantaneous summoning dynamics.>
 - **Defensive & Counter Vectors:** <How this entity interacts with physical armor, elemental attacks, or spatial suppression.>
-- **Resource Depletion Rate:** <Stamina, soul power, or spiritual exhaustion curves under continuous tactical deployment.>
+- **Resource Depletion Rate:** <Stamina, power reserve, or spiritual exhaustion curves under continuous tactical deployment.>
 
 ---
 
@@ -72,9 +72,9 @@ tags:
 ## 6. Verbatim Evidence & Source Grounding
 *Enforcing Rule 30: literal quotations from frozen immutable sources in `01_Canon_and_Divergence/Sources/`.*
 
-- *"<Literal verbatim quotation from cited source demonstrating the primary baseline fact.>"* [[SRC-Martial_Souls]]
-- *"<Literal verbatim quotation demonstrating secondary operational evidence.>"* [[SRC-Soul_Power]]
-- *"<Literal verbatim quotation establishing hard limits or historical precedent.>"* [[SRC-Soul_Rings]]
+- *"<Literal verbatim quotation from cited source demonstrating the primary baseline fact.>"* [[SRC-Innate_Powers]]
+- *"<Literal verbatim quotation demonstrating secondary operational evidence.>"* [[SRC-Power_Reserve]]
+- *"<Literal verbatim quotation establishing hard limits or historical precedent.>"* [[SRC-Power_Sources]]
 
 ---
 

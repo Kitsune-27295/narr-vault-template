@@ -1,6 +1,6 @@
 ---
 name: vault-query
-description: Disciplined knowledge query: search before reading, answer with citations, report gaps, and file back valuable syntheses.
+description: "Disciplined knowledge query: search before reading, answer with citations, report gaps, and file back valuable syntheses. Use when the vault must be searched and answered with citations and gaps reported."
 ---
 # Query the Vault
 
