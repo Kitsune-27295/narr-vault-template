@@ -1,7 +1,7 @@
 {
   "name": "douluo_dalu",
   "display_name": "Douluo Dalu (Soul Land) / Cultivation Fantasy",
-  "version": "1.2",
+  "version": "2.0.0",
   "fandom": "Douluo Dalu",
   "genre": "Xuanhuan / Cultivation Fantasy",
   "description": "Specialized framework preset for Douluo Dalu and related xianxia/xuanhuan fanfictions. Includes cultivation ranks, spiritual realms, martial souls, spirit beasts, alchemy, soul rings, and strict Pinyin romanization rules.",
@@ -11,28 +11,7 @@
     "Pinyin Romanization standard with Zero-CJK enforcement",
     "Alchemy and Crafting tiered schemas",
     "Martial soul, soul beast, profession, theory, event and item page templates",
-    "Rank ladder, refinement stages and spelling decisions seed (es and pt-BR proposed)"
-  ],
-  "properties": [
-    "wuhun",
-    "spiritual_realm",
-    "rank",
-    "combat_system",
-    "tier",
-    "pattern",
-    "primary",
-    "secondary",
-    "species",
-    "era",
-    "canon_status",
-    "source_refs",
-    "evidence_quote",
-    "evidence_location",
-    "work_citation",
-    "captured",
-    "excerpt_of",
-    "reading",
-    "reading_note"
+    "Rank ladder, refinement stages and spelling decisions seed (es and pt-BR)"
   ],
   "custom_types": [
     "martial_soul",
@@ -40,15 +19,18 @@
     "profession",
     "theory"
   ],
-  "seed_pages": [
-    "Meta/Templates/TMP-Event.md",
-    "Meta/Templates/TMP-Item.md",
-    "Meta/Templates/TMP-Profession.md",
-    "Meta/Templates/TMP-Theory.md",
-    "Meta/Templates/TMP-Martial_Soul.md",
-    "Meta/Templates/TMP-Soul_Beast.md",
-    "Meta/Templates/TMP-Douluo_Character.md",
-    "02_Story_Bible/Terminology/TRM-Douluo_Terms.md",
-    "eval/queries.yaml"
+  "seeds": {
+    "seeds/TMP-Event.md.seed": "Meta/Templates/TMP-Event.md",
+    "seeds/TMP-Item.md.seed": "Meta/Templates/TMP-Item.md",
+    "seeds/TMP-Profession.md.seed": "Meta/Templates/TMP-Profession.md",
+    "seeds/TMP-Theory.md.seed": "Meta/Templates/TMP-Theory.md",
+    "seeds/TMP-Martial_Soul.md.seed": "Meta/Templates/TMP-Martial_Soul.md",
+    "seeds/TMP-Soul_Beast.md.seed": "Meta/Templates/TMP-Soul_Beast.md",
+    "seeds/TMP-Douluo_Character.md.seed": "Meta/Templates/TMP-Douluo_Character.md",
+    "seeds/TRM-Douluo_Terms.md.seed": "02_Story_Bible/Terminology/TRM-Douluo_Terms.md",
+    "seeds/queries.yaml.seed": "eval/queries.yaml"
+  },
+  "required_tags": [
+    "#fandom/douluo_dalu"
   ]
 }

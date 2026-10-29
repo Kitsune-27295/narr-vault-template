@@ -26,3 +26,39 @@ properties:
   secondary:
     type: text
     description: "Secondary martial soul in dual-wielding configurations."
+  species:
+    type: text
+    description: "Species or lineage classification for beasts and spiritual entities."
+  era:
+    type: text
+    description: "Historical era or timeline generation in continental history."
+  canon_status:
+    type: text
+    description: "Verification status against canon sources (canon, fanon, divergent)."
+  source_refs:
+    type: multitext
+    description: "List of cited canon or source document UIDs."
+  evidence_quote:
+    type: text
+    description: "Verbatim quote validating the property or claim."
+  evidence_location:
+    type: text
+    description: "Chapter and paragraph coordinate of the cited evidence."
+  work_citation:
+    type: text
+    description: "Canonical novel, manhua, or official source title."
+  captured:
+    type: date
+    description: "Date the evidence or entry was captured into the story bible."
+  excerpt_of:
+    type: multitext
+    description: "Parent source files or documents this entry is extracted from."
+  reading:
+    type: text
+    description: "Reading state or priority for research sources."
+  reading_note:
+    type: text
+    description: "Curator annotation regarding source reliability."
+  verified:
+    type: date
+    description: "Date the entry was verified against the canon baseline."

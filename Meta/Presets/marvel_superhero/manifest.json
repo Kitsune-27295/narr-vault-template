@@ -1,7 +1,7 @@
 {
   "name": "marvel_superhero",
   "display_name": "Marvel / Superhero & Western Sci-Fi",
-  "version": "1.0",
+  "version": "2.0.0",
   "fandom": "Marvel Universe",
   "genre": "Superhero / Sci-Fi / Urban Fantasy",
   "description": "Specialized framework preset for Marvel, DC, and superhero fanfictions. Includes vigilante ranks, secret identities, power classifications, gadgets, SHIELD clearance tiers, and Earth designation mappings.",
@@ -11,24 +11,15 @@
     "Equipment and Gadget schematics (e.g. Web-Shooters, Armor)",
     "Earth Universe Mapping (e.g. Earth-616, Earth-1610)"
   ],
-  "properties": [
-    "secret_identity",
-    "hero_alias",
-    "power_classification",
-    "power_tier",
-    "clearance_level",
-    "team_affiliation",
-    "gadgets",
-    "suit_tech",
-    "nemesis",
-    "origin_event"
-  ],
   "custom_types": [
     "hero_persona",
     "gadget"
   ],
-  "seed_pages": [
-    "Meta/Templates/TMP-Hero_Persona.md",
-    "Meta/Templates/TMP-Gadget.md"
+  "seeds": {
+    "seeds/TMP-Hero_Persona.md.seed": "Meta/Templates/TMP-Hero_Persona.md",
+    "seeds/TMP-Gadget.md.seed": "Meta/Templates/TMP-Gadget.md"
+  },
+  "required_tags": [
+    "#fandom/marvel"
   ]
 }

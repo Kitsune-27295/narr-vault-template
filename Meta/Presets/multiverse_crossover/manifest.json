@@ -1,7 +1,7 @@
 {
   "name": "multiverse_crossover",
   "display_name": "Multiverse & Crossover Fusion",
-  "version": "1.0",
+  "version": "2.0.0",
   "fandom": "Multi-Fandom / Cross-Cosmology",
   "genre": "Multiverse / Crossover / Reality Fusion",
   "description": "Specialized framework preset for cross-universe travels, dimensional fusions, and multiverse variants. Tracks origin realities, reality anchors, divergence catalysts, and cosmological stability indexes.",
@@ -11,22 +11,15 @@
     "Cross-System Power Equalization matrices",
     "Cosmological Ledger & Timeline divergence mapping"
   ],
-  "properties": [
-    "origin_universe",
-    "current_reality",
-    "variant_of",
-    "anchor_point",
-    "reality_stability",
-    "power_equalization",
-    "crossover_origin",
-    "travel_method"
-  ],
   "custom_types": [
     "variant",
     "reality_anchor"
   ],
-  "seed_pages": [
-    "Meta/Templates/TMP-Variant.md",
-    "Meta/Templates/TMP-Reality_Anchor.md"
+  "seeds": {
+    "seeds/TMP-Variant.md.seed": "Meta/Templates/TMP-Variant.md",
+    "seeds/TMP-Reality_Anchor.md.seed": "Meta/Templates/TMP-Reality_Anchor.md"
+  },
+  "required_tags": [
+    "#fandom/multiverse"
   ]
 }
