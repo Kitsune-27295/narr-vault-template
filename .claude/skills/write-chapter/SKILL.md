@@ -19,18 +19,14 @@ Before writing a single paragraph of narrative prose:
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Scaffold Chapter Page
-Generate the chapter markdown file using the blueprint engine:
+Generate the chapter markdown file:
 ```bash
-narr new chapter_pt "C<NN> - <Chapter_Title>"
+narr chapter new <NN> "<Chapter_Title>" --pov "<Character_Name>"
 ```
 This creates `04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md` with compliant frontmatter (`type: chapter`, `language: pt-BR`, `status: draft`).
 
 ### Step 2: Assemble Deterministic Context
-Generate the fiction-conscious prompt with token budgeting:
-```bash
-narr prompt render write-chapter --chapter <NN> --pov "<Character_Name>" --arc "<Arc_Name>"
-```
-Review the assembled context sections:
+Assemble the context yourself, within a small token budget; read:
 - Atmospheric Tone & Negative Boundaries from `SCP-Tone_and_Identity_Bible.md`.
 - Epistemic Horizon Ledger from `LDG-Character_Knowledge.md` (ensuring the POV character does not possess out-of-scene knowledge).
 - Active Plot Threads & Chekhov Weapons.
@@ -48,7 +44,7 @@ Draft the chapter in `04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md` observing th
 ### Step 4: Validate Invariants
 Run deterministic post-generation validation:
 ```bash
-narr prompt validate write-chapter 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
+narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
 ```
 Verifies:
 - VAL010: Zero CJK characters outside raw sources.
@@ -57,9 +53,7 @@ Verifies:
 - Wikilink bracket syntax balance (`[[...]]`).
 
 ### Step 4b: Read the Prose Signals
-```bash
-narr stats <NN>
-```
+Read the STY001-STY005 warnings that `narr lint` printed for the chapter.
 Look at sentence rhythm, filter words, -mente adverbs and repeated openers. These are advisory (STY001-STY005); fix real problems and explain the rest. Allow at most three revise-and-validate rounds per chapter; after that, record what is left in the handoff instead of looping.
 
 ### Step 5: Synchronize Operational Ledgers
@@ -78,6 +72,6 @@ First write the *state diff* of the chapter in the handoff: new facts, changed f
 Execute vault integrity checks:
 ```bash
 narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
-narr crosscheck
+python tools/vault_audit.py
 ```
 Both commands must report 0 errors and 0 issues before the drafting turn is complete.

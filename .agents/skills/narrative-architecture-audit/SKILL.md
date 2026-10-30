@@ -8,7 +8,7 @@ Use this skill to diagnose how a chapter or arc is built. It reads five groups s
 
 ## Read the five groups one at a time
 Do not mix groups in one pass; each pass answers one question.
-1. **Promises and payoffs:** what does the text promise the reader, and where is it kept? Cross-check `LDG-Foreshadowing.md`, `LDG-Chekhov_Guns.md` and the output of `narr crosscheck`.
+1. **Promises and payoffs:** what does the text promise the reader, and where is it kept? Cross-check `LDG-Foreshadowing.md`, `LDG-Chekhov_Guns.md` and the output of `python tools/vault_audit.py`.
 2. **Causal chain:** does each beat follow from the previous one with "but" or "therefore", not "and then"? List every "and then" link.
 3. **Character change:** what does the POV character believe at the start, what at the end, and which scene proves the shift? An arc without proof is a claim.
 4. **Information flow:** who knows what, and when does the reader learn it? Check `LDG-Character_Knowledge.md` for anyone acting on knowledge they have not gained. Flag exposition delivered in one block.

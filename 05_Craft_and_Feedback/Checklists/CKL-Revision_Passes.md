@@ -12,7 +12,7 @@ Use with the `revision-pass` skill. Sources are credited in [[CKL-Craft_Sources]
 
 ## 1. Structure
 - [ ] The chapter serves its arc beat.
-- [ ] Promises and payoffs line up with the ledgers (`narr crosscheck` passes).
+- [ ] Promises and payoffs line up with the ledgers (`python tools/vault_audit.py` passes).
 - [ ] Beats connect with "but" or "therefore", not "and then".
 - [ ] Characters act only on what they know.
 
@@ -22,7 +22,7 @@ Use with the `revision-pass` skill. Sources are credited in [[CKL-Craft_Sources]
 - [ ] Exposition arrives in small pieces, tied to a want.
 
 ## 3. Line
-- [ ] Sentence lengths vary (`narr stats`, STY003).
+- [ ] Sentence lengths vary (`narr lint`, STY003).
 - [ ] Filter words and -mente adverbs are trimmed where they blur the image (STY001, STY002).
 - [ ] Sentence openers do not repeat in runs (STY004).
 - [ ] Stock phrases and "not X, but Y" cadences are replaced with specific images (STY005).
@@ -32,5 +32,5 @@ Use with the `revision-pass` skill. Sources are credited in [[CKL-Craft_Sources]
 - [ ] Defect list written first, with paragraph markers.
 - [ ] Curator approved the items to change.
 - [ ] Each change passed the reversion test.
-- [ ] `narr prompt validate`, `narr lint` and `narr translate check` pass.
+- [ ] `narr lint` and `narr translate check` pass.
 - [ ] At most three rounds per scale.

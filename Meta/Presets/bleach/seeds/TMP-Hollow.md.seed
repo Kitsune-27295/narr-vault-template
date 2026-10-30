@@ -1,6 +1,4 @@
 ---
-folder: 02_Story_Bible/Characters
-prefix: CHR-
 uid: "TMP-Hollow"
 type: hollow
 title: "<Hollow or Arrancar Name>"
@@ -33,3 +31,10 @@ Origin, territory in Hueco Mundo, and evolution history.
 - **Release Name:** `<resurreccion_name>`
 - **Transformed Appearance:** Bestial or enhanced morphological traits.
 - **Augmented Abilities:** Unique powers unlocked in released state.
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

@@ -2,31 +2,55 @@
 properties:
   secret_identity:
     type: text
-    description: "Civilian name and identity (e.g. Peter Parker)."
+    description: Civilian name and identity.
   hero_alias:
     type: text
-    description: "Public vigilante or hero moniker (e.g. Spider-Man)."
+    description: Public vigilante or hero moniker.
+  base_of_operations:
+    type: text
+    description: Primary headquarters or safehouse.
   power_classification:
     type: text
-    description: "Origin category: Mutant, Mutate, Tech, Mystic, Cosmic, Alien, Peak Human."
+    description: 'Origin category: Mutant, Mutate, Tech, Mystic, Cosmic, Alien, Peak Human.'
   power_tier:
     type: text
-    description: "Power scale: Street, City, Continental, Planetary, Cosmic, Multiversal."
+    description: 'Power scale: Street, City, Continental, Planetary, Cosmic, Multiversal.'
+  power_grid:
+    type: text
+    description: Six attributes on a 1-7 scale in fixed order STR/SPD/DUR/INT/ENE/FIG, e.g. 4/4/3/3/1/4.
+  canon_origin:
+    type: text
+    description: Source reality or franchise a character comes from (e.g. Marvel Earth-616).
   clearance_level:
     type: number
-    description: "SHIELD or governmental security clearance level (1-10)."
+    description: SHIELD or governmental security clearance level (1-10).
   team_affiliation:
     type: multitext
-    description: "Teams or coalitions: Avengers, X-Men, Fantastic Four, Defenders, etc."
+    description: 'Teams or coalitions: Avengers, X-Men, Fantastic Four, Defenders, etc.'
   gadgets:
     type: multitext
-    description: "Key signatures and proprietary tech items."
+    description: Signature proprietary tech items.
   suit_tech:
     type: text
-    description: "Fabrication, armor grade, and onboard systems."
+    description: Fabrication, armor grade and onboard systems.
   nemesis:
     type: text
-    description: "Primary antagonist or rogues gallery anchor."
+    description: Primary antagonist or rogues gallery anchor.
   origin_event:
     type: text
-    description: "Catalyst event granting abilities or starting crusade."
+    description: Catalyst event granting abilities or starting the crusade.
+  creator:
+    type: text
+    description: Creator or manufacturer of a gadget.
+  user:
+    type: text
+    description: Primary user or operative of a gadget.
+  tech_level:
+    type: text
+    description: Standard, Advanced Stark Tech, Wakandan Vibranium, Pym Particle or Cosmic.
+  power_source:
+    type: text
+    description: Arc Reactor, Battery, Mystical, None, etc.
+  mass_produced:
+    type: checkbox
+    description: Whether the gadget exists in series production.

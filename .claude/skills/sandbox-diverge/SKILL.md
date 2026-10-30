@@ -12,7 +12,7 @@ Use this skill to widen the option space before a decision. It writes only `06_I
 3. **Produce five options** that differ in kind, not in wording: different cause, different cost, different consequence for the POV character. For each, give a one-line description and a stated probability (the five add to 100 %).
 4. **Add one low-probability option** under 5 % that breaks an assumption but stays inside canon.
 5. **Check each option** against the epistemic horizons and Sanderson's Second Law (costs and limits). Mark options that need a point of divergence.
-6. **File the note:** `narr new` is not needed; create one sandbox note with frontmatter `type: concept`, `status: proposed`, `scope: sandbox`, and the five options plus the long shot.
+6. **File the note:** create one sandbox note with frontmatter `type: concept`, `status: proposed`, `scope: sandbox`, and the five options plus the long shot.
 
 ## Output rules
 - Options are short pitches, not drafted scenes. No manuscript prose.

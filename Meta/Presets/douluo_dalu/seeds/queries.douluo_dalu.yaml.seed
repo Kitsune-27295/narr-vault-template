@@ -1,0 +1,9 @@
+# Preset golden queries for retrieval evaluation (loaded by `narr eval` with eval/queries.yaml)
+- query: "spirit rank ladder bands"
+  expect: ["TRM-Douluo_Terms"]
+- query: "currency exchange gold silver copper coin rates"
+  expect: ["TRM-Douluo_Terms"]
+- query: "martial soul classification rarity tier"
+  expect: ["TMP-Martial_Soul"]
+- query: "soul beast danger rating habitat"
+  expect: ["TMP-Soul_Beast"]

@@ -7,7 +7,7 @@ description: "Diagnose whether a scene turns, using the five commandments (incit
 Use this skill to diagnose one scene or one chapter. It reads and reports; it never edits prose (Rule 20). Craft sources are credited in `05_Craft_and_Feedback/Checklists/CKL-Craft_Sources.md`; the wording here is the framework's own.
 
 ## Pre-audit gates
-1. Run `narr stats <N>` and note rhythm, openers and filter density; they are signals, not verdicts.
+1. Run `narr lint --path 04_Manuscript` and note rhythm, openers and filter density (STY001-STY005); they are signals, not verdicts.
 2. Read the chapter's `<!-- p:N -->` paragraphs. Every finding must cite a paragraph marker.
 3. Read the POV character's dossier and the arc beat the chapter serves.
 
@@ -46,4 +46,4 @@ One-sentence synthesis: <who wants what, what stops them, what changes>
 Offer fixes as questions to the curator, never as rewritten prose. For a full-chapter pass, repeat per scene and finish with the chapter's sequel-to-scene balance.
 
 ## Related gates
-`narr lint --path 04_Manuscript`, `narr crosscheck`. Use `reader-sim` for attention, `revision-pass` to plan edits, `narrative-architecture-audit` for arc-level structure.
+`narr lint --path 04_Manuscript`, `python tools/vault_audit.py`. Use `reader-sim` for attention, `revision-pass` to plan edits, `narrative-architecture-audit` for arc-level structure.

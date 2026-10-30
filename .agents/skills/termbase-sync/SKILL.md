@@ -58,7 +58,7 @@ Append the standardized entry under the appropriate section in `02_Story_Bible/T
 Check that no draft or story bible file uses unapproved localized variants:
 ```bash
 narr lint --path 02_Story_Bible/Terminology/TRM-Termbase.md
-narr crosscheck
+python tools/vault_audit.py
 ```
 
 ### Step 4: Multi-Agent Parity Check

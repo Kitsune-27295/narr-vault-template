@@ -2,11 +2,12 @@
   "hooks": {
     "PreToolUse": [
       {
-        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit|Bash|PowerShell",
         "hooks": [
           {
             "type": "command",
-            "command": "narr hook run pre-write"
+            "command": "narr hook run pre-write --vault \"$CLAUDE_PROJECT_DIR\" || exit 2",
+            "timeout": 30
           }
         ]
       }
@@ -16,7 +17,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "narr hook run session-start"
+            "command": "narr hook run session-start --vault \"$CLAUDE_PROJECT_DIR\"",
+            "timeout": 30
           }
         ]
       }
@@ -26,10 +28,25 @@
         "hooks": [
           {
             "type": "command",
-            "command": "narr hook run stop"
+            "command": "narr hook run stop --vault \"$CLAUDE_PROJECT_DIR\"",
+            "timeout": 30
           }
         ]
       }
+    ]
+  },
+  "permissions": {
+    "deny": [
+      "Edit(./01_Canon_and_Divergence/Sources/**)",
+      "Edit(./.env*)",
+      "Edit(./**/.env*)",
+      "Edit(./.narr/**)",
+      "Edit(./.githooks/**)",
+      "Edit(./.claude/settings.json)",
+      "Edit(./.claude/settings.local.json)",
+      "Edit(./.agents/hooks.json)",
+      "Read(./.env)",
+      "Read(./.env.*)"
     ]
   }
 }

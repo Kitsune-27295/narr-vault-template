@@ -1,7 +1,7 @@
 # CONVENTIONS.md — Curator Conventions
 
 This file is owned strictly by the curator.
-Framework upgrades via `narr upgrade` will NEVER overwrite or modify this file.
+Framework upgrades will NEVER overwrite or modify this file.
 
 ## 1. Project Conventions
 - **Language Policy:**

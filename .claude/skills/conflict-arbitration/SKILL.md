@@ -19,9 +19,9 @@ When two assertions collide, resolve them using the strict 4-Tier Hierarchy:
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Render Conflict Arbitration Context
-Assemble active contradictions from the registry:
+Read the active contradictions in `08_Ledgers/LDG-Contradictions.md`, then run the deterministic audit:
 ```bash
-narr prompt render conflict-arbitration
+python tools/vault_audit.py
 ```
 
 ### Step 2: Register Collision in LDG-Contradictions.md
@@ -37,17 +37,13 @@ Select the appropriate arbitration outcome:
 - **Case B — In-Universe Epistemic Limitation:** Both quotes are canon, but Side A was spoken by an uninformed character.
   - Action: Record character blindspot in `08_Ledgers/LDG-Character_Knowledge.md` and character sheet. Update contradiction status to `resolved`.
 - **Case C — Deliberate Point of Divergence (Fanfiction):** The fanfiction intentionally breaks away from canon at an atomic event.
-  - Action: Scaffold a new POD page:
-    ```bash
-    narr new pod "<POD_Title>"
-    ```
+  - Action: Create a new POD page from `Meta/Templates/TMP-POD.md` in `01_Canon_and_Divergence/PODs/`.
     Link the POD to the diverged baseline (`CAN-*.md`). Update contradiction status to `resolved (POD)`.
 
 ### Step 4: Vault Consolidation & Integrity Check
 Run consolidation and lint checks:
 ```bash
-narr consolidate
-narr crosscheck
+python tools/vault_audit.py
 narr lint
 ```
 Confirm all links resolve cleanly, zero dead links exist, and zero open unresolved contradictions remain.

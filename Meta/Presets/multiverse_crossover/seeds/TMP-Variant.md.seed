@@ -1,6 +1,4 @@
 ---
-folder: 02_Story_Bible/Characters
-prefix: CHR-
 uid: "TMP-Variant"
 type: variant
 title: "<Variant Name>"
@@ -28,3 +26,10 @@ Unique techniques, altered power expressions, or cross-pollinated skills acquire
 
 ## Narrative Role in Crossover
 Status in current host reality, temporal anomalies generated, and interaction with native counterparts.
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

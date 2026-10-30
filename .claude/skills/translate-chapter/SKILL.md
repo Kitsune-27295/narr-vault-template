@@ -12,7 +12,7 @@ The publication layer is released in literary Spanish (`es`). To guarantee edito
 ## Pre-Translation Invariant Gates
 1. Verify that the source pt-BR chapter draft is complete and validated:
    ```bash
-   narr prompt validate write-chapter 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
+   narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
    ```
 2. Verify that `02_Story_Bible/Terminology/TRM-Termbase.md` contains the official localization equivalents for all proper nouns, martial ranks, and realm terminology.
 
@@ -20,9 +20,7 @@ The publication layer is released in literary Spanish (`es`). To guarantee edito
 
 ### Step 1: Scaffold Publication Page
 Scaffold the target Spanish chapter linking back to the source draft:
-```bash
-narr new chapter_es "C<NN> - <Spanish_Title>" --source-ref "C<NN>_<Slug_PT>"
-```
+Create `04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md` by hand (copy the pt-BR file's frontmatter, set `language: es` and `source_ref`).
 This generates `04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md` with frontmatter:
 ```yaml
 ---
@@ -40,11 +38,8 @@ tags:
 ```
 
 ### Step 2: Assemble Localization Context
-Generate the translation prompt with full termbase integration:
-```bash
-narr prompt render translate-chapter --chapter <NN> --lang es
-```
-Review the assembled context:
+Gather the translation context yourself:
+Review:
 - Source pt-BR chapter text with existing `<!-- p:N -->` anchors.
 - Official terminology mappings from `TRM-Termbase.md`.
 - Target prose rhythm and tone guidelines from `SCP-Tone_and_Identity_Bible.md`.
@@ -64,7 +59,7 @@ narr translate check <NN>
 ```
 And execute deep invariant validation:
 ```bash
-narr prompt validate translate-chapter 04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md --source-file 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug_PT>.md
+narr translate check <NN>
 ```
 Verifies:
 - MSC004: Every `<!-- p:N -->` marker of the source appears exactly once, in the same order (block counts with a 10 % tolerance apply only when neither file has markers).

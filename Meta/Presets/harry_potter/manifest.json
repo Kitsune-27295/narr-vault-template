@@ -1,0 +1,49 @@
+{
+  "name": "harry_potter",
+  "display_name": "Harry Potter / Wizarding World",
+  "version": "1.0.0",
+  "schema_version": 2,
+  "maturity": "experimental",
+  "fandom": "Harry Potter",
+  "genre": "Urban Fantasy / Magical School",
+  "description": "Harry Potter fanfiction and crossovers: spell classification, magical artifacts, wand lore, houses and blood status.",
+  "features": [
+    "Spell note type with category, incantation and legality",
+    "Magical artifact note type with owner chain",
+    "House, wand core and patronus fields"
+  ],
+  "extends": [],
+  "conflicts": [],
+  "custom_types": [
+    "spell",
+    "magical_artifact"
+  ],
+  "note_layout": {
+    "spell": {
+      "prefix": "TEC",
+      "folder": "02_Story_Bible/Powers_and_Systems"
+    },
+    "magical_artifact": {
+      "prefix": "ITM",
+      "folder": "02_Story_Bible/Items_and_Artifacts"
+    }
+  },
+  "seeds": {
+    "seeds/TMP-Spell.md.seed": "Meta/Templates/TMP-Spell.md",
+    "seeds/TMP-Magical_Artifact.md.seed": "Meta/Templates/TMP-Magical_Artifact.md"
+  },
+  "required_tags": [
+    "#fandom/harry_potter"
+  ],
+  "provenance": {
+    "basis": "inferred",
+    "notes": "Schema scaffold. Field names and option lists reflect general knowledge of the setting and structures seen in the author's crossover vaults; no canon text is bundled. Verify every value against frozen sources before relying on it.",
+    "sources": [
+      {
+        "kind": "user_defined",
+        "title": "Author's reference vaults (Fanfictions / Fanfiction collections), surveyed during the SPEC-009 audit",
+        "ref": "internal"
+      }
+    ]
+  }
+}

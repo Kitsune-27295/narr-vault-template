@@ -1,111 +1,113 @@
 ---
 uid: "TMP-Baseline"
 type: baseline
-title: "<Canonical Entity or System Name>"
+title: "<Domain title, as in domains.yaml>"
+domain: <domain_id>
 aliases:
-  - "<Pinyin / Alternate Name>"
+  - "<Alternate name, translation or Pinyin>"
 source_ids:
-  - "SRC-Innate_Powers"
-  - "SRC-Power_Reserve"
-status: confirmed
+  - "SRC-<YYYYMMDD>-<slug>"
+status: draft
 scope: source_canon
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
 tags:
   - "canon/baseline"
-  - "fandom-slug"
 ---
-# <Canonical Entity or System Name>
+# <Domain title>
+
+<!--
+Charter (copy from domains.yaml, never edit the scope here):
+  Domain: <domain_id> (<kind>). In scope: <scope_in topics>.
+  Delegated: <topic> -> <owner domain id>; link, do not explain.
+One dossier per domain. A fact lives in the dossier that owns it; every other dossier links.
+Create it with `narr domain new <domain_id>`; route the sources with `narr ingest route <id>`.
+-->
 
 > [!NOTE]
-> **Executive Summary:** <2-3 sentence technical overview of the canonical baseline: ontological classification, primary source authority, governing mechanisms, and role in original <Setting Name> continuity.>
+> **Executive Summary:** <2-3 sentences: what this domain is, which sources feed it, and what it governs in the setting.>
 
 ---
 
-## 1. Consolidated Architecture & Overview
-<!-- High-density analytical synthesis of this canonical entity, system, or mechanism across all cited sources. -->
+## 1. Definition and Terminology
+<!-- One unified definition. Choose the vault's canonical term; list every alias, translation and Pinyin in the frontmatter and in the table below. Follow the vault's terminology decision (memory/decisions/DEC-*.md). -->
 
-<Paragraph 1: Foundational definition and planar ontology. What is this entity, power, lineage, or system within the <Setting Name> universe? How does it originate in the celestial or biological history of the plane?>
+<Definition: what the domain is, in the setting's own terms, reconciled across all sources.>
 
-<Paragraph 2: Metaphysical and operational mechanics. How does this system interact with practitioners' meridians, power reserve cultivation, or environmental essence? What universal laws govern its activation, breakthrough, or inheritance?>
-
-<Paragraph 3: Societal and geopolitical footprint. How do continental factions (e.g., <Dominant Hegemonic Faction>, the Two Great Empires, the Upper Three Sects) evaluate, monopolize, or respond to this phenomenon?>
-
----
-
-## 2. Structural & Taxonomic Matrix
-
-| Dimension / Parameter | Canonical Tier / Classification | Functional Mechanism | Canonical Archetypes / Examples |
-|:---|:---|:---|:---|
-| **<Parameter 1>** | `<Classification / Grade>` | <Definitive operational rule governing this tier> | `<Example Entity 1, Example Entity 2>` |
-| **<Parameter 2>** | `<Classification / Grade>` | <Definitive operational rule governing this tier> | `<Example Entity 1, Example Entity 2>` |
-| **<Parameter 3>** | `<Classification / Grade>` | <Definitive operational rule governing this tier> | `<Example Entity 1, Example Entity 2>` |
-| **<Parameter 4>** | `<Classification / Grade>` | <Definitive operational rule governing this tier> | `<Example Entity 1, Example Entity 2>` |
-
----
-
-## 3. Atomic Canonical Facts
-*Enforcing Rule 15 & Rule 30: active voice, technical precision, zero speculative filler.*
-
-- **[Core Law 1]:** <Factual assertion establishing the baseline rule without ambiguity.>
-- **[Core Law 2]:** <Factual assertion establishing energetic or biological constraints.>
-- **[Core Law 3]:** <Factual assertion establishing threshold requirements (e.g., age, cultivation decile, physical conditioning).>
-- **[Core Law 4]:** <Factual assertion establishing societal or factional governance.>
-
----
-
-## 4. Tactical Combat Principles & Invariants
-- **Activation & Reaction Timings:** <Pre-activation requirements, physical transformation lag, or instantaneous summoning dynamics.>
-- **Defensive & Counter Vectors:** <How this entity interacts with physical armor, elemental attacks, or spatial suppression.>
-- **Resource Depletion Rate:** <Stamina, power reserve, or spiritual exhaustion curves under continuous tactical deployment.>
-
----
-
-## 5. Canon Divergence & Adaptation Discrepancies
-<!-- Documenting discrepancies between webnovel, manhua, and donghua adaptations. -->
-
-- **Discrepancy / Variation 1:** <Contrast between original webnovel text and visual media retcons (e.g., differences in colors, ages, or mechanics across sequels).>
-- **Discrepancy / Variation 2:** <Terminology shifts or translated discrepancies. If an open conflict exists, reference `08_Ledgers/LDG-Contradictions.md`.>
-
----
-
-## 6. Verbatim Evidence & Source Grounding
-*Enforcing Rule 30: literal quotations from frozen immutable sources in `01_Canon_and_Divergence/Sources/`.*
-
-- *"<Literal verbatim quotation from cited source demonstrating the primary baseline fact.>"* [[SRC-Innate_Powers]]
-- *"<Literal verbatim quotation demonstrating secondary operational evidence.>"* [[SRC-Power_Reserve]]
-- *"<Literal verbatim quotation establishing hard limits or historical precedent.>"* [[SRC-Power_Sources]]
-
----
-
-## 7. What it does NOT establish (Negative Boundaries)
-*Enforcing Rule 30: explicit documentation of what these canonical sources DO NOT state, preventing fanon bleed and hallucination.*
-
-1. **Negative Boundary 1:** <The canon baseline DOES NOT state or imply that characters can bypass X without Y.>
-2. **Negative Boundary 2:** <Does NOT allow infinite scaling, spontaneous energy creation, or ungrounded miraculous recoveries.>
-3. **Negative Boundary 3:** <Does NOT establish that secondary adaptation retcons override prime webnovel canon unless explicitly ruled by vault consensus.>
-
----
-
-## 8. Operational Lifecycle Protocols
-
-### 8.1 Inception & Extraction Protocol (Phase 1)
-1. **File Placement:** Always save under `01_Canon_and_Divergence/Baselines/` with the exact filename `CAN-<Topic_Name>.md` (zero spaces, Rule 10).
-2. **Metadata Integrity:** Fill YAML frontmatter completely (`uid`, `type: baseline`, `source_ids`, `status: confirmed`).
-3. **Drafting Sequence:** Define Architecture (Section 1) -> Taxonomic Matrix (Section 2) -> Atomic Facts (Section 3) -> Verbatim Quotes (Section 6) -> Negative Boundaries (Section 7).
-
-### 8.2 Maintenance & Audit Protocol (Phase 2)
-1. **Source Immutability:** Never modify cited source files in `01_Canon_and_Divergence/Sources/`; baselines synthesize, sources remain frozen.
-2. **Crosscheck Gate:** Verify all wikilinks via `narr lint` to prevent broken references or unverified claims.
-
----
-
-## 9. Standardized Lexicon & Taxonomy Glossary
-
-| Term / Taxonomy | Category | Clear & Accessible Definition |
+| Canonical term | Aliases and variants | Where the variants appear |
 |:---|:---|:---|
-| **Canonical Baseline (*CAN*)** | Canon | An authoritative, source-verified synthesis of prime <Setting Name> lore serving as the benchmark for divergence. |
-| **Atomic Fact** | Epistemology | A single, non-divisible factual assertion directly backed by literal source quotations. |
-| **Negative Boundary** | Continuity | An explicit statement declaring what canon does not permit, preventing assumption creep and fanon bleed. |
-| **Source Anchor (*SRC*)** | Evidence | An immutable primary clipping or raw chapter excerpt providing empirical proof for baseline facts. |
-| **Sanderson Limitation** | Power | Hard constraint ensuring supernatural phenomena operate under consistent, costly, and bounded rules. |
+| **<Term>** | <Alias; translation; Pinyin> | <SRC ids> |
+
+---
+
+## 2. Mechanics and Laws
+<!-- Rules that always hold, one atomic fact per line, each with a literal quote. State limits and costs before powers (rule 30). -->
+
+- **[Law 1]:** <Assertion.>
+  *"<Literal quote from the source.>"* [[SRC-<id>]]
+- **[Limit 1]:** <Cost, ceiling or restriction.>
+  *"<Literal quote.>"* [[SRC-<id>]]
+
+---
+
+## 3. Taxonomy and Progression
+<!-- Tiers, categories, levels or stages. Use tables. Keep each source's own scale distinct when scales differ. -->
+
+| Tier or category | Definition | Mechanical effect | Examples | Source |
+|:---|:---|:---|:---|:---|
+| **<Tier>** | <Definition> | <Effect> | <Examples> | [[SRC-<id>]] |
+
+---
+
+## 4. Interactions and Delegations
+<!-- How this domain touches others. Explain only what this domain owns; for everything in `delegates`, write one line and link the owner dossier. -->
+
+- **With [[CAN-<Other_Dossier>]]:** <One-line interaction; the owner explains the mechanics.>
+
+See also: [[CAN-<Related_Dossier>]]
+
+---
+
+## 5. Divergences: Retcons, Media Variants, Translation Conflicts
+<!-- Never choose a side silently. Separate three kinds of divergence:
+ - Retcon or era: the rule as it really works vs what characters of an era knew.
+ - Medium: source text vs adaptations; rank them with `canon_authority` in vault.yaml.
+ - Translation: variant names for one thing.
+Each side keeps its own literal quote and uid. Log source-vs-source conflicts in 08_Ledgers/LDG-Contradictions.md. -->
+
+- **<Topic>:** <What differs.>
+  - Side A: *"<Quote.>"* [[SRC-<id>]]
+  - Side B: *"<Quote.>"* [[SRC-<id>]]
+  - Status: open | resolved by era | resolved by authority. Ledger: <CON id>.
+
+---
+
+## 6. Verbatim Evidence
+*Rule 30: literal quotations from frozen sources in `01_Canon_and_Divergence/Sources/`, one source per quote.*
+
+- *"<Quote demonstrating the central fact.>"* [[SRC-<id>]]
+
+---
+
+## 7. What it does NOT establish
+*Rule 30: say what the sources do not state, to stop assumptions and fanon bleed.*
+
+1. **<Boundary 1>:** <The sources do not state or imply that ...>
+2. **<Boundary 2>:** <Does not allow ...>
+
+---
+
+## 8. Maintenance Log
+*Incremental upsert: a new source is routed, then each claim is redundant (skip), complementary (insert in the right section) or conflicting (section 5 and the ledger). Never overwrite silently.*
+
+| Date | Source | Change |
+|:---|:---|:---|
+| YYYY-MM-DD | [[SRC-<id>]] | <Created / added tier X / recorded conflict> |
+
+---
+
+## 9. Glossary and Aliases
+
+| Term | Category | Definition |
+|:---|:---|:---|
+| **<Term>** | <Category> | <One-line definition> |

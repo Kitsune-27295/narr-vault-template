@@ -7,7 +7,7 @@ description: "Structure and track narrative arcs: choose an arc type, write the 
 Use this skill to plan or restructure an arc in `03_Continuity_and_Timeline/Arcs/`. The method is the framework's own distillation of widely taught arc craft; sources are credited in `05_Craft_and_Feedback/Checklists/CKL-Craft_Sources.md`.
 
 ## Workflow
-1. Scaffold the arc: `narr new arc "<Arc Title>"`.
+1. Scaffold the arc from `Meta/Templates/TMP-Arc.md` into `03_Continuity_and_Timeline/Arcs/`.
 2. **Choose the arc type** for the POV character and write it in the arc page:
    - **Positive change:** the character replaces a false belief with a truth.
    - **Flat:** the character already holds the truth and changes the world around them.
@@ -16,7 +16,7 @@ Use this skill to plan or restructure an arc in `03_Continuity_and_Timeline/Arcs
 4. **Place the beats** in the arc's beat table with a target chapter for each, in order: hook, first plot point, first pinch, midpoint, second pinch, second plot point, climax, resolution. Chapters must exist or be planned and must increase down the table.
 5. **Connect the beats.** Between every pair of beats write the connector word: *but* (an obstacle reverses the plan) or *therefore* (a consequence follows). Rewrite any *and then* link.
 6. **Prove the change.** Name the chapter that shows the character before the change and the chapter that shows them after, with the same situation seen twice.
-7. **Tie to the ledgers.** Register promises in `LDG-Foreshadowing.md` and open threads in `LDG-Active_Threads.md`. A lie planted late or a truth with no earlier hint is a promise problem; run `narr crosscheck`.
+7. **Tie to the ledgers.** Register promises in `LDG-Foreshadowing.md` and open threads in `LDG-Active_Threads.md`. A lie planted late or a truth with no earlier hint is a promise problem; run `python tools/vault_audit.py`.
 8. Run `narr graph` to confirm the arc is connected, then `narr lint --path 03_Continuity_and_Timeline`.
 
 ## Position checks

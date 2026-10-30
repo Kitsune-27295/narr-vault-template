@@ -1,0 +1,31 @@
+{
+  "types": {
+    "uid": "text",
+    "type": "text",
+    "title": "text",
+    "aliases": "multitext",
+    "status": "text",
+    "scope": "text",
+    "created": "date",
+    "updated": "date",
+    "tags": "multitext",
+    "gender": "text",
+    "age": "number",
+    "birth_year": "number",
+    "primary_faction": "text",
+    "power_system": "text",
+    "tier_rank": "text",
+    "canon_status": "text",
+    "source_ids": "multitext",
+    "source_refs": "multitext",
+    "source_url": "text",
+    "work_citation": "text",
+    "captured": "date",
+    "excerpt_of": "multitext",
+    "reading": "text",
+    "reading_note": "text",
+    "verified": "date",
+    "evidence_quote": "text",
+    "evidence_location": "text"
+  }
+}

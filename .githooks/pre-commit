@@ -1,3 +1,13 @@
 #!/bin/sh
-V="$(cd "$(dirname "$0")/.." && pwd)"
-narr hook run git-pre-commit --vault "$V" || exit 1
+# Managed by `narr hook install`; regenerate it instead of editing.
+ROOT="$(git rev-parse --show-toplevel 2>/dev/null || pwd)"
+if command -v narr >/dev/null 2>&1; then
+  exec narr hook run git-pre-commit --vault "$ROOT"
+fi
+for PY in "$ROOT/.venv/Scripts/python" "$ROOT/.venv/bin/python" python3 python; do
+  if command -v "$PY" >/dev/null 2>&1 && "$PY" -c "import narr_fiction" >/dev/null 2>&1; then
+    exec "$PY" -m narr_fiction.cli hook run git-pre-commit --vault "$ROOT"
+  fi
+done
+echo "narr: CLI not found; git-pre-commit hook skipped (install it, then run narr doctor)" >&2
+exit 0

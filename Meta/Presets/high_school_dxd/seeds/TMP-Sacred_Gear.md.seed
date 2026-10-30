@@ -1,0 +1,42 @@
+---
+uid: "TMP-Sacred_Gear"
+type: sacred_gear
+title: "<Sacred Gear Name>"
+aliases:
+  - "<Alternate name>"
+gear_class: "<Longinus | Standard | Sub-Species | Artificial>"
+balance_breaker: "<form | None>"
+gear_holder: "<holder>"
+status: active
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - "story_bible/sacred_gear"
+  - "fandom/high_school_dxd"
+---
+# <Sacred Gear Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentences: what it is, who uses it, why it matters to the story.>
+
+## 1. Abilities
+<Write the abilities.>
+
+## 2. Balance Breaker
+<Write the balance breaker.>
+
+## 3. Holder History
+<Write the holder history.>
+
+## 4. Counters
+<Write the counters.>
+
+## 5. Negative Boundaries & Costs (Rule 30)
+1. **Cannot:** <absolute limitation; what this never does.>
+2. **Cost:** <resource, risk or drawback paid on every use; no cost-free loops.>
+
+## 6. Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"*  (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

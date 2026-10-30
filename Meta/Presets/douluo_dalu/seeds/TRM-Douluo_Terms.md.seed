@@ -90,3 +90,15 @@ Prefer the spelling your frozen sources use. Keep note titles stable once links 
 | Dragon Beard Needle | Dragon Whisker Needle | proposed |
 | Eight Stage Drop | Eight Drop, Eight-Stage Throw | proposed |
 | Nine Heart Flowering Apple | Nine Heart Begonia, Nine-Heart Flowering Crabapple | proposed |
+
+## Rank Title Variants
+The rank ladder above uses the "Spirit" family. Two real vaults forked on this choice: one keeps "Spirit" (source-faithful), the other adopted "Soul" as house terminology (Soul Master, Grand Soul Master, Soul Elder, Soul Ancestor, Soul Saint, Soul Douluo). Pick one per vault, record the decision as an ADR, and make the termbase and every note agree.
+
+| Spirit family (this seed) | Soul family (alternative) | Rank Band |
+|---|---|---|
+| Spirit Master | Soul Master | 11-20 |
+| Spirit Grandmaster | Grand Soul Master | 21-30 |
+| Spirit Elder | Soul Elder | 31-40 |
+| Spirit Ancestor | Soul Ancestor | 41-50 |
+| Spirit Saint | Soul Saint | 71-80 |
+| Spirit Douluo | Soul Douluo | 81-90 |

@@ -1,0 +1,49 @@
+{
+  "name": "fate_nasuverse",
+  "display_name": "Fate / Nasuverse",
+  "version": "1.0.0",
+  "schema_version": 2,
+  "maturity": "experimental",
+  "fandom": "Fate / Nasuverse",
+  "genre": "Urban Fantasy / Mythic Battle Royale",
+  "description": "Fate and Nasuverse fanfiction and crossovers: Servants, Noble Phantasms, magecraft and the Holy Grail War structure.",
+  "features": [
+    "Servant note type with class, true name and parameters",
+    "Noble Phantasm note type with rank, type and range",
+    "Master and Command Seal fields"
+  ],
+  "extends": [],
+  "conflicts": [],
+  "custom_types": [
+    "servant",
+    "noble_phantasm"
+  ],
+  "note_layout": {
+    "servant": {
+      "prefix": "CHR",
+      "folder": "02_Story_Bible/Characters"
+    },
+    "noble_phantasm": {
+      "prefix": "PWR",
+      "folder": "02_Story_Bible/Powers_and_Systems"
+    }
+  },
+  "seeds": {
+    "seeds/TMP-Servant.md.seed": "Meta/Templates/TMP-Servant.md",
+    "seeds/TMP-Noble_Phantasm.md.seed": "Meta/Templates/TMP-Noble_Phantasm.md"
+  },
+  "required_tags": [
+    "#fandom/fate"
+  ],
+  "provenance": {
+    "basis": "inferred",
+    "notes": "Schema scaffold. Field names and option lists reflect general knowledge of the setting and structures seen in the author's crossover vaults; no canon text is bundled. Verify every value against frozen sources before relying on it.",
+    "sources": [
+      {
+        "kind": "user_defined",
+        "title": "Author's reference vaults (Fanfictions / Fanfiction collections), surveyed during the SPEC-009 audit",
+        "ref": "internal"
+      }
+    ]
+  }
+}

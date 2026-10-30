@@ -1,6 +1,4 @@
 ---
-folder: 02_Story_Bible/Cosmology_and_Godhood
-prefix: SCP-
 uid: "TMP-Reality_Anchor"
 type: reality_anchor
 title: "<Anchor Name>"
@@ -25,3 +23,10 @@ Dimensional frequency, planar harmonics, and temporal anchoring parameters.
 
 ## Threat Vectors & Vulnerabilities
 What forces, paradoxes, or cosmic beings can destabilize this anchor point.
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

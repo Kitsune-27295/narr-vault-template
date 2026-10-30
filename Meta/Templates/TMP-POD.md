@@ -125,8 +125,8 @@ graph TD
 3. **Drafting Sequence:** Define Causal Core (Section 1) -> Baseline Quote (Section 2) -> Mechanism (Section 3) -> Butterfly Matrix (Section 4).
 
 ### 8.2 Scene Drafting & Continuity Verification (Phase 2)
-1. **Prompt Integration:** Include relevant POD anchors in manuscript drafting prompts via `narr prompt render write-chapter`.
-2. **Crosscheck Validation:** Run `narr crosscheck` to confirm no downstream manuscript chapters accidentally revert to prime canon behavior.
+1. **Prompt Integration:** Include relevant POD anchors in the manuscript drafting notes (`narr chapter new`).
+2. **Crosscheck Validation:** Run `python tools/vault_audit.py` to confirm no downstream manuscript chapters accidentally revert to prime canon behavior.
 
 ---
 

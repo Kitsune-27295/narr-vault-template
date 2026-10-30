@@ -121,9 +121,9 @@ tags:
 3. **Drafting Sequence:** Define Dramatic Spine (Section 1) -> Beat Sheet Matrix (Section 2) -> Transformation Grid (Section 3) -> Chekhov Setups (Section 4).
 
 ### 8.2 Execution & Chapter Drafting Protocol (Phase 2)
-1. **Chapter Prompt Generation:** Use the Beat Sheet to generate drafting instructions via `narr prompt render write-chapter`.
+1. **Chapter Prompt Generation:** Use the Beat Sheet to write the drafting instructions for each chapter (`narr chapter new`).
 2. **Pacing Enforcement:** Verify each drafted chapter delivers its designated beat before advancing to the next.
-3. **Post-Arc Audit:** Upon completing the final chapter, execute `narr crosscheck` to ensure all active threads are reconciled.
+3. **Post-Arc Audit:** Upon completing the final chapter, execute `python tools/vault_audit.py` to ensure all active threads are reconciled.
 
 ---
 

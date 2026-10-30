@@ -1,6 +1,4 @@
 ---
-folder: 02_Story_Bible/Characters
-prefix: CHR-
 uid: "TMP-Hero_Persona"
 type: hero_persona
 title: "<Hero Alias>"
@@ -34,3 +32,10 @@ Background, daytime occupation, cover story, and loved ones requiring protection
 
 ## Operational History
 Key incidents, public perception, legal status (e.g. Sokovia Accords compliance), and rogues gallery.
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

@@ -16,10 +16,7 @@ In serialized narrative fiction, unfulfilled setups ("orphaned Chekhov guns") an
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Render Foreshadowing Audit Context
-Assemble the current ledger status and active arcs:
-```bash
-narr prompt render foreshadowing-audit
-```
+Read `08_Ledgers/LDG-Foreshadowing.md`, `08_Ledgers/LDG-Chekhov_Guns.md` and the active arcs.
 
 ### Step 2: Audit Clue Trajectories
 Inspect each row in `08_Ledgers/LDG-Foreshadowing.md`:
@@ -29,7 +26,7 @@ Inspect each row in `08_Ledgers/LDG-Foreshadowing.md`:
 
 Read the deterministic results instead of calculating by hand:
 ```bash
-narr crosscheck
+python tools/vault_audit.py
 ```
 - **FSH001 (error):** a payoff chapter that comes before its plant.
 - **FSH002 (error):** a row marked paid off or discharged without a payoff chapter.
@@ -57,6 +54,6 @@ Update the status column in `LDG-Foreshadowing.md`:
 ### Step 5: Verification Gate
 Run crosscheck and lint to verify zero continuity drift:
 ```bash
-narr crosscheck
+python tools/vault_audit.py
 narr lint --path 08_Ledgers
 ```

@@ -1,0 +1,42 @@
+---
+uid: "TMP-Shinobi_Village"
+type: shinobi_village
+title: "<Village Name>"
+aliases:
+  - "<Alternate name>"
+village_country: "<country>"
+village_kage: "<Kage | vacant>"
+kekkei_genkai: "<clans>"
+status: active
+scope: fanfic_canon
+created: YYYY-MM-DD
+updated: YYYY-MM-DD
+tags:
+  - "story_bible/shinobi_village"
+  - "fandom/naruto"
+---
+# <Village Name>
+
+> [!NOTE]
+> **Executive Summary:** <2-3 sentences: what it is, who uses it, why it matters to the story.>
+
+## 1. Geography and Defenses
+<Write the geography and defenses.>
+
+## 2. Government and Ranks
+<Write the government and ranks.>
+
+## 3. Notable Clans
+<Write the notable clans.>
+
+## 4. Relations With Other Villages
+<Write the relations with other villages.>
+
+## 5. Negative Boundaries & Costs (Rule 30)
+1. **Cannot:** <absolute limitation; what this never does.>
+2. **Cost:** <resource, risk or drawback paid on every use; no cost-free loops.>
+
+## 6. Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"*  (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

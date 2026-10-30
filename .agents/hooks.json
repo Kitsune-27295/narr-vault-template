@@ -1,0 +1,31 @@
+{
+  "narr-harness": {
+    "enabled": true,
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "narr hook run pre-write --agent antigravity --vault ..",
+            "timeout": 30
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "type": "command",
+        "command": "narr hook run session-start --agent antigravity --vault ..",
+        "timeout": 30
+      }
+    ],
+    "Stop": [
+      {
+        "type": "command",
+        "command": "narr hook run stop --agent antigravity --vault ..",
+        "timeout": 30
+      }
+    ]
+  }
+}

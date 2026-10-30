@@ -2,22 +2,58 @@
 properties:
   zanpakuto:
     type: text
-    description: "Name of the Zanpakuto spirit or blade."
+    description: Name of the Zanpakuto spirit or blade.
   shikai_command:
     type: text
-    description: "Release incantation for Shikai (e.g. Roar, Zabimaru)."
+    description: Release incantation for Shikai.
   bankai_name:
     type: text
-    description: "Full Bankai release name (e.g. Senbonzakura Kageyoshi)."
+    description: Full Bankai release name.
+  bankai_mastery:
+    type: text
+    description: None, Partial or True Bankai.
+  sealed_form:
+    type: text
+    description: Sealed-state weapon form (Katana, Wakizashi, Nodachi, Custom).
+  wielder:
+    type: text
+    description: UID of the character who bears the Zanpakuto (CHR-...).
+  element:
+    type: text
+    description: Elemental or conceptual affinity of an ability.
   reiatsu_color:
     type: text
-    description: "Color and sensory manifestation of spiritual pressure."
+    description: Color and sensory manifestation of spiritual pressure.
   division:
     type: text
-    description: "Gotei 13 division or military branch."
+    description: Gotei 13 division or military branch.
   hollow_form:
     type: text
-    description: "Stage of Hollow evolution (e.g. Gillian, Adjuchas, Vasto Lorde, Arrancar)."
+    description: Stage of Hollow evolution (Gillian, Adjuchas, Vasto Lorde, Arrancar).
+  evolutionary_stage:
+    type: text
+    description: Position on the Hollow evolutionary ladder.
+  mask_remnant:
+    type: text
+    description: Description of the Hollow mask fragment.
+  espada_rank:
+    type: text
+    description: Numbered rank among the Espada, if any.
+  aspect_of_death:
+    type: text
+    description: Aspect of Death an Espada embodies, if any.
+  resurreccion_name:
+    type: text
+    description: Name of the Resurreccion release.
+  resurreccion_command:
+    type: text
+    description: Release command of the Resurreccion.
   kido_number:
     type: number
-    description: "Incantation number for Hado or Bakudo (1-99)."
+    description: Incantation number for Hado or Bakudo (1-99).
+  kido_class:
+    type: text
+    description: Hado, Bakudo or Kaido.
+  incantation:
+    type: text
+    description: Spoken incantation of a Kido spell.

@@ -9,7 +9,7 @@ Use this skill to read a chapter as a reader who knows only what earlier chapter
 ## Setup
 1. Choose the persona from the curator's brief: genre fluency, patience for exposition, what they read for. Default: a fluent, impatient reader of serialized fiction in the same genre.
 2. Load only the chapters before this one. The reader does not know the Story Bible, the ledgers or the termbase.
-3. Run `narr stats <N>` first and keep its numbers out of the reading; compare afterwards.
+3. Run `narr lint --path 04_Manuscript` first (STY signals) and keep its numbers out of the reading; compare afterwards.
 
 ## Procedure
 Read each `<!-- p:N -->` paragraph in order. After each, note in one line, only if something changed:

@@ -1,0 +1,21 @@
+# Domain registry: the scope contract of every domain dossier (docs/DOSSIERS.md).
+# One entry per knowledge domain of your setting: a system, profession, cosmology, faction,
+# item system, geography, or (exempt from the pillars) a character.
+# Add entries, then `narr domain new <id>` creates the dossier and `narr ingest route <SRC-id>`
+# shows which part of a source belongs to which domain. Presets may add domains.<preset>.yaml.
+#
+# Three pillars before a new domain: its own rules, an internal taxonomy or scale, and reuse by
+# several characters or arcs. Anything smaller is a section of its parent dossier.
+#
+# domains:
+#   - id: magic_system               # [a-z][a-z0-9_]{1,63}, unique across all registry files
+#     title: Magic System            # becomes CAN-Magic_System
+#     kind: system                   # system | profession | cosmology | faction | item_system | geography | character
+#     aliases: [Arcane Power]        # other names, translations, romanizations (routing + frontmatter)
+#     scope_in: [source of power, cost, recovery, limits]
+#     delegates:                     # topic -> owner domain id: link to the owner, do not explain here
+#       guild ranks: mages_guild
+#     keywords: []                   # optional extra routing terms
+#     pillars: {rules: true, taxonomy: true, reuse: true}
+version: 1
+domains: []

@@ -14,9 +14,7 @@ Retain:
 - In-universe rules, physics, physical specifications, character traits, and historical lineages.
 
 ## 2. Execute Promotion via CLI
-```bash
-narr promote "<path-to-sandbox-file>" --zone <characters|factions|locations|powers|cosmology|pods> --prefix <CHR|FAC|LOC|PWR|SYS|SCP|POD> --slug <Safe_Slug> --title "<Formal Title>"
-```
+Move the sandbox note into its zone under a prefixed name (`CHR-`, `FAC-`, `LOC-`, `PWR-`, `SYS-`, `SCP-`, `POD-`) with `narr mv "<sandbox-file>" "<zone>/<PREFIX>-<Safe_Slug>.md"` (use `--dry-run` first), then set its frontmatter (`scope`, `type`, `status`) by hand.
 
 ## 3. Log Decision
 Record the promotion in memory:

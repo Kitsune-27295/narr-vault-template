@@ -1,20 +1,13 @@
-# Antigravity Instructions
+@AGENTS.md
 
-This repository is governed strictly by the LLM Operating Contract in [@AGENTS.md](AGENTS.md).
-Before executing any write or analysis, perform the cold-start sequence specified in AGENTS.md:
-1. Read `vault.yaml`
-2. Read `AGENTS.md`
-3. Read `CONVENTIONS.md`
-4. Read `context/author_voice.md`
-5. Read `memory/hot.md`
-6. Read `08_Ledgers/LDG-Session_Handoff.md`
+# Antigravity / Gemini delta
 
-All operations must adhere to:
-- Zero-space filenames (Rule 10)
-- Literal quote verification `*"..."*` against frozen sources (Rule 30)
-- Strict non-manuscript technical writing style (Rule 15)
-- Termbase consistency in translations (Rule 20)
-- `narr lint` and `narr crosscheck` must exit 0 before completing tasks.
+Antigravity reads `AGENTS.md` and `.agents/rules/` directly; this file only adds what is specific to it:
+
+- `.agents/` is the canonical home of skills and rules (`.claude/` is generated from it by `narr hook install`).
+- `.agents/hooks.json` wires the same `narr hook run ...` gate as Claude Code (PreToolUse deny/ask).
+- Before finishing a task, `narr lint` and `python tools/vault_audit.py` must exit 0.
+
 ## Agent skills
 
 ### Issue tracker
@@ -24,4 +17,3 @@ Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
 ### Domain docs
 
 Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
-

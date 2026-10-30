@@ -1,25 +1,62 @@
 {
   "name": "multiverse_crossover",
   "display_name": "Multiverse & Crossover Fusion",
-  "version": "2.0.0",
+  "version": "2.1.0",
+  "schema_version": 2,
+  "maturity": "stable",
   "fandom": "Multi-Fandom / Cross-Cosmology",
   "genre": "Multiverse / Crossover / Reality Fusion",
-  "description": "Specialized framework preset for cross-universe travels, dimensional fusions, and multiverse variants. Tracks origin realities, reality anchors, divergence catalysts, and cosmological stability indexes.",
+  "description": "Cross-universe travel, variants, reality anchors, per-world hubs and power-equalization matrices. Compose it with a fandom preset for a crossover.",
   "features": [
-    "Reality Anchoring and Dimensional Coordinate tracking",
-    "Variant Analysis (variant_of, origin_universe)",
-    "Cross-System Power Equalization matrices",
-    "Cosmological Ledger & Timeline divergence mapping"
+    "Reality anchoring",
+    "Variant analysis (variant_of, divergence_point)",
+    "Per-world hub pages",
+    "Cross-system power equalization matrix"
   ],
+  "extends": [],
+  "conflicts": [],
   "custom_types": [
     "variant",
-    "reality_anchor"
+    "reality_anchor",
+    "world_hub",
+    "verse_equalization"
   ],
+  "note_layout": {
+    "variant": {
+      "prefix": "CHR",
+      "folder": "02_Story_Bible/Characters"
+    },
+    "reality_anchor": {
+      "prefix": "SCP",
+      "folder": "07_Cosmologies_and_Multiverse/Anchors"
+    },
+    "world_hub": {
+      "prefix": "SCP",
+      "folder": "07_Cosmologies_and_Multiverse/Worlds"
+    },
+    "verse_equalization": {
+      "prefix": "SCP",
+      "folder": "07_Cosmologies_and_Multiverse/Equalization"
+    }
+  },
   "seeds": {
     "seeds/TMP-Variant.md.seed": "Meta/Templates/TMP-Variant.md",
-    "seeds/TMP-Reality_Anchor.md.seed": "Meta/Templates/TMP-Reality_Anchor.md"
+    "seeds/TMP-Reality_Anchor.md.seed": "Meta/Templates/TMP-Reality_Anchor.md",
+    "seeds/TMP-World_Hub.md.seed": "Meta/Templates/TMP-World_Hub.md",
+    "seeds/TMP-Verse_Equalization.md.seed": "Meta/Templates/TMP-Verse_Equalization.md"
   },
   "required_tags": [
     "#fandom/multiverse"
-  ]
+  ],
+  "provenance": {
+    "basis": "user_defined",
+    "notes": "Hub and equalization templates follow the per-world hub and verse-equalization structures in the author's World H crossover vaults. Story mechanics (jump rules, world contracts) are deliberately not bundled.",
+    "sources": [
+      {
+        "kind": "user_defined",
+        "title": "Author's reference vaults (Fanfictions / Fanfiction collections), surveyed during the SPEC-009 audit",
+        "ref": "internal"
+      }
+    ]
+  }
 }

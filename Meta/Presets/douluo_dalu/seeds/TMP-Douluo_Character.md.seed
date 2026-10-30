@@ -1,5 +1,5 @@
 ---
-uid: "TMP-Character"
+uid: "TMP-Douluo_Character"
 type: character
 title: "<Character Name>"
 aliases:
@@ -347,3 +347,10 @@ When dramatic shifts occur in the story:
 | **External Spirit Bone (*Waifuhungu*)** | Anatomy | Rare anomalous spirit bones outside the 6 standard slots (e.g., spider legs, wings) that evolve alongside the host's personal cultivation breakthroughs. |
 | **Battle Armor (*Doukai*)** | Equipment | Fusion of spiritually refined metals, soul guidance circuits, and bloodline resonance (1-Word to 4-Word) acting as an external technological exoskeleton. |
 | **Epistemic Horizon** | Continuity | The strict boundary of what a character actually knows versus what they assume, preventing authorial omniscience and maintaining believable character choices. |
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>

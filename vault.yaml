@@ -28,6 +28,9 @@ style:
   tics_max: 3
   min_chapter_words: 300
 
+# Authority of canon media, highest first. Dossiers record lower-ranked variants in section 5.
+canon_authority: [source_text, adaptation, fanon, inference]
+
 scopes:
   default: "fanfic_canon"
   hierarchy:

@@ -7,7 +7,7 @@ description: "Diagnose why a writing session is stuck and route the curator to t
 Use this skill when the work has stopped. It orients, diagnoses and routes. It writes no prose and creates no canon.
 
 ## Orient (two minutes)
-1. Run `narr session brief` and read `memory/hot.md`, the active thread table and the current arc beat.
+1. Run `narr memory` and read `memory/hot.md`, the active thread table and the current arc beat.
 2. State in two lines where the story is and what the next chapter must achieve.
 
 ## Diagnose: ask, then pick one

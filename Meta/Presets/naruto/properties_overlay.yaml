@@ -1,0 +1,35 @@
+# Naruto Properties Overlay (scaffold, verify against frozen sources)
+properties:
+  jutsu_rank:
+    type: text
+    description: Rank of a jutsu (E, D, C, B, A, S).
+  jutsu_classification:
+    type: text
+    description: Ninjutsu, Genjutsu, Taijutsu, Fuinjutsu, Senjutsu, Kekkei Genkai or Kinjutsu.
+  chakra_natures:
+    type: multitext
+    description: Chakra natures involved (Fire, Wind, Lightning, Earth, Water, Yin, Yang, advanced).
+  hand_seals:
+    type: text
+    description: Hand seal sequence, or None.
+  chakra_cost:
+    type: text
+    description: Chakra cost or strain per use.
+  shinobi_rank:
+    type: text
+    description: Academy Student, Genin, Chunin, Jonin, Anbu, Kage or other.
+  village_affiliation:
+    type: text
+    description: Wikilink to the village a shinobi belongs to.
+  kekkei_genkai:
+    type: multitext
+    description: Bloodline limits a shinobi carries.
+  tailed_beast:
+    type: text
+    description: Tailed beast sealed in or bonded to a character, if any.
+  village_country:
+    type: text
+    description: Country that hosts a village.
+  village_kage:
+    type: text
+    description: Current Kage of a village.

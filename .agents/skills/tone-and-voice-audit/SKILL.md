@@ -37,7 +37,6 @@ Audit narrative prose against high-craft standards:
 ### Step 4: Deterministic Signals First
 Read the numbers before judging by ear:
 ```bash
-narr stats <N>                    # add --lang es for the Spanish chapter
 narr lint --path 04_Manuscript    # STY001-STY005 are advisory warnings
 ```
 Treat each signal as a place to look, not a verdict: STY001 filter words, STY002 -mente adverbs, STY003 flat rhythm, STY004 repeated sentence openers, STY005 stock phrases and negative parallelisms. Thresholds live in the `style:` block of `vault.yaml`.

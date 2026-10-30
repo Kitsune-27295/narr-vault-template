@@ -1,6 +1,4 @@
 ---
-folder: 02_Story_Bible/Powers_and_Systems
-prefix: PWR-
 uid: "TMP-Gadget"
 type: gadget
 title: "<Gadget Name>"
@@ -28,3 +26,10 @@ Physical description, materials (Vibranium, Adamantium, Carbon Nanotubes), and d
 
 ## Maintenance & Upgrades
 Iterative versions, known defects, and repair protocols.
+
+---
+
+## Provenance
+- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
+- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
+- **What it does NOT establish:** <claims this page deliberately does not make.>
