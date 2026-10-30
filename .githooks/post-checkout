@@ -1,3 +1,0 @@
-#!/bin/sh
-V="$(cd "$(dirname "$0")/.." && pwd)"
-narr session brief --vault "$V"

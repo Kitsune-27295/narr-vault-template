@@ -1,6 +1,6 @@
 ---
 name: foreshadowing-audit
-description: "Track clues, setups, red herrings, and payoffs across serialized arcs to prevent orphaned Chekhov promises. Use when setups, clues and payoffs must be checked for orphaned promises before drafting or revising an arc."
+description: Track clues, setups, red herrings, and payoffs across serialized arcs to prevent orphaned Chekhov promises
 ---
 # foreshadowing-audit
 
@@ -16,7 +16,10 @@ In serialized narrative fiction, unfulfilled setups ("orphaned Chekhov guns") an
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Render Foreshadowing Audit Context
-Read `08_Ledgers/LDG-Foreshadowing.md`, `08_Ledgers/LDG-Chekhov_Guns.md` and the active arcs.
+Assemble the current ledger status and active arcs:
+```bash
+narr prompt render foreshadowing-audit
+```
 
 ### Step 2: Audit Clue Trajectories
 Inspect each row in `08_Ledgers/LDG-Foreshadowing.md`:
@@ -24,18 +27,9 @@ Inspect each row in `08_Ledgers/LDG-Foreshadowing.md`:
 |---|---|---|---|---|---|
 | FSH-001 | C02 | Strange resonance when metal touches altar | Arc 2 Climax | — | planted |
 
-Read the deterministic results instead of calculating by hand:
-```bash
-python tools/vault_audit.py
-```
-- **FSH001 (error):** a payoff chapter that comes before its plant.
-- **FSH002 (error):** a row marked paid off or discharged without a payoff chapter.
-- **FSH003 (warning):** a planted or primed row without a planted chapter.
-- **VAL028 (warning):** an unresolved row whose `Intended Target` chapter is already drafted.
-
-Audit criteria beyond the CLI:
-1. **Promise, progress, payoff:** every promise needs at least one visible progress beat between plant and payoff. Mark a row `primed` when a later chapter reinforces it, and name that chapter.
-2. **Kind:** note whether the row is a clue, a lie, a truth or a pinch; a lie or truth first planted in the final quarter of an arc is a structural problem.
+Audit criteria:
+1. **Distance Check:** Calculate chapter delta between `Planted Chapter` and current chapter.
+2. **Overdue Warning (VAL028):** If the current chapter has surpassed the `Intended Target` without resolution or deliberate deferral, flag as `OVERDUE`.
 3. **Pacing Balance:** Ensure no single chapter introduces more than 3 major unresolved clues without advancing existing ones.
 4. **Red Herring Validation:** If a clue is a deliberate red herring, verify that an in-universe revelation resolves the false trail cleanly.
 
@@ -54,6 +48,6 @@ Update the status column in `LDG-Foreshadowing.md`:
 ### Step 5: Verification Gate
 Run crosscheck and lint to verify zero continuity drift:
 ```bash
-python tools/vault_audit.py
+narr crosscheck
 narr lint --path 08_Ledgers
 ```

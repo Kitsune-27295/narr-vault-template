@@ -1,49 +1,40 @@
 {
+  "$schema": "https://narrative-bible.schema/preset/v2",
   "name": "bleach",
   "display_name": "Bleach / Shinigami Lore",
-  "version": "2.1.0",
-  "schema_version": 2,
-  "maturity": "experimental",
+  "version": "2.0",
   "fandom": "Bleach",
   "genre": "Supernatural Shonen Battle",
-  "description": "Overlay for the Bleach universe: Zanpakuto releases, Bankai names, Reiatsu colors, Gotei 13 divisions, Hollow forms and Kido.",
+  "locales": {
+    "draft": "pt-BR",
+    "publish": "es"
+  },
+  "description": "Overlay for Bleach universe: Zanpakuto releases, Bankai names, Reiatsu colors, Gotei 13 divisions and Hollow forms.",
   "features": [
     "zanpakuto_mechanics",
     "reiatsu_scaling",
     "gotei_divisions"
   ],
-  "extends": [],
-  "conflicts": [],
+  "properties": [
+    "zanpakuto",
+    "shikai_command",
+    "bankai_name",
+    "reiatsu_color",
+    "division",
+    "hollow_form",
+    "kido_number"
+  ],
   "custom_types": [
     "zanpakuto",
     "hollow",
     "kido"
   ],
-  "note_layout": {
-    "zanpakuto": {
-      "prefix": "PWR",
-      "folder": "02_Story_Bible/Powers_and_Systems"
-    },
-    "kido": {
-      "prefix": "PWR",
-      "folder": "02_Story_Bible/Powers_and_Systems"
-    },
-    "hollow": {
-      "prefix": "CHR",
-      "folder": "02_Story_Bible/Characters"
-    }
-  },
-  "seeds": {
-    "seeds/TMP-Zanpakuto.md.seed": "Meta/Templates/TMP-Zanpakuto.md",
-    "seeds/TMP-Hollow.md.seed": "Meta/Templates/TMP-Hollow.md",
-    "seeds/TMP-Kido.md.seed": "Meta/Templates/TMP-Kido.md"
-  },
+  "seed_pages": [
+    "Meta/Templates/TMP-Zanpakuto.md",
+    "Meta/Templates/TMP-Hollow.md",
+    "Meta/Templates/TMP-Kido.md"
+  ],
   "required_tags": [
     "#fandom/bleach"
-  ],
-  "provenance": {
-    "basis": "inferred",
-    "notes": "No reference vault uses Bleach beyond taxonomy edge cases (Zanpakuto, Bankai, Kido, Spiritual Pressure); the schema reflects general knowledge and is unvalidated against real use.",
-    "sources": []
-  }
+  ]
 }

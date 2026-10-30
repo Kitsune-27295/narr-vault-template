@@ -1,6 +1,6 @@
 ---
 name: conflict-arbitration
-description: "Formal protocol for arbitrating canon collisions, source contradictions, and Point of Divergence (POD) branchings. Use when two sources, a baseline and a fanfic rule, or a point of divergence contradict each other."
+description: Formal protocol for arbitrating canon collisions, source contradictions, and Point of Divergence (POD) branchings
 ---
 # conflict-arbitration
 
@@ -19,9 +19,9 @@ When two assertions collide, resolve them using the strict 4-Tier Hierarchy:
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Render Conflict Arbitration Context
-Read the active contradictions in `08_Ledgers/LDG-Contradictions.md`, then run the deterministic audit:
+Assemble active contradictions from the registry:
 ```bash
-python tools/vault_audit.py
+narr prompt render conflict-arbitration
 ```
 
 ### Step 2: Register Collision in LDG-Contradictions.md
@@ -37,13 +37,17 @@ Select the appropriate arbitration outcome:
 - **Case B — In-Universe Epistemic Limitation:** Both quotes are canon, but Side A was spoken by an uninformed character.
   - Action: Record character blindspot in `08_Ledgers/LDG-Character_Knowledge.md` and character sheet. Update contradiction status to `resolved`.
 - **Case C — Deliberate Point of Divergence (Fanfiction):** The fanfiction intentionally breaks away from canon at an atomic event.
-  - Action: Create a new POD page from `Meta/Templates/TMP-POD.md` in `01_Canon_and_Divergence/PODs/`.
+  - Action: Scaffold a new POD page:
+    ```bash
+    narr new pod "<POD_Title>"
+    ```
     Link the POD to the diverged baseline (`CAN-*.md`). Update contradiction status to `resolved (POD)`.
 
 ### Step 4: Vault Consolidation & Integrity Check
 Run consolidation and lint checks:
 ```bash
-python tools/vault_audit.py
+narr consolidate
+narr crosscheck
 narr lint
 ```
 Confirm all links resolve cleanly, zero dead links exist, and zero open unresolved contradictions remain.

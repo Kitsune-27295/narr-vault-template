@@ -1,145 +1,28 @@
 # Douluo Dalu (Soul Land) Cultivation Properties Overlay
+# Injected into specialized vaults created for Douluo Dalu fanfictions
+
 properties:
   wuhun:
     type: multitext
-    description: Awakened Martial Soul(s), as a list of wikilinks or names.
+    description: "Awakened Martial Soul(s) (e.g. Nine-Tailed Celestial Fox, Clear Sky Hammer)."
   spiritual_realm:
     type: text
-    description: Spiritual boundary or realm (Origin Realm, Spirit Sea, Spirit Abyss, God Realm).
+    description: "Spiritual boundary/realm (e.g. Origin Realm, Spirit Sea, Spirit Abyss, God Realm)."
   rank:
     type: number
-    description: Cultivation numerical level (Rank 15 Spirit Master, Rank 92 Titled Douluo).
-  cultivation_level:
-    type: number
-    description: Numeric cultivation level when stored apart from a rank title.
+    description: "Cultivation numerical level (e.g. Rank 15 Spirit Master, Rank 92 Titled Douluo)."
   combat_system:
     type: text
-    description: Combat classification (Control, Power Attack, Agility Attack, Defense, Auxiliary, Healing,
-      Food).
-  combat_role:
-    type: text
-    description: Role in a team fight.
+    description: "Combat classification (e.g. Control System, Power Attack System, Agility Attack)."
   tier:
     type: text
-    description: Cultivation tier title (Spirit Scholar, Spirit Master, Titled Douluo, God). Not a character-depth
-      tier.
+    description: "Cultivation tier (e.g. Spirit Scholar, Spirit Master, Titled Douluo, God)."
   pattern:
     type: text
-    description: Soul ring configuration pattern (yellow-yellow-purple-black).
+    description: "Soul ring configuration pattern (e.g. yellow-yellow-purple-black)."
   primary:
     type: text
-    description: Primary martial soul or affinity path.
+    description: "Primary martial soul or affinity path."
   secondary:
     type: text
-    description: Secondary martial soul in dual-wielding configurations.
-  species:
-    type: text
-    description: Species or lineage classification for beasts and spiritual entities.
-  era:
-    type: text
-    description: Historical era or timeline generation in continental history.
-  bloodlines:
-    type: multitext
-    description: Bloodline heritages a character carries.
-  divine_position:
-    type: text
-    description: Seat or office held in the divine hierarchy.
-  battle_armor_tier:
-    type: text
-    description: Grade of battle armor a character can manifest.
-  secondary_professions:
-    type: multitext
-    description: Professions practised besides the main one.
-  energy_basis:
-    type: text
-    description: Primary energy a system or character draws on.
-  in_world_name:
-    type: text
-    description: Name used inside the setting when it differs from the title.
-  classification:
-    type: text
-    description: Category inside a note type (item class, theory class, martial soul class).
-  elemental_affinity:
-    type: text
-    description: Elemental affinity of a martial soul.
-  rarity_tier:
-    type: text
-    description: Rarity grade of a martial soul, item or beast.
-  associated_clans:
-    type: multitext
-    description: Clans that hold a martial soul or lineage.
-  associated_domains:
-    type: multitext
-    description: Domains linked to a martial soul.
-  mutation_origin:
-    type: text
-    description: How a variant martial soul came to be.
-  biological_clade:
-    type: text
-    description: Clade or family of a soul beast.
-  primary_element:
-    type: text
-    description: Principal element of a soul beast.
-  hierarchy_tier:
-    type: text
-    description: Position of a beast in the beast hierarchy.
-  native_habitat:
-    type: text
-    description: Native habitat of a beast.
-  danger_rating:
-    type: text
-    description: Threat grade of a beast.
-  crafting_discipline:
-    type: text
-    description: Discipline used to craft an item.
-  creator_origin:
-    type: text
-    description: Craftsman, sect or era an item comes from.
-  wielder_custodian:
-    type: text
-    description: Current bearer or custodian of an item.
-  core_discipline:
-    type: text
-    description: Core discipline of a profession.
-  guild_authority:
-    type: text
-    description: Guild or body that governs a profession.
-  ranking_system_type:
-    type: text
-    description: Ranking system a profession uses.
-  stat_requisites:
-    type: text
-    description: Stat or realm requisite to practise a profession.
-  continental_prestige:
-    type: text
-    description: Standing of a profession across the continent.
-  epistemological_status:
-    type: text
-    description: How established a theory is.
-  target_domain:
-    type: text
-    description: Domain a theory explains.
-  author_or_compiler:
-    type: text
-    description: Who authored or compiled a theory.
-  date_in_universe:
-    type: text
-    description: In-universe date of an event.
-  duration:
-    type: text
-    description: Duration of an event.
-  location:
-    type: text
-    description: Wikilink to the location of an event.
-  arc:
-    type: text
-    description: Wikilink to the parent arc of an event.
-  pod_reference:
-    type: text
-    description: Point of divergence an event relates to.
-  characters_involved:
-    type: multitext
-    description: Characters taking part in an event.
-  factions_involved:
-    type: multitext
-    description: Factions taking part in an event.
+    description: "Secondary martial soul in dual-wielding configurations."

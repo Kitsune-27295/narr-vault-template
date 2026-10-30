@@ -1,4 +1,6 @@
 ---
+folder: 02_Story_Bible/Powers_and_Systems
+prefix: PWR-
 uid: "TMP-Kido"
 type: kido
 title: "<Kido Name>"
@@ -25,10 +27,3 @@ Full incantation text required for 100% output without Eishohaki (incantation ab
 - **Standard Cast:** Damage or binding effect with full incantation.
 - **Eishohaki (Abandoned Chant):** Reduced power cast without verbal incantation.
 - **Niju Eisho (Two-Fold Chant):** Combination or chain usage.
-
----
-
-## Provenance
-- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
-- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
-- **What it does NOT establish:** <claims this page deliberately does not make.>

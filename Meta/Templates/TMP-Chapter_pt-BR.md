@@ -9,7 +9,6 @@ status: draft
 pov: "<CHR-Nome_do_Personagem_POV>"
 timeline_event: "<EVT-Nome_do_Evento>"
 arc: "<ARC-Nome_do_Arco>"
-characters: [] # cast of this chapter, e.g. [CHR-Nome]; checked against died_in (CHR001)
 word_count: 0
 created: YYYY-MM-DD
 updated: YYYY-MM-DD
@@ -53,4 +52,4 @@ Derechos de autor reservados a los autores respectivos.
 - [ ] **Horizonte Epistêmico (LDG-Character_Knowledge):** O personagem POV agiu exclusivamente com o conhecimento disponível na cena?
 - [ ] **Chekhov Weapons (LDG-Chekhov_Guns):** Algum item, arma ou promessa foi introduzido (`status: primed`) ou acionado (`status: discharged`)?
 - [ ] **Custos de Sanderson:** Os gastos de poder de alma, fadiga física e recuo articular foram devidamente cobrados na narrativa?
-- [ ] **Verificação de Linter:** O comando `narr lint --path <caminho_do_arquivo>` encerrou com código 0?
+- [ ] **Verificação de Linter:** O comando `narr prompt validate write-chapter <caminho_do_arquivo>` encerrou com código 0?

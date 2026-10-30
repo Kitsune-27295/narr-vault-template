@@ -1,6 +1,6 @@
 ---
 name: termbase-sync
-description: "Synchronize and govern multi-lingual terminology, cultivation ranks, proper nouns, and measurement units in TRM-Termbase.md. Use when terminology, ranks, proper nouns or units must be kept consistent across languages in the termbase."
+description: Synchronize and govern multi-lingual terminology, cultivation ranks, proper nouns, and measurement units in TRM-Termbase.md
 ---
 # termbase-sync
 
@@ -58,7 +58,7 @@ Append the standardized entry under the appropriate section in `02_Story_Bible/T
 Check that no draft or story bible file uses unapproved localized variants:
 ```bash
 narr lint --path 02_Story_Bible/Terminology/TRM-Termbase.md
-python tools/vault_audit.py
+narr crosscheck
 ```
 
 ### Step 4: Multi-Agent Parity Check

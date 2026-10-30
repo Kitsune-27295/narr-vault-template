@@ -1,6 +1,6 @@
 ---
 name: translate-chapter
-description: "Translate and localize manuscript chapters from pt-BR to es publication with 1:1 paragraph parity (MSC004) and TRM-Termbase compliance. Use when a pt-BR chapter must be translated to es with paragraph parity and termbase compliance."
+description: Translate and localize manuscript chapters from pt-BR to es publication with 1:1 paragraph parity (MSC004) and TRM-Termbase compliance
 ---
 # translate-chapter
 
@@ -12,7 +12,7 @@ The publication layer is released in literary Spanish (`es`). To guarantee edito
 ## Pre-Translation Invariant Gates
 1. Verify that the source pt-BR chapter draft is complete and validated:
    ```bash
-   narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
+   narr prompt validate write-chapter 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
    ```
 2. Verify that `02_Story_Bible/Terminology/TRM-Termbase.md` contains the official localization equivalents for all proper nouns, martial ranks, and realm terminology.
 
@@ -20,7 +20,9 @@ The publication layer is released in literary Spanish (`es`). To guarantee edito
 
 ### Step 1: Scaffold Publication Page
 Scaffold the target Spanish chapter linking back to the source draft:
-Create `04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md` by hand (copy the pt-BR file's frontmatter, set `language: es` and `source_ref`).
+```bash
+narr new chapter_es "C<NN> - <Spanish_Title>" --source-ref "C<NN>_<Slug_PT>"
+```
 This generates `04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md` with frontmatter:
 ```yaml
 ---
@@ -38,8 +40,11 @@ tags:
 ```
 
 ### Step 2: Assemble Localization Context
-Gather the translation context yourself:
-Review:
+Generate the translation prompt with full termbase integration:
+```bash
+narr prompt render translate-chapter --chapter <NN> --lang es
+```
+Review the assembled context:
 - Source pt-BR chapter text with existing `<!-- p:N -->` anchors.
 - Official terminology mappings from `TRM-Termbase.md`.
 - Target prose rhythm and tone guidelines from `SCP-Tone_and_Identity_Bible.md`.
@@ -59,10 +64,10 @@ narr translate check <NN>
 ```
 And execute deep invariant validation:
 ```bash
-narr translate check <NN>
+narr prompt validate translate-chapter 04_Manuscript/es/Chapters/C<NN>_<Slug_ES>.md --source-file 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug_PT>.md
 ```
 Verifies:
-- MSC004: Every `<!-- p:N -->` marker of the source appears exactly once, in the same order (block counts with a 10 % tolerance apply only when neither file has markers).
+- MSC004: Paragraph count difference is within strict tolerance ($\le 10\%$).
 - Complete preservation of sequential `<!-- p:N -->` paragraph delimiters.
 - VAL010: Zero CJK characters in publication output.
 - VAL024: Zero conversational assistant preambles.

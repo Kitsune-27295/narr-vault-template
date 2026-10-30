@@ -5,8 +5,8 @@ title: "<Technique / Martial Art Name>"
 aliases:
   - "<Pinyin / Alternate Translation>"
   - "<Epithet / Title>"
-classification: "<Internal Cultivation | Footwork / Movement | Palm / Strike | Weapon Mastery / Intent | Ocular / Mental | Hidden Weapon / Ballistics | Self-Created Signature Skill>"
-discipline_system: "<Internal Energy (Neili) | Power Reserve | Spiritual Power | Physical Biomechanics>"
+classification: "<Internal Cultivation | Footwork / Movement | Palm / Strike | Weapon Mastery / Intent | Ocular / Mental | Hidden Weapon / Ballistics | Self-Created Soul Skill>"
+discipline_system: "<Internal Energy (Neili) | Soul Power (Hunli) | Spiritual Power (Jingshenli) | Physical Biomechanics>"
 creator_origin: "<CHR-Creator_Name | FAC-Sect_Name | Ancient Heritage>"
 tier_rarity: "<Fundamental | Intermediate | Advanced Sect Secret | Apex Masterwork | Transcendent / Divine>"
 prerequisite_rank: "<Rank Threshold or Physical Conditioning Requirement>"
@@ -33,7 +33,7 @@ tags:
 
 <Paragraph 1: Core philosophical paradigm. What fundamental martial or natural law governs this art? (e.g., Accumulating kinetic momentum through centrifugal rotation, soft redirection conquering brute force, supreme speed through air-stream slipstreams, absolute mental stillness governing physical reaction).>
 
-<Paragraph 2: Energetic and meridian circulation mechanics. How does internal energy, power reserve, or spiritual focus route through the practitioner's vascular and meridian systems? Which acupoints are activated, and how does energy convert into physical force, velocity, or sensory enhancement?>
+<Paragraph 2: Energetic and meridian circulation mechanics. How does internal energy, soul power, or spiritual focus route through the practitioner's vascular and meridian systems? Which acupoints are activated, and how does energy convert into physical force, velocity, or sensory enhancement?>
 
 <Paragraph 3: Psychological resonance and martial state of mind. What emotional control or psychological state (*Xinfa*) must the user maintain during execution? Does it require detached calm, furious intent, predatory focus, or absolute void?>
 
@@ -57,7 +57,7 @@ tags:
 | Form / Phase # | Form Name (English & Pinyin) | Kinematic Flow & Posture | Energy Drain & Circulation Pathway | Combat Effect & Vector | Cooldown / Stance Recovery |
 |:---:|:---|:---|:---|:---|:---|
 | **Form 1** | `<Opening Stance / Rooting>` | <Initial biomechanical alignment> | <Low baseline drain; circulating through Ren/Du meridians> | <Defensive framing; threat evaluation> | <Immediate / Continuous> |
-| **Form 2** | `<Intermediate Transition / Accumulation>` | <Dynamic shift in center of gravity> | <Moderate power reserve / stamina expenditure> | <Kinetic acceleration; guard displacement> | <Brief recovery window (1-2s)> |
+| **Form 2** | `<Intermediate Transition / Accumulation>` | <Dynamic shift in center of gravity> | <Moderate soul power / stamina expenditure> | <Kinetic acceleration; guard displacement> | <Brief recovery window (1-2s)> |
 | **Form 3** | `<Apex Strike / Terminal Form>` | <Full-body whip kinetic release> | <Heavy burst drain; concentrated dantian discharge> | <Armor-piercing devastation / lethal thrust> | <Noticeable reset interval (3-5s)> |
 | **Form 4** | `<Counter / Redirection Variant>` | <Rotational pivot absorbing incoming force> | <Adaptive consumption based on incoming force> | <Force reversal; disarming / destabilization> | <Dependent on opponent momentum> |
 
@@ -70,9 +70,9 @@ tags:
 - **Sensory Manifestation:** <How the practitioner's murderous intent (*Shaqi*), sword intent (*Jianyi*), or fist will physically presses against nearby observers.>
 - **Range & Field Effect:** `<Radius in meters where opponents experience mental suppression, illusory cuts, or slowed reactions.>`
 
-### 4.2 Innate Power & Equipment Synergy
-- **Optimal Weapon / Tool Alignment:** <Specific weapon geometry, weight class, or innate power type best suited for this art.>
-- **Transformation Integration:** <How beast transformation enhances claws, tails, or muscular torque during kata execution.>
+### 4.2 Martial Soul & Equipment Synergy
+- **Optimal Weapon / Tool Alignment:** <Specific weapon geometry, weight class, or martial soul type best suited for this art.>
+- **Beast Soul Integration:** <How beast transformation enhances claws, tails, or muscular torque during kata execution.>
 - **Cross-Technique Chaining:** <Known synergistic combinations (e.g., pairing this strike art with a specific footwork technique to eliminate positional recovery frames).>
 
 ---
@@ -126,11 +126,11 @@ tags:
 
 | Term / Taxonomy | Category | Clear & Accessible Definition |
 |:---|:---|:---|
-| **Internal Energy (*Neili*)** | Energy | Internal cultivated vital energy circulating through meridians, distinct from external power reserve derived from rings. |
+| **Internal Energy (*Neili*)** | Energy | Internal cultivated vital energy circulating through meridians, distinct from external soul power derived from rings. |
 | **Footwork (*Shenfa*)** | Kinematics | Specialized movement patterns, directional pivots, and evasion geometry utilized to control combat distance. |
 | **Martial Intent (*Yijing*)** | Willpower | The externalized projection of a practitioner's refined martial comprehension, capable of exerting physical/mental pressure. |
 | **Qi Deviation (*Zouhuorumo*)** | Pathology | Violent chaotic reversal of energy through damaged or improperly forced meridians, risking physical crippling or death. |
 | **Acupoint (*Xuewei*)** | Anatomy | Specific biological and energetic nodes along the human meridian network utilized for energy emission or circulation. |
 | **Form / Kata (*Zhaoshi*)** | Kinematics | Standardized sequences of postures, offensive vectors, and defensive transitions refined over generations. |
-| **Self-Created Technique** | Innovation | A martial technique developed through personal insight that manipulates power reserve without relying on a power source. |
+| **Self-Created Skill (*Zichuang Hunji*)** | Innovation | A martial technique developed through personal insight that manipulates soul power without relying on a spirit ring. |
 | **Sanderson Limitation** | Narrative | Explicit physical or energetic ceiling preventing a technique from acting as an unbounded plot device. |

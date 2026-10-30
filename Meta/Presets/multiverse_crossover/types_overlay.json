@@ -1,0 +1,12 @@
+{
+  "types": {
+    "origin_universe": "text",
+    "current_reality": "text",
+    "variant_of": "text",
+    "anchor_point": "text",
+    "reality_stability": "text",
+    "power_equalization": "text",
+    "crossover_origin": "text",
+    "travel_method": "text"
+  }
+}

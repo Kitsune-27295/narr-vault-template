@@ -18,18 +18,12 @@ budgets:
   max_context_tokens: 3500
   operational_file_max_bytes: 307200
 
-# Advisory prose checks (warnings STY001-STY005) for chapters in 04_Manuscript; densities are per 1000 words.
-style:
-  enabled: true
-  filter_per_1000_max: 25
-  adverb_per_1000_max: 12
-  rhythm_min_stdev: 4
-  opener_run_max: 3
-  tics_max: 3
-  min_chapter_words: 300
-
-# Authority of canon media, highest first. Dossiers record lower-ranked variants in section 5.
-canon_authority: [source_text, adaptation, fanon, inference]
+rag:
+  model: "minishlab/potion-multilingual-128M"
+  dimensions: 256
+  rrf_k: 60
+  chunk_size: 1500
+  chunk_overlap: 225
 
 scopes:
   default: "fanfic_canon"
@@ -53,3 +47,4 @@ scopes:
 git:
   commit_types: ["canon", "source", "bible", "timeline", "manuscript", "pod", "ledger", "meta", "fix", "refactor", "chore"]
   require_lint_pass: true
+  co_author: "Antigravity <noreply@google.com>"

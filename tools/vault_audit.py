@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Deterministic vault guard that runs the narr-fiction linter (same checks as `narr lint`).
+"""Deterministic vault guard that delegates to `narr.checks`.
 Fails on invariant, ontological, structural, or continuity errors.
 
 Usage:
@@ -13,32 +13,37 @@ import sys
 from collections import defaultdict
 from pathlib import Path
 
-from framework_core.linter.checks import CORE_CHECKS
-from framework_core.linter.engine import LinterRegistry
-from narr_fiction.checks import NARR_CHECKS
-from narr_fiction.vault import NarrVault
+# Add src to sys.path if narr is not installed in the active environment
+_REPO_ROOT = Path(__file__).resolve().parent.parent.parent
+_SRC_DIR = _REPO_ROOT / "src"
+if _SRC_DIR.is_dir() and str(_SRC_DIR) not in sys.path:
+    sys.path.insert(0, str(_SRC_DIR))
+
+from narr.checks import run_all_checks  # noqa: E402
+from narr.vault import Vault  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 
 
 def main() -> int:
-    registry = LinterRegistry()
-    for check in [*CORE_CHECKS, *NARR_CHECKS]:
-        registry.register(check)
-    report = registry.run(NarrVault(ROOT))
+    vault = Vault.find(ROOT)
+    findings = run_all_checks(vault)
 
     errors: dict[str, list[str]] = defaultdict(list)
     warnings: dict[str, list[str]] = defaultdict(list)
-    for diag in report.diagnostics:
-        bag = errors if str(diag.severity).lower() == "error" else warnings
-        bag[diag.code].append(f"{diag.path or '-'}: {diag.message}")
+
+    for f in findings:
+        if f.severity == "error":
+            errors[f.code].append(f"{f.path}: {f.message}")
+        else:
+            warnings[f.code].append(f"{f.path}: {f.message}")
 
     show_all = "--warn" in sys.argv
     for title, bag in (("ERROR", errors), ("WARN", warnings)):
-        for code in sorted(bag):
-            print(f"[{title}] {code} ({len(bag[code])})")
-            for msg in bag[code][: (None if title == "ERROR" or show_all else 3)]:
-                print("   ", msg)
+        for k in sorted(bag):
+            print(f"[{title}] {k} ({len(bag[k])})")
+            for m in bag[k][: (None if title == "ERROR" or show_all else 3)]:
+                print("   ", m)
 
     total_errors = sum(len(v) for v in errors.values())
     total_warnings = sum(len(v) for v in warnings.values())
@@ -47,5 +52,5 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.stdout.reconfigure(encoding="utf-8")  # type: ignore[union-attr]
+    sys.stdout.reconfigure(encoding="utf-8")
     sys.exit(main())

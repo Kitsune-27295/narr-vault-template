@@ -55,7 +55,7 @@ tags:
 
 <Paragraph 1: Theoretical foundation. How does the verified mechanism operate under consistent planar physics? What energetic, biological, or psychological laws govern its behavior?>
 
-<Paragraph 2: Biomechanical or meridian integration. How does this finding translate into human physical movement, power reserve circulation, or cultivation bottlenecks?>
+<Paragraph 2: Biomechanical or meridian integration. How does this finding translate into human physical movement, soul power circulation, or cultivation bottlenecks?>
 
 <Paragraph 3: Sanderson hard limits and energy economics. What are the strict costs, recovery intervals, failure points, and non-negotiable limitations associated with this phenomenon?>
 

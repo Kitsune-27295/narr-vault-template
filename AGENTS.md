@@ -27,16 +27,15 @@
 
 ## 3. Operational Workflow & CLI Gates
 ```pwsh
-narr chapter new <N> "<Title>" --pov "<POV>"       # Scaffold a pt-BR draft with <!-- p:N --> markers
+narr pipeline plan                                # Display authoritative workflow phases
+narr prompt render write-chapter -c <N> -p "<POV>" # Assemble prompt for pt-BR drafting
+narr prompt validate write-chapter <draft_file>   # Check CJK, fluff, <!-- p:N --> sequence
+narr prompt render translate-chapter -c <N>       # Assemble prompt for es publication
 narr translate check <N>                          # Verify paragraph parity (MSC004)
-narr domain list                                  # Domains and the dossier owning each (or planned)
-narr ingest route <SRC-id>                        # Which section of a source belongs to which domain
-narr ingest coverage [<SRC-id>]                   # Source paragraphs no dossier has quoted yet
-narr lint [--path P]                              # Pre-commit invariant check (must exit 0)
-narr search "<terms>" [-k N] [--zone Z] [--json]  # Ranked search with path:line citations
+narr lint                                         # Pre-commit invariant check (must exit 0)
+narr crosscheck                                   # Continuity and Chekhov ledger check
 python tools/vault_audit.py                       # Quote, uid, scope, table and link guard (must exit 0)
-narr doctor                                       # Environment, .agents/.claude mirrors and hook files
-narr hook install [--activate]                    # Regenerate mirrors, Claude/Antigravity hooks, .githooks
+narr doctor                                       # Environment and multi-agent parity check
 ```
 
 ## 4. Core Axioms (see .agents/rules/ for authoritative specifications)
@@ -52,8 +51,9 @@ narr hook install [--activate]                    # Regenerate mirrors, Claude/A
 ## 5. Agent Skills & Tooling
 - Issue tracker: Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
 - Domain docs: Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
-- Decisions: record curator decisions with `narr decide "<title>"` into `memory/decisions/`; `08_Ledgers/LDG-Architecture_Decision_Records.md` holds the framework's own ADRs.
 
 ## 6. Session Close
-Update `08_Ledgers/LDG-Session_Handoff.md` (done, next, decided) and `memory/hot.md` by hand; record curator decisions with `narr decide "<title>"`.
+```pwsh
+narr session close --done "<completed items>" --next "<next priority>" --decided "<key decisions>"
+```
 

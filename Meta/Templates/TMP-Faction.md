@@ -5,11 +5,11 @@ title: "<Faction / Organization Name>"
 aliases:
   - "<Pinyin / Alternate Name>"
   - "<Epithet / Title>"
-classification: "<Imperial Dynasty | Supreme Continental Hegemony | Upper Three Sect | Lower Four Sect | Single-Attribute Clan | Practitioner Academy | Commercial Cartel | Underground Syndicate>"
+classification: "<Imperial Dynasty | Supreme Continental Hegemony | Upper Three Sect | Lower Four Sect | Single-Attribute Clan | Soul Master Academy | Commercial Cartel | Underground Syndicate>"
 headquarters: "<LOC-Headquarters_Location>"
 sovereign_leader: "<CHR-Supreme_Leader>"
 hierarchical_tier: "<Tier 1: Global Superpower | Tier 2: Continental Hegemon | Tier 3: Regional Powerhouse | Tier 4: Local Prestige Clan | Tier 5: Minor Auxiliary Group>"
-hereditary_innate_power: "<PWR-Clan_Hereditary_Power | Multi-Discipline | None>"
+hereditary_martial_soul: "<PWR-Clan_Hereditary_Soul | Multi-Discipline | None>"
 status: active
 scope: fanfic_canon
 created: YYYY-MM-DD
@@ -29,7 +29,7 @@ tags:
 <!-- 2 to 4 paragraphs detailing public philosophy, institutional culture, and covert motives. -->
 
 ### 1.1 Public Stance & Ideology
-<Paragraph 1: Public doctrine and societal mandate. What values does this organization project to the continental populace, imperial courts, and unaffiliated practitioners? (e.g., Divine salvation and awakening for commoners, aristocratic martial supremacy, pure commercial neutrality, scholarly enlightenment).>
+<Paragraph 1: Public doctrine and societal mandate. What values does this organization project to the continental populace, imperial courts, and unaffiliated soul masters? (e.g., Divine salvation and awakening for commoners, aristocratic martial supremacy, pure commercial neutrality, scholarly enlightenment).>
 
 ### 1.2 Secret Agenda & True Motives
 <Paragraph 2: Hidden objectives and true motives pursued by the innermost ruling circle. What grand strategy or survival mandate guides leadership? (e.g., Overthrowing secular empires to establish a theocracy, stockpiling resources for clan seclusion, avenging a generational blood debt, securing ascension to godhood).>
@@ -42,7 +42,7 @@ tags:
 ---
 
 ## 2. Ancestral Bloodline & Signature Heritage
-- **Hereditary Innate Power:** `<PWR-Hereditary_Innate_Power>`
+- **Hereditary Martial Soul:** `<PWR-Hereditary_Martial_Soul>`
   - *Inheritance Stability:* <% Probability of pure bloodline offspring awakening this exact soul.>
   - *Clan Genetic Anomalies / Mutations:* <Known mutant variants, positive or negative.>
 - **Exclusive Clan Techniques (*Zongmen Juexue*):**
@@ -50,14 +50,14 @@ tags:
   - `<TEC-Exclusive_Technique_2>`: <Functional summary and clan restrictions.>
 - **Ancestral Heirlooms & Regalia:**
   - *Sacred Weapon / Tool:* `<ITM-Clan_Sacred_Artifact>`
-  - *Inherited Relic Sets:* <Details on complete or partial sets passed down across patriarchs.>
+  - *Inherited Spirit Bone Sets:* <Details on complete or partial 6-bone sets passed down across patriarchs.>
 
 ---
 
 ## 3. Hierarchical Structure & Governance Model
 - **Supreme Executive:** `<CHR-Patriarch_or_Pontiff>` (Title / Rank / Absolute authority limits).
 - **Council of Elders / Supreme Worshipers:**
-  - *Elder Hall Composition:* `<N> Grand Elders (Apex-Tier Practitioner level) and <N> Standard Elders (Elite-Tier Practitioner level).`
+  - *Elder Hall Composition:* `<N> Grand Elders (Title Douluo level) and <N> Standard Elders (Spirit Douluo level).`
   - *Decision Protocol:* <Autocratic decree vs. two-thirds elder council majority required for war declaration.>
 - **Functional Administrative Divisions:**
   - *Combat & War Hall:* <Responsible for field deployments, hunting expeditions, and frontier defense.>
@@ -65,7 +65,7 @@ tags:
   - *Logistics, Treasury & Alchemy:* <Managing clan commerce, forging workshops, medicinal herb stockpiles.>
   - *External Affairs & Intelligence:* <Diplomatic envoys, spy networks embedded in imperial capitals and arenas.>
 - **Disciple Stratification:**
-  - *Direct Line:* <Direct blood descendants of the founding patriarch; receive priority cultivation pills and relics.>
+  - *Direct Line (*Zhixi*):* <Direct blood descendants of the founding patriarch; receive priority cultivation pills and spirit bones.>
   - *Branch Line (*Pangzhi*):* <Collateral relatives; serve as secondary officers, stewards, and regional outpost guards.>
   - *External Disciples (*Waimen*):* <Talented recruits from commoner or vassal backgrounds; bound by strict loyalty oaths.>
 
@@ -76,11 +76,11 @@ tags:
 ### 4.1 Standing Armed Forces & Cultivation Census
 | Combat Rank Tier | Title / Classification | Approximate Census | Primary Deployment Role |
 |:---|:---|:---:|:---|
-| **Ranks 91–99** | Apex-Tier Practitioner / Peak Elders | `<N> Combatants` | Strategic deterrent, apex battlefield intervention |
-| **Ranks 81–90** | Elite-Tier Practitioner / Senior Officers | `<N> Combatants` | Legion commanders, high-tier hunting leads |
-| **Ranks 71–80** | Paragon / Mid-level Elders | `<N> Combatants` | Elite tactical strike units, branch leaders |
+| **Ranks 91–99** | Title Douluo / Peak Elders | `<N> Combatants` | Strategic deterrent, apex battlefield intervention |
+| **Ranks 81–90** | Spirit Douluo / Senior Officers | `<N> Combatants` | Legion commanders, high-tier hunting leads |
+| **Ranks 71–80** | Soul Saint / Mid-level Elders | `<N> Combatants` | Elite tactical strike units, branch leaders |
 | **Ranks 41–70** | Soul Ancestor to Soul Emperor | `<N> Combatants` | Core vanguard, specialized squad captains |
-| **Ranks 11–40** | Initiate to Elder | `<N> Combatants` | Rank-and-file disciples, perimeter security |
+| **Ranks 11–40** | Spirit Master to Soul Elder | `<N> Combatants` | Rank-and-file disciples, perimeter security |
 
 ### 4.2 Economic Foundations & Asset Control
 - **Primary Revenue Streams:** <Control of spirit metal mines, imperial subsidies, commercial taxation, auction house shares.>
@@ -116,9 +116,9 @@ graph TD
 ## 6. Sanderson Institutional Vulnerabilities & Bottlenecks
 *Enforcing Rule 30 & Sanderson's Second Law: structural weaknesses and critical failure points.*
 
-- **Innate Power / Tactical Specialization Flaws:** <E.g., Extreme offensive focus leaving rear support exposed; lack of autonomous combat power in auxiliary clans requiring sworn external guardians.>
-- **Succession & Bloodline Crises:** <Risk of generational decline if direct heirs fail to manifest high innate power reserve; internal succession wars between elder factions.>
-- **Logistical & Resource Choke-Points:** <Total dependence on external creature hunting reserves or specific rare metals to forge clan equipment.>
+- **Martial Soul / Tactical Specialization Flaws:** <E.g., Extreme offensive focus leaving rear support exposed; lack of autonomous combat power in auxiliary clans requiring sworn external guardians.>
+- **Succession & Bloodline Crises:** <Risk of generational decline if direct heirs fail to manifest high innate soul power; internal succession wars between elder factions.>
+- **Logistical & Resource Choke-Points:** <Total dependence on external spirit beast hunting reserves or specific rare metals to forge clan equipment.>
 - **Intelligence Vulnerabilities:** <Infiltration risks, disaffected external disciples selling secret techniques.>
 
 ---
@@ -151,7 +151,7 @@ graph TD
 
 ### 9.2 Scene Deployment & Political Dynamics (Phase 2)
 1. **Factional Voice:** Ensure characters affiliated with this faction reflect the institutional culture and moral code documented in Section 1.
-2. **Military Deployments:** Adhere strictly to the combat census table in Section 4; do not spontaneously conjure extra Apex-Tier Practitioners without canon justification.
+2. **Military Deployments:** Adhere strictly to the combat census table in Section 4; do not spontaneously conjure extra Title Douluo without canon justification.
 3. **Continuous Ledger Sync:** Ensure related character profiles (`CHR-*.md`) reference this faction under Affiliations.
 
 ---
@@ -160,10 +160,10 @@ graph TD
 
 | Term / Taxonomy | Category | Clear & Accessible Definition |
 |:---|:---|:---|
-| **Upper Three Sects (*Shang San Zong*)** | Hierarchy | The three premier righteous sects of the continent, possessing Apex-Tier sovereigns and continental prestige. |
+| **Upper Three Sects (*Shang San Zong*)** | Hierarchy | The three premier righteous sects of the continent, possessing Title Douluo sovereigns and continental prestige. |
 | **Lower Four Sects (*Xia Si Zong*)** | Hierarchy | The four powerful secondary sects closely aligned with or influenced by <Dominant Hegemonic Faction>'s geopolitical sphere. |
-| **Direct Line** | Lineage | Core blood descendants carrying the purest ancestral innate power and holding primary inheritance rights. |
+| **Direct Line (*Zhixi*)** | Lineage | Core blood descendants carrying the purest ancestral martial soul and holding primary inheritance rights. |
 | **Branch Line (*Pangzhi*)** | Lineage | Collateral family branches handling administrative, economic, or garrison duties across the empire. |
 | **Patriarch (*Zongzhu*)** | Governance | The supreme political and martial leader of a sect, holding final operational command. |
-| **Worshiping Hall** | Institution | The apex sanctuary of <Dominant Hegemonic Faction> housing Rank 96+ Apex-Tier Practitioners devoted exclusively to the faction's patron deity. |
+| **Worshiping Hall (*Gongfeng Dian*)** | Institution | The apex sanctuary of <Dominant Hegemonic Faction> housing Rank 96+ Title Douluo devoted exclusively to the Angel God. |
 | **Sanderson Limitation** | Narrative | Explicit structural, political, or demographic vulnerability preventing a faction from acting with omnipotent dominance. |

@@ -1,6 +1,6 @@
 ---
 name: write-chapter
-description: "Draft narrative chapters in pt-BR using hybrid prompt assembly, <!-- p:N --> paragraph delimiters, and continuous ledger synchronization. Use when a chapter must be drafted in pt-BR with paragraph markers, continuity and ledger synchronisation."
+description: Draft narrative chapters in pt-BR using hybrid prompt assembly, <!-- p:N --> paragraph delimiters, and continuous ledger synchronization
 ---
 # write-chapter
 
@@ -19,14 +19,18 @@ Before writing a single paragraph of narrative prose:
 ## Step-by-Step Execution Workflow
 
 ### Step 1: Scaffold Chapter Page
-Generate the chapter markdown file:
+Generate the chapter markdown file using the blueprint engine:
 ```bash
-narr chapter new <NN> "<Chapter_Title>" --pov "<Character_Name>"
+narr new chapter_pt "C<NN> - <Chapter_Title>"
 ```
 This creates `04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md` with compliant frontmatter (`type: chapter`, `language: pt-BR`, `status: draft`).
 
 ### Step 2: Assemble Deterministic Context
-Assemble the context yourself, within a small token budget; read:
+Generate the fiction-conscious prompt with token budgeting:
+```bash
+narr prompt render write-chapter --chapter <NN> --pov "<Character_Name>" --arc "<Arc_Name>"
+```
+Review the assembled context sections:
 - Atmospheric Tone & Negative Boundaries from `SCP-Tone_and_Identity_Bible.md`.
 - Epistemic Horizon Ledger from `LDG-Character_Knowledge.md` (ensuring the POV character does not possess out-of-scene knowledge).
 - Active Plot Threads & Chekhov Weapons.
@@ -44,7 +48,7 @@ Draft the chapter in `04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md` observing th
 ### Step 4: Validate Invariants
 Run deterministic post-generation validation:
 ```bash
-narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
+narr prompt validate write-chapter 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
 ```
 Verifies:
 - VAL010: Zero CJK characters outside raw sources.
@@ -52,12 +56,8 @@ Verifies:
 - Sequential integrity of `<!-- p:N -->` paragraph delimiters.
 - Wikilink bracket syntax balance (`[[...]]`).
 
-### Step 4b: Read the Prose Signals
-Read the STY001-STY005 warnings that `narr lint` printed for the chapter.
-Look at sentence rhythm, filter words, -mente adverbs and repeated openers. These are advisory (STY001-STY005); fix real problems and explain the rest. Allow at most three revise-and-validate rounds per chapter; after that, record what is left in the handoff instead of looping.
-
 ### Step 5: Synchronize Operational Ledgers
-First write the *state diff* of the chapter in the handoff: new facts, changed facts, and contradictions that stay open until the curator decides (log those in `LDG-Contradictions.md`). Then immediately update the continuity ledgers in `08_Ledgers/`:
+Immediately update the continuity ledgers in `08_Ledgers/`:
 1. `08_Ledgers/LDG-Character_Knowledge.md`:
    - Append newly acquired knowledge or deceptions experienced by the characters.
 2. `08_Ledgers/LDG-Chekhov_Guns.md`:
@@ -72,6 +72,6 @@ First write the *state diff* of the chapter in the handoff: new facts, changed f
 Execute vault integrity checks:
 ```bash
 narr lint --path 04_Manuscript/pt-BR/Chapters/C<NN>_<Slug>.md
-python tools/vault_audit.py
+narr crosscheck
 ```
 Both commands must report 0 errors and 0 issues before the drafting turn is complete.

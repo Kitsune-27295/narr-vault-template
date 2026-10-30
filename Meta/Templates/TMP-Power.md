@@ -5,7 +5,7 @@ title: "<Innate Power / Talent / Inborn Gift Name>"
 aliases:
   - "<Pinyin / Alternate Name>"
 classification: "<Inborn Sensory Gift | Inborn Biological Trait | State of Consciousness & Mental Discipline | Innate Physiological Anomaly>"
-power_source: "<Inborn Physiology | Spiritual Consciousness | Blood Essence (Qixue) | Natural Optic/Neurological Biology>"
+power_source: "<Inborn Physiology | Spiritual Consciousness (Jingshenli) | Blood Essence (Qixue) | Natural Optic/Neurological Biology>"
 decoupled_from_regalia: true
 combat_utility: "<Microscopic Perception & Precognition | Emotional & Presence Erasure | Inborn Physical Hardness | Sensory Expansion | Subconscious Reaction>"
 rarity_tier: "<Universal Biological Trait | Rare Inborn Gift | Singular Anomaly | Sovereign Transcendence>"
@@ -23,16 +23,16 @@ tags:
 # <Innate Power / Talent / Inborn Gift Name>
 
 > [!NOTE]
-> **Executive Summary:** <2-3 sentence technical overview of this inborn power entity: classification (inborn sensory gift, biological trait, or state of consciousness), neurological/physiological foundation, complete independence from innate powers and power sources, tactical utility, and operational boundaries. **Architectural Rule:** Do NOT document learned martial arts, swordsmanship forms, breathing styles, or katas here; those belong exclusively to [[TMP-Technique]] (`TEC-`).>
+> **Executive Summary:** <2-3 sentence technical overview of this inborn power entity: classification (inborn sensory gift, biological trait, or state of consciousness), neurological/physiological foundation, complete independence from martial souls and spirit rings, tactical utility, and operational boundaries. **Architectural Rule:** Do NOT document learned martial arts, swordsmanship forms, breathing styles, or katas here; those belong exclusively to [[TMP-Technique]] (`TEC-`).>
 
 ---
 
 ## 1. Core Concept & Decoupled Metaphysical Essence
 <!-- 2 to 4 paragraphs explaining the nature, origin, and governing laws of this inborn talent or state. -->
 
-<Paragraph 1: Ontological origin and complete independence from innate power regalia. Is this power an inborn biological/sensory gift (e.g., Perfect Perception, Inborn Divine Strength, Dragon-Tiger Marrow) or an esoteric state of consciousness / mental discipline (e.g., Calm Mind State, Heart of Emptiness)? Emphasize that this ability is an inborn physiological or spiritual condition that operates autonomously without summoning a innate power or activating power sources.>
+<Paragraph 1: Ontological origin and complete independence from martial soul regalia. Is this power an inborn biological/sensory gift (e.g., Transparent World / See-Through World, Inborn Divine Strength, Dragon-Tiger Marrow) or an esoteric state of consciousness / mental discipline (e.g., Selfless State, Heart of Emptiness)? Emphasize that this ability is an inborn physiological or spiritual condition that operates autonomously without summoning a martial soul or activating spirit rings.>
 
-<Paragraph 2: Neurological, physiological, and anatomical conduit. Which anatomical systems or internal energy reservoirs fuel this ability (e.g., optic chiasm and spiritual sea, autonomic nervous system, deep marrow density, or resting vascular equilibrium)? How does it remain fully functional even if the user's innate power is suppressed, sealed, or absent?>
+<Paragraph 2: Neurological, physiological, and anatomical conduit. Which anatomical systems or internal energy reservoirs fuel this ability (e.g., optic chiasm and spiritual sea, autonomic nervous system, deep marrow density, or resting vascular equilibrium)? How does it remain fully functional even if the user's martial soul is suppressed, sealed, or absent?>
 
 <Paragraph 3: Psychological resonance and subjective consciousness. How does maintaining or slipping into this state shape the user's perception of time, spatial distance, adrenaline, predatory hostility, and tactical awareness in high-intensity environments?>
 
@@ -43,7 +43,7 @@ tags:
 - **Sensory Signature & Footprint:**
   - Ocular / Body Glow: `<Color Name> (<Hex Code>) | Completely imperceptible to external eyes`
   - Presence Footprint: `<Auditory silence, thermal stabilization, zero bloodlust emission, environmental neutrality>`
-- **Internal HUD Perception (Subjective Perspective):** <What the user perceives upon activation: e.g., Perfect Perception seeing blood flow, bone micro-stress, muscle contractions, and energy vectors in real-time pseudo-precognition; Calm Mind State experiencing emotional stillness, detached focus, and complete erasure of predatory intent.>
+- **Internal HUD Perception (Subjective Perspective):** <What the user perceives upon activation: e.g., Transparent World seeing blood flow, bone micro-stress, muscle contractions, and energy vectors in real-time pseudo-precognition; Selfless State experiencing emotional stillness, detached focus, and complete erasure of predatory intent.>
 
 ---
 
@@ -52,12 +52,12 @@ tags:
 
 ### 3.1 Step-by-Step Activation Sequence
 1. **Initial Trigger:** `<Cognitive alignment, autonomic nervous shift, or focal optical transition>`
-2. **Internal Somatic Route:** `<Transmission through optic nerve, cerebral cortex, or cardiac resting cycle without activating power sources>`
+2. **Internal Somatic Route:** `<Transmission through optic nerve, cerebral cortex, or cardiac resting cycle without activating soul rings>`
 3. **Perceptual / Environmental Realization:** `<Immediate sensory expansion, internal biological visualization, or complete presence neutralization>`
 4. **Resolution & Stabilization:** `<Natural return to standard perception without metabolic shock or energetic deficit>`
 
 ### 3.2 Energetic Consumption Profile
-- **Primary Energy Drain:** `<Negligible / Consumes near-zero power reserve; fueled primarily by mental focus, blood essence stability, or baseline calories>`
+- **Primary Energy Drain:** `<Negligible / Consumes near-zero soul power; fueled primarily by mental focus, blood essence stability, or baseline calories>`
 - **Sustained Endurance Limit:** `<Maximum continuous duration before neurological fatigue, eye strain, or psychological dissociation occurs>`
 - **Recovery Rate:** `<Natural recovery through rest or mental grounding>`
 
@@ -99,7 +99,7 @@ tags:
 
 ## 7. Rarity, Lineage & Continental Distribution
 - **Prevalence on <World / Setting Name>:** `<Unique personal anomaly | Extremely rare genetic mutation | Transmigrated kinesthetic legacy>`
-- **Philosophical Contrast:** <How this disciplined, quiet, internal power contrasts sharply with the flamboyant, roar-heavy cultivation culture of standard practitioners.>
+- **Philosophical Contrast:** <How this disciplined, quiet, internal power contrasts sharply with the flamboyant, roar-heavy cultivation culture of standard Douluo soul masters.>
 
 ---
 
@@ -120,8 +120,8 @@ tags:
 
 | Term / Taxonomy | Category | Clear & Accessible Definition |
 |:---|:---|:---|
-| **Innate Power** | Ontology | An inborn physiological trait, sensory gift, or state of consciousness independent of power sources and innate powers. |
-| **Inborn Sensory Gift** | Physiology | Native biological adaptations (e.g., Perfect Perception) granting heightened optical and internal sensory resolution. |
-| **State of Consciousness (*Xinfa / Yijing*)** | Psychology | Mental states (e.g., Calm Mind State) that quiet ego, neutralize bloodlust, and optimize nervous system response. |
+| **Innate Power (*Xiantian Nengli*)** | Ontology | An inborn physiological trait, sensory gift, or state of consciousness independent of spirit rings and martial souls. |
+| **Inborn Sensory Gift** | Physiology | Native biological adaptations (e.g., Transparent World) granting heightened optical and internal sensory resolution. |
+| **State of Consciousness (*Xinfa / Yijing*)** | Psychology | Mental states (e.g., Selfless State) that quiet ego, neutralize bloodlust, and optimize nervous system response. |
 | **Presence Erasure** | Stealth | Blending completely into environmental background physics, preventing beast instincts and sensory detection. |
 | **Sanderson Hard Ceiling** | Narrative | Explicit limitations, costs, and failure modes ensuring power systems remain grounded, consistent, and believable. |

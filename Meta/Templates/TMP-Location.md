@@ -5,10 +5,10 @@ title: "<Location Name>"
 aliases:
   - "<Pinyin / Alternate Name>"
   - "<Epithet / Title>"
-classification: "<Sovereign City | Wilderness Forest / Wilderness | Extreme Sanctuary | Sect Stronghold | Academy / Training Ground | Arena | Forbidden / Divine Realm>"
+classification: "<Sovereign City | Beast Forest / Wilderness | Extreme Sanctuary | Sect Stronghold | Academy / Training Ground | Spirit Arena | Forbidden / Divine Realm>"
 controlling_faction: "<FAC-Governing_Faction | FAC-Empire_or_Sect>"
 parent_region: "<LOC-Parent_Province_or_Territory>"
-danger_tier: "<Tier 0: Pacified Settlement | Tier 1: Low-Hazard Outer Forest | Tier 2: Expert Hunting Ground | Tier 3: Paragon Peril | Tier 4: Apex-Tier Practitioner Lethality | Tier 5: God-Level Forbidden Zone>"
+danger_tier: "<Tier 0: Pacified Settlement | Tier 1: Low-Hazard Outer Forest | Tier 2: Spirit Ancestor Hunting Zone | Tier 3: Soul Saint Peril | Tier 4: Title Douluo Lethality | Tier 5: God-Level Forbidden Zone>"
 ambient_soul_density: "<Sparse (0.5x) | Continental Standard (1.0x) | Enriched Sanctuary (2.0x-5.0x) | Extreme Prismatic Spring (10x+)>"
 status: active
 scope: fanfic_canon
@@ -30,7 +30,7 @@ tags:
 
 <Paragraph 1: Macro-geography and territorial boundaries. Where is this location situated on the <World / Setting Name>? Which empire, kingdom, or sect claims sovereign jurisdiction, and how contested are its borders?>
 
-<Paragraph 2: Strategic and economic value. Why does this location matter to the continent's balance of power? Is it a trade crossroads, an exclusive creature hunting reserve, a fortified border choke-point, or an isolated sanctuary for high-tier cultivation?>
+<Paragraph 2: Strategic and economic value. Why does this location matter to the continent's balance of power? Is it a trade crossroads, an exclusive spirit beast hunting reserve, a fortified border choke-point, or an isolated sanctuary for high-tier cultivation?>
 
 <Paragraph 3: Historical genesis and architectural heritage. When was this settlement, fortress, or sanctuary founded? Does it feature ancient pre-imperial stonework, <Dominant Hegemonic Faction> marble basilica architecture, clan iron-wood bastions, or untouched primordial nature?>
 
@@ -46,7 +46,7 @@ tags:
   - *Intermediate Zone / Urban Core:* <Administrative palaces, great merchant guilds, intermediate clan residences, standard beast canopy.>
   - *Core Sanctum / Apex Reserve:* <Sovereign manor, high-tier cultivation spring, elder ancestral hall, or apex 100,000-year beast territory.>
 - **Signature Architectural & Natural Landmarks:**
-  - *Landmark 1:* `<Landmark Name> - <Visual and functional description (e.g., Central Arena, Ice-Fire Spring, Papal Peak).>`
+  - *Landmark 1:* `<Landmark Name> - <Visual and functional description (e.g., Central Spirit Arena, Ice-Fire Spring, Papal Peak).>`
   - *Landmark 2:* `<Landmark Name> - <Visual and functional description.>`
   - *Landmark 3:* `<Landmark Name> - <Visual and functional description.>`
 
@@ -54,29 +54,29 @@ tags:
 
 ## 3. Atmospheric, Environmental & Ecological Matrix
 - **Climate & Biome:** <Temperate continental, humid subtropical rainforest, sub-zero alpine tundra, or geothermal volcanic basin.>
-- **Ambient Power Reserve Dynamics:**
+- **Ambient Soul Power Dynamics:**
   - Energy Density Multiplier: `<Relative to baseline continental atmosphere (e.g., 1.0x baseline, 3.5x enriched)>`
   - Energetic Purity / Elemental Bias: <Neutral balanced, heavy Yang/Fire concentration, corrosive poison mist, pure water/ice resonance.>
-  - Cultivation Impact: <Accelerates recovery of specific practitioners; creates meridian stagnation or elemental burning in mismatched wielders.>
+  - Cultivation Impact: <Accelerates recovery of specific soul masters; creates meridian stagnation or elemental burning in mismatched wielders.>
 - **Flora & Natural Resources:**
   - *Immortal Herbs / Spiritual Plants:* <Known rare herbs, centuries-old ginseng, spiritual grasses, or specialized timbers.>
   - *Mineral & Ore Deposits:* <Deep-sea sinking silver, spirit gold veins, dark iron quarries.>
-- **Fauna & Creature Population (Wilderness / Hunting Locations Only):**
-  - *Dominant Creature Families:* <Arachnid, feline, draconic, avian, or serpentine species.>
+- **Fauna & Beast Population (Wilderness / Hunting Locations Only):**
+  - *Dominant Beast Families:* <Arachnid, feline, draconic, avian, or serpentine species.>
   - *Age Distribution Profile:* <Outer perimeter: 10-100y | Mid-zone: 1,000-10,000y | Core: 50,000-100,000y+>
-  - *Apex Creature Rulers:* `<CHR-Apex_Beast_1>, <CHR-Apex_Beast_2>`
+  - *Apex Beast Rulers:* `<CHR-Apex_Beast_1>, <CHR-Apex_Beast_2>`
 
 ---
 
 ## 4. Socio-Political Structure & Defensive Garrison
 - **Administrative Governance:** <Governed by City Lord, Sect Grand Elder, <Dominant Hegemonic Faction> Bishop, or Royal Governor.>
 - **Resident Armed Strength & Garrison:**
-  - Garrison Size & Unit Types: `<N> imperial regular soldiers, <N> knight squads, <N> garrisoned practitioners.`
-  - Highest Resident Combatant: `<Title / Rank of strongest resident protector (e.g., Level 78 Paragon, Level 85 Elite-Tier Practitioner).>`
+  - Garrison Size & Unit Types: `<N> imperial regular soldiers, <N> knight squads, <N> garrisoned soul masters.`
+  - Highest Resident Combatant: `<Title / Rank of strongest resident protector (e.g., Level 78 Soul Saint, Level 85 Spirit Douluo).>`
   - <Dominant Hegemonic Faction> Presence: `<Sub-Temple / Cathedral / Platinum Bishopric / Zero presence due to sect isolation.>`
 - **Demographic & Economic Profile:**
-  - Population: `<Estimated civilian and practitioner count>`
-  - Primary Industries: <Creature hunting logistics, relic auctions, metallurgy, agricultural trade, maritime fishing.>
+  - Population: `<Estimated civilian and soul master count>`
+  - Primary Industries: <Beast hunting logistics, spirit bone auctions, metallurgy, agricultural trade, maritime fishing.>
   - Law & Order Enforcement: <Strict imperial law, <Dominant Hegemonic Faction> martial decree, or lawless wilderness where strength dictates survival.>
 
 ---
@@ -95,9 +95,9 @@ tags:
 ## 6. Negative Boundaries & Absolute Regional Constraints
 *Enforcing Rule 30: explicit documentation of what this location CANNOT provide or sustain.*
 
-1. **Negative Boundary 1 (Ecological Carrying Capacity):** <The ecosystem CANNOT replenish high-tier (10,000y+) creatures rapidly; excessive culling causes generational ecological collapse.>
+1. **Negative Boundary 1 (Ecological Carrying Capacity):** <The ecosystem CANNOT replenish high-tier (10,000y+) spirit beasts rapidly; excessive culling causes generational ecological collapse.>
 2. **Negative Boundary 2 (Geopolitical Sovereign Limits):** <Local authority CANNOT overrule imperial martial mobilization or high-ranking <Dominant Hegemonic Faction> Elder Orders without risking continental war.>
-3. **Negative Boundary 3 (Environmental Immunity Ceilings):** <Natural barriers provide ZERO protection against Apex-Tier Practitioner-level spatial manipulation or continental-tier bombardment.>
+3. **Negative Boundary 3 (Environmental Immunity Ceilings):** <Natural barriers provide ZERO protection against Title Douluo-level spatial manipulation or continental-tier bombardment.>
 4. **Negative Boundary 4 (Resource Scarcity Floor):** <The settlement CANNOT sustain its garrison if external grain and fresh water supply lines are severed for more than N weeks.>
 
 ---
@@ -129,10 +129,10 @@ tags:
 
 | Term / Taxonomy | Category | Clear & Accessible Definition |
 |:---|:---|:---|
-| **Hunting Ground** | Geography | Enclosed or wilderness territory inhabited by wild creatures, partitioned into danger tiers for power-source acquisition. |
+| **Hunting Forest (*Lieshou Senlin*)** | Geography | Enclosed or wilderness territory inhabited by wild spirit beasts, partitioned into danger tiers for ring acquisition. |
 | **Yin-Yang Eye (*Liangyi Yan*)** | Ecology | A supreme geothermal spring where extreme opposing elemental energies converge, accelerating botanical growth by orders of magnitude. |
-| **Great Arena (*Da Douhun Chang*)** | Institution | Massive civic arenas hosting standardized combat duels across bronze, silver, gold, and sapphire tier rankings. |
+| **Great Spirit Arena (*Da Douhun Chang*)** | Institution | Massive civic arenas hosting standardized combat duels across bronze, silver, gold, and sapphire tier rankings. |
 | **Core Zone (*Hexinqu*)** | Geography | The innermost, untamed sanctuary of a beast habitat where ancient, intelligent 100,000-year soul beasts reside. |
-| **Danger Tier** | Taxonomy | Standardized 0-to-5 scale assessing the minimum practitioner cultivation rank required to survive ambient threats. |
+| **Danger Tier** | Taxonomy | Standardized 0-to-5 scale assessing the minimum soul master cultivation rank required to survive ambient threats. |
 | **Ambient Soul Density** | Energy | The concentration of unrefined celestial energy present in local air, governing natural recovery and cultivation rates. |
 | **Sanderson Limitation** | Narrative | Explicit physical, supply, or environmental constraint preventing a setting from providing limitless resources or safety. |

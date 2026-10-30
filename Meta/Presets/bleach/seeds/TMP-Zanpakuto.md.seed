@@ -1,4 +1,6 @@
 ---
+folder: 02_Story_Bible/Powers_and_Systems
+prefix: PWR-
 uid: "TMP-Zanpakuto"
 type: zanpakuto
 title: "<Zanpakuto Name>"
@@ -34,10 +36,3 @@ Brief description of the Zanpakuto spirit, sealed blade appearance, and combat d
 ## Spirit Persona
 - **Appearance:** Manifestation inside the inner world.
 - **Personality:** Relationship and inner dialogue with the wielder.
-
----
-
-## Provenance
-- **Basis:** <canon_verified | fanon_established | user_defined | inferred>
-- **Evidence:** `SRC-<ID>#<locator>` *"<verbatim quote>"* (leave empty while the basis is `inferred`)
-- **What it does NOT establish:** <claims this page deliberately does not make.>

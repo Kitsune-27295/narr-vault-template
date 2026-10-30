@@ -86,7 +86,7 @@ tags:
 
 - **Cultivation Rank Invariants:**
   - `<CHR-Protagonist>`: Starts at Rank `<N>` -> Concludes at Rank `<M>` (Max gain strictly limited by biological absorption time).
-  - New Power Sources / Relics Acquired: `<Item / Beast taxa with verified age within physical limit>`.
+  - New Spirit Rings / Soul Bones Acquired: `<Item / Beast taxa with verified age within physical limit>`.
 - **Physical & Material Costs Incurred:**
   - *Biological Backlash:* <Meridian damage, stamina exhaustion requiring N weeks of recovery.>
   - *Resource Depletion:* <Exhausted hidden weapon bolts, depleted pills, spent currency.>
@@ -96,7 +96,7 @@ tags:
 ## 6. Negative Boundaries & Explicit Scope Constraints
 *Enforcing Rule 30: explicit documentation of what this arc WILL NOT resolve or contain.*
 
-1. **Negative Boundary 1 (Scope Creep Prohibition):** <This arc WILL NOT escalate to continental war or premature Apex-Tier Practitioner confrontations.>
+1. **Negative Boundary 1 (Scope Creep Prohibition):** <This arc WILL NOT escalate to continental war or premature Title Douluo confrontations.>
 2. **Negative Boundary 2 (Unearned Breakthrough Ceiling):** <No character will advance more than their hard physiological cultivation limit without immortal herb catalyst.>
 3. **Negative Boundary 3 (Secret Preservation):** <The protagonist's deepest transmigration secrets WILL NOT be discovered by secondary characters.>
 4. **Negative Boundary 4 (Sanderson Cost Floor):** <The climactic victory CANNOT be achieved without exhausting core trump cards and incurring tactical trade-offs.>
@@ -121,9 +121,9 @@ tags:
 3. **Drafting Sequence:** Define Dramatic Spine (Section 1) -> Beat Sheet Matrix (Section 2) -> Transformation Grid (Section 3) -> Chekhov Setups (Section 4).
 
 ### 8.2 Execution & Chapter Drafting Protocol (Phase 2)
-1. **Chapter Prompt Generation:** Use the Beat Sheet to write the drafting instructions for each chapter (`narr chapter new`).
+1. **Chapter Prompt Generation:** Use the Beat Sheet to generate drafting instructions via `narr prompt render write-chapter`.
 2. **Pacing Enforcement:** Verify each drafted chapter delivers its designated beat before advancing to the next.
-3. **Post-Arc Audit:** Upon completing the final chapter, execute `python tools/vault_audit.py` to ensure all active threads are reconciled.
+3. **Post-Arc Audit:** Upon completing the final chapter, execute `narr crosscheck` to ensure all active threads are reconciled.
 
 ---
 

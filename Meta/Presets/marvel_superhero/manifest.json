@@ -1,50 +1,34 @@
 {
   "name": "marvel_superhero",
   "display_name": "Marvel / Superhero & Western Sci-Fi",
-  "version": "2.1.0",
-  "schema_version": 2,
-  "maturity": "experimental",
+  "version": "1.0",
   "fandom": "Marvel Universe",
   "genre": "Superhero / Sci-Fi / Urban Fantasy",
-  "description": "Superhero fanfiction preset: secret identities, power classification, the 1-7 power grid, gadgets and team affiliation.",
+  "description": "Specialized framework preset for Marvel, DC, and superhero fanfictions. Includes vigilante ranks, secret identities, power classifications, gadgets, SHIELD clearance tiers, and Earth designation mappings.",
   "features": [
     "Secret Identity and Public Persona tracking",
     "Power Classification (Mutant, Mutate, Tech, Mystic, Cosmic)",
-    "Six-attribute power grid",
-    "Gadget schematics"
+    "Equipment and Gadget schematics (e.g. Web-Shooters, Armor)",
+    "Earth Universe Mapping (e.g. Earth-616, Earth-1610)"
   ],
-  "extends": [],
-  "conflicts": [],
+  "properties": [
+    "secret_identity",
+    "hero_alias",
+    "power_classification",
+    "power_tier",
+    "clearance_level",
+    "team_affiliation",
+    "gadgets",
+    "suit_tech",
+    "nemesis",
+    "origin_event"
+  ],
   "custom_types": [
     "hero_persona",
     "gadget"
   ],
-  "note_layout": {
-    "hero_persona": {
-      "prefix": "CHR",
-      "folder": "02_Story_Bible/Characters"
-    },
-    "gadget": {
-      "prefix": "PWR",
-      "folder": "02_Story_Bible/Powers_and_Systems"
-    }
-  },
-  "seeds": {
-    "seeds/TMP-Hero_Persona.md.seed": "Meta/Templates/TMP-Hero_Persona.md",
-    "seeds/TMP-Gadget.md.seed": "Meta/Templates/TMP-Gadget.md"
-  },
-  "required_tags": [
-    "#fandom/marvel"
-  ],
-  "provenance": {
-    "basis": "inferred",
-    "notes": "hero_persona and gadget are not used by any reference vault. power_grid and canon_origin come from the author's Spider-Man vaults (power grid page, Kintsugi/Heroes); their formats differed between vaults and are standardised here.",
-    "sources": [
-      {
-        "kind": "user_defined",
-        "title": "Author's reference vaults (Fanfictions / Fanfiction collections), surveyed during the SPEC-009 audit",
-        "ref": "internal"
-      }
-    ]
-  }
+  "seed_pages": [
+    "Meta/Templates/TMP-Hero_Persona.md",
+    "Meta/Templates/TMP-Gadget.md"
+  ]
 }

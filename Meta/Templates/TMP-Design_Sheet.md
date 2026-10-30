@@ -5,7 +5,7 @@ title: "<Character / Entity Visual Design Sheet>"
 aliases:
   - "<Visual Concept Codename>"
 subject: "<CHR-Subject_Character>"
-visual_identity_pillar: "Vault Visual Identity"
+visual_identity_pillar: "Aetheric Celestial Aegis"
 art_status: draft_sketch
 primary_artist_model: "FLUX.1-dev / Midjourney v6"
 status: active
@@ -34,12 +34,12 @@ tags:
 
 - **Height:** `<N> cm` | **Apparent Age:** `<N> years` | **Build:** `<Athletic / Heroic / Slender>`
 - **Hair:** `<Color, length, styling, and motion dynamics>`
-- **Eyes:** `<Iris hue, pupil geometry, luminescence under power reserve activation>`
+- **Eyes:** `<Iris hue, pupil geometry, luminescence under soul power activation>`
 
 ---
 
 ## 2. Chromatic Palette Hierarchy & Material Textures
-*Governed by the Vault Visual Identity visual guidelines (`.agents/skills/art-concept/SKILL.md`).*
+*Governed by the Aetheric Celestial Aegis visual guidelines (`.agents/skills/art-concept/SKILL.md`).*
 
 ```mermaid
 pie title Chromatic Hierarchy
@@ -50,7 +50,7 @@ pie title Chromatic Hierarchy
 
 - **Dominant Base (60%):** `<Color Name> (<Hex Code>)` — Applied to undertunics, deep shadow voids, cloaks, and structural leather.
 - **Secondary Armor / Metal (30%):** `<Color Name> (<Hex Code>)` — Mirror-finished gold plate, baroque acanthus reliefs, articulated gauntlets.
-- **Accent Radiance (10%):** `<Color Name> (<Hex Code>)` — Concentric power source halos, eye reflections, glowing runic inscriptions.
+- **Accent Radiance (10%):** `<Color Name> (<Hex Code>)` — Concentric spirit ring halos, eye reflections, glowing runic inscriptions.
 - **Haptic Material Textures:**
   - *Hard Surface:* <Mirror-polished gilded steel with engraved lion/dragon filigree.>
   - *Textile:* <Heavy midnight-blue silk brocade with silver-thread embroidery.>
@@ -76,12 +76,12 @@ pie title Chromatic Hierarchy
 
 ---
 
-## 4. Weapons, Power Sources & Manifestation Phantasms
+## 4. Weapons, Soul Rings & Manifestation Phantasms
 - **Primary Weapon / Tool Soul:**
   - *Total Length & Proportions:* `<Dimensions in cm>`
   - *Hilt & Crossguard Geometry:* <Ergonomic grip, counterweight pommel, engraved runes.>
   - *Blade / Shield Luster:* <Reflective sheen, luminous edge beveling, particle aura.>
-- **Power Source Halos:**
+- **Spirit Ring Halos (*Hunhuan*):**
   - *Configuration:* `<List of active rings by age and color (e.g., Ring 1: Yellow, Ring 2: Purple)>`
   - *Hover Alignment:* Concentric glowing halos rotating serenely behind the back, etched with ancient calligraphic runes.
   - *Particle FX:* Micro-embers of incandescent gold and floating stardust filaments refracting ambient air.
@@ -94,7 +94,7 @@ pie title Chromatic Hierarchy
 ```text
 [Subject & Stance]: Dynamic full-body portrait of a regal young warrior, heroic shonen proportions, intense focused gaze, dynamic low-angle martial arts stance with subtle foreshortening.
 [Costume & Armor]: Clad in magnificent baroque mirror-polished imperial gold plate armor with raised lion-crest filigree, articulated gauntlets, rich midnight navy silk undertunic with gold trim.
-[Aura & Manifestation]: Concentric glowing power sources hover serenely behind his back, etched with radiant runes, ribbons of translucent golden aether refracting the air around him.
+[Aura & Manifestation]: Concentric glowing spirit rings hover serenely behind his back, etched with radiant runes, ribbons of translucent golden aether refracting the air around him.
 [Lighting & Atmosphere]: Dramatic chiaroscuro lighting, deep cosmic void background, intense volumetric golden rim light, glowing particle sparks and specular star glints.
 [Technical Style]: High-end digital anime concept art, Ufotable studio quality, immaculate clean linework, intricate filigree detail, 8k resolution, cinematic composition --ar 16:9 --style raw
 ```
@@ -110,7 +110,7 @@ blurry, low quality, flat lighting, plastic armor texture, desaturated, muddy co
 - **Orthographic Angles:**
   - *Front View:* Full symmetrical alignment showing chestplate filigree and belt arrangement.
   - *Side Profile:* Displays pauldrons depth, spine curvature, and weapon sheath positioning.
-  - *Back View:* Documents cape flow, shoulder-guard mounting, and floating power source spacing.
+  - *Back View:* Documents cape flow, shoulder-guard mounting, and floating spirit ring spacing.
 - **Key Facial Expressions:**
   - *Demeanor 1 (Imperial Stillness):* Calm, unreadable expression; steady eyes evaluating the perimeter.
   - *Demeanor 2 (Combat Intensity):* Sharpened brow, eyes locked onto the adversary, jaw set with absolute focus.
@@ -136,7 +136,7 @@ blurry, low quality, flat lighting, plastic armor texture, desaturated, muddy co
 | Term / Taxonomy | Category | Clear & Accessible Definition |
 |:---|:---|:---|
 | **Design Sheet (*DSN*)** | Art | An authoritative visual reference document standardizing character proportions, costumes, and color palettes. |
-| **Vault Visual Identity** | Style | The unified high-fantasy visual identity synthesizing baroque gold plate, wuxia spirit halos, and chiaroscuro VFX. |
+| **Aetheric Celestial Aegis** | Style | The unified high-fantasy visual identity synthesizing baroque gold plate, wuxia spirit halos, and chiaroscuro VFX. |
 | **Chiaroscuro VFX** | Lighting | High-contrast lighting technique utilizing deep obsidian shadows and intense volumetric rim lights. |
-| **Power Source Halo** | Manifestation | Concentric glowing rings hovering behind a practitioner representing absorbed creatures and combat ranks. |
+| **Spirit Ring Halo** | Manifestation | Concentric glowing rings hovering behind a soul master representing absorbed spirit beasts and combat ranks. |
 | **Orthographic Turnaround** | Production | Front, side, and back visual perspectives used to maintain model sheet consistency across illustrations. |

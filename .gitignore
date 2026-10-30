@@ -9,6 +9,9 @@
 *.sqlite3
 *.db
 
+# Git hooks (per-machine installation via narr hook install)
+.githooks/
+
 # Python, virtual environments & testing caches
 __pycache__/
 *.py[cod]

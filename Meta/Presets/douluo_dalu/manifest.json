@@ -1,76 +1,54 @@
 {
   "name": "douluo_dalu",
   "display_name": "Douluo Dalu (Soul Land) / Cultivation Fantasy",
-  "version": "2.1.1",
-  "schema_version": 2,
-  "maturity": "stable",
+  "version": "1.2",
   "fandom": "Douluo Dalu",
   "genre": "Xuanhuan / Cultivation Fantasy",
-  "description": "Douluo Dalu and related xianxia/xuanhuan fanfiction: cultivation ranks, martial souls, soul beasts, professions, theories, a multilingual termbase and strict Pinyin romanization (Zero-CJK outside Sources).",
+  "description": "Specialized framework preset for Douluo Dalu and related xianxia/xuanhuan fanfictions. Includes cultivation ranks, spiritual realms, martial souls, spirit beasts, alchemy, soul rings, and strict Pinyin romanization rules.",
   "features": [
-    "Martial soul, soul beast, profession and theory note types",
-    "Spirit ring and bone progression tracking",
-    "Pinyin romanization with Zero-CJK enforcement",
-    "Event and item templates",
-    "Termbase seed with rank ladder, refinement stages, es/pt-BR columns and a Spirit/Soul variant table"
+    "Martial Soul and Cultivation Art taxonomy",
+    "Spirit Ring and Bone progression tracking",
+    "Pinyin Romanization standard with Zero-CJK enforcement",
+    "Alchemy and Crafting tiered schemas",
+    "Martial soul, soul beast, profession, theory, event and item page templates",
+    "Rank ladder, refinement stages and spelling decisions seed (es and pt-BR proposed)"
   ],
-  "extends": [],
-  "conflicts": [],
+  "properties": [
+    "wuhun",
+    "spiritual_realm",
+    "rank",
+    "combat_system",
+    "tier",
+    "pattern",
+    "primary",
+    "secondary",
+    "species",
+    "era",
+    "canon_status",
+    "source_refs",
+    "evidence_quote",
+    "evidence_location",
+    "work_citation",
+    "captured",
+    "excerpt_of",
+    "reading",
+    "reading_note"
+  ],
   "custom_types": [
     "martial_soul",
     "soul_beast",
     "profession",
     "theory"
   ],
-  "note_layout": {
-    "martial_soul": {
-      "prefix": "MSL",
-      "folder": "02_Story_Bible/Martial_Souls"
-    },
-    "soul_beast": {
-      "prefix": "BST",
-      "folder": "02_Story_Bible/Soul_Beasts"
-    },
-    "profession": {
-      "prefix": "PRF",
-      "folder": "02_Story_Bible/Professions"
-    },
-    "theory": {
-      "prefix": "THE",
-      "folder": "02_Story_Bible/Knowledge_and_Theories"
-    },
-    "event": {
-      "prefix": "EVT",
-      "folder": "03_Continuity_and_Timeline/Events"
-    },
-    "item": {
-      "prefix": "ITM",
-      "folder": "02_Story_Bible/Items_and_Artifacts"
-    }
-  },
-  "seeds": {
-    "seeds/TMP-Event.md.seed": "Meta/Templates/TMP-Event.md",
-    "seeds/TMP-Item.md.seed": "Meta/Templates/TMP-Item.md",
-    "seeds/TMP-Profession.md.seed": "Meta/Templates/TMP-Profession.md",
-    "seeds/TMP-Theory.md.seed": "Meta/Templates/TMP-Theory.md",
-    "seeds/TMP-Martial_Soul.md.seed": "Meta/Templates/TMP-Martial_Soul.md",
-    "seeds/TMP-Soul_Beast.md.seed": "Meta/Templates/TMP-Soul_Beast.md",
-    "seeds/TMP-Douluo_Character.md.seed": "Meta/Templates/TMP-Douluo_Character.md",
-    "seeds/TRM-Douluo_Terms.md.seed": "02_Story_Bible/Terminology/TRM-Douluo_Terms.md",
-    "seeds/queries.douluo_dalu.yaml.seed": "eval/queries.douluo_dalu.yaml"
-  },
-  "required_tags": [
-    "#fandom/douluo_dalu"
-  ],
-  "provenance": {
-    "basis": "user_defined",
-    "notes": "Derived from the author's Douluo vaults. English spellings follow Fandom captures; es and pt-BR terms are proposals. The two reference vault families disagree on rank titles (Spirit vs Soul) and on the shape of wuhun (list vs dict); both are documented, neither is imposed. Provenance properties (canon_status, source_refs, evidence_*) now live in the framework baseline.",
-    "sources": [
-      {
-        "kind": "user_defined",
-        "title": "Author's reference vaults (Fanfictions / Fanfiction collections), surveyed during the SPEC-009 audit",
-        "ref": "internal"
-      }
-    ]
-  }
+  "seed_pages": [
+    "Meta/Templates/TMP-Event.md",
+    "Meta/Templates/TMP-Item.md",
+    "Meta/Templates/TMP-Profession.md",
+    "Meta/Templates/TMP-Theory.md",
+    "Meta/Templates/TMP-Martial_Soul.md",
+    "Meta/Templates/TMP-Soul_Beast.md",
+    "Meta/Templates/TMP-Douluo_Character.md",
+    "02_Story_Bible/Terminology/TRM-Douluo_Terms.md",
+    "eval/queries.yaml"
+  ]
 }
