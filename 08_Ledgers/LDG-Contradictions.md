@@ -1,14 +1,11 @@
 ---
 uid: "LDG-Contradictions"
 type: ledger
-title: "Canon & Narrative Contradictions Ledger"
-status: active
-scope: meta
-tags: ["ledger/contradictions"]
+title: "Contradictions"
 ---
-# LDG-Contradictions — Source Conflict Registry
+# LDG-Contradictions
 
-> No sample rows ship with the template. Add a row for every conflict between sources, or between canon and the fanfic. Italic quotes must be verbatim from the frozen source named in the row.
+One row per conflict between two sources, or between canon and the story. Quotes are verbatim from the frozen source named in the row.
 
-| ID | Date | Topic | Side A Quote | Side B Quote | Status | Governing Rule & Resolution |
-|---|---|---|---|---|---|---|
+| ID | Topic | Side A quote | Side B quote | Status | Resolution |
+|---|---|---|---|---|---|

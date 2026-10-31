@@ -1,59 +1,38 @@
-# AGENTS.md — Narrative Story Bible Framework v2.0
-# Operational contract. Every rule file in .agents/rules/ is authoritative.
+# AGENTS.md
 
-## 1. Cold-Start Sequence (read in order)
-1. vault.yaml      — budgets, locales, scopes
-2. AGENTS.md       — this contract
-3. CONVENTIONS.md  — curator conventions
-4. context/author_voice.md
-5. memory/hot.md
-6. 08_Ledgers/LDG-Session_Handoff.md
+Markdown story bible for a work of fiction. Start with `00_Atlas/ATL-Home.md`, then `08_Ledgers/LDG-Session_Handoff.md`.
 
-## 2. Zone Map
-| Zone | Prefix | Language | Agent writes |
-|---|---|---|---|
-| 01_Canon_and_Divergence/Sources/ | SRC- | original | NEVER (immutable) |
-| 01_Canon_and_Divergence/Baselines/ | CAN- | en-US | yes |
-| 01_Canon_and_Divergence/PODs/ | POD- | en-US | yes |
-| 02_Story_Bible/ | CHR/PWR/SYS/TEC/ITM/LOC/FAC/TRM/SCP/SHT | en-US | yes |
-| 03_Continuity_and_Timeline/ | EVT/ARC/CKL | en-US | yes |
-| 04_Manuscript/pt-BR/ | C## | pt-BR | yes (draft) |
-| 04_Manuscript/es/ | C## | es | yes (publish) |
-| 06_Ideation_and_Unblocking/ | SBX | en-US | yes (sandbox/graveyard) |
-| 07_Cosmologies_and_Multiverse/ | SCP | en-US | yes |
-| 08_Ledgers/ | LDG | en-US | yes |
-| context/ | — | en-US | only on curator request |
-| memory/ | — | en-US | yes |
+## Zones
 
-## 3. Operational Workflow & CLI Gates
-```pwsh
-narr chapter new <N> "<Title>" --pov "<POV>"       # Scaffold a pt-BR draft with <!-- p:N --> markers
-narr translate check <N>                          # Verify paragraph parity (MSC004)
-narr domain list                                  # Domains and the dossier owning each (or planned)
-narr ingest route <SRC-id>                        # Which section of a source belongs to which domain
-narr ingest coverage [<SRC-id>]                   # Source paragraphs no dossier has quoted yet
-narr lint [--path P]                              # Pre-commit invariant check (must exit 0)
-narr search "<terms>" [-k N] [--zone Z] [--json]  # Ranked search with path:line citations
-python tools/vault_audit.py                       # Quote, uid, scope, table and link guard (must exit 0)
-narr doctor                                       # Environment, .agents/.claude mirrors and hook files
-narr hook install [--activate]                    # Regenerate mirrors, Claude/Antigravity hooks, .githooks
-```
+| Zone | Prefix | Agent writes |
+|---|---|---|
+| `00_Atlas/` | ATL- | yes |
+| `01_Canon_and_Divergence/Sources/` | SRC- | never (frozen) |
+| `01_Canon_and_Divergence/Baselines/` | CAN- | yes |
+| `02_Story_Bible/Characters/` | CHR- | yes |
+| `02_Story_Bible/Locations/` | LOC- | yes |
+| `02_Story_Bible/Systems/` | SYS- | yes |
+| `08_Ledgers/` | LDG- | yes |
 
-## 4. Core Axioms (see .agents/rules/ for authoritative specifications)
-- Rule 05: Engineering excellence — KISS, SSOT, dual remediation (symptom + root cause)
-- Rule 10: Note conventions — zero-space filenames, no CJK outside Sources, flat bidirectional links
-- Rule 15: Editorial style — technical objectivity, active voice, short paragraphs, zero AI preambles
-- Rule 20: Manuscript — pt-BR draft (<!-- p:N -->), es publish (1:1 parity); strict TRM-Termbase compliance
-- Rule 30: Canon & continuity — verbatim evidence, negative boundaries, Sanderson costs/limits
-- Rule 40: Git commits — Narrative Conventional Commits; lint-pass gate
-- Rule 50: Memory & context — hot.md <=60 lines, AGENTS.md <=200 lines
-- Rule 60: Framework governance — neutral template, presets for fandom overlays
+## Naming
 
-## 5. Agent Skills & Tooling
-- Issue tracker: Local markdown files under `.scratch/`. See `docs/agents/issue-tracker.md`.
-- Domain docs: Single-context layout ([[TRM-Termbase]] and `memory/decisions/`). See `docs/agents/domain.md`.
-- Decisions: record curator decisions with `narr decide "<title>"` into `memory/decisions/`; `08_Ledgers/LDG-Architecture_Decision_Records.md` holds the framework's own ADRs.
+- File name = prefix + name, no spaces (`CHR-Mira_Vale.md`); the `uid` in the front matter equals the file name without `.md`.
+- Link notes with `[[uid]]`.
 
-## 6. Session Close
-Update `08_Ledgers/LDG-Session_Handoff.md` (done, next, decided) and `memory/hot.md` by hand; record curator decisions with `narr decide "<title>"`.
+## Canon rules
 
+1. Every quotation in a baseline is verbatim from the frozen source it cites.
+2. Each baseline has a `## What it does NOT establish` section.
+3. A system (`SYS-`) documents its costs and limits before its powers.
+4. One owner per fact: write and quote it in one note; elsewhere give one line and a link.
+5. Two sources that disagree: keep both quotes and add a row to `LDG-Contradictions`; never choose silently.
+6. A character never acts on a fact not recorded in `LDG-Character_Knowledge`.
+
+## Never edit
+
+- Anything in `01_Canon_and_Divergence/Sources/`.
+- Existing ledger rows: append, do not rewrite.
+
+## Session close
+
+Update `LDG-Session_Handoff` (done, next, decided).

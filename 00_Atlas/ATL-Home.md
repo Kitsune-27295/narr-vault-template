@@ -1,22 +1,23 @@
 ---
 uid: "ATL-Home"
 type: atlas
-title: "Story Bible Master Atlas"
-status: active
+title: "Story Bible Atlas"
 ---
-# Story Bible Master Atlas
+# Story Bible Atlas
 
-Welcome to the Narrative Story Bible Vault.
+Entry point of the vault. Link every top-level note here.
 
-## Primary Navigation
-- [[CHR-Protagonist|Protagonist Dossier]]
-- [[SYS-Power_System|Universal Power System]]
-- [[TRM-Termbase|Localization & Termbase]]
-- [[SCP-Tone_and_Identity_Bible|Pitch & Tone Bible]]
+## Canon
+- Frozen sources: `01_Canon_and_Divergence/Sources/`
+- Baselines (one dossier per domain): `01_Canon_and_Divergence/Baselines/`
 
-## Active Ledgers
-- [[LDG-Active_Threads|Active Plot Threads]]
-- [[LDG-Chekhov_Guns|Chekhov Weapons & Items]]
-- [[LDG-Character_Knowledge|Character Epistemic Horizons]]
-- [[LDG-Foreshadowing|Foreshadowing & Payoffs]]
-- [[LDG-Contradictions|Source Contradictions Registry]]
+## Story bible
+- Characters: `02_Story_Bible/Characters/`
+- Locations: `02_Story_Bible/Locations/`
+- Systems: `02_Story_Bible/Systems/`
+
+## Ledgers
+- [[LDG-Active_Threads]]
+- [[LDG-Contradictions]]
+- [[LDG-Character_Knowledge]]
+- [[LDG-Session_Handoff]]

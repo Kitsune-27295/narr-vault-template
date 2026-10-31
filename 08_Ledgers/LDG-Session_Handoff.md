@@ -1,14 +1,12 @@
 ---
 uid: "LDG-Session_Handoff"
 type: ledger
-title: "Session Handoff & Ledger State"
-status: active
-scope: meta
-tags: ["ledger/handoff"]
+title: "Session Handoff"
 ---
-# LDG-Session_Handoff — Active Session Handoff
+# LDG-Session_Handoff
 
-## Session Handoff — Initialized
-- **Done:** Framework scaffolding initialized.
-- **Next:** Configure presets and start first baseline ingest.
-- **Decided:** NSBF v2 architecture accepted.
+Rewrite at the end of each session.
+
+- **Done:**
+- **Next:**
+- **Decided:**

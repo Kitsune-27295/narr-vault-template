@@ -1,14 +1,11 @@
 ---
 uid: "LDG-Active_Threads"
 type: ledger
-title: "Active Plot Threads Ledger"
-status: active
-scope: meta
-tags: ["ledger/threads"]
+title: "Active Plot Threads"
 ---
-# LDG-Active_Threads — Active Plot Threads Ledger
+# LDG-Active_Threads
 
-> No sample rows ship with the template. Add a row per dramatic thread once the curator confirms the arc beats.
+One row per open dramatic thread.
 
-| Thread ID | Arc Introduced | Description | Driving Characters | Current Status | Target Resolution |
+| Thread | Introduced | Description | Characters | Status | Target resolution |
 |---|---|---|---|---|---|
