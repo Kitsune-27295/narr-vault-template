@@ -1,9 +1,12 @@
+import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import { clipUrlOrHtml } from './clipper/clipper.js';
-import { ingestSourceFile } from './ingestor/ingestor.js';
+import activeProfile from './profiles/active.js';
 
 /**
  * End-to-End Orchestrator:
- * Takes a single URL, clips it to Canon/<Franchise>/Sources/, and immediately ingests into Modular Dossiers.
+ * Takes a single URL, clips it where the active profile files captures, then runs the profile's next step
+ * (narr: ingest into Modular Dossiers; other profiles: refresh the search index).
  */
 export async function runEndToEndPipeline({
   url,
@@ -11,6 +14,7 @@ export async function runEndToEndPipeline({
   franchise = null,
   vaultRoot = process.cwd(),
   dryRun = false,
+  profile = activeProfile,
 }) {
   console.log(`[PIPELINE] Starting end-to-end processing for: ${url || 'HTML input'}`);
 
@@ -21,6 +25,7 @@ export async function runEndToEndPipeline({
     franchise,
     vaultRoot,
     dryRun,
+    profile,
   });
 
   console.log(`[PIPELINE] Engine 1 complete: ${clipResult.status.toUpperCase()} -> ${clipResult.slug} (${clipResult.franchise})`);
@@ -32,14 +37,8 @@ export async function runEndToEndPipeline({
     };
   }
 
-  // 2. Engine 2: Semantic Ingest into Modular Dossiers
-  const ingestResult = await ingestSourceFile({
-    mdPath: clipResult.mdPath,
-    franchise: clipResult.franchise,
-    vaultRoot,
-  });
-
-  console.log(`[PIPELINE] Engine 2 complete: Ingested into ${ingestResult.dossiersAffected.length} modular dossier(s).`);
+  // 2. Engine 2: the profile's next step
+  const ingestResult = await profile.afterClip(clipResult, { vaultRoot });
 
   return {
     clipResult,
@@ -48,7 +47,7 @@ export async function runEndToEndPipeline({
 }
 
 // CLI entrypoint
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const args = process.argv.slice(2);
   let url = '';
   let franchise = null;

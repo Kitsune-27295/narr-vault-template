@@ -4,6 +4,7 @@ import path from 'node:path';
 import { openVaultDatabase, syncVault, searchDocuments } from './search.js';
 import { assembleContext } from './context-assembler.js';
 import { runRagBenchmark } from './eval.js';
+import profile from '../profiles/active.js';
 
 function parseArgs(args) {
   const parsed = {
@@ -40,7 +41,7 @@ function parseArgs(args) {
 
 function printUsage() {
   console.log(`
-Vault Fiction-Conscious RAG CLI (F-RAG)
+${profile.cli.title} (profile: ${profile.id})
 
 Usage:
   node tools/rag/cli.js sync
@@ -48,14 +49,14 @@ Usage:
 
   node tools/rag/cli.js search "<query>" [options]
     Options:
-      --zone <Canon|Bible|Manuscript|Cockpit>
-      --franchise <Universe_Primary|Universe_Secondary|Shared>
-      --ptype <canon_baseline|rule_mechanic|divergence_pod|character_sheet|character_dossier|scene_draft>
+      --zone <${profile.cli.zones}>
+${profile.cli.franchises ? `      --franchise <${profile.cli.franchises}>
+` : ''}      --ptype <${profile.cli.ptypes}>
       --limit <number> (default: 10)
 
   node tools/rag/cli.js context "<query>" [options]
     Options:
-      --scene <path_to_scene.md>
+      ${profile.cli.anchorFlag}
       --budget <tokens> (default: 2500)
       --out <path_to_output.md>
 

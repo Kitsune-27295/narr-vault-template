@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { load as yamlLoad, dump as yamlDump } from 'js-yaml';
 import { DatabaseSync } from 'node:sqlite';
+import activeProfile from '../profiles/active.js';
 
 /**
  * Initializes the SQLite database schema with documents and FTS5 full-text tables.
@@ -56,56 +57,14 @@ export function parseMarkdown(rawContent) {
 }
 
 /**
- * Determines zone, franchise, and ptype from file path and frontmatter.
+ * Determines zone, franchise, and ptype from file path and frontmatter, using the
+ * layout rules of the active profile (`tools/profiles/`).
  * @param {string} relPath
  * @param {Record<string, any>} fm
+ * @param {{classify: Function}} [profile]
  */
-export function classifyDocument(relPath, fm) {
-  const normalized = relPath.replace(/\\/g, '/');
-  const parts = normalized.split('/');
-
-  let zone = 'Other';
-  let franchise = fm.franchise || null;
-  let ptype = fm.type || null;
-
-  if (parts[0] === 'Canon') {
-    zone = 'Canon';
-    franchise = franchise || parts[1] || 'Shared';
-  } else if (parts[0] === 'Bible') {
-    zone = 'Bible';
-    franchise = franchise || 'Shared';
-  } else if (parts[0] === 'Manuscript') {
-    zone = 'Manuscript';
-    franchise = franchise || 'Multiverse';
-  } else if (parts[0] === '00_Cockpit') {
-    zone = 'Cockpit';
-  } else if (parts[0] === '99_System') {
-    zone = 'System';
-  }
-
-  if (!ptype) {
-    if (normalized.includes('01_Divergences_AU')) {
-      ptype = 'divergence_pod';
-    } else if (normalized.includes('/Baselines/') || normalized.includes('Baselines')) {
-      ptype = 'canon_baseline';
-    } else if (normalized.includes('04_Rules_Mechanics') || normalized.includes('06_Power_Systems_Mechanics') || normalized.includes('07_Power_Systems_Mechanics')) {
-      ptype = 'rule_mechanic';
-    } else if ((normalized.includes('02_Cast_Characters') || normalized.includes('02_Characters')) && zone === 'Bible') {
-      ptype = 'character_sheet';
-    } else if ((normalized.includes('01_Characters') || normalized.includes('02_Characters')) && zone === 'Canon') {
-      ptype = 'character_dossier';
-    } else if (normalized.includes('Sources') || normalized.includes('/Sources/')) {
-      ptype = 'source_raw';
-    } else if (normalized.includes('04_Locations') || normalized.includes('04_World_Locations_Items') || normalized.includes('05_Items_Artifacts')) {
-      ptype = normalized.includes('ITEM_') ? 'item_au' : 'world_delta';
-    } else if (zone === 'Manuscript' && !normalized.endsWith('index.md') && !normalized.endsWith('index_es.md')) {
-      ptype = 'scene_draft';
-    } else {
-      ptype = 'general';
-    }
-  }
-
-  return { zone, franchise, ptype };
+export function classifyDocument(relPath, fm, profile = activeProfile) {
+  return profile.classify(relPath, fm);
 }
 
 /**
@@ -113,10 +72,10 @@ export function classifyDocument(relPath, fm) {
  * @param {DatabaseSync} db
  * @param {{ relPath: string, content: string, mtime?: number }} doc
  */
-export function indexDocument(db, doc) {
+export function indexDocument(db, doc, profile = activeProfile) {
   const normalizedPath = doc.relPath.replace(/\\/g, '/');
   const { frontmatter, body } = parseMarkdown(doc.content);
-  const { zone, franchise, ptype } = classifyDocument(normalizedPath, frontmatter);
+  const { zone, franchise, ptype } = classifyDocument(normalizedPath, frontmatter, profile);
 
   const fallbackTitle = path.basename(normalizedPath, path.extname(normalizedPath)).replace(/_/g, ' ');
   const title = frontmatter.title || fallbackTitle;
@@ -240,7 +199,7 @@ export function searchDocuments(db, query, options = {}) {
  * @param {DatabaseSync} db
  * @returns {{ indexed: number, skipped: number, total: number }}
  */
-export function syncVault(vaultDir, db) {
+export function syncVault(vaultDir, db, profile = activeProfile) {
   const ignoreDirs = new Set(['.git', '.scratch', 'node_modules', '.gemini', '.obsidian', '.vscode', '.claude', '.agents']);
   const filesToIndex = [];
 
@@ -285,7 +244,7 @@ export function syncVault(vaultDir, db) {
         relPath,
         content,
         mtime: stat.mtimeMs,
-      });
+      }, profile);
       indexed++;
     }
 

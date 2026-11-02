@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { searchDocuments } from './search.js';
+import activeProfile from '../profiles/active.js';
 
 /**
  * Estimates token count from a character length (~4 characters per token).
@@ -12,53 +13,17 @@ export function estimateTokens(text) {
 }
 
 /**
- * Categorizes a search result into one of the 5 Fiction-Conscious RAG Tiers.
+ * Categorizes a search result into one of the 5 context tiers of the active profile.
  * @param {Record<string, any>} doc
+ * @param {{tierOf: Function}} [profile]
  * @returns {number} Tier 1 to 5
  */
-export function categorizeTier(doc) {
-  const relPath = doc.rel_path || '';
-  const ptype = doc.ptype || '';
-  const zone = doc.zone || '';
-
-  // Tier 2: Timeline Divergences (AU Overrides)
-  if (ptype === 'divergence_pod' || relPath.includes('01_Divergences_AU') || relPath.includes('/DIV_') || relPath.startsWith('DIV_')) {
-    return 2;
-  }
-
-  // Tier 3: AU Character Profiles & Voices
-  if (ptype === 'character_sheet' || ptype === 'cast_profile' || (zone === 'Bible' && (relPath.includes('02_Cast_Characters') || relPath.includes('02_Characters')))) {
-    return 3;
-  }
-
-  // Tier 4: System Mechanics & Hard Constraints (Canon & AU Power Systems, Techniques & Relics)
-  if (
-    ptype === 'rule_mechanic' ||
-    ptype === 'power_system' ||
-    ptype === 'power_system_au' ||
-    ptype === 'technique_au' ||
-    ptype === 'item_au' ||
-    relPath.includes('04_Rules_Mechanics') ||
-    relPath.includes('06_Power_Systems_Mechanics') ||
-    relPath.includes('07_Power_Systems_Mechanics') ||
-    relPath.includes('05_Items_Artifacts') ||
-    (zone === 'Bible' && relPath.includes('02_Items')) ||
-    (zone === 'Canon' && /(energy|power|mechanic|system)/i.test((doc.tags || '') + ' ' + (doc.title || '') + ' ' + relPath))
-  ) {
-    return 4;
-  }
-
-  // Tier 1: Scene drafts or active anchors
-  if (ptype === 'scene_draft' || (zone === 'Manuscript' && relPath.endsWith('.md') && !relPath.endsWith('Index.md') && !relPath.endsWith('Index_ES.md')) || zone === 'Cockpit') {
-    return 1;
-  }
-
-  // Tier 5: Canonical background lore
-  return 5;
+export function categorizeTier(doc, profile = activeProfile) {
+  return profile.tierOf(doc);
 }
 
 /**
- * Assembles a structured, fiction-conscious context packet respecting token budget.
+ * Assembles a structured, tiered context packet (tiers and texts come from the active profile) respecting token budget.
  *
  * @param {Object} options
  * @param {string} options.query - Query prompt or focus keywords.
@@ -68,18 +33,19 @@ export function categorizeTier(doc) {
  * @param {number} [options.maxDocs=15] - Maximum documents to retrieve from FTS.
  * @returns {{ contextText: string, packedTiers: number[], tokenEstimate: number, sources: string[] }}
  */
-export function assembleContext({ query, scenePath, budgetTokens = 2500, db, maxDocs = 20 }) {
+export function assembleContext({ query, scenePath, budgetTokens = 2500, db, maxDocs = 20, profile = activeProfile }) {
+  const { context } = profile;
   const maxChars = budgetTokens * 4;
   const sources = [];
   const packedTiers = new Set();
 
   // Tier buckets
   const tiers = {
-    1: [], // Active Scene / POV Anchor
-    2: [], // AU Divergence Overrides (Precedence over canon)
-    3: [], // Character Profiles & Voices
-    4: [], // System Mechanics & Constraints
-    5: [], // Canon Background Lore
+    1: [], // highest priority; meaning per profile (narr: active scene anchor)
+    2: [],
+    3: [],
+    4: [],
+    5: [], // lowest priority; meaning per profile (narr: canon background lore)
   };
 
   // If scenePath is provided, anchor it as Tier 1
@@ -91,8 +57,8 @@ export function assembleContext({ query, scenePath, budgetTokens = 2500, db, max
         rel_path: scenePath.replace(/\\/g, '/'),
         title: sceneTitle,
         content: sceneContent,
-        zone: 'Manuscript',
-        ptype: 'scene_draft',
+        zone: context.anchor.zone,
+        ptype: context.anchor.ptype,
       });
     } else {
       console.warn(`[RAG WARNING] Scene file not found: ${scenePath}`);
@@ -104,7 +70,7 @@ export function assembleContext({ query, scenePath, budgetTokens = 2500, db, max
 
   // Distribute into tiers
   for (const doc of rawResults) {
-    const tierNum = categorizeTier(doc);
+    const tierNum = categorizeTier(doc, profile);
     // Avoid duplicate if scenePath was already anchored
     if (scenePath && doc.rel_path === scenePath.replace(/\\/g, '/')) {
       continue;
@@ -113,23 +79,12 @@ export function assembleContext({ query, scenePath, budgetTokens = 2500, db, max
   }
 
   // Build the markdown text while monitoring character budget
-  const header = `# FICTION-CONSCIOUS RETRIEVAL AUGMENTED CONTEXT (F-RAG)
-> [!IMPORTANT]
-> **Timeline Divergences (AU Overrides) strictly supersede canonical dossiers.**
-> Where a point of divergence is active, adhere strictly to the AU reality over default canon.
-
-`;
+  const header = `# ${context.heading}\n${context.preface}\n\n`;
 
   let outputText = header;
   let remainingChars = maxChars - header.length;
 
-  const tierTitles = {
-    1: '## [TIER 1: ACTIVE SCENE & POV ANCHOR]',
-    2: '## [TIER 2: TIMELINE DIVERGENCES (AU OVERRIDES)]',
-    3: '## [TIER 3: CHARACTER PROFILES & ACTIVE VOICES]',
-    4: '## [TIER 4: SYSTEM MECHANICS & CONSTRAINTS]',
-    5: '## [TIER 5: CANONICAL BACKGROUND LORE]',
-  };
+  const tierTitles = context.tierTitles;
 
   // Process tiers in strict priority order (1 -> 2 -> 3 -> 4 -> 5)
   for (let t = 1; t <= 5; t++) {
@@ -150,9 +105,9 @@ export function assembleContext({ query, scenePath, budgetTokens = 2500, db, max
       const docHeader = `\n### ${doc.title} (\`${doc.rel_path}\`)\n`;
       let docBody = doc.content.trim();
 
-      // AU Divergence Banner
-      if (t === 2) {
-        docBody = `> [!WARNING] **AU OVERRIDE**: The following facts alter canon history.\n\n${docBody}`;
+      // Tier banner (for example the AU override warning of the narr profile)
+      if (context.banners[t]) {
+        docBody = `${context.banners[t]}\n\n${docBody}`;
       }
 
       const totalItemText = docHeader + docBody + '\n';

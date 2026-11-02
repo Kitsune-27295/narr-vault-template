@@ -1,3 +1,4 @@
+import { pathToFileURL } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import { extractAtomicClaims, routeClaimsToDomains } from './claim-router.js';
@@ -85,7 +86,7 @@ export async function ingestAllSources({ franchise = null, vaultRoot = process.c
 }
 
 // CLI entrypoint
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const args = process.argv.slice(2);
   let sourcePath = null;
   let franchise = null;

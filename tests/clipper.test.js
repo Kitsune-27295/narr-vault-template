@@ -1,7 +1,9 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
-import { clipUrlOrHtml, slugifyTitle, detectFranchise } from '../tools/clipper/clipper.js';
+import { clipUrlOrHtml, slugifyTitle } from '../tools/clipper/clipper.js';
+import { detectFranchiseWithRules } from '../tools/clipper/franchise-resolver.js';
+const detectFranchise = (url, explicit, vaultRoot) => detectFranchiseWithRules({ url, explicitFranchise: explicit, vaultRoot }).franchise;
 
 describe('Engine 1: Hybrid Web Clipper CLI', () => {
   const testOutputDir = path.join(process.cwd(), 'Canon', 'Test_Franchise');

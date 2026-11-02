@@ -1,16 +1,9 @@
+import { pathToFileURL } from 'node:url';
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { sanitizeAndConvertHtml } from './sanitizer.js';
-import { detectFranchiseWithRules, ensureCanonScaffold } from './franchise-resolver.js';
-
-/**
- * Standard franchise mapping delegating to centralized franchise-resolver
- */
-export function detectFranchise(urlStr, explicitFranchise = null, vaultRoot = process.cwd()) {
-  const res = detectFranchiseWithRules({ url: urlStr, explicitFranchise, vaultRoot });
-  return res.franchise;
-}
+import activeProfile from '../profiles/active.js';
 
 /**
  * Clean slug generation for file names
@@ -39,7 +32,7 @@ function fetchWithCurl(url, userAgent) {
 /**
  * Clips a URL or HTML string and saves .md + .json sidecar
  */
-export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = process.cwd(), dryRun = false, replaceExisting = false }) {
+export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = process.cwd(), dryRun = false, replaceExisting = false, profile = activeProfile }) {
   let rawHtml = html;
 
   if (!rawHtml && url) {
@@ -100,15 +93,10 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
     throw new Error('No HTML content provided or fetched.');
   }
 
-  const resolved = detectFranchiseWithRules({ url: url || '', explicitFranchise: franchise, vaultRoot });
-  const targetFranchise = resolved.franchise;
-  const canonTier = resolved.canonTier;
-  if (canonTier === 'F-Fanon') {
-    throw new Error('Fanon wiki sources cannot be filed as Canon captures. Use research/workbench notes instead.');
-  }
-
-  // Auto-scaffold 7 canonical subdirectories if not yet present
-  ensureCanonScaffold({ franchise: targetFranchise, vaultRoot });
+  // The profile decides where the capture goes and which provenance fields it carries.
+  const route = profile.clip.route({ url: url || '', explicitFranchise: franchise, vaultRoot });
+  const targetFranchise = route.group;
+  route.scaffold();
 
   const parsed = sanitizeAndConvertHtml(rawHtml, url);
   if (parsed.title.toLowerCase().includes('just a moment') || parsed.title.toLowerCase().includes('attention required')) {
@@ -116,7 +104,7 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
   }
   const slug = slugifyTitle(parsed.title);
 
-  const sourcesDir = path.join(vaultRoot, 'Canon', targetFranchise, 'Sources');
+  const sourcesDir = route.sourcesDir;
   const mdPath = path.join(sourcesDir, `${slug}.md`);
   const jsonPath = path.join(sourcesDir, `${slug}.json`);
 
@@ -150,8 +138,7 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
     source_id: `src_${slug}_${parsed.contentHash.slice(0, 8)}`,
     url: url || 'local',
     title: parsed.title,
-    franchise: targetFranchise,
-    canon_tier: canonTier,
+    ...route.sidecar,
     captured_at: new Date().toISOString(),
     content_sha256: parsed.contentHash,
     categories: parsed.categories,
@@ -160,16 +147,17 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
 
   if (!dryRun) {
     fs.mkdirSync(sourcesDir, { recursive: true });
-    const frontmatter = `---
-title: "${parsed.title.replace(/"/g, '\\"')}"
-note_type: canon-source
-cosmology: ${targetFranchise}
-canon_tier: ${canonTier}
-source_url: "${url || 'local'}"
-is_processed: false
----
-
-`;
+    const frontmatter = [
+      '---',
+      `title: "${parsed.title.replace(/"/g, '\\"')}"`,
+      `note_type: ${route.noteType}`,
+      ...route.frontmatter.map(([key, value]) => `${key}: ${value}`),
+      `source_url: "${url || 'local'}"`,
+      'is_processed: false',
+      '---',
+      '',
+      '',
+    ].join('\n');
     fs.writeFileSync(mdPath, frontmatter + parsed.markdown, 'utf8');
     fs.writeFileSync(jsonPath, JSON.stringify(sidecar, null, 2), 'utf8');
   }
@@ -185,7 +173,7 @@ is_processed: false
 }
 
 // CLI entrypoint
-if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
+if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
   const args = process.argv.slice(2);
   let url = '';
   let franchise = null;
