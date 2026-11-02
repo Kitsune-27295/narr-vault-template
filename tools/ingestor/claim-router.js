@@ -172,64 +172,46 @@ export function routeClaimsToDomains(claims, franchise = 'Universe_Primary', sid
   const infobox = sidecar?.infobox || {};
   const categories = sidecar?.categories || [];
 
-  let targetSubdir = '04_Rules_Mechanics';
-  let domain = 'sistema_poder';
-  let noteType = 'canon-power-system';
+  let targetSubdir = 'Baselines';
+  let domain = 'baseline';
+  let noteType = 'canon-baseline';
 
-  // 1. Timeline Events / Wars
+  // Semantic domain classification for metadata
   if (
     /(\bWar\b|\bAttack\b|\bIncident\b|\bBattle\b|\bConflict\b)/i.test(title) ||
     categories.some(c => /(War|Event|History|Battle)/i.test(c))
   ) {
-    targetSubdir = '06_Timeline_Events';
     domain = 'timeline_events';
-    noteType = 'canon-event';
-  }
-  // 2. Factions / Clans / Organizations
-  else if (
+  } else if (
     /(\bClan\b|\bCouncil\b|\bRoot\b|\bOrganization\b|\bPolice\b|\bCorps\b)/i.test(title) ||
     infobox['Known Members'] ||
     (infobox['Affiliation'] && !infobox['Birthdate'] && !infobox['Sex'])
   ) {
-    targetSubdir = '03_Factions_Cultures';
     domain = 'factions_cultures';
-    noteType = 'canon-faction';
-  }
-  // 3. Characters
-  else if (
+  } else if (
     infobox['Birthdate'] ||
     infobox['Sex'] ||
     infobox['Blood type'] ||
-    infobox['Ninja Rank'] ||
     infobox['Family'] ||
     infobox['Status'] === 'Deceased' ||
-    infobox['Status'] === 'Alive' ||
-    /(\bSenju\b|\bUzumaki\b|\bUchiha\b|\bHatake\b|\bSarutobi\b|\bNamikaze\b|\bKurama\b|\bJiraiya\b|\bTsunade\b|\bNawaki\b|\bDanzo\b|\bKatō\b|\bKato\b)/i.test(title)
+    infobox['Status'] === 'Alive'
   ) {
-    targetSubdir = '01_Characters';
     domain = 'characters';
-    noteType = 'canon-character';
-  }
-  // 4. Locations
-  else if (
+  } else if (
     infobox['Country'] ||
     infobox['Leader'] ||
     infobox['Population'] ||
-    /(gakure|\bVillage\b|\bCountry\b|\bLand of\b|\bMountain\b|\bValley\b|\bForest\b|Myōboku|Myoboku)/i.test(title)
+    /(\bVillage\b|\bCountry\b|\bLand of\b|\bMountain\b|\bValley\b|\bForest\b)/i.test(title)
   ) {
-    targetSubdir = '02_Locations';
     domain = 'locations';
-    noteType = 'canon-location';
-  }
-  // 5. Items / Artifacts
-  else if (
+  } else if (
     infobox['Classification'] === 'Tool' ||
     infobox['Classification'] === 'Weapon' ||
     /(\bSword\b|\bBlade\b|\bScroll\b|\bArtifact\b|\bTreasure\b)/i.test(title)
   ) {
-    targetSubdir = '05_Items_Artifacts';
     domain = 'items_artifacts';
-    noteType = 'canon-item';
+  } else {
+    domain = 'sistema_poder';
   }
 
   const contract = franchiseContracts[targetKey] || {

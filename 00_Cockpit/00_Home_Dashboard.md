@@ -1,13 +1,22 @@
 ---
-title: Home Dashboard
+note_type: cockpit-dashboard
 type: dashboard
-tags: [cockpit, dashboard, framework]
+title: Home Dashboard
+uid: CKP-HOME-DASHBOARD
+status: active
+aliases:
+  - Home Dashboard
+  - 00_Home_Dashboard
+  - CKP-HOME-DASHBOARD
+tags:
+  - '#cockpit/dashboard'
+created: '2026-11-02'
+updated: '2026-11-02'
 ---
 
 # Home Dashboard
 
-> **Fanfiction workspace.** Replace this line with the title and premise of your story.
-> Drafted in **pt-BR**, published in **Spanish (es)**.
+> **Narrative Vault Framework workspace.** Set the title, source universes, and languages in `vault.yaml`.
 
 ---
 
@@ -23,19 +32,19 @@ tags: [cockpit, dashboard, framework]
 
 ---
 
-## Fanfiction Divergence Tracker
+## Divergence Tracker
 
 ![[Bible_Divergences.base]]
 
 ---
 
-## Story Grid: Scene Surgery Table
+## Story Grid - Scene Surgery Table
 
 ![[Story_Grid_Scenes.base]]
 
 ---
 
-## Translation Pipeline pt-BR to es
+## Translation Pipeline
 
 ![[Translation_Pipeline.base]]
 
@@ -43,32 +52,40 @@ tags: [cockpit, dashboard, framework]
 
 ## Quick Navigation
 
-### Canon (Holocron)
-- [[Canon/Universe_Primary/00_Universe_Primary_Index|Universe Primary Canon Index]]: placeholder franchise; copy the folder for each franchise you add.
+### Canon
+- [[Canon/Universe_Primary/00_Universe_Primary_Index|Universe Primary Canon Index]]
+- [[Canon/Universe_Secondary/00_Universe_Secondary_Index|Universe Secondary Canon Index]]
 
-### Bible and Narrative Core
-- [[Bible/00_Bible_Master_Index|00_Bible_Master_Index]]: master index of the story bible.
-- [[Bible/01_Divergences_AU/DIV_00_Point_of_Divergence_Template|DIV_00 Point of Divergence]]: template for the first divergence.
-- [[Bible/02_Cast_Characters/SI_Protagonist_Template|Protagonist template]] and [[Bible/02_Cast_Characters/Canon_Counterpart_Template|Canon counterpart template]].
-- [[Bible/03_Relationship_Matrix/REL_Matrix_Template|Relationship matrix template]].
-- [[Bible/05_Plot_Threads_Arcs/ARC_01_Narrative_Arc_Template|Narrative arc template]] and [[Bible/05_Plot_Threads_Arcs/00_Open_Questions|Open questions]].
-- [[Bible/06_Chronology_Calendar/Master_Timeline_Template|Master timeline template]].
-- [[00_Cockpit/04_Continuity_Audits|04_Continuity_Audits]]: unresolved setups, pacing and continuity audits.
+### Bible & Narrative Core
+- [[Bible/00_Bible_Master_Index|Bible Master Index]]
+- [[Bible/09_Plot_Threads_Arcs/00_Open_Questions|Open Questions]]
+- [[00_Cockpit/04_Continuity_Audits|Continuity Audits]]
 
-### Ideation
-- [[Seeds_Scratchpad/00_Seeds_Inbox|Seeds Inbox]]: raw ideas and quick capture.
+### Continuity Ledgers
+- [[Ledgers/IDX-Ledgers|Ledgers Master Index]]
+- [[Ledgers/LDG-Chekhov|Chekhov's Gun Ledger]]
+- [[Ledgers/LDG-Decisions|Narrative Decisions Ledger]]
+- [[Ledgers/LDG-Open_Threads|Open Threads Ledger]]
+- [[Ledgers/LDG-Contradictions|Contradictions Ledger]]
+- [[Ledgers/LDG-Session_Handoff|Session Handoff Ledger]]
 
-### Manuscript Workspace
-- [[Manuscript/pt-BR/Index|Manuscript PT-BR Index]]: master drafting index (Portuguese).
-- [[Manuscript/es/Index_ES|Manuscript ES Index]]: Spanish publication index.
+### Sandbox, Craft & Research
+- [[Sandbox/README|Sandbox / Laboratory]]
+- [[Sandbox/Seeds_Inbox|Seeds Inbox]]
+- [[Sandbox/_registry|Sandbox Projects Registry]]
+- [[Craft/README|Craft & Feedback]]
+- [[Research/README|Research Layer]]
+
+### Manuscript
+- [[Manuscript/pt-BR/Index|Manuscript pt-BR Index]]
+- [[Manuscript/es/Index_ES|Manuscript es Index]]
 
 ---
 
 ## Operational Lifecycle
-1. **Capture**: save each canon source under `Canon/<Universe>/00_Sources/` and never edit it afterwards.
-2. **Distill**: write dossiers in `Canon/<Universe>/01_Characters/` to `06_Timeline_Events/`, quoting only what the sources say.
-3. **Establish the Bible**: divergence PODs (`Bible/01_Divergences_AU/`), cast sheets, chronology.
-4. **Draft**: `Manuscript/pt-BR/01_Scenes/`, with Story Grid audit metadata.
-5. **Compile**: `Manuscript/pt-BR/02_Compiled_PT/`.
-6. **Translate**: `Manuscript/es/01_Chapters_Working/`, aligned with the lexicon and register guides.
-7. **Publish**: `Manuscript/es/03_Published_Exports/`.
+1. **Capture** - `npm run clip` -> `Canon/<Universe>/Sources/`
+2. **Distill** - `npm run ingest` -> `Canon/<Universe>/Baselines/`
+3. **Establish Bible** - Divergence PODs, cast sheets, chronology
+4. **Draft** - `Manuscript/pt-BR/` with Story Grid audit metadata
+5. **Translate** - `Manuscript/es/` with lexicon alignment
+6. **Publish** - `99_System/Export_Templates/AO3_Export_Procedure.md`

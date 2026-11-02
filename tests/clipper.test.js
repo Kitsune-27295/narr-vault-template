@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, afterAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { clipUrlOrHtml, slugifyTitle, detectFranchise } from '../tools/clipper/clipper.js';
@@ -18,13 +18,6 @@ describe('Engine 1: Hybrid Web Clipper CLI', () => {
     }
   });
 
-  afterAll(() => {
-    const canonDir = path.join(process.cwd(), 'Canon');
-    if (fs.existsSync(canonDir) && fs.readdirSync(canonDir).length === 0) {
-      fs.rmdirSync(canonDir);
-    }
-  });
-
   it('should auto-detect franchise from Fandom URL', () => {
     expect(detectFranchise('https://universe-primary.fandom.com/wiki/Energy_System')).toBe('Universe_Primary');
     expect(detectFranchise('https://universe-secondary.fandom.com/wiki/Exotic_Power')).toBe('Universe_Secondary');
@@ -37,7 +30,16 @@ describe('Engine 1: Hybrid Web Clipper CLI', () => {
     expect(slugifyTitle('Entity Alpha: Part 1')).toBe('Entity_Alpha_Part_1');
   });
 
-  it('should save clean .md and .json sidecar into Canon/<Franquia>/Sources/', async () => {
+  it('refuses to file Fandom fanon material under Canon, even with explicit franchise routing', async () => {
+    await expect(clipUrlOrHtml({
+      html: '<html><head><title>Example</title></head><body><h1>Example</h1><p>Fanon content</p></body></html>',
+      url: 'https://alphafanon.fandom.com/wiki/Example',
+      franchise: 'Universe_Alpha',
+      vaultRoot: process.cwd(),
+    })).rejects.toThrow('Fanon wiki sources cannot be filed as Canon captures');
+  });
+
+  it('should save clean .md and .json sidecar into Canon/<Franchise>/Sources/', async () => {
     const rawHtml = `
       <html>
         <head><title>Aether Flow | Fantasy Realm Wiki</title></head>
@@ -65,6 +67,8 @@ describe('Engine 1: Hybrid Web Clipper CLI', () => {
 
     expect(result.status).toBe('created');
     expect(result.slug).toBe('Aether_Flow');
+    expect(result.mdPath).toContain(path.join('Test_Franchise', 'Sources', 'Aether_Flow.md'));
+    expect(result.jsonPath).toContain(path.join('Test_Franchise', 'Sources', 'Aether_Flow.json'));
     expect(fs.existsSync(result.mdPath)).toBe(true);
     expect(fs.existsSync(result.jsonPath)).toBe(true);
 
@@ -86,6 +90,24 @@ describe('Engine 1: Hybrid Web Clipper CLI', () => {
     });
 
     expect(rerunResult.status).toBe('unchanged');
+
+    const changedHtml = rawHtml.replace('foundational energy', 'ancient foundational energy');
+    await expect(clipUrlOrHtml({
+      html: changedHtml,
+      url: 'https://fantasy-realm.fandom.com/wiki/Aether_Flow',
+      franchise: 'Test_Franchise',
+      vaultRoot: process.cwd(),
+    })).rejects.toThrow('Capture already exists');
+    expect(fs.readFileSync(result.mdPath, 'utf8')).toBe(mdContent);
+
+    const replacement = await clipUrlOrHtml({
+      html: changedHtml,
+      url: 'https://fantasy-realm.fandom.com/wiki/Aether_Flow',
+      franchise: 'Test_Franchise',
+      vaultRoot: process.cwd(),
+      replaceExisting: true,
+    });
+    expect(replacement.status).toBe('replaced');
   });
 });
 

@@ -1,8 +1,20 @@
 ---
-title: Universe Primary Master Index
+note_type: canon-index
 type: index
+cosmology: Universe_Primary
+title: Universe Primary Master Index
+uid: CAN-UNI-INDEX
+status: established
+aliases:
+  - Universe Primary
+  - Universe Primary Master Index
+  - CAN-UNI-INDEX
+tags:
+  - '#canon/index'
+  - '#canon/universe-primary'
+created: '2026-11-01'
+updated: '2026-11-02'
 franchise: Universe_Primary
-tags: [canon, index, universe_primary, framework]
 ---
 
 # 🌌 Universe Primary — Canon Master Index
@@ -15,17 +27,11 @@ tags: [canon, index, universe_primary, framework]
 
 | Module | Purpose |
 |---|---|
-| [[00_Sources/|00_Sources/]] | Raw web clips and provenance sidecar JSONs |
-| [[01_Characters/|01_Characters/]] | Official canonical character dossiers |
-| [[02_Locations/|02_Locations/]] | Geography, realms, planetary zones, and architecture |
-| [[03_Factions_Cultures/|03_Factions_Cultures/]] | Organizations, clans, polities, and cultures |
-| [[04_Rules_Mechanics/|04_Rules_Mechanics/]] | Invariant energy systems, power scaling, and physical laws |
-| [[05_Items_Artifacts/|05_Items_Artifacts/]] | Relics, weapons, specialized tech, and materials |
-| [[06_Timeline_Events/|06_Timeline_Events/]] | Canonical chronology, historical wars, and eras |
+| [[Sources/\|Sources/]] | Raw source captures and cryptographic provenance sidecars |
+| [[Baselines/\|Baselines/]] | Subject-specific canonical dossiers and authoritative reference hubs |
 
 ---
 
 ## Core Modular Dossiers
-- [[Dossier_Power_System_Template|Dossier: Primary Power System]]
-- [[Character_Dossier_Template|Dossier: Canonical Character Template]]
+- Use [[99_System/Templates/TPL_Canon_Baseline|TPL_Canon_Baseline]] when creating new canonical baseline dossiers.
 

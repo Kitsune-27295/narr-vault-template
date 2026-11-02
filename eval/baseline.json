@@ -1,0 +1,9 @@
+{
+  "benchmark_version": "1.0.0",
+  "created": "2026-11-02",
+  "target_metrics": {
+    "min_recall_at_5": 0.85,
+    "min_mrr": 0.7
+  },
+  "total_queries": 3
+}

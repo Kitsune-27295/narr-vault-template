@@ -1,9 +1,15 @@
-# Golden queries for narrative retrieval evaluation (Recall@5, MRR, NDCG)
-- query: "power system rules and limitations"
-  expect: ["SYS-Power_System"]
-- query: "protagonist profile and status"
-  expect: ["CHR-Protagonist"]
-- query: "tone bible and core atmosphere"
-  expect: ["SCP-Tone_and_Identity_Bible"]
-- query: "localization termbase and honorifics"
-  expect: ["TRM-Termbase"]
+# Golden queries for retrieval evaluation (node tools/rag/cli.js eval)
+# Tests recall@k and MRR. These starter queries target the framework's own notes;
+# replace them with queries about your project once it has content.
+
+- query: "Sandbox upstream staging rule not canon until promoted"
+  expect:
+    - Sandbox/README
+
+- query: "Chekhov's Gun ledger plants and payoffs"
+  expect:
+    - LDG-Chekhov
+
+- query: "Bible master index divergence precedence"
+  expect:
+    - 00_Bible_Master_Index

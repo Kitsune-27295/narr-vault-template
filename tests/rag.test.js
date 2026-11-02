@@ -1,13 +1,7 @@
 import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import fs from 'node:fs';
-import path from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { DatabaseSync } from 'node:sqlite';
 import { initDatabase, indexDocument } from '../tools/rag/search.js';
 import { assembleContext } from '../tools/rag/context-assembler.js';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 describe('Fiction-Conscious Context Assembler (F-RAG)', () => {
   let db;
@@ -18,10 +12,10 @@ describe('Fiction-Conscious Context Assembler (F-RAG)', () => {
 
     // 1. Canon Rule
     indexDocument(db, {
-      relPath: 'Canon/Universe_Primary/04_Rules_Mechanics/Primary_Energy_System.md',
+      relPath: 'Canon/Universe_Primary/Baselines/Baseline_Primary_Energy_System.md',
       content: `---
 title: Primary Energy System
-type: rule_mechanic
+type: baseline
 tags: [energy, limits, primary_system]
 ---
 # Primary Energy System
@@ -32,10 +26,10 @@ Primary Energy is finite. Overuse causes biological exhaustion or core burnout. 
 
     // 2. Canon Character Dossier
     indexDocument(db, {
-      relPath: 'Canon/Universe_Primary/01_Characters/Entity_Alpha.md',
+      relPath: 'Canon/Universe_Primary/Baselines/Baseline_Entity_Alpha.md',
       content: `---
 title: Entity Alpha (Canon)
-type: character_dossier
+type: baseline
 tags: [native, practitioner]
 ---
 # Entity Alpha
@@ -126,13 +120,9 @@ AU Override: The protagonist now possesses both native biological pathways AND a
   });
 
   it('should anchor a scene file into Tier 1', () => {
-    const sceneRel = 'Manuscript/pt-BR/01_Scenes/C01_S01_Scene_Template.md';
-    const sceneFile = fs.existsSync(sceneRel)
-      ? sceneRel
-      : path.resolve(__dirname, '../../../frameworks/vault/narr/templates', sceneRel);
-
+    const sceneFile = 'Manuscript/pt-BR/PT_Chapter_01_Template.md';
     const result = assembleContext({
-      query: 'Chakra',
+      query: 'Aether',
       scenePath: sceneFile,
       budgetTokens: 2500,
       db,
@@ -140,7 +130,7 @@ AU Override: The protagonist now possesses both native biological pathways AND a
 
     expect(result.packedTiers).toContain(1);
     expect(result.contextText).toContain('[TIER 1: ACTIVE SCENE & POV ANCHOR]');
-    expect(result.contextText).toContain('C01 S01 Scene Template');
+    expect(result.contextText).toContain('PT Chapter 01 Template');
   });
 
   it('should append truncation marker when a long document exceeds remaining tier budget', () => {
@@ -157,5 +147,30 @@ AU Override: The protagonist now possesses both native biological pathways AND a
     });
 
     expect(result.contextText).toContain('*(Truncated to preserve context budget)*');
+  });
+
+  it('should categorize Bible AU power systems and OC techniques into Tier 4', () => {
+    indexDocument(db, {
+      relPath: 'Bible/06_Power_Systems_Mechanics/01_Multiverse_Synergy/PWR_Multiverse_Energy_Laws.md',
+      content: `---
+title: Multiverse Energy Laws
+type: power_system_au
+tags: [power_system, multiverse, synergy]
+---
+# Multiverse Energy Laws
+Aether and Mana conversion ratios operate at 1:10 base parity.
+`,
+      mtime: Date.now(),
+    });
+
+    const result = assembleContext({
+      query: 'Multiverse Energy Laws conversion',
+      budgetTokens: 2500,
+      db,
+    });
+
+    expect(result.packedTiers).toContain(4);
+    expect(result.contextText).toContain('[TIER 4: SYSTEM MECHANICS & CONSTRAINTS]');
+    expect(result.contextText).toContain('Multiverse Energy Laws');
   });
 });

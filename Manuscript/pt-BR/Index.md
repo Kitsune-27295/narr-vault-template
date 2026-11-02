@@ -1,25 +1,30 @@
 ---
-title: Índice de Manuscrito (pt-BR)
+note_type: manuscript-index
 type: index
-tags: [manuscript, index, pt-br, framework]
+title: Índice de Manuscrito (pt-BR)
+uid: MSP-PT-INDEX
+status: active
+aliases:
+  - Índice do Manuscrito pt-BR
+  - Manuscript PT Index
+  - MSP-PT-INDEX
+tags:
+  - '#manuscript/pt-br'
+created: '2026-11-01'
+updated: '2026-11-02'
 ---
 
 # ✍️ Índice do Manuscrito — Edição Master (pt-BR)
 
-> Camada de redação criativa e rascunhos em português brasileiro.
+> Camada de redação criativa e capítulos em português brasileiro.
 
 ---
 
 ## Estrutura de Produção
 
-| Diretório | Finalidade |
-|---|---|
-| [[00_Outlines/\|00_Outlines/]] | Escaletas e planejamento de beats dramáticos |
-| [[01_Scenes/\|01_Scenes/]] | Cenas individuais enriquecidas com auditoria Story Grid |
-| [[02_Compiled_PT/\|02_Compiled_PT/]] | Capítulos compilados prontos para revisão e tradução |
-| [[03_Scrapyard/\|03_Scrapyard/]] | Depósito de fragmentos cortados e rascunhos descartados |
+Os capítulos são mantidos diretamente na raiz de `Manuscript/pt-BR/`, integrando prosa dramática e notas de auditoria Story Grid sem subdivisões em subpastas.
 
 ---
 
 ## Capítulos Ativos
-- [[02_Compiled_PT/PT_Chapter_01_Template|Capítulo 01 — O Primeiro Despertar (Template)]]
+- [[Manuscript/pt-BR/PT_Chapter_01_Template|Capítulo 01 — O Primeiro Despertar (Template pt-BR)]]

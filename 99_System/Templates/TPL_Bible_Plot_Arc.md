@@ -1,72 +1,25 @@
 ---
-note_type: "fic-arc"
-type: "narrative_arc"
+note_type: fic-arc
+type: narrative_arc
 cosmology: "{{primary_cosmology}}"
-canon_tier: "AU-Override"
-status: "Planning / In-Progress / Completed"
-aliases:
-  - "{{arc_code}}"
-  - "{{arc_title}}"
-arc_number: 1
-target_wordcount: 50000
+canon_tier: AU-Override
+status: planned
+aliases: []
 tags:
-  - "bible"
-  - "plot"
-  - "arc"
-  - "story-grid"
+  - bible
+  - plot
 ---
 
-# {{arc_code}}: {{arc_title}}
-
-> **Narrative Arc Beat Sheet** — Structural roadmap, Story Grid diagnostic requirements, and scene breakdown.
-
----
+# {{arc_code}} — {{arc_title}}
 
 ## 1. Arc Overview & Dramatic Premise
 
-| Dimension | Specification |
-|---|---|
-| **Arc Code / Title** | {{arc_code}}: {{arc_title}} |
-| **Narrative Scope** | Act I Introduction / Mid-Story Climax / Final Resolution |
-| **Primary POV Focus** | [[{{Primary_POV_Character}}]] |
-| **Temporal Horizon** | Day {{start_day}} to Day {{end_day}} |
-| **Associated POD** | [[{{Associated_POD}}]] |
+{{What problem changes during this arc? Link relevant cast, POD, and earlier/later arcs.}}
 
-[Provide a concise 1–2 paragraph overview describing the core dramatic problem of the arc, the external threat, and the internal character transformation.]
+## 2. Arc Beats & Scene Roadmap
 
----
+{{Record the decisive choice, turning point, climax, and the scenes needed to reach them. Use Story Grid terms only when they help diagnose the draft.}}
 
-## 2. Story Grid Diagnostic Framework
+## 3. Continuity, Themes & Open Questions
 
-- **Global Genre / Conventions:** [Action / Thriller / Mystery / Cultivation Epic].
-- **Core Life Value Shift:** [Vulnerability → Survival / Ignorance → Forbidden Knowledge / Damnation → Sovereignty].
-- **Inciting Incident:** [The specific disruptive event compelling the protagonist to act].
-- **Progressive Complications & Turning Point:** [Rising stakes and unexpected crises forcing a life-or-death crisis decision].
-- **Crisis Question:** [A genuine dilemma: Best Bad Choice or Irreconcilable Goods].
-- **Climax:** [The active confrontation resolving the arc dilemma].
-- **Resolution:** [The new world baseline established for the following arc].
-
----
-
-## 3. Chronological Scene Roadmap
-
-| Scene Code | Target Title | Primary POV | Location | Story Grid Event & Value Shift | Status |
-|---|---|---|---|---|---|
-| `C01_S01` | [Scene 01 Title] | [[{{POV_Char}}]] | [[{{Location_A}}]] | Awakening shock: Disorientation (-/+) | Drafted |
-| `C01_S02` | [Scene 02 Title] | [[{{POV_Char}}]] | [[{{Location_A}}]] | Testing internal core: Caution (+/-) | Planned |
-| `C01_S03` | [Scene 03 Title] | [[{{POV_Char}}]] | [[{{Location_B}}]] | First contact with local patrol: Peril (+/-) | Planned |
-
----
-
-## 4. Thematic Undercurrents & Metaphysical Stakes
-
-- **Pragmatism vs Moral Complicity:** [The ethical boundary tested when surviving in a brutal foreign cosmology.]
-- **Cosmological Friction:** [How the protagonist's foreign energy or meta-awareness destabilizes local assumptions.]
-
----
-
-## 5. Cross-Arc Cascades & Open Questions
-
-- **Foreshadowed Threats:** [Threats introduced in this arc that escalate in subsequent story phases.]
-- **Unresolved Mechanics Questions:** [Mysteries of energy conversion or identity yet to be demystified.]
-
+{{Record established consequences and constraints. Keep future possibilities marked as plans. Add theme or open questions only when useful.}}

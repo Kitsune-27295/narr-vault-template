@@ -1,38 +1,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { dump as yamlDump } from 'js-yaml';
 
 /**
- * Standard 7 canonical subdirectories for any cosmology in Canon/
+ * Standard canonical subdirectories for any cosmology in Canon/
  */
 export const CANON_SUBDIRECTORIES = [
   'Sources',
-  '00_Sources',
-  '01_Characters',
-  '02_Locations',
-  '03_Factions_Cultures',
-  '04_Rules_Mechanics',
-  '05_Items_Artifacts',
-  '06_Timeline_Events',
+  'Baselines',
 ];
 
 /**
- * Validates and sanitizes a franchise name to prevent path traversal or invalid identifiers.
- * Must match /^[A-Za-z0-9][A-Za-z0-9_]{0,63}$/ after whitespace/hyphen normalization.
- */
-export function assertFranchiseName(name) {
-  if (!name || typeof name !== 'string') {
-    throw new Error(`Invalid franchise name: "${name}". Franchise name must be a non-empty string.`);
-  }
-  const clean = name.trim().replace(/[\s-]+/g, '_');
-  if (!/^[A-Za-z0-9][A-Za-z0-9_]{0,63}$/.test(clean)) {
-    throw new Error(`Invalid franchise name: "${name}". Must match /^[A-Za-z0-9][A-Za-z0-9_]{0,63}$/.`);
-  }
-  return clean;
-}
-
-/**
- * Matches a string against a simple wildcard glob (e.g. *naruto.fandom.com*)
+ * Matches a string against a simple wildcard glob (e.g. *example-world.fandom.com*)
  */
 function matchGlob(str, pattern) {
   const escaped = pattern
@@ -57,13 +35,16 @@ export function loadFranchiseRules(vaultRoot = process.cwd()) {
 
   return {
     rules: [
-      { franchise: 'Universe_Primary', patterns: ['*universe-primary*', '*primary-world.wiki*'], defaultCanonTier: 'G-Primary' },
-      { franchise: 'Universe_Secondary', patterns: ['*universe-secondary*', '*secondary-world.wiki*'], defaultCanonTier: 'G-Primary' },
+      { franchise: 'Universe_Primary', patterns: ['*universe-primary.fandom.com*'], defaultCanonTier: 'C-Secondary' },
+      { franchise: 'Universe_Primary', patterns: ['*primary-world.wiki*'], defaultCanonTier: 'G-Primary' },
+      { franchise: 'Universe_Secondary', patterns: ['*universe-secondary.fandom.com*'], defaultCanonTier: 'C-Secondary' },
+      { franchise: 'Universe_Secondary', patterns: ['*secondary-world.wiki*'], defaultCanonTier: 'G-Primary' },
       { franchise: 'Universe_Tertiary', patterns: ['*universe-tertiary*', '*tertiary-world.wiki*'], defaultCanonTier: 'W-Author-WoB' },
     ],
     fallbackRule: {
       fandomSubdomainPattern: true,
       defaultFranchise: 'General',
+      defaultCanonTier: 'C-Secondary',
     },
   };
 }
@@ -72,12 +53,26 @@ export function loadFranchiseRules(vaultRoot = process.cwd()) {
  * Resolves the destination franchise and default canon tier from URL / explicit flags
  */
 export function detectFranchiseWithRules({ url = '', explicitFranchise = null, vaultRoot = process.cwd() }) {
+  try {
+    const host = new URL(url).hostname.toLowerCase();
+    if (host.includes('fanon') && host.includes('fandom.com')) {
+      const subdomain = host.split('.')[0];
+      return {
+        franchise: subdomain.split(/[-_]+/).map(word => word.charAt(0).toUpperCase() + word.slice(1)).join('_'),
+        canonTier: 'F-Fanon',
+        matchedRule: 'fanon-domain',
+      };
+    }
+  } catch {
+    // Explicit franchise routing can still be used with local HTML.
+  }
+
   // 1. Explicit override via CLI flag has highest priority
   if (explicitFranchise) {
-    const cleanName = assertFranchiseName(explicitFranchise);
+    const cleanName = explicitFranchise.trim().replace(/[\s-]+/g, '_');
     return {
       franchise: cleanName,
-      canonTier: 'G-Primary',
+      canonTier: 'C-Secondary',
       matchedRule: 'explicit-flag',
     };
   }
@@ -90,9 +85,8 @@ export function detectFranchiseWithRules({ url = '', explicitFranchise = null, v
     for (const rule of config.rules || []) {
       for (const pattern of rule.patterns || []) {
         if (matchGlob(cleanUrl, pattern) || cleanUrl.includes(pattern.replace(/\*/g, ''))) {
-          const validated = assertFranchiseName(rule.franchise);
           return {
-            franchise: validated,
+            franchise: rule.franchise,
             canonTier: rule.defaultCanonTier || 'G-Primary',
             matchedRule: `pattern:${pattern}`,
           };
@@ -101,7 +95,7 @@ export function detectFranchiseWithRules({ url = '', explicitFranchise = null, v
     }
   }
 
-  // 3. Fallback: extract fandom subdomain (e.g. jujutsu-kaisen.fandom.com -> Jujutsu_kaisen)
+  // 3. Fallback: extract fandom subdomain (e.g. novel-cosmology.fandom.com -> Novel_Cosmology)
   try {
     const parsed = new URL(url);
     const host = parsed.hostname.toLowerCase();
@@ -111,10 +105,9 @@ export function detectFranchiseWithRules({ url = '', explicitFranchise = null, v
         .split(/[-_]+/)
         .map(w => w.charAt(0).toUpperCase() + w.slice(1))
         .join('_');
-      const validated = assertFranchiseName(formatted);
       return {
-        franchise: validated,
-        canonTier: 'G-Primary',
+        franchise: formatted,
+        canonTier: host.includes('fanon') ? 'F-Fanon' : 'C-Secondary',
         matchedRule: 'fandom-subdomain',
       };
     }
@@ -123,29 +116,21 @@ export function detectFranchiseWithRules({ url = '', explicitFranchise = null, v
   }
 
   // 4. Default fallback
-  const fallback = config.fallbackRule?.defaultFranchise || 'General';
   return {
-    franchise: assertFranchiseName(fallback),
-    canonTier: 'G-Primary',
+    franchise: config.fallbackRule?.defaultFranchise || 'General',
+    canonTier: config.fallbackRule?.defaultCanonTier || 'C-Secondary',
     matchedRule: 'default-fallback',
   };
 }
 
 /**
- * Ensures the 7 canonical subdirectories and master index exist for a franchise in Canon/
+ * Ensures canonical subdirectories ('Sources', 'Baselines') and master index exist for a franchise in Canon/
  */
 export function ensureCanonScaffold({ franchise, vaultRoot = process.cwd() }) {
-  const validatedFranchise = assertFranchiseName(franchise);
-  const canonBase = path.resolve(vaultRoot, 'Canon');
-  const franchiseDir = path.resolve(canonBase, validatedFranchise);
-
-  if (!franchiseDir.startsWith(canonBase + path.sep)) {
-    throw new Error(`Path traversal detected: franchise "${franchise}" resolves outside Canon directory.`);
-  }
-
+  const franchiseDir = path.join(vaultRoot, 'Canon', franchise);
   let created = false;
 
-  // 1. Create 7 canonical subdirectories
+  // 1. Create canonical subdirectories (Sources, Baselines)
   for (const sub of CANON_SUBDIRECTORIES) {
     const subDir = path.join(franchiseDir, sub);
     if (!fs.existsSync(subDir)) {
@@ -155,18 +140,13 @@ export function ensureCanonScaffold({ franchise, vaultRoot = process.cwd() }) {
   }
 
   // 2. Create 00_<Franquia>_Index.md if not existing
-  const indexFile = path.join(franchiseDir, `00_${validatedFranchise}_Index.md`);
+  const indexFile = path.join(franchiseDir, `00_${franchise}_Index.md`);
   if (!fs.existsSync(indexFile)) {
-    const cleanTitle = validatedFranchise.replace(/_/g, ' ');
-    const frontmatterObj = {
-      note_type: 'canon-index',
-      cosmology: validatedFranchise,
-      aliases: [cleanTitle, `${cleanTitle} Canon Index`],
-    };
-    const frontmatterStr = yamlDump(frontmatterObj, { lineWidth: -1 }).trim();
-
+    const cleanTitle = franchise.replace(/_/g, ' ');
     const indexContent = `---
-${frontmatterStr}
+note_type: canon-index
+cosmology: ${franchise}
+aliases: ["${cleanTitle}", "${cleanTitle} Canon Index"]
 ---
 
 # 📖 Canon Index — ${cleanTitle}
@@ -177,13 +157,8 @@ ${frontmatterStr}
 
 | Folder | Contents |
 |---|---|
-| [[Sources/|Sources/]] | Raw captures (Web Clipper) — unprocessed |
-| [[01_Characters/|01_Characters/]] | Characters, named creatures, historical figures |
-| [[02_Locations/|02_Locations/]] | Villages, countries, locations, cosmography |
-| [[03_Factions_Cultures/|03_Factions_Cultures/]] | Clans, organizations, factions, cultures |
-| [[04_Rules_Mechanics/|04_Rules_Mechanics/]] | Power systems, invariant laws, technical mechanics |
-| [[05_Items_Artifacts/|05_Items_Artifacts/]] | Artifacts, legendary weapons, relics, items |
-| [[06_Timeline_Events/|06_Timeline_Events/]] | Major historical events, eras, canonical timeline |
+| [[Sources/|Sources/]] | Raw source captures and cryptographic provenance sidecars |
+| [[Baselines/|Baselines/]] | Subject-specific canonical dossiers and authoritative reference hubs |
 
 ## Core References
 <!-- Add key canon references here -->
@@ -195,3 +170,4 @@ ${frontmatterStr}
 
   return created;
 }
+

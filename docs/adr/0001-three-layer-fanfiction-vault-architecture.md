@@ -8,7 +8,7 @@ Writing expansive, multi-franchise crossover fanfiction creates profound organiz
 
 ## Decision
 We establish a strict 3-Layer Vault Architecture within Obsidian:
-1. `Canon/`: Pure, unadulterated source facts partitioned per franchise (`Canon/<Universe>/`), subdivided into 7 standardized modular directories (`00_Sources`, `01_Characters` through `06_Timeline_Events`).
+1. `Canon/`: Pure, unadulterated source facts partitioned per franchise (`Canon/<Universe>/`), subdivided into 7 standardized modular directories (`Sources`, `01_Characters` through `06_Timeline_Events`).
 2. `Bible/`: The authoritative ground truth of the fanfiction project, hosting Points of Divergence (PODs), cast sheets with canon deltas, relationship matrices, and arc outlines.
 3. `Manuscript/`: Creative drafting workspace organized by language editions (`pt-BR/` for working scenes and `es/` for published chapters).
 4. `00_Cockpit/` and `99_System/`: Supporting layers for operational dashboards and shared bilingual translation rules.

@@ -2,7 +2,7 @@
 note_type: canon-source
 cosmology: "{{cosmology}}"
 source_url: "{{source_url}}"
-canon_tier: "G-Primary"
+canon_tier: "C-Secondary"
 is_processed: false
 aliases: []
 ---
@@ -24,7 +24,6 @@ aliases: []
 - [ ] 
 
 ## Canonical Target Destinations
-<!-- Designate target wiki directories for the extracted entities -->
-- `Canon/{{cosmology}}/01_Characters/` ➔ ...
-- `Canon/{{cosmology}}/04_Rules_Mechanics/` ➔ ...
+<!-- Designate target baseline dossiers for the extracted entities -->
+- `Canon/{{cosmology}}/Baselines/Baseline_<Topic>.md` ➔ ...
 

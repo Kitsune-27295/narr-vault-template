@@ -1,19 +1,27 @@
 {
   "name": "narrative-vault-framework-template",
   "version": "1.0.0",
-  "description": "Universal Multiverse & Fiction Framework and Obsidian Vault Template",
+  "description": "Universal Narrative Vault Framework: an Obsidian vault template with a deterministic CLI toolchain, F-RAG search, continuity ledgers and an agent operating contract",
   "type": "module",
   "scripts": {
-    "test": "vitest run",
+    "test": "vitest run --no-file-parallelism",
     "check:agents": "vitest run tests/harness-parity.test.js",
+    "validate:workflow": "node tools/workflow-validator.js",
     "validate:templates": "node tools/templates/template-validator.js",
-    "package": "node tools/packaging/package-template.js",
+    "validate:vault": "node tools/templates/template-validator.js --notes",
+    "validate:sources": "node tools/templates/template-validator.js --sources",
+    "validate:links": "node tools/vault/link-validator.js",
+    "validate:ledgers": "node tools/vault/ledger-validator.js",
+    "doctor": "node tools/doctor.js",
+    "brief": "node tools/brief.js",
+    "session:close": "node tools/session-close.js",
     "clip": "node tools/clipper/clipper.js",
     "ingest": "node tools/ingestor/ingestor.js",
     "pipeline": "node tools/pipeline.js",
     "rag:sync": "node tools/rag/cli.js sync",
     "rag:search": "node tools/rag/cli.js search",
-    "rag:context": "node tools/rag/cli.js context"
+    "rag:context": "node tools/rag/cli.js context",
+    "rag:eval": "node tools/rag/cli.js eval"
   },
   "dependencies": {
     "js-yaml": "5.5.0",

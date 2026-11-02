@@ -1,7 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { dump, load } from 'js-yaml';
-import { assertFranchiseName } from '../clipper/franchise-resolver.js';
 
 const yaml = { dump, load };
 
@@ -194,7 +193,7 @@ export function mergeClaimsIntoExisting(existingContent, routedData, sourceSha) 
   if (newMechanics.length > 0) {
     updatedBody = updatedBody.replace(
       /(## 2\. Mecânicas Fundamentais e Leis Invariantes\n)([\s\S]*?)(\n## 3\.)/,
-      (_match, p1, p2, p3) => `${p1}${p2}\n${newMechanics.join('\n')}${p3}`
+      `$1$2\n${newMechanics.join('\n')}$3`
     );
   }
 
@@ -209,7 +208,7 @@ export function mergeClaimsIntoExisting(existingContent, routedData, sourceSha) 
   if (newInteractions.length > 0) {
     updatedBody = updatedBody.replace(
       /(## 4\. Interações Entre Sistemas \(Cross-Dossier Links\)\n)([\s\S]*?)(\n## 5\.)/,
-      (_match, p1, p2, p3) => `${p1}${p2}\n${newInteractions.join('\n')}${p3}`
+      `$1$2\n${newInteractions.join('\n')}$3`
     );
   }
 
@@ -223,22 +222,15 @@ ${updatedBody.trim()}
 }
 
 /**
- * Upserts a Modular Dossier to disk under Canon/<Franquia>/<targetSubdir>/
+ * Upserts a Canonical Baseline to disk under Canon/<Franchise>/Baselines/
  */
 export function upsertModularDossier({ routedData, franchise, vaultRoot = process.cwd(), sourceSha = null }) {
-  const targetSubdir = routedData.targetSubdir || '04_Rules_Mechanics';
-  const validatedFranchise = assertFranchiseName(franchise);
-  const canonBase = path.resolve(vaultRoot, 'Canon');
-  const targetDir = path.resolve(canonBase, validatedFranchise, targetSubdir);
-
-  if (!targetDir.startsWith(canonBase + path.sep)) {
-    throw new Error(`Path traversal detected: destination directory "${targetDir}" resolves outside Canon.`);
-  }
-
+  const targetSubdir = routedData.targetSubdir || 'Baselines';
+  const targetDir = path.join(vaultRoot, 'Canon', franchise, targetSubdir);
   fs.mkdirSync(targetDir, { recursive: true });
 
   const cleanName = routedData.name.replace(/[:*?"<>|\\/]/g, '').replace(/\s+/g, '_');
-  const fileName = `Dossier_${cleanName}.md`;
+  const fileName = `Baseline_${cleanName}.md`;
   const filePath = path.join(targetDir, fileName);
 
   let status = 'created';
@@ -256,7 +248,7 @@ export function upsertModularDossier({ routedData, franchise, vaultRoot = proces
   } else {
     finalContent = synthesizeModularDossier({
       routedData,
-      franchise: validatedFranchise,
+      franchise,
       fontesIntegradas: 1,
       integratedSources: sourceSha ? [sourceSha] : [],
     });

@@ -1,12 +1,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
-import { pathToFileURL } from 'node:url';
-import { dump as yamlDump } from 'js-yaml';
+import { execFileSync } from 'node:child_process';
 import { sanitizeAndConvertHtml } from './sanitizer.js';
-import { detectFranchiseWithRules, ensureCanonScaffold, assertFranchiseName } from './franchise-resolver.js';
-
-const USER_AGENT = 'narr-clipper/1.0 (+https://github.com/Kitsune-27295/frameworks)';
-const MAX_BODY_BYTES = 10 * 1024 * 1024; // 10MB limit
+import { detectFranchiseWithRules, ensureCanonScaffold } from './franchise-resolver.js';
 
 /**
  * Standard franchise mapping delegating to centralized franchise-resolver
@@ -17,103 +13,48 @@ export function detectFranchise(urlStr, explicitFranchise = null, vaultRoot = pr
 }
 
 /**
- * Clean slug generation for file names with Windows reserved name and length protections
+ * Clean slug generation for file names
  */
 export function slugifyTitle(title) {
-  let slug = (title || '')
+  return title
     .replace(/\(.*?\)/g, '') // remove parentheticals
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '') // remove accents
     .replace(/[^a-zA-Z0-9\s_-]/g, '') // remove special symbols
     .trim()
     .replace(/[\s-]+/g, '_');
-
-  if (!slug) {
-    slug = 'Untitled';
-  }
-
-  if (slug.length > 80) {
-    slug = slug.slice(0, 80).replace(/_+$/, '');
-  }
-
-  if (/^(CON|PRN|AUX|NUL|COM\d|LPT\d)$/i.test(slug)) {
-    slug = `Doc_${slug}`;
-  }
-
-  return slug;
 }
 
 /**
- * Checks whether a hostname resolves to private, loopback, or link-local address (SSRF guard).
+ * Cross-platform curl fallback for anti-bot bypass
  */
-function isPrivateOrLoopbackHost(hostname) {
-  const h = hostname.toLowerCase();
-  if (h === 'localhost' || h === '::1') return true;
-  if (/^127\.\d+\.\d+\.\d+$/.test(h)) return true;
-  if (/^10\.\d+\.\d+\.\d+$/.test(h)) return true;
-  if (/^192\.168\.\d+\.\d+$/.test(h)) return true;
-  if (/^172\.(1[6-9]|2\d|3[01])\.\d+\.\d+$/.test(h)) return true;
-  if (/^169\.254\.\d+\.\d+$/.test(h)) return true;
-  return false;
-}
-
-/**
- * Reads response body with a maximum byte limit to avoid memory exhaustion
- */
-async function readResponseWithLimit(res, maxBytes = MAX_BODY_BYTES) {
-  if (!res.body) return '';
-  const reader = res.body.getReader();
-  const chunks = [];
-  let totalBytes = 0;
-
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    totalBytes += value.length;
-    if (totalBytes > maxBytes) {
-      throw new Error(`Response body exceeded maximum allowed limit of ${maxBytes} bytes.`);
-    }
-    chunks.push(value);
-  }
-
-  return Buffer.concat(chunks).toString('utf8');
-}
-
-/**
- * Validates URL scheme and destination
- */
-function validateUrl(urlStr) {
-  const parsed = new URL(urlStr);
-  if (!['http:', 'https:'].includes(parsed.protocol)) {
-    throw new Error(`Invalid protocol "${parsed.protocol}". Only http: and https: are allowed.`);
-  }
-  if (isPrivateOrLoopbackHost(parsed.hostname)) {
-    throw new Error(`SSRF protection: requests to private or loopback host "${parsed.hostname}" are forbidden.`);
-  }
-  return parsed;
+function fetchWithCurl(url, userAgent) {
+  const curlBin = process.platform === 'win32' ? 'curl.exe' : 'curl';
+  return execFileSync(curlBin, ['-s', '-L', '-A', userAgent, url], {
+    maxBuffer: 20 * 1024 * 1024,
+    encoding: 'utf8',
+  });
 }
 
 /**
  * Clips a URL or HTML string and saves .md + .json sidecar
  */
-export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = process.cwd(), dryRun = false }) {
+export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = process.cwd(), dryRun = false, replaceExisting = false }) {
   let rawHtml = html;
 
   if (!rawHtml && url) {
-    const parsedUrl = validateUrl(url);
+    const userAgent =
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
-    // Fandom / MediaWiki native API fast-path
-    const isFandom = /(^|\.)fandom\.com$/i.test(parsedUrl.hostname);
-    const fandomMatch = parsedUrl.pathname.match(/^\/wiki\/(.+)$/);
-
-    if (isFandom && fandomMatch) {
+    // Fandom / MediaWiki native API fast-path (bypasses Cloudflare anti-bot and delivers clean article HTML)
+    const fandomMatch = url.match(/^(https?:\/\/[^\/]+)\/wiki\/(.+)$/);
+    if (fandomMatch && fandomMatch[1].includes('fandom.com')) {
       try {
-        const domain = `${parsedUrl.protocol}//${parsedUrl.host}`;
-        const pageTitle = decodeURIComponent(fandomMatch[1]);
+        const domain = fandomMatch[1];
+        const pageTitle = decodeURIComponent(fandomMatch[2]);
         const apiUrl = `${domain}/api.php?action=parse&page=${encodeURIComponent(pageTitle)}&format=json&redirects=1`;
         const apiRes = await fetch(apiUrl, {
-          headers: { 'User-Agent': USER_AGENT, Accept: 'application/json' },
-          signal: AbortSignal.timeout(20000),
+          headers: { 'User-Agent': userAgent, Accept: 'application/json' },
         });
         if (apiRes.ok) {
           const apiData = await apiRes.json();
@@ -122,25 +63,36 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
           }
         }
       } catch {
-        // Fall through to standard fetch
+        // Fall through to standard fetch / curl fallback
       }
     }
 
     if (!rawHtml) {
-      const res = await fetch(url, {
-        headers: {
-          'User-Agent': USER_AGENT,
-          Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-          'Accept-Language': 'en-US,en;q=0.5',
-        },
-        signal: AbortSignal.timeout(20000),
-      });
-
-      if (!res.ok) {
-        throw new Error(`Failed to fetch ${url}: HTTP ${res.status} ${res.statusText}`);
+      try {
+        const res = await fetch(url, {
+          headers: {
+            'User-Agent': userAgent,
+            Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+            'Accept-Language': 'en-US,en;q=0.5',
+          },
+        });
+        if (res.ok) {
+          rawHtml = await res.text();
+        } else {
+          // Fallback to curl on anti-bot / 403 response
+          try {
+            rawHtml = fetchWithCurl(url, userAgent);
+          } catch {
+            throw new Error(`Failed to fetch ${url}: HTTP ${res.status} ${res.statusText}`);
+          }
+        }
+      } catch (fetchErr) {
+        try {
+          rawHtml = fetchWithCurl(url, userAgent);
+        } catch {
+          throw fetchErr;
+        }
       }
-
-      rawHtml = await readResponseWithLimit(res, MAX_BODY_BYTES);
     }
   }
 
@@ -149,31 +101,34 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
   }
 
   const resolved = detectFranchiseWithRules({ url: url || '', explicitFranchise: franchise, vaultRoot });
-  const targetFranchise = assertFranchiseName(resolved.franchise);
+  const targetFranchise = resolved.franchise;
   const canonTier = resolved.canonTier;
+  if (canonTier === 'F-Fanon') {
+    throw new Error('Fanon wiki sources cannot be filed as Canon captures. Use research/workbench notes instead.');
+  }
 
   // Auto-scaffold 7 canonical subdirectories if not yet present
   ensureCanonScaffold({ franchise: targetFranchise, vaultRoot });
 
   const parsed = sanitizeAndConvertHtml(rawHtml, url);
   if (parsed.title.toLowerCase().includes('just a moment') || parsed.title.toLowerCase().includes('attention required')) {
-    throw new Error(`Anti-bot challenge page intercepted for ${url}. Aborting clip. Use --html-file with a browser capture instead.`);
+    throw new Error(`Cloudflare anti-bot challenge page intercepted for ${url}. Aborting clip.`);
   }
+  const slug = slugifyTitle(parsed.title);
 
-  let slug = slugifyTitle(parsed.title);
+  const sourcesDir = path.join(vaultRoot, 'Canon', targetFranchise, 'Sources');
+  const mdPath = path.join(sourcesDir, `${slug}.md`);
+  const jsonPath = path.join(sourcesDir, `${slug}.json`);
 
-  const sourcesDir = fs.existsSync(path.join(vaultRoot, 'Canon', targetFranchise, '00_Sources'))
-    ? path.join(vaultRoot, 'Canon', targetFranchise, '00_Sources')
-    : path.join(vaultRoot, 'Canon', targetFranchise, 'Sources');
-
-  let mdPath = path.join(sourcesDir, `${slug}.md`);
-  let jsonPath = path.join(sourcesDir, `${slug}.json`);
-
-  // Check Idempotency via SHA-256 and handle collisions on different URLs
+  // Keep captures immutable unless replacement is explicitly authorized.
+  const captureExists = fs.existsSync(mdPath) || fs.existsSync(jsonPath);
   if (fs.existsSync(jsonPath)) {
     try {
       const existingMeta = JSON.parse(fs.readFileSync(jsonPath, 'utf8'));
-      if (existingMeta.content_sha256 === parsed.contentHash) {
+      const existingMarkdown = fs.existsSync(mdPath) ? fs.readFileSync(mdPath, 'utf8') : '';
+      const frontmatterMatch = existingMarkdown.match(/^---\r?\n[\s\S]*?\r?\n---\r?\n/);
+      const existingBody = frontmatterMatch ? existingMarkdown.slice(frontmatterMatch[0].length).replace(/^\r?\n/, '') : null;
+      if (existingMeta.content_sha256 === parsed.contentHash && existingBody === parsed.markdown) {
         return {
           status: 'unchanged',
           slug,
@@ -183,15 +138,12 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
           contentHash: parsed.contentHash,
         };
       }
-      if (existingMeta.url && url && existingMeta.url !== url) {
-        // Different URL with same title: append hash suffix to preserve both
-        slug = `${slug}_${parsed.contentHash.slice(0, 8)}`;
-        mdPath = path.join(sourcesDir, `${slug}.md`);
-        jsonPath = path.join(sourcesDir, `${slug}.json`);
-      }
     } catch {
-      // Re-write if corrupted
+      // A corrupt sidecar is still protected data; require explicit replacement.
     }
+  }
+  if (captureExists && !replaceExisting) {
+    throw new Error(`Capture already exists with different or unreadable provenance: ${mdPath}. Inspect it and rerun with --replace-existing only if replacement is intended.`);
   }
 
   const sidecar = {
@@ -208,23 +160,22 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
 
   if (!dryRun) {
     fs.mkdirSync(sourcesDir, { recursive: true });
+    const frontmatter = `---
+title: "${parsed.title.replace(/"/g, '\\"')}"
+note_type: canon-source
+cosmology: ${targetFranchise}
+canon_tier: ${canonTier}
+source_url: "${url || 'local'}"
+is_processed: false
+---
 
-    const frontmatterObj = {
-      title: parsed.title,
-      note_type: 'canon-source',
-      cosmology: targetFranchise,
-      canon_tier: canonTier,
-      source_url: url || 'local',
-      is_processed: false,
-    };
-    const frontmatter = `---\n${yamlDump(frontmatterObj, { lineWidth: -1 }).trim()}\n---\n\n`;
-
+`;
     fs.writeFileSync(mdPath, frontmatter + parsed.markdown, 'utf8');
     fs.writeFileSync(jsonPath, JSON.stringify(sidecar, null, 2), 'utf8');
   }
 
   return {
-    status: 'created',
+    status: captureExists ? 'replaced' : 'created',
     slug,
     franchise: targetFranchise,
     mdPath,
@@ -234,34 +185,33 @@ export async function clipUrlOrHtml({ url, html, franchise = null, vaultRoot = p
 }
 
 // CLI entrypoint
-if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.argv[1])).href) {
+if (import.meta.url === `file:///${process.argv[1].replace(/\\/g, '/')}`) {
   const args = process.argv.slice(2);
   let url = '';
   let franchise = null;
   let htmlPath = null;
   let dryRun = false;
-  let vaultRoot = process.env.VAULT_ROOT || process.cwd();
+  let replaceExisting = false;
 
   for (let i = 0; i < args.length; i++) {
     if (args[i] === '--help' || args[i] === '-h') {
-      console.log('Usage: node tools/clipper/clipper.js <url> [--franchise <name>] [--html-file <path>] [--vault <path>] [--dry-run]');
-      console.log('Note: For protected pages with Cloudflare/anti-bot challenges, save HTML via browser and use --html-file.');
+      console.log('Usage: node tools/clipper/clipper.js <url> [--franchise <name>] [--html-file <path>] [--dry-run] [--replace-existing]');
       process.exit(0);
     } else if (args[i] === '--franchise' || args[i] === '-f') {
       franchise = args[++i];
     } else if (args[i] === '--html-file') {
       htmlPath = args[++i];
-    } else if (args[i] === '--vault') {
-      vaultRoot = path.resolve(args[++i]);
     } else if (args[i] === '--dry-run') {
       dryRun = true;
+    } else if (args[i] === '--replace-existing') {
+      replaceExisting = true;
     } else if (!url && !args[i].startsWith('-')) {
       url = args[i];
     }
   }
 
   if (!url && !htmlPath) {
-    console.log('Usage: node tools/clipper/clipper.js <url> [--franchise <name>] [--html-file <path>] [--vault <path>] [--dry-run]');
+    console.log('Usage: node tools/clipper/clipper.js <url> [--franchise <name>] [--html-file <path>] [--dry-run] [--replace-existing]');
     process.exit(1);
   }
 
@@ -270,7 +220,7 @@ if (process.argv[1] && import.meta.url === pathToFileURL(path.resolve(process.ar
     htmlContent = fs.readFileSync(htmlPath, 'utf8');
   }
 
-  clipUrlOrHtml({ url, html: htmlContent, franchise, vaultRoot, dryRun })
+  clipUrlOrHtml({ url, html: htmlContent, franchise, dryRun, replaceExisting })
     .then(res => {
       console.log(`[CLIPPER] Result: ${res.status.toUpperCase()} -> ${res.slug} (${res.franchise})`);
       console.log(`[CLIPPER] MD: ${res.mdPath}`);

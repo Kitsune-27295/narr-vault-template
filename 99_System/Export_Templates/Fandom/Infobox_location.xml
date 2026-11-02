@@ -1,6 +1,6 @@
 <!-- 
   Fandom / MediaWiki Portable Infobox Template: Location / Geography
-  Deploy this XML definition to: Template:Infobox_location
+  Optional Fandom Portable Infobox starting point. Adapt and test in the target wiki's sandbox.
 -->
 <infobox type="location">
     <title source="title">
@@ -25,12 +25,12 @@
         </data>
     </group>
     <group>
-        <header>Demographics & Infrastructure</header>
+        <header>Demographics &amp; Infrastructure</header>
         <data source="inhabitants">
             <label>Notable Inhabitants</label>
         </data>
         <data source="connections">
-            <label>Routes & Connections</label>
+            <label>Routes &amp; Connections</label>
         </data>
         <data source="amenities">
             <label>Key Landmarks</label>
@@ -43,16 +43,16 @@
   WIKITEXT ARTICLE INVOCATION EXAMPLE:
   ============================================================
   {{Infobox_location
-  | title = Example Valley
-  | image = Example_Valley.png
+  | title = Valley of the End
+  | image = Valley_End.png
   | caption = View of the statues at sunset
   | type = Historical Landmark / Battlefield
-  | location = [[Example Kingdom]]
+  | location = [[Fire Country]]
   | cosmology = Universe_Primary
   | governing_body = Disputed Border
   | inhabitants =
-  * [[Example Hermit]]
-  * [[Example Founder]]
+  * [[Character Alpha]]
+  * [[Character Beta]]
   | connections =
   * [[Northern Frontier Road]]
   * [[River Valley Pass]]

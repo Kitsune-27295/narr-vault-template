@@ -1,6 +1,6 @@
 <!-- 
   Fandom / MediaWiki Portable Infobox Template: Character
-  Deploy this XML definition to: Template:Infobox_character
+  Optional Fandom Portable Infobox starting point. Adapt and test in the target wiki's sandbox.
 -->
 <infobox type="character">
     <title source="name">
@@ -31,7 +31,7 @@
         </data>
     </group>
     <group>
-        <header>Affiliation & Role</header>
+        <header>Affiliation &amp; Role</header>
         <data source="occupation">
             <label>Occupation</label>
         </data>
@@ -66,12 +66,12 @@
   | caption = Character during Arc 1
   | full_name = Full Canon Name
   | alias = The Primary Title
-  | species = Human / Other / Entity
+  | species = Human / Entity
   | gender = Male / Female / Other
   | age = 17
   | status = Alive
-  | occupation = Guard Captain
-  | affiliation = [[Example City Watch]]
+  | occupation = Squad Captain
+  | affiliation = [[Leaf Village]]
   | cosmology = Universe_Primary
   | alignment = Neutral Good
   | first_appearance = [[Chapter 01: The First Awakening]]

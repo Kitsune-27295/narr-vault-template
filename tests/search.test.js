@@ -89,7 +89,7 @@ Practitioners mold energy through mental discipline to project radiant force.
   });
 
   it('should incrementally sync a vault folder without duplicate entries', () => {
-    const file1 = path.join(testDir, 'Canon', 'Universe_Primary', '01_Characters');
+    const file1 = path.join(testDir, 'Canon', 'Universe_Primary', 'Baselines');
     fs.mkdirSync(file1, { recursive: true });
     fs.writeFileSync(
       path.join(file1, 'Entity_Alpha.md'),
@@ -110,9 +110,24 @@ Practitioners mold energy through mental discipline to project radiant force.
     expect(results[0].title).toBe('Entity Alpha');
   });
 
+  it('excludes historical scratch plans from the writing-context search index', () => {
+    const canonDir = path.join(testDir, 'Canon', 'Universe_Alpha', 'Baselines');
+    const scratchDir = path.join(testDir, '.scratch', 'old-planning-record');
+    fs.mkdirSync(canonDir, { recursive: true });
+    fs.mkdirSync(scratchDir, { recursive: true });
+    fs.writeFileSync(path.join(canonDir, 'Master_Chronology.md'), '# Current Alpha Chronology\nYear 26 is the narrative start.', 'utf8');
+    fs.writeFileSync(path.join(scratchDir, 'spec.md'), '# Superseded Planning Record\nYear -35 was an obsolete anchor.', 'utf8');
+
+    const stats = syncVault(testDir, db);
+    const rows = db.prepare('SELECT rel_path FROM documents').all();
+    expect(stats.indexed).toBe(1);
+    expect(rows.map((row) => row.rel_path)).toEqual(['Canon/Universe_Alpha/Baselines/Master_Chronology.md']);
+    expect(searchDocuments(db, 'obsolete anchor').some((result) => result.rel_path.includes('.scratch'))).toBe(false);
+  });
+
   it('should correctly classify real vault character paths in Canon and Bible', () => {
     indexDocument(db, {
-      relPath: 'Canon/Universe_Primary/01_Characters/Entity_Alpha.md',
+      relPath: 'Canon/Universe_Primary/Baselines/Entity_Alpha.md',
       content: '# Entity Alpha\nNative realm guardian.',
       mtime: Date.now(),
     });
@@ -123,7 +138,7 @@ Practitioners mold energy through mental discipline to project radiant force.
     });
 
     const canonChar = db.prepare("SELECT ptype, zone, franchise FROM documents WHERE rel_path LIKE '%Entity_Alpha%'").get();
-    expect(canonChar.ptype).toBe('character_dossier');
+    expect(canonChar.ptype).toBe('canon_baseline');
     expect(canonChar.zone).toBe('Canon');
     expect(canonChar.franchise).toBe('Universe_Primary');
 
@@ -133,7 +148,7 @@ Practitioners mold energy through mental discipline to project radiant force.
   });
 
   it('should prune deleted files from documents and FTS5 on incremental sync', () => {
-    const dir = path.join(testDir, 'Canon', 'Universe_Primary', '01_Characters');
+    const dir = path.join(testDir, 'Canon', 'Universe_Primary', 'Baselines');
     fs.mkdirSync(dir, { recursive: true });
     const targetFile = path.join(dir, 'Rival_Entity.md');
     fs.writeFileSync(targetFile, '# Rival Entity\nProdigy possessing ocular resonance.', 'utf-8');

@@ -1,32 +1,37 @@
 ---
 name: narrative-architecture-audit
-description: "Review-only audit of a chapter or arc across five groups (promises and payoffs, causal chain, character change, information flow, sensory and emotional texture), quoting paragraph markers and never editing. Use when a chapter or arc needs a structural diagnosis before revision or when a draft feels hollow without an obvious cause."
+description: "Review-only structural audit of a manuscript chapter or arc across five groups: promises and payoffs, causal chain, character change, information flow, and sensory texture. Quotes paragraph markers and diagnoses without destructive editing."
 ---
+
 # narrative-architecture-audit
 
-Use this skill to diagnose how a chapter or arc is built. It reads five groups separately, quotes evidence with `<!-- p:N -->` markers and never edits (Rule 20.3). Craft sources are credited in `05_Craft_and_Feedback/Checklists/CKL-Craft_Sources.md`.
+Use this skill to diagnose whether a drafted scene, chapter, or arc has structural integrity before proceeding with line revisions.
 
-## Read the five groups one at a time
-Do not mix groups in one pass; each pass answers one question.
-1. **Promises and payoffs:** what does the text promise the reader, and where is it kept? Cross-check `LDG-Foreshadowing.md`, `LDG-Chekhov_Guns.md` and the output of `python tools/vault_audit.py`.
-2. **Causal chain:** does each beat follow from the previous one with "but" or "therefore", not "and then"? List every "and then" link.
-3. **Character change:** what does the POV character believe at the start, what at the end, and which scene proves the shift? An arc without proof is a claim.
-4. **Information flow:** who knows what, and when does the reader learn it? Check `LDG-Character_Knowledge.md` for anyone acting on knowledge they have not gained. Flag exposition delivered in one block.
-5. **Texture:** sensory detail and emotion. Check both a floor (a scene with no body in it) and a ceiling (every beat embodied, every smell named). Prefer behaviour and plain naming over stacked symptoms. Use only in-universe anchors for comparison.
+## Read the Five Groups One at a Time
 
-## Evidence rules
-- Quote the marker, not the sentence: `p:14`. Quote text only to show a pattern.
-- Mark inferences as inferences. A finding without a marker is an opinion; label it so.
-- Treat a loose end as `abandoned` only if the text closes it; otherwise it is open.
+### Group 1: Promises and Payoffs
+- What expectations does the opening establish?
+- Are open loops addressed, intentionally deferred, or forgotten?
+- Check Chekhov weapons and setups against `foreshadowing-audit`.
 
-## Report block
-```text
-ARCHITECTURE AUDIT: <chapter or arc>
-Promises: kept [...]  open [...]  broken [...]
-Causal chain: weak links at p:_ (and then), p:_ (and then)
-Character change: from <belief> to <belief>, proven at p:_ | not proven
-Information flow: surprises earned [...]  knowledge leaks [...]  exposition blocks [...]
-Texture: floor ok|low at p:_   ceiling ok|high at p:_
-Top three questions for the curator:
-```
-Follow with `revision-pass` only if the curator approves.
+### Group 2: Causal Chain
+- Does each paragraph/event follow from the preceding one by "Therefore" or "But"?
+- Identify any "And then" sequences where events happen arbitrarily without causal necessity.
+
+### Group 3: Character Change and Agency
+- Does the POV protagonist make an active choice under pressure?
+- Is there a meaningful delta in the character's emotional, social, or physical state between the scene start and end?
+
+### Group 4: Information Flow and Exposition
+- Is exposition delivered through dialogue conflict, action pressure, or sensory discovery?
+- Flag dry "as you know, Bob" infodumps that stall narrative momentum.
+
+### Group 5: Sensory & Emotional Texture
+- Are multiple senses engaged (sight, sound, tactile, smell/taste, ambient energy pressure)?
+- Does the scene mood reflect the protagonist's internal emotional register?
+
+## Report Format
+Present findings with specific paragraph citations (`<!-- p:N -->`):
+- **Strengths:** Concrete elements that function effectively.
+- **Structural Defects:** Gaps in causality, passive protagonist choices, or stalled pacing.
+- **Recommended Actions:** Targeted recommendations for the revision pass.

@@ -1,6 +1,6 @@
 <!-- 
   Fandom / MediaWiki Portable Infobox Template: Item / Artifact / Relic
-  Deploy this XML definition to: Template:Infobox_item
+  Optional Fandom Portable Infobox starting point. Adapt and test in the target wiki's sandbox.
 -->
 <infobox type="item">
     <title source="name">
@@ -25,7 +25,7 @@
         </data>
     </group>
     <group>
-        <header>Attunement & Usage</header>
+        <header>Attunement &amp; Usage</header>
         <data source="owners">
             <label>Current / Known Owners</label>
         </data>
@@ -33,7 +33,7 @@
             <label>Primary Functions</label>
         </data>
         <data source="hazards">
-            <label>Hazards & Rebound</label>
+            <label>Hazards &amp; Rebound</label>
         </data>
     </group>
 </infobox>
@@ -43,21 +43,21 @@
   WIKITEXT ARTICLE INVOCATION EXAMPLE:
   ============================================================
   {{Infobox_item
-  | name = Example Relic
-  | image = Example_Relic.png
-  | caption = A sentient blade of legend
+  | name = Samehada
+  | image = Samehada_Sword.png
+  | caption = The Great Shark Skin Blade
   | item_type = Sentient Energy-Draining Blade
-  | creator = [[Example Guild of Artisans]]
+  | creator = [[Mist Village Artisans]]
   | cosmology = Universe_Primary
   | status = Intact
   | owners =
-  * [[First Owner]]
-  * [[Second Owner]]
+  * [[Kisame Hoshigaki]]
+  * [[Killer B]]
   | functions =
-  * Drains energy on contact
+  * Shaves energy on contact
   * Transfers energy to wielder
   | hazards =
-  * Will betray its wielder if a richer energy source is encountered
+  * Will betray wielder if tastier energy is encountered
   }}
 -->
 

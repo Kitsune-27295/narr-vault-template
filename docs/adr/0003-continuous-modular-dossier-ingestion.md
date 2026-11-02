@@ -11,7 +11,7 @@ We implement a two-engine continuous canon pipeline:
 1. **Engine 1 (Hybrid Web Clipper):** Strips DOM boilerplate using `linkedom`, extracts infoboxes into sidecar JSON, formats progression tables as clean Markdown, and writes to `Canon/<Franchise>/Sources/`.
 2. **Engine 2 (Semantic Map-Reduce Ingestor):** Decomposes raw sources into typed claims, evaluates them against the 3 Pillars Rule, and synthesizes them into structured Modular Dossiers under `Canon/<Franchise>/04_Rules_Mechanics/`.
 3. **Scope Delegation & Canon Layering:** Sub-techniques and secondary items are delegated via wikilinks rather than duplicating full text. Conflict logs track retcons and adaptations.
-4. **Declarative Franchise Routing:** Driven by `99_System/franchise-rules.json` with automatic directory scaffolding.
+4. **Declarative Franchise Routing:** Driven by `99_System/franchise-rules.json` with automatic scaffolding of the seven standard Canon modules, including `Sources/`.
 
 ## Consequences
 - **Positive:** High signal-to-noise ratio, structured invariant rules for LLMs, deterministic idempotency via SHA-256 hashes.

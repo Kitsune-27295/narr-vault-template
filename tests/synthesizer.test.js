@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, afterAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { synthesizeModularDossier, upsertModularDossier } from '../tools/ingestor/synthesizer.js';
@@ -15,13 +15,6 @@ describe('Engine 2 Step 3 & 4: Canon Layering & Modular Dossier Upsert', () => {
   afterEach(() => {
     if (fs.existsSync(testFranchiseDir)) {
       fs.rmSync(testFranchiseDir, { recursive: true, force: true });
-    }
-  });
-
-  afterAll(() => {
-    const canonDir = path.join(process.cwd(), 'Canon');
-    if (fs.existsSync(canonDir) && fs.readdirSync(canonDir).length === 0) {
-      fs.rmdirSync(canonDir);
     }
   });
 

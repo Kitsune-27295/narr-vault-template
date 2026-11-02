@@ -1,55 +1,68 @@
-version: "3.0"
-vault_id: "narrative-story-bible-template"
-title: "Narrative Story Bible Template"
-description: "Framework-template for long-form narrative fiction vaults (fanfic, original)"
+# ==============================================================================
+# Vault Declarative Configuration: Narrative Vault Framework
+# Single source of truth for story metadata, tiers, languages, modules & budgets.
+# ==============================================================================
+schema: 1
 
-narr:
-  version: ">=2.0"
+story:
+  title: "Untitled Narrative Project"
+  fandoms: []   # source universes this project draws on
+  tier: "T2"
+  rating: "Not Rated"   # e.g. an AO3 rating
+  authoritative_calendar: ""   # e.g. Canon/<Franchise>/Baselines/Baseline_Master_Chronology_Timeline.md
+  epoch: ""   # e.g. "Founding Year 0"; all dated events count forward from it
+  opening_date: ""   # where the story opens on that calendar
 
-locales:
-  draft: "pt-BR"
-  publish: "es"
-  system: "en-US"
+languages:
+  drafting: "pt-BR"
+  publication: "es"
+  reference: "en-US"
 
+# Character sheet modules recognized across the vault
+modules:
+  - "Identity"
+  - "Appearance"
+  - "Personality"
+  - "Voice"
+  - "Decision_Logic"
+  - "Rank_and_Progression"
+  - "Powers_and_Costs"
+  - "Techniques"
+  - "Equipment"
+  - "Academy_and_Cohort"
+  - "State_as_of"
+
+# Required sections per character tier
+character_required:
+  T1:
+    - "Identity"
+    - "Appearance"
+    - "Personality"
+    - "Voice"
+    - "Decision_Logic"
+    - "Rank_and_Progression"
+    - "Powers_and_Costs"
+    - "Techniques"
+    - "Equipment"
+    - "Academy_and_Cohort"
+    - "State_as_of"
+  T2:
+    - "Identity"
+    - "Rank_and_Progression"
+    - "Powers_and_Costs"
+    - "State_as_of"
+  T3:
+    - "Identity"
+    - "State_as_of"
+
+# Continuity tracking thresholds
+thresholds:
+  chekhov_gap: 3          # Maximum chapters a planted element may go unpaid before report
+  thread_dormant_gap: 5   # Maximum chapters an open thread may stay dormant before report
+
+# Operational context budgets
 budgets:
-  agents_md_max_lines: 200
-  hot_memory_max_lines: 60
-  chapter_target_words: 4500
-  max_context_tokens: 3500
-  operational_file_max_bytes: 307200
+  hot_lines: 60           # Maximum lines in memory/hot.md
+  agents_lines: 200       # Target line ceiling for operational contract
+  note_bytes: 65536       # Maximum recommended bytes per single content note (64 KB)
 
-# Advisory prose checks (warnings STY001-STY005) for chapters in 04_Manuscript; densities are per 1000 words.
-style:
-  enabled: true
-  filter_per_1000_max: 25
-  adverb_per_1000_max: 12
-  rhythm_min_stdev: 4
-  opener_run_max: 3
-  tics_max: 3
-  min_chapter_words: 300
-
-# Authority of canon media, highest first. Dossiers record lower-ranked variants in section 5.
-canon_authority: [source_text, adaptation, fanon, inference]
-
-scopes:
-  default: "fanfic_canon"
-  hierarchy:
-    source_canon:
-      parent: null
-      can_see: ["source_canon"]
-    fanfic_canon:
-      parent: "source_canon"
-      can_see: ["source_canon", "fanfic_canon"]
-    au_alternate:
-      parent: "source_canon"
-      can_see: ["source_canon", "au_alternate"]
-    au_divergence:
-      parent: "source_canon"
-      can_see: ["source_canon", "fanfic_canon", "au_divergence"]
-    sandbox:
-      parent: null
-      can_see: ["sandbox"]
-
-git:
-  commit_types: ["canon", "source", "bible", "timeline", "manuscript", "pod", "ledger", "meta", "fix", "refactor", "chore"]
-  require_lint_pass: true

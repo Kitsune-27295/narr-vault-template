@@ -1,31 +1,9 @@
-# Obsidian workspace state
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+node_modules/
 
-# Local narr CLI index, journal & cache
-.narr/
-.bible/
-*.sqlite
-*.sqlite3
-*.db
+# SQLite FTS5 index and runtime journals (rebuilt by npm run rag:sync)
+.scratch/*.db
+.scratch/*.db-shm
+.scratch/*.db-wal
 
-# Python, virtual environments & testing caches
-__pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
-dist/
-build/
-.venv/
-venv/
-env/
-.pytest_cache/
-.pytest_temp/
-.mypy_cache/
-.ruff_cache/
-scratch/
-
-# Operating System files
-.DS_Store
-Thumbs.db
-desktop.ini
+# Local scraping tool cache
+.firecrawl/

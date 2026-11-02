@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach, afterAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { detectFranchiseWithRules, ensureCanonScaffold } from '../tools/clipper/franchise-resolver.js';
@@ -11,13 +11,6 @@ describe('Centralized Franchise Resolver & Canon Scaffolder', () => {
   afterEach(() => {
     if (fs.existsSync(testDir)) {
       fs.rmSync(testDir, { recursive: true, force: true });
-    }
-  });
-
-  afterAll(() => {
-    const canonDir = path.join(vaultRoot, 'Canon');
-    if (fs.existsSync(canonDir) && fs.readdirSync(canonDir).length === 0) {
-      fs.rmdirSync(canonDir);
     }
   });
 
@@ -36,7 +29,7 @@ describe('Centralized Franchise Resolver & Canon Scaffolder', () => {
       vaultRoot,
     });
     expect(res1.franchise).toBe('Universe_Primary');
-    expect(res1.canonTier).toBe('G-Primary');
+    expect(res1.canonTier).toBe('C-Secondary');
 
     const res2 = detectFranchiseWithRules({
       url: 'https://universe-tertiary.tertiary-world.wiki/events/100',
@@ -50,6 +43,17 @@ describe('Centralized Franchise Resolver & Canon Scaffolder', () => {
       vaultRoot,
     });
     expect(res3.franchise).toBe('Universe_Primary');
+    expect(res3.canonTier).toBe('G-Primary');
+  });
+
+  it('classifies Fandom fanon domains separately even when a franchise is explicitly supplied', () => {
+    const res = detectFranchiseWithRules({
+      url: 'https://alphafanon.fandom.com/wiki/Example',
+      explicitFranchise: 'Universe_Alpha',
+      vaultRoot,
+    });
+    expect(res.canonTier).toBe('F-Fanon');
+    expect(res.matchedRule).toBe('fanon-domain');
   });
 
   it('should fallback to extracting fandom subdomain for unregistered fandoms', () => {
@@ -60,7 +64,7 @@ describe('Centralized Franchise Resolver & Canon Scaffolder', () => {
     expect(res.franchise).toBe('Novel_Cosmology');
   });
 
-  it('should automatically scaffold the 7 canonical subdirectories and index note when new franchise appears', () => {
+  it('should automatically scaffold the canonical subdirectories and index note when new franchise appears', () => {
     const scaffolded = ensureCanonScaffold({
       franchise: testFranchise,
       vaultRoot,
@@ -68,17 +72,15 @@ describe('Centralized Franchise Resolver & Canon Scaffolder', () => {
 
     expect(scaffolded).toBe(true);
     expect(fs.existsSync(path.join(testDir, 'Sources'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '01_Characters'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '02_Locations'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '03_Factions_Cultures'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '04_Rules_Mechanics'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '05_Items_Artifacts'))).toBe(true);
-    expect(fs.existsSync(path.join(testDir, '06_Timeline_Events'))).toBe(true);
+    expect(fs.existsSync(path.join(testDir, '00_Sources'))).toBe(false);
+    expect(fs.existsSync(path.join(testDir, 'Baselines'))).toBe(true);
     expect(fs.existsSync(path.join(testDir, `00_${testFranchise}_Index.md`))).toBe(true);
 
     const indexMd = fs.readFileSync(path.join(testDir, `00_${testFranchise}_Index.md`), 'utf8');
     expect(indexMd).toContain(`cosmology: ${testFranchise}`);
     expect(indexMd).toContain('# 📖 Canon Index');
+    expect(indexMd).toContain('[[Sources/|Sources/]]');
+    expect(indexMd).toContain('[[Baselines/|Baselines/]]');
   });
 });
 

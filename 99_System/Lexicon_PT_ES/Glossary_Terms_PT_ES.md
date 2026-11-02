@@ -1,6 +1,17 @@
 ---
 note_type: lexicon
-aliases: ["Bilingual Glossary", "Glossary PT-ES", "Glosario PT-ES"]
+title: Bilingual Translation Glossary — pt-BR ⟷ es
+uid: SYS-GLOSSARY-TERMS-PT-ES
+status: established
+aliases:
+  - Bilingual Glossary
+  - Glossary PT-ES
+  - Glosario PT-ES
+  - SYS-GLOSSARY-TERMS-PT-ES
+tags:
+  - '#system/lexicon'
+created: '2026-11-01'
+updated: '2026-11-02'
 ---
 
 # 📖 Bilingual Translation Glossary — pt-BR ⟷ es

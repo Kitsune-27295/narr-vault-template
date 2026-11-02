@@ -1,7 +1,17 @@
 ---
-title: Índice de Manuscrito (Español)
+note_type: manuscript-index
 type: index
-tags: [manuscript, index, spanish, framework]
+title: Índice de Manuscrito (Español)
+uid: MSP-ES-INDEX
+status: active
+aliases:
+  - Índice de Manuscrito ES
+  - Manuscript ES Index
+  - MSP-ES-INDEX
+tags:
+  - '#manuscript/es'
+created: '2026-11-01'
+updated: '2026-11-02'
 ---
 
 # 📖 Índice de Manuscrito — Edición Publicación (Español)
@@ -12,13 +22,9 @@ tags: [manuscript, index, spanish, framework]
 
 ## Flujo de Trabajo
 
-| Directorio | Finalidad |
-|---|---|
-| [[01_Chapters_Working/\|01_Chapters_Working/]] | Capítulos en proceso activo de traducción |
-| [[02_Chapters_Final/\|02_Chapters_Final/]] | Capítulos traducidos y revisados estilísticamente |
-| [[03_Published_Exports/\|03_Published_Exports/]] | Paquetes limpios listos para exportación a AO3 |
+Los capítulos traducidos residen directamente en la raíz de `Manuscript/es/` sin subcarpetas intermedias. Los procedimientos editoriales de exportación a AO3 residen en [[99_System/Export_Templates/AO3_Export_Procedure|AO3 Export Procedure]].
 
 ---
 
 ## Capítulos en Traducción
-- [[01_Chapters_Working/ES_Draft_Chapter_01_Template|Capítulo 01 — El Primer Despertar (Template)]]
+- [[Manuscript/es/ES_Draft_Chapter_01_Template|Capítulo 01 — El Primer Despertar (Template Español)]]

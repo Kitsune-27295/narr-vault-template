@@ -1,6 +1,16 @@
 ---
 note_type: voice-guide
-aliases: ["Voice Guide ES", "Guía de Voces ES"]
+title: Character Voice & Translation Guide — Spanish (es)
+uid: SYS-CHARACTER-VOICE-GUIDE-ES
+status: established
+aliases:
+  - Voice Guide ES
+  - Guía de Voces ES
+  - SYS-CHARACTER-VOICE-GUIDE-ES
+tags:
+  - '#system/lexicon'
+created: '2026-11-01'
+updated: '2026-11-02'
 ---
 
 # 🎭 Character Voice & Translation Guide — Spanish (es)
@@ -11,7 +21,7 @@ aliases: ["Voice Guide ES", "Guía de Voces ES"]
 
 ### SI Protagonista / The Protagonist
 - **Register:** Analytic, measured, guarded internal monologue; cautious, polite external dialogue.
-- **Pronoun Choice:** Uses *tú* with peers and younger characters; defaults to respectful *usted* with elders, clan heads, and rulers.
+- **Pronoun Choice:** Uses *tú* with peers and younger operatives; defaults to respectful *usted* with elders, faction heads, and rulers.
 - **Mannerisms:** Avoids excessive in-world jargon in early chapters; internal thoughts reflect modern speculative literacy.
 
 ### Native Canon Counterpart / Focal Peer

@@ -84,20 +84,6 @@ function createTurndownService() {
     },
   });
 
-  // Strip unsafe javascript: and data: links
-  service.addRule('unsafeLinks', {
-    filter: function (node) {
-      if (node.nodeName === 'A') {
-        const href = node.getAttribute('href') || '';
-        return /^(javascript:|data:)/i.test(href.trim());
-      }
-      return false;
-    },
-    replacement: function (content) {
-      return content;
-    },
-  });
-
   // Remove empty links or anchors
   service.addRule('emptyLinks', {
     filter: function (node) {
@@ -169,7 +155,6 @@ export function sanitizeAndConvertHtml(htmlString, url = '') {
   if (!title) {
     title = document.querySelector('title')?.textContent?.split('|')[0]?.split('-')[0]?.trim() || 'Untitled';
   }
-  title = title.replace(/[\r\n]+/g, ' ').trim();
 
   // Extract Infobox before pruning
   const infobox = extractInfoboxData(document);

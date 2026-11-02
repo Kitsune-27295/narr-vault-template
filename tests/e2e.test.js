@@ -1,7 +1,9 @@
-import { describe, it, expect, beforeEach, afterEach, afterAll } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { runEndToEndPipeline } from '../tools/pipeline.js';
+import { ingestAllSources } from '../tools/ingestor/ingestor.js';
 
 describe('End-to-End Pipeline Verification Suite', () => {
   const testUniverseDir = path.join(process.cwd(), 'Canon', 'Universe_Test_E2e');
@@ -15,13 +17,6 @@ describe('End-to-End Pipeline Verification Suite', () => {
   afterEach(() => {
     if (fs.existsSync(testUniverseDir)) {
       fs.rmSync(testUniverseDir, { recursive: true, force: true });
-    }
-  });
-
-  afterAll(() => {
-    const canonDir = path.join(process.cwd(), 'Canon');
-    if (fs.existsSync(canonDir) && fs.readdirSync(canonDir).length === 0) {
-      fs.rmdirSync(canonDir);
     }
   });
 
@@ -113,5 +108,22 @@ describe('End-to-End Pipeline Verification Suite', () => {
 
     expect(rerun.clipResult.status).toBe('unchanged');
     expect(rerun.ingestResult.dossiersAffected[0].status).toBe('unchanged');
+  });
+
+  it('should discover Canon sources in both the standard and legacy directories', async () => {
+    const vaultRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'vault-source-discovery-'));
+    const standardDir = path.join(vaultRoot, 'Canon', 'Test_Franchise', 'Sources');
+    const legacyDir = path.join(vaultRoot, 'Canon', 'Test_Franchise', '00_Sources');
+    fs.mkdirSync(standardDir, { recursive: true });
+    fs.mkdirSync(legacyDir, { recursive: true });
+    fs.writeFileSync(path.join(standardDir, 'Standard.md'), 'Standard source has enough text for claim extraction.');
+    fs.writeFileSync(path.join(legacyDir, 'Legacy.md'), 'Legacy source has enough text for claim extraction.');
+
+    try {
+      const results = await ingestAllSources({ franchise: 'Test_Franchise', vaultRoot });
+      expect(results.map(({ source }) => path.basename(source)).sort()).toEqual(['Legacy.md', 'Standard.md']);
+    } finally {
+      fs.rmSync(vaultRoot, { recursive: true, force: true });
+    }
   });
 });

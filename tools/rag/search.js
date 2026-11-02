@@ -83,24 +83,22 @@ export function classifyDocument(relPath, fm) {
     zone = 'System';
   }
 
-  // Security guard: Raw web captures under Sources/ are strictly untrusted data
-  // and must never forge ptype/divergence_pod via frontmatter
-  const isSourceRaw = normalized.includes('00_Sources') || normalized.includes('/Sources/');
-  if (isSourceRaw) {
-    ptype = 'source_raw';
-    if (zone === 'Canon') {
-      franchise = parts[1] || 'Shared';
-    }
-  } else if (!ptype) {
+  if (!ptype) {
     if (normalized.includes('01_Divergences_AU')) {
       ptype = 'divergence_pod';
-    } else if (normalized.includes('04_Rules_Mechanics')) {
+    } else if (normalized.includes('/Baselines/') || normalized.includes('Baselines')) {
+      ptype = 'canon_baseline';
+    } else if (normalized.includes('04_Rules_Mechanics') || normalized.includes('06_Power_Systems_Mechanics') || normalized.includes('07_Power_Systems_Mechanics')) {
       ptype = 'rule_mechanic';
     } else if ((normalized.includes('02_Cast_Characters') || normalized.includes('02_Characters')) && zone === 'Bible') {
       ptype = 'character_sheet';
     } else if ((normalized.includes('01_Characters') || normalized.includes('02_Characters')) && zone === 'Canon') {
       ptype = 'character_dossier';
-    } else if (zone === 'Manuscript' && (normalized.includes('/01_Scenes/') || normalized.includes('/02_Compiled_PT/'))) {
+    } else if (normalized.includes('Sources') || normalized.includes('/Sources/')) {
+      ptype = 'source_raw';
+    } else if (normalized.includes('04_Locations') || normalized.includes('04_World_Locations_Items') || normalized.includes('05_Items_Artifacts')) {
+      ptype = normalized.includes('ITEM_') ? 'item_au' : 'world_delta';
+    } else if (zone === 'Manuscript' && !normalized.endsWith('index.md') && !normalized.endsWith('index_es.md')) {
       ptype = 'scene_draft';
     } else {
       ptype = 'general';

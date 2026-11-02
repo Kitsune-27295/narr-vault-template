@@ -3,6 +3,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { openVaultDatabase, syncVault, searchDocuments } from './search.js';
 import { assembleContext } from './context-assembler.js';
+import { runRagBenchmark } from './eval.js';
 
 function parseArgs(args) {
   const parsed = {
@@ -49,7 +50,7 @@ Usage:
     Options:
       --zone <Canon|Bible|Manuscript|Cockpit>
       --franchise <Universe_Primary|Universe_Secondary|Shared>
-      --ptype <rule_mechanic|divergence_pod|character_sheet|character_dossier|scene_draft>
+      --ptype <canon_baseline|rule_mechanic|divergence_pod|character_sheet|character_dossier|scene_draft>
       --limit <number> (default: 10)
 
   node tools/rag/cli.js context "<query>" [options]
@@ -57,15 +58,18 @@ Usage:
       --scene <path_to_scene.md>
       --budget <tokens> (default: 2500)
       --out <path_to_output.md>
+
+  node tools/rag/cli.js eval [options]
+    Options:
+      --queries <path_to_queries.yaml> (default: eval/queries.yaml)
 `);
 }
 
 async function main() {
   const args = process.argv.slice(2);
   const parsed = parseArgs(args);
-  const vaultDir = parsed.flags.vault ? path.resolve(parsed.flags.vault) : (process.env.VAULT_ROOT ? path.resolve(process.env.VAULT_ROOT) : process.cwd());
-  const dbPath = parsed.flags.db ? path.resolve(parsed.flags.db) : path.join(vaultDir, '.scratch', 'vault_index.db');
-  const db = openVaultDatabase(dbPath);
+  const vaultDir = process.cwd();
+  const db = openVaultDatabase();
 
   try {
     switch (parsed.command) {
@@ -83,14 +87,11 @@ async function main() {
           return;
         }
 
-        const rawLimit = parsed.flags.limit ? parseInt(parsed.flags.limit, 10) : 10;
-        const boundedLimit = Math.min(Math.max(isNaN(rawLimit) ? 10 : rawLimit, 1), 100);
-
         const options = {
           zone: parsed.flags.zone,
           franchise: parsed.flags.franchise,
           ptype: parsed.flags.ptype,
-          limit: boundedLimit,
+          limit: parsed.flags.limit ? parseInt(parsed.flags.limit, 10) : 10,
         };
 
         const results = searchDocuments(db, parsed.query, options);
@@ -115,9 +116,7 @@ async function main() {
           return;
         }
 
-        const rawBudget = parsed.flags.budget ? parseInt(parsed.flags.budget, 10) : 2500;
-        const budgetTokens = Math.min(Math.max(isNaN(rawBudget) ? 2500 : rawBudget, 100), 50000);
-
+        const budgetTokens = parsed.flags.budget ? parseInt(parsed.flags.budget, 10) : 2500;
         const result = assembleContext({
           query: parsed.query || '',
           scenePath: parsed.flags.scene,
@@ -127,10 +126,6 @@ async function main() {
 
         if (parsed.flags.out) {
           const outPath = path.resolve(vaultDir, parsed.flags.out);
-          const normalizedVault = path.resolve(vaultDir);
-          if (!outPath.startsWith(normalizedVault + path.sep) && outPath !== normalizedVault) {
-            throw new Error(`Path traversal blocked: --out path "${parsed.flags.out}" must stay inside vault "${vaultDir}".`);
-          }
           fs.mkdirSync(path.dirname(outPath), { recursive: true });
           fs.writeFileSync(outPath, result.contextText, 'utf-8');
           console.log(`[RAG CONTEXT] Output saved to ${outPath} (~${result.tokenEstimate} tokens, Tiers: ${result.packedTiers.join(', ')})`);
@@ -138,6 +133,27 @@ async function main() {
           console.log(result.contextText);
           console.log(`\n<!-- Estimated tokens: ${result.tokenEstimate} | Packed Tiers: [${result.packedTiers.join(', ')}] | Sources: ${result.sources.length} -->`);
         }
+        break;
+      }
+
+      case 'eval': {
+        const queriesPath = parsed.flags.queries
+          ? path.resolve(vaultDir, parsed.flags.queries)
+          : path.join(vaultDir, 'eval', 'queries.yaml');
+
+        console.log(`\n📊 [RAG EVAL] Running retrieval evaluation against: ${queriesPath}...\n`);
+        const benchmark = runRagBenchmark(db, queriesPath);
+
+        console.log(`Results across ${benchmark.queriesCount} queries:`);
+        for (const res of benchmark.results) {
+          const statusIcon = res.firstHitRank > 0 && res.firstHitRank <= 3 ? '✓' : res.firstHitRank > 0 ? '~' : '✗';
+          console.log(`  ${statusIcon} Query: "${res.query}"`);
+          console.log(`    Rank: ${res.firstHitRank > 0 ? `#${res.firstHitRank}` : 'NOT FOUND'} | Recall@5: ${(res.recallAt5 * 100).toFixed(1)}%`);
+        }
+
+        console.log(`\nBenchmark Summary:`);
+        console.log(`  Mean Reciprocal Rank (MRR): ${benchmark.mrr.toFixed(4)}`);
+        console.log(`  Average Recall@5:           ${(benchmark.avgRecallAt5 * 100).toFixed(1)}%\n`);
         break;
       }
 

@@ -5,6 +5,7 @@ How the engineering skills should consume this repository's domain documentation
 ## Before exploring, read these
 
 - **`GLOSSARY.md`** at the repository root: defines the canonical domain vocabulary for the Multiverse Fanfiction Framework, the 3-Layer Vault architecture, the Ingestion Engine, and the Fiction-Conscious RAG (F-RAG).
+- **`docs/agents/editorial-standards.md`**: defines the universal writing, formatting, epistemic rigor, and structural standards across all vault layers.
 - **`docs/adr/`**: read Architectural Decision Records that touch the area you are about to work in.
 
 If any of these files do not exist, proceed silently.
@@ -13,14 +14,21 @@ If any of these files do not exist, proceed silently.
 
 Single-context repository layout:
 
-```text
-/
-├── GLOSSARY.md
-├── docs/adr/
-│   ├── 0001-three-layer-fanfiction-vault-architecture.md
-│   ├── 0002-native-sqlite-fts5-rag-engine.md
-│   └── 0003-continuous-modular-dossier-ingestion.md
-└── tools/
+```mermaid
+flowchart TD
+    root["/"]
+    gl["GLOSSARY.md"]
+    adr["docs/adr/"]
+    tools["tools/"]
+    a1["0001-three-layer-fanfiction-vault-architecture.md"]
+    a6["0006-native-sqlite-fts5-rag-engine.md"]
+    a3["0003-continuous-modular-dossier-ingestion.md"]
+    root --> gl
+    root --> adr
+    root --> tools
+    adr --> a1
+    adr --> a6
+    adr --> a3
 ```
 
 ## Use the glossary's vocabulary
@@ -31,4 +39,5 @@ When your output names a domain concept (in an issue title, a refactor proposal,
 
 If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
 
-> _Contradicts ADR-0001 (three-layer vault architecture), but worth reopening because..._
+> _Contradicts ADR-0001 (three-layer vault architecture), but worth reopening because…_
+
