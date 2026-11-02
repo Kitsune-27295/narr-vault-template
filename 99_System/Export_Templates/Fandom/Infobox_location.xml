@@ -1,0 +1,64 @@
+<!-- 
+  Fandom / MediaWiki Portable Infobox Template: Location / Geography
+  Deploy this XML definition to: Template:Infobox_location
+-->
+<infobox type="location">
+    <title source="title">
+        <default>{{PAGENAME}}</default>
+    </title>
+    <image source="image">
+        <caption source="caption"/>
+    </image>
+    <group>
+        <header>Geographical Data</header>
+        <data source="type">
+            <label>Location Type</label>
+        </data>
+        <data source="location">
+            <label>Region / Realm</label>
+        </data>
+        <data source="cosmology">
+            <label>Cosmology</label>
+        </data>
+        <data source="governing_body">
+            <label>Governing Body</label>
+        </data>
+    </group>
+    <group>
+        <header>Demographics & Infrastructure</header>
+        <data source="inhabitants">
+            <label>Notable Inhabitants</label>
+        </data>
+        <data source="connections">
+            <label>Routes & Connections</label>
+        </data>
+        <data source="amenities">
+            <label>Key Landmarks</label>
+        </data>
+    </group>
+</infobox>
+
+<!--
+  ============================================================
+  WIKITEXT ARTICLE INVOCATION EXAMPLE:
+  ============================================================
+  {{Infobox_location
+  | title = Example Valley
+  | image = Example_Valley.png
+  | caption = View of the statues at sunset
+  | type = Historical Landmark / Battlefield
+  | location = [[Example Kingdom]]
+  | cosmology = Universe_Primary
+  | governing_body = Disputed Border
+  | inhabitants =
+  * [[Example Hermit]]
+  * [[Example Founder]]
+  | connections =
+  * [[Northern Frontier Road]]
+  * [[River Valley Pass]]
+  | amenities =
+  * Founder Statues
+  * Waterfall Gorge
+  }}
+-->
+

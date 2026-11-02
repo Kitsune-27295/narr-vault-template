@@ -1,0 +1,29 @@
+{
+  "name": "narrative-vault-framework-template",
+  "version": "1.0.0",
+  "description": "Universal Multiverse & Fiction Framework and Obsidian Vault Template",
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "check:agents": "vitest run tests/harness-parity.test.js",
+    "validate:templates": "node tools/templates/template-validator.js",
+    "package": "node tools/packaging/package-template.js",
+    "clip": "node tools/clipper/clipper.js",
+    "ingest": "node tools/ingestor/ingestor.js",
+    "pipeline": "node tools/pipeline.js",
+    "rag:sync": "node tools/rag/cli.js sync",
+    "rag:search": "node tools/rag/cli.js search",
+    "rag:context": "node tools/rag/cli.js context"
+  },
+  "dependencies": {
+    "js-yaml": "5.5.0",
+    "linkedom": "0.18.14",
+    "turndown": "7.2.4"
+  },
+  "devDependencies": {
+    "vitest": "5.0.5"
+  },
+  "engines": {
+    "node": ">=22.5"
+  }
+}

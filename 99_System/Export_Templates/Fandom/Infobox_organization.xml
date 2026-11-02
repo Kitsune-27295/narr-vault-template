@@ -1,0 +1,60 @@
+<!-- 
+  Fandom / MediaWiki Portable Infobox Template: Organization / Faction
+  Deploy this XML definition to: Template:Infobox_organization
+-->
+<infobox type="organization">
+    <title source="name">
+        <default>{{PAGENAME}}</default>
+    </title>
+    <image source="logo">
+        <caption source="caption"/>
+    </image>
+    <group>
+        <header>Institutional Structure</header>
+        <data source="type">
+            <label>Organization Type</label>
+        </data>
+        <data source="leader">
+            <label>Supreme Leader</label>
+        </data>
+        <data source="headquarters">
+            <label>Headquarters</label>
+        </data>
+        <data source="cosmology">
+            <label>Cosmology</label>
+        </data>
+    </group>
+    <group>
+        <header>Political & Military Relations</header>
+        <data source="allies">
+            <label>Allies</label>
+        </data>
+        <data source="enemies">
+            <label>Adversaries</label>
+        </data>
+        <data source="status">
+            <label>Status</label>
+        </data>
+    </group>
+</infobox>
+
+<!--
+  ============================================================
+  WIKITEXT ARTICLE INVOCATION EXAMPLE:
+  ============================================================
+  {{Infobox_organization
+  | name = Example Syndicate
+  | logo = Example_Crest.png
+  | caption = Crimson Insignia
+  | type = Rogue Syndicate
+  | leader = [[Example Leader]]
+  | headquarters = [[Example Hidden City]]
+  | cosmology = Universe_Primary
+  | allies =
+  * None (Clandestine)
+  | enemies =
+  * [[Example Great Nations]]
+  | status = Active
+  }}
+-->
+

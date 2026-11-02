@@ -1,0 +1,9 @@
+{
+  "filters": [
+    {"property": "note_type", "operator": "equals", "value": "chapter-es"}
+  ],
+  "group": "trans_status",
+  "sort": [{"property": "chapter_num", "direction": "asc"}],
+  "view": "kanban",
+  "columns": ["file.name", "chapter_num", "trans_status", "pt_source_chapter", "date_published", "ao3_url"]
+}

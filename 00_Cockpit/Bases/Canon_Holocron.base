@@ -1,0 +1,8 @@
+{
+  "filters": [
+    {"property": "note_type", "operator": "contains", "value": "canon-"}
+  ],
+  "sort": [{"property": "cosmology", "direction": "asc"}, {"property": "note_type", "direction": "asc"}],
+  "view": "cards",
+  "columns": ["file.name", "cosmology", "note_type", "aliases", "parent_entity"]
+}

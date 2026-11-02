@@ -1,0 +1,81 @@
+<!-- 
+  Fandom / MediaWiki Portable Infobox Template: Character
+  Deploy this XML definition to: Template:Infobox_character
+-->
+<infobox type="character">
+    <title source="name">
+        <default>{{PAGENAME}}</default>
+    </title>
+    <image source="image">
+        <caption source="caption"/>
+    </image>
+    <group>
+        <header>Biographical Data</header>
+        <data source="full_name">
+            <label>Full Name</label>
+        </data>
+        <data source="alias">
+            <label>Aliases / Titles</label>
+        </data>
+        <data source="species">
+            <label>Species / Race</label>
+        </data>
+        <data source="gender">
+            <label>Gender</label>
+        </data>
+        <data source="age">
+            <label>Age</label>
+        </data>
+        <data source="status">
+            <label>Vital Status</label>
+        </data>
+    </group>
+    <group>
+        <header>Affiliation & Role</header>
+        <data source="occupation">
+            <label>Occupation</label>
+        </data>
+        <data source="affiliation">
+            <label>Affiliation</label>
+        </data>
+        <data source="cosmology">
+            <label>Universe of Origin</label>
+        </data>
+        <data source="alignment">
+            <label>Alignment</label>
+        </data>
+    </group>
+    <group>
+        <header>Chronology</header>
+        <data source="first_appearance">
+            <label>First Appearance</label>
+        </data>
+        <data source="last_appearance">
+            <label>Last Appearance</label>
+        </data>
+    </group>
+</infobox>
+
+<!--
+  ============================================================
+  WIKITEXT ARTICLE INVOCATION EXAMPLE:
+  ============================================================
+  {{Infobox_character
+  | name = Character Name
+  | image = Character_Portrait.png
+  | caption = Character during Arc 1
+  | full_name = Full Canon Name
+  | alias = The Primary Title
+  | species = Human / Other / Entity
+  | gender = Male / Female / Other
+  | age = 17
+  | status = Alive
+  | occupation = Guard Captain
+  | affiliation = [[Example City Watch]]
+  | cosmology = Universe_Primary
+  | alignment = Neutral Good
+  | first_appearance = [[Chapter 01: The First Awakening]]
+  | last_appearance = —
+  }}
+-->
+

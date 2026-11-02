@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"node-01","type":"text","text":"# 🕸️ Relationship Web\n\nAdd notes from Bible/02_Cast_Characters/ and Bible/03_Relationship_Matrix/ here to visualize the cast relationship network of the fanfic.","x":-200,"y":-100,"width":450,"height":200}
+	],
+	"edges":[]
+}

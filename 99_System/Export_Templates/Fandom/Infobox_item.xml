@@ -1,0 +1,63 @@
+<!-- 
+  Fandom / MediaWiki Portable Infobox Template: Item / Artifact / Relic
+  Deploy this XML definition to: Template:Infobox_item
+-->
+<infobox type="item">
+    <title source="name">
+        <default>{{PAGENAME}}</default>
+    </title>
+    <image source="image">
+        <caption source="caption"/>
+    </image>
+    <group>
+        <header>Technical Classification</header>
+        <data source="item_type">
+            <label>Item Type</label>
+        </data>
+        <data source="creator">
+            <label>Creator / Origin</label>
+        </data>
+        <data source="cosmology">
+            <label>Cosmology</label>
+        </data>
+        <data source="status">
+            <label>Current Status</label>
+        </data>
+    </group>
+    <group>
+        <header>Attunement & Usage</header>
+        <data source="owners">
+            <label>Current / Known Owners</label>
+        </data>
+        <data source="functions">
+            <label>Primary Functions</label>
+        </data>
+        <data source="hazards">
+            <label>Hazards & Rebound</label>
+        </data>
+    </group>
+</infobox>
+
+<!--
+  ============================================================
+  WIKITEXT ARTICLE INVOCATION EXAMPLE:
+  ============================================================
+  {{Infobox_item
+  | name = Example Relic
+  | image = Example_Relic.png
+  | caption = A sentient blade of legend
+  | item_type = Sentient Energy-Draining Blade
+  | creator = [[Example Guild of Artisans]]
+  | cosmology = Universe_Primary
+  | status = Intact
+  | owners =
+  * [[First Owner]]
+  * [[Second Owner]]
+  | functions =
+  * Drains energy on contact
+  * Transfers energy to wielder
+  | hazards =
+  * Will betray its wielder if a richer energy source is encountered
+  }}
+-->
+

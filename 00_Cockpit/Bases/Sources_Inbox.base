@@ -1,0 +1,10 @@
+{
+  "filters": [
+    {"property": "note_type", "operator": "equals", "value": "canon-source"},
+    {"property": "is_processed", "operator": "equals", "value": false}
+  ],
+  "group": "cosmology",
+  "sort": [{"property": "cosmology", "direction": "asc"}],
+  "view": "table",
+  "columns": ["file.name", "cosmology", "canon_tier", "source_url", "is_processed"]
+}

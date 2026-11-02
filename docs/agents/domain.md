@@ -1,32 +1,34 @@
 # Domain Docs
 
-How the engineering skills should consume this repo's domain documentation when exploring the codebase.
+How the engineering skills should consume this repository's domain documentation when exploring the codebase.
 
 ## Before exploring, read these
 
-- **`02_Story_Bible/Terminology/TRM-Termbase.md`** ([[TRM-Termbase]]): defines canonical domain concepts, proper nouns, and entity terms.
-- **`memory/decisions/`**: read architectural decision records (`DEC-*.md`) that touch the area you are about to work in.
+- **`GLOSSARY.md`** at the repository root: defines the canonical domain vocabulary for the Multiverse Fanfiction Framework, the 3-Layer Vault architecture, the Ingestion Engine, and the Fiction-Conscious RAG (F-RAG).
+- **`docs/adr/`**: read Architectural Decision Records that touch the area you are about to work in.
 
-If any of these files do not exist, proceed silently. The domain modeling workflow creates them lazily when terms or decisions are resolved.
+If any of these files do not exist, proceed silently.
 
 ## File structure
 
-Single-context story vault layout:
+Single-context repository layout:
 
-- `02_Story_Bible/Terminology/TRM-Termbase.md` ([[TRM-Termbase]])
-- `memory/decisions/`
-  - `DEC-Adopt_canonical_naming_and_core_ranks.md`
-- `.scratch/`
-- `docs/agents/`
+```text
+/
+├── GLOSSARY.md
+├── docs/adr/
+│   ├── 0001-three-layer-fanfiction-vault-architecture.md
+│   ├── 0002-native-sqlite-fts5-rag-engine.md
+│   └── 0003-continuous-modular-dossier-ingestion.md
+└── tools/
+```
 
-## Use the termbase vocabulary
+## Use the glossary's vocabulary
 
-When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, or a test name), use the term as defined in [[TRM-Termbase]]. Do not drift to synonyms the termbase explicitly avoids.
-
-If the concept you need is not in the termbase yet, note it for termbase synchronization (`termbase-sync`) instead of inventing unvetted terms.
+When your output names a domain concept (in an issue title, a refactor proposal, a hypothesis, a test name), use the term as defined in `GLOSSARY.md`. Do not drift to synonyms the glossary explicitly avoids.
 
 ## Flag ADR conflicts
 
-If your output contradicts an existing decision record in `memory/decisions/`, surface it explicitly rather than silently overriding:
+If your output contradicts an existing ADR, surface it explicitly rather than silently overriding:
 
-> _Contradicts DEC-XXXX, but worth reopening because…_
+> _Contradicts ADR-0001 (three-layer vault architecture), but worth reopening because..._

@@ -1,0 +1,36 @@
+{
+  "$schema": "./franchise-rules.schema.json",
+  "description": "Domain routing and pattern matching registry for Canon ingestion. Replace the placeholder franchise with your own and add one rule per franchise.",
+  "rules": [
+    {
+      "franchise": "Universe_Primary",
+      "patterns": [
+        "*universe-primary*",
+        "*primary-world.wiki*",
+        "*primary-canon*"
+      ],
+      "defaultCanonTier": "G-Primary"
+    },
+    {
+      "franchise": "Universe_Secondary",
+      "patterns": [
+        "*universe-secondary*",
+        "*secondary-world.wiki*",
+        "*secondary-canon*"
+      ],
+      "defaultCanonTier": "G-Primary"
+    },
+    {
+      "franchise": "Universe_Tertiary",
+      "patterns": [
+        "*universe-tertiary*",
+        "*tertiary-world.wiki*"
+      ],
+      "defaultCanonTier": "W-Author-WoB"
+    }
+  ],
+  "fallbackRule": {
+    "fandomSubdomainPattern": true,
+    "defaultFranchise": "General"
+  }
+}

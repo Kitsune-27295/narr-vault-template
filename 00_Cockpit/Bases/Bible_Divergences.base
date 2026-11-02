@@ -1,0 +1,9 @@
+{
+  "filters": [
+    {"property": "note_type", "operator": "starts-with", "value": "fic-"}
+  ],
+  "group": "canon_status",
+  "sort": [{"property": "canon_status", "direction": "asc"}],
+  "view": "table",
+  "columns": ["file.name", "note_type", "canon_status", "canon_ref", "divergence_sources", "fic_arc_status"]
+}

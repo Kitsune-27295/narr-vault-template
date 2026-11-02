@@ -1,0 +1,6 @@
+{
+	"nodes":[
+		{"id":"node-01","type":"text","text":"# 🗺️ Plot Corkboard\n\nDrag notes from Bible/ and Manuscript/ into this canvas to visually map the story's plots, turning points, and conspiracies.\n\nUse as a digital corkboard (Robert Caro method).","x":-200,"y":-100,"width":450,"height":200}
+	],
+	"edges":[]
+}

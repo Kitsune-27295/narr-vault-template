@@ -1,0 +1,8 @@
+{
+  "filters": [
+    {"property": "note_type", "operator": "equals", "value": "scene-pt"}
+  ],
+  "sort": [{"property": "chapter_num", "direction": "asc"}, {"property": "scene_order", "direction": "asc"}],
+  "view": "table",
+  "columns": ["file.name", "chapter_num", "scene_order", "timeline_day", "pov_char", "scene_event", "scene_value_shift", "scene_polarity", "turning_point_type", "draft_status"]
+}
