@@ -43,17 +43,17 @@
   WIKITEXT ARTICLE INVOCATION EXAMPLE:
   ============================================================
   {{Infobox_organization
-  | name = Akatsuki
-  | logo = Akatsuki_Cloud_Crest.png
-  | caption = Crimson Cloud Insignia
+  | name = Organization Name
+  | logo = Organization_Crest.png
+  | caption = Short caption
   | type = Rogue Syndicate
   | leader = [[Character Alpha]] / [[Character Beta]]
-  | headquarters = [[Amegakure]]
+  | headquarters = [[Headquarters Name]]
   | cosmology = Universe_Primary
   | allies =
   * None (Clandestine)
   | enemies =
-  * [[Great Nations]]
+  * [[Rival Faction]]
   | status = Active
   }}
 -->

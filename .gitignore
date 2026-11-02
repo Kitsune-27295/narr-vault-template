@@ -5,5 +5,9 @@ node_modules/
 .scratch/*.db-shm
 .scratch/*.db-wal
 
+# Obsidian machine state (layout, open tabs)
+.obsidian/workspace.json
+.obsidian/workspaces.json
+
 # Local scraping tool cache
 .firecrawl/

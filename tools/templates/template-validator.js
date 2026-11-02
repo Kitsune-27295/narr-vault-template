@@ -15,60 +15,6 @@ export const TEMPLATE_SCHEMAS = {
       '## Sources and scope',
     ],
   },
-  'canon-character': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'character',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
-  'canon-location': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'location',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
-  'canon-power-system': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'power_system',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
-  'canon-faction': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'faction',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
-  'canon-item': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'item',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
-  'canon-event': {
-    requiredFrontmatter: ['note_type', 'type', 'cosmology', 'canon_tier', 'status', 'aliases'],
-    expectedType: 'timeline_event',
-    requiredHeadings: [
-      '## Summary',
-      '## Source-backed details',
-      '## Sources and scope',
-    ],
-  },
   'canon-source': {
     requiredFrontmatter: ['note_type', 'cosmology', 'source_url', 'canon_tier', 'is_processed', 'aliases'],
     requiredHeadings: ['## Captured Content'],
@@ -135,10 +81,6 @@ export const TEMPLATE_SCHEMAS = {
     requiredFrontmatter: ['note_type', 'chapter_num', 'pov_char', 'draft_status'],
     requiredHeadings: [],
   },
-  'scene-pt': {
-    requiredFrontmatter: ['note_type', 'chapter_num', 'scene_order', 'pov_char', 'draft_status'],
-    requiredHeadings: [],
-  },
   'chapter-es': {
     requiredFrontmatter: ['note_type', 'chapter_num', 'pt_source_chapter', 'trans_status'],
     requiredHeadings: [],
@@ -151,18 +93,12 @@ export const UNSCHEMED_NOTE_TYPES = {
   'bible-open-questions': 'Active continuity and narrative worldbuilding register.',
   'cockpit-dashboard': 'Operational cockpit dashboard or diagnostic audit tracker.',
   'manuscript-index': 'Manuscript navigation and production index.',
-  'manuscript-outline': 'Manuscript act outline structure and beat sheet.',
-  'chapter-pt-compiled': 'Consolidated Portuguese chapter draft reference for translation.',
   'seeds-inbox': 'Raw concepts, speculative ideas, and narrative seeds inbox.',
-  'incubator-index': 'Staging lab index for foreign cosmology ideation.',
-  'incubator-lab': 'Dedicated incubator concept lab staging shelf for foreign cosmology integration.',
   'fic-arc-auxiliary': 'One-off multiverse roadmap; kept as a planning document until decomposed.',
   'fic-cast-auxiliary': 'One-off cast/relationship tracker; kept as an operational register.',
   'fic-timeline-auxiliary': 'Story chronology register governed by ADR 0005 and the authoritative timeline.',
   lexicon: 'Bilingual term register; governed by translation guidance.',
   'voice-guide': 'Translation voice reference; prose-specific operational document.',
-  scrapyard: 'Manuscript archive index; not an authored prose dossier.',
-  'chapter-es-final': 'Publication archive guide; not a chapter manuscript.',
   'ao3-export-guide': 'Publication procedure; editorial guidance, not a chapter.',
   'context': 'Authorial voice and language pipeline guidance.',
   'memory': 'Cognitive harness active memory and operational learnings.',

@@ -73,9 +73,9 @@ We establish the **Standardized Narrative Information Architecture (SNIA)** as t
   - Complete elimination of broken wikilinks through alias-backed UID resolution.
   - High associative discoverability through hierarchical tags and standardized MOCs.
   - Zero-CJK compliance guaranteed across all 147 live vault notes.
-  - Fully verified by automated test suites (`tests/vault-consistency.test.js` and `tests/template-validator.test.js`).
+  - Fully verified by automated test suites (`tests/template-validator.test.js`).
 - **Negative:**
   - Frontmatter editing requires adherence to Obsidian Properties conventions.
 - **Mitigation:**
-  - Automated verification via `npm run validate:vault`, `npm run validate:links`, and `tests/vault-consistency.test.js`.
+  - Automated verification via `npm run validate:vault` and `npm run validate:links`.
 

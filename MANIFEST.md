@@ -1,13 +1,13 @@
 # Manifest
 
-Generated at extraction time from the staged tree (excluding this file).
+Generated at extraction time from the staged tree (excluding this file from the counts).
 
 | Path | Files | Role |
 |---|---|---|
 | `(root)` | 12 | Root configuration and documentation |
 | `.agents/skills` | 25 | Agent skills (construction workflow, vault lifecycle, narrative craft) |
 | `.obsidian` | 5 | Minimal Obsidian configuration (attachments folder, template folder, core plugins, graph) |
-| `.scratch` | 1 | Root configuration and documentation |
+| `.scratch` | 1 | Empty home for the local markdown issue tracker |
 | `00_Cockpit` | 9 | Dashboards, Bases tables, canvases, continuity audits |
 | `99_System` | 23 | Templates, bilingual lexicon, export templates, franchise routing, attachments |
 | `Bible` | 13 | Story ground truth, 10 module skeleton |
@@ -21,7 +21,7 @@ Generated at extraction time from the staged tree (excluding this file).
 | `docs` | 15 | ADRs, SNIA schema, agent docs, style manual |
 | `eval` | 2 | Retrieval benchmark |
 | `memory` | 3 | In-flight state, learnings, journal |
-| `tests` | 15 | Vitest suites |
+| `tests` | 17 | Vitest suites |
 | `tools` | 18 | CLI toolchain |
 
-Root files: `README.md`, `ARCHITECTURE.md`, `MANIFEST.md`, `EXCLUSIONS.md`, `CHANGELOG.md`, `AGENTS.md`, `CLAUDE.md`, `GLOSSARY.md`, `vault.yaml`, `package.json`, `package-lock.json`, `.gitignore`, `.gitattributes`.
+Root files: `.gitattributes`, `.gitignore`, `AGENTS.md`, `ARCHITECTURE.md`, `CHANGELOG.md`, `CLAUDE.md`, `EXCLUSIONS.md`, `GLOSSARY.md`, `MANIFEST.md`, `README.md`, `package-lock.json`, `package.json`, `vault.yaml`.

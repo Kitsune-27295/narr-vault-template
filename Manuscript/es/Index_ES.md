@@ -27,4 +27,4 @@ Los capítulos traducidos residen directamente en la raíz de `Manuscript/es/` s
 ---
 
 ## Capítulos en Traducción
-- [[Manuscript/es/ES_Draft_Chapter_01_Template|Capítulo 01 — El Primer Despertar (Template Español)]]
+- [[Manuscript/es/ES_Draft_Chapter_01_Template|Capítulo 01 — {{chapter_title}} (Template Español)]]

@@ -4,6 +4,14 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { load as yamlLoad } from 'js-yaml';
 
+/** Splits a markdown table row on unescaped pipes; an escaped pipe (wikilink alias) stays inside its cell. */
+export function splitRow(line) {
+  return line
+    .split(/(?<!\\)\|/)
+    .map((cell) => cell.trim().replaceAll('\\|', '|'))
+    .filter(Boolean);
+}
+
 export function validateLedgers(projectRoot = process.cwd()) {
   const issues = [];
   const warnings = [];
@@ -44,7 +52,7 @@ export function validateLedgers(projectRoot = process.cwd()) {
     const content = fs.readFileSync(chekhovPath, 'utf8');
     const lines = content.split('\n').filter(l => l.trim().startsWith('|') && !l.includes('---|---') && !l.includes('Planted in'));
     for (const line of lines) {
-      const cols = line.split('|').map(c => c.trim()).filter(Boolean);
+      const cols = splitRow(line);
       if (cols.length < 4) {
         issues.push(`Malformed row in LDG-Chekhov.md: "${line}"`);
         continue;
@@ -80,7 +88,7 @@ export function validateLedgers(projectRoot = process.cwd()) {
     const content = fs.readFileSync(decisionsPath, 'utf8');
     const lines = content.split('\n').filter(l => l.trim().startsWith('|') && !l.includes('---|---') && !l.includes('What was rejected'));
     for (const line of lines) {
-      const cols = line.split('|').map(c => c.trim()).filter(Boolean);
+      const cols = splitRow(line);
       if (cols.length < 4) {
         issues.push(`Malformed row in LDG-Decisions.md: "${line}"`);
       }
@@ -95,7 +103,7 @@ export function validateLedgers(projectRoot = process.cwd()) {
     const content = fs.readFileSync(threadsPath, 'utf8');
     const lines = content.split('\n').filter(l => l.trim().startsWith('|') && !l.includes('---|---') && !l.includes('Thread / Investigation'));
     for (const line of lines) {
-      const cols = line.split('|').map(c => c.trim()).filter(Boolean);
+      const cols = splitRow(line);
       if (cols.length < 5) {
         issues.push(`Malformed row in LDG-Open_Threads.md: "${line}"`);
         continue;
@@ -126,7 +134,7 @@ export function validateLedgers(projectRoot = process.cwd()) {
     const content = fs.readFileSync(contradictionsPath, 'utf8');
     const lines = content.split('\n').filter(l => l.trim().startsWith('|') && !l.includes('---|---') && !l.includes('Side A'));
     for (const line of lines) {
-      const cols = line.split('|').map(c => c.trim()).filter(Boolean);
+      const cols = splitRow(line);
       if (cols.length < 5) {
         issues.push(`Malformed row in LDG-Contradictions.md: "${line}"`);
         continue;

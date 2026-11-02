@@ -47,7 +47,7 @@ graph TD
 ```
 
 ### 2.1 The Four Visual Pillars:
-1. **Costume & Material Language:** Layered textiles, cultural weaves, armor plates, clannic crests, belts, sashes, and functional footwear appropriate to the setting.
+1. **Costume & Material Language:** Layered textiles, cultural weaves, armor plates, faction crests, belts, sashes, and functional footwear appropriate to the setting.
 2. **Power & Energy Manifestations:** Distinct visual behaviors for supernatural energies (shape, color, luminosity, particle density, and atmospheric heat/pressure) tied to tier and rank.
 3. **Lighting, Palette & Composition (The 60-30-10 Rule):**
    - **60% Dominant:** Primary background/costume tone establishing atmosphere.
@@ -66,7 +66,7 @@ flowchart TD
         L1["Layer 1: Hair Geometry & Crown Dynamics\n(Crown volume, spiky flare, chest sidelocks, parted bangs)"]
         L2["Layer 2: Facial Architecture & Gaze Gradients\n(Bone structure, ocular palettes, two-tone vertical iris transitions)"]
         L3["Layer 3: Silhouette & Attire Drape\n(Faction tailoring, inner tunics, flowing haori/robes, functional wraps)"]
-        L4["Layer 4: Lineage & Cosmological Insignia\n(Clannic crests, sacred cord ties, elemental particle shimmers)"]
+        L4["Layer 4: Lineage & Cosmological Insignia\n(Faction crests, sacred cord ties, elemental particle shimmers)"]
     end
 ```
 
@@ -74,12 +74,12 @@ flowchart TD
    - Define exact volumetric flow, crown silhouette (e.g., voluminous flared crown radiating outward like wings/flames as in *Hades True Body*), forehead bangs (e.g., center-parted curtain bangs), and frontal draping (e.g., two dense symmetrical chest sidelocks echoing *Indra Ōtsutsuki* or *Miyamoto Musashi*).
 2. **Facial Architecture & Gaze Gradients:**
    - Articulate bone structure (e.g., sharp aristocratic jawline, serene bishōnen demeanor).
-   - When eyes reflect dual clannic or cosmological lineages, define an organic vertical color gradient (e.g., deep *crimson-red* at the upper iris smoothly dissolving into rich *royal violet* at the lower edge) rather than flat or mismatched heterochromia.
+   - When eyes reflect dual lineages, define an organic vertical color gradient (e.g., deep *crimson-red* at the upper iris smoothly dissolving into rich *royal violet* at the lower edge) rather than flat or mismatched heterochromia.
 3. **Silhouette & Attire Drape (Faction & Wanderer Tailoring):**
    - Synthesize cultural garments into a unified, functional silhouette (e.g., fitted inner tunic + hakama trousers + flowing open-front haori + dual-layer sash and shoulder cord ties).
    - Ensure the silhouette balances martial readiness with effortless casual elegance (contrapposto weight settling).
 4. **Lineage & Cosmological Insignia:**
-   - Anchor the character within vault cosmology through subtle, refined visual markers: minimal clannic crest embroidery, sacred cord accents (*tasuki*), and ambient energy shimmers (e.g., crystalline air shimmers, morning mist, floating water droplets).
+   - Anchor the character within vault cosmology through subtle, refined visual markers: minimal faction crest embroidery, sacred cord accents (*tasuki*), and ambient energy shimmers (e.g., crystalline air shimmers, morning mist, floating water droplets).
 
 ---
 

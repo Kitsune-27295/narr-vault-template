@@ -29,7 +29,7 @@ modules:
   - "Powers_and_Costs"
   - "Techniques"
   - "Equipment"
-  - "Academy_and_Cohort"
+  - "Affiliation_and_Cohort"
   - "State_as_of"
 
 # Required sections per character tier
@@ -44,7 +44,7 @@ character_required:
     - "Powers_and_Costs"
     - "Techniques"
     - "Equipment"
-    - "Academy_and_Cohort"
+    - "Affiliation_and_Cohort"
     - "State_as_of"
   T2:
     - "Identity"

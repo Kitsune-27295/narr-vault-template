@@ -69,7 +69,7 @@ Every first-class entity in the vault carries a canonical Unique Identifier (`ui
 | `TEC-` | Technique / Skill | `Bible/06_Power_Systems_Mechanics/` | `TEC-SPIRAL-VARIANT` | `TECH_Spiral_AU.md` |
 | `REL-` | Relationship Matrix | `Bible/07_Relationship_Matrix/` | `REL-ALPHA-BETA` | `REL_Alpha_Beta.md` |
 | `TML-` | Timeline / Chronology Event | `Bible/08_Chronology_Calendar/` | `TML-Y26-ACADEMY-ENTRY` | `TML_Y26_Academy_Entry.md` |
-| `ARC-` | Narrative Arc / Plot Thread | `Bible/09_Plot_Threads_Arcs/` | `ARC-01-ACADEMY-DAYS` | `ARC_01_Academy_Days.md` |
+| `ARC-` | Narrative Arc / Plot Thread | `Bible/09_Plot_Threads_Arcs/` | `ARC-01-OPENING-DAYS` | `ARC_01_Opening_Days.md` |
 | `TRM-` | Terminology / Nomenclature | `Bible/10_Terminology_Glossary/` | `TRM-AETHER-TERMS` | `TRM_Aether_Terminology.md` |
 | `LDG-` | Continuity Ledger | `Ledgers/` | `LDG-CHEKHOV` | `LDG-Chekhov.md` |
 | `SBX-` | Sandbox Staging Project | `Sandbox/<Stage>/` | `SBX-001-ENGINE-LAB` | `SBX-001_Engine_Lab.md` |
@@ -113,7 +113,7 @@ updated: YYYY-MM-DD
 ### Domain-Specific Extension Properties
 - **Canon Baselines (`note_type: canon-baseline`):** `franchise: string`, `canon_tier: string`, `primary_sources: list`.
 - **Bible AU Cast (`note_type: character-profile`):** `cosmology: string`, `generation: string`, `birth_year: int`, `canonical_baseline: string`.
-- **Bible AU Divergences (`note_type: pod`):** `divergence_point: string`, `affected_modules: list`, `epoch_year: int`.
+- **Bible AU Divergences (`note_type: pod`):** `divergence_point: string`, `affected_modules: list`, `anchor_year: string`.
 - **Continuity Ledgers (`note_type: ledger`):** `ledger_type: chekhov | decisions | threads | contradictions | handoff`.
 - **Sandbox Incubator (`note_type: sandbox-project`):** `stage: draft | review | approved | archive`, `target_module: string`.
 

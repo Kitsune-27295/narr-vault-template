@@ -1,8 +1,8 @@
 {
   "filters": [
-    {"property": "note_type", "operator": "equals", "value": "scene-pt"}
+    {"property": "note_type", "operator": "equals", "value": "chapter-pt"}
   ],
-  "sort": [{"property": "chapter_num", "direction": "asc"}, {"property": "scene_order", "direction": "asc"}],
+  "sort": [{"property": "chapter_num", "direction": "asc"}],
   "view": "table",
-  "columns": ["file.name", "chapter_num", "scene_order", "timeline_day", "pov_char", "scene_event", "scene_value_shift", "scene_polarity", "turning_point_type", "draft_status"]
+  "columns": ["file.name", "chapter_num", "timeline_day", "pov_char", "scene_event", "scene_value_shift", "scene_polarity", "turning_point_type", "draft_status"]
 }

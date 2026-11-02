@@ -30,14 +30,14 @@ describe('vault link integrity command', () => {
     const root = createVault({
       'Canon/Universe_Alpha/01_Characters/Character_Alpha.md': '# Character_Alpha\n## Voice\nBiography\n========\n',
       'Canon/Universe_Alpha/Sources/Source.md': '# Source\n',
-      'Bible/02_Cast_Characters/Character_Beta.md': '# Character_Beta\n## Voice\nA vivid voice. ^shin-voice\n',
+      'Bible/02_Cast_Characters/Character_Beta.md': '# Character_Beta\n## Voice\nA vivid voice. ^beta-voice\n',
       'Canon/Universe_Alpha/00_Universe_Alpha_Index.md': '[[01_Characters/\\|Characters]]\n',
       '00_Cockpit/Bases/Canon_Holocron.base': 'filters: []\n',
       '00_Cockpit/00_Home_Dashboard.md': '[[Canon_Holocron.base]]\n',
       'Manuscript/pt-BR/scene.md': [
         '[[Canon/Universe_Alpha/01_Characters/Character_Alpha|Character_Alpha]]',
         '[[Bible/02_Cast_Characters/Character_Beta#Voice|Character_Beta voice]]',
-        '[[Bible/02_Cast_Characters/Character_Beta^shin-voice|Character_Beta paragraph]]',
+        '[[Bible/02_Cast_Characters/Character_Beta^beta-voice|Character_Beta paragraph]]',
         '[[Canon/Universe_Alpha/01_Characters/Character_Alpha#Biography|Character_Alpha history]]',
         '[[../../Canon/Universe_Alpha/01_Characters/Character_Alpha.md]]',
         '[[Canon/Universe_Alpha/Sources/]]',

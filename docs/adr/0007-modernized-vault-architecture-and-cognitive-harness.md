@@ -29,7 +29,7 @@ We modernize the target vault ecosystem with a blank-slate architectural reconst
    - `LDG-Chekhov.md`: Plants and payoffs tracker (`planted`, `paid_off`, `abandoned`).
    - `LDG-Decisions.md`: Creative and story choices not visible in prose (Date, Decision, What was rejected, Why, Chapter).
    - `LDG-Open_Threads.md`: Active, dormant, and resolved subplots.
-   - `LDG-Contradictions.md`: Conflict register with dual citations and authorial resolutions (migrated from `Bible/00_Contradictions_Ledger.md` with backward-compatible alias).
+   - `LDG-Contradictions.md`: Conflict register with dual citations and authorial resolutions (replacing the earlier Bible-level register).
    - `LDG-Session_Handoff.md`: Surface boundary handoff tracking where work stopped.
    - `IDX-Ledgers.md`: Master index for Obsidian navigation.
 

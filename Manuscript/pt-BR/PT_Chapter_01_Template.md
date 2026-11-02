@@ -1,7 +1,7 @@
 ---
 note_type: chapter-pt
 type: chapter_draft
-title: 'Capítulo 01: O Primeiro Despertar (Template pt-BR)'
+title: 'Capítulo 01: {{chapter_title}} (Template pt-BR)'
 uid: MSP-PT-PT-CHAPTER-01-TEMPLATE
 status: established
 aliases:
@@ -10,30 +10,30 @@ aliases:
   - MSP-PT-PT-CHAPTER-01-TEMPLATE
 tags:
   - '#manuscript/pt-br'
-created: '2026-11-01'
+created: '2026-11-02'
 updated: '2026-11-02'
 chapter_num: 1
 pov_char: '{{pov_char}}'
 timeline_day: D=0
-scene_event: Despertar sensorial e validação empírica da nova realidade
-scene_value_shift: Segurança ➔ Vulnerabilidade
+scene_event: '{{scene_event}}'
+scene_value_shift: '{{value_shift}}'
 scene_polarity: +/-
 turning_point_type: revelacao
-setup_introduced: Anomalia na pulsação e circulação da energia primária
+setup_introduced: '{{setup_introduced}}'
 payoff_resolved: ''
 draft_status: rascunho
 ---
 
-# Capítulo 01 — O Primeiro Despertar (Template pt-BR)
+# Capítulo 01 — {{chapter_title}} (Template pt-BR)
 
-> **POV:** {{pov_char}}  
-> **Linha Temporal:** D=0 Amanhecer  
-> **Localização:** {{location_link}}  
-> **Diagnóstico Story Grid:** Revelação (+/-) · Choque de Realidade
+> **POV:** {{pov_char}}
+> **Linha Temporal:** D=0
+> **Localização:** {{location_link}}
+> **Diagnóstico Story Grid:** {{story_grid_diagnosis}}
 
 ---
 
-## Chapter 01: O Primeiro Despertar
+## Chapter 01: {{chapter_title}}
 
 **All rights to their respective authors***
 
@@ -43,25 +43,19 @@ draft_status: rascunho
 
 ---
 
-### Cena 01 — O Primeiro Despertar
-*POV: {{pov_char}} · D=0 Amanhecer*
+### Cena 01 — {{scene_title}}
+*POV: {{pov_char}} · D=0*
 
-O cheiro de terra úmida e orvalho denso foi o primeiro choque sensorial. Não havia telas de computador, ruídos mecânicos de uma cidade moderna ou a familiaridade do quarto. Apenas a umidade cortante do vento matinal e o peso real de gravetos e folhas sob as costas.
-
-Ao abrir os olhos, as copas das árvores erguiam-se a dezenas de metros em direção a um céu que não pertencia ao meu mundo de origem. As cores possuíam uma saturação e nitidez impossíveis de serem forjadas por um sonho comum.
-
-Ergui a mão direita diante do rosto. Sob a pele dos dedos esfolados, sentia-se uma pulsação anômala — uma correnteza térmica sutil que não correspondia a nenhuma fisiologia humana ordinária. Era a energia primária descrita nas crônicas de Universe Primary.
-
-Eu não estava diante de uma tela ou página de ficção. Eu estava pisando no solo de uma realidade implacável.
+<!-- p:1 -->
+{{Escreva a cena em parágrafos curtos. Cada parágrafo recebe uma âncora numerada para o alinhamento 1:1 com a tradução em Manuscript/es/.}}
 
 ---
 
 %%
 Story Grid Audit Notes:
-- Story Event: Despertar sensorial e validação empírica do mundo vivo vs ficção teórica.
-- Polarity: Positivo (sobrevivência e consciência íntegra) para Negativo (extrema vulnerabilidade).
-- Turning Point: Percepção direta do fluxo de energia interna confirmando nova biologia.
-- Setup Introduced: Anomalia no fluxo de energia interna que antecipa incursion law.
-- Payoff Resolved: (Nenhum; cena de abertura de arco).
+- Story Event: {{scene_event}}
+- Polarity: {{from}} para {{to}}
+- Turning Point: {{turning_point}}
+- Setup Introduced: {{setup_introduced}}
+- Payoff Resolved: (nenhum, ou o capítulo e a cena do pagamento)
 %%
-

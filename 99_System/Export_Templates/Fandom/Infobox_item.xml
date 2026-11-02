@@ -43,21 +43,21 @@
   WIKITEXT ARTICLE INVOCATION EXAMPLE:
   ============================================================
   {{Infobox_item
-  | name = Samehada
-  | image = Samehada_Sword.png
-  | caption = The Great Shark Skin Blade
-  | item_type = Sentient Energy-Draining Blade
-  | creator = [[Mist Village Artisans]]
+  | name = Item Name
+  | image = Item_Image.png
+  | caption = Short caption
+  | item_type = Sentient Weapon
+  | creator = [[Creator Name]]
   | cosmology = Universe_Primary
   | status = Intact
   | owners =
-  * [[Kisame Hoshigaki]]
-  * [[Killer B]]
+  * [[Owner Alpha]]
+  * [[Owner Beta]]
   | functions =
-  * Shaves energy on contact
-  * Transfers energy to wielder
+  * Primary function
+  * Secondary function
   | hazards =
-  * Will betray wielder if tastier energy is encountered
+  * Known hazard
   }}
 -->
 

@@ -1,4 +1,4 @@
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
+import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
 import fs from 'node:fs';
 import path from 'node:path';
 import { DatabaseSync } from 'node:sqlite';
@@ -115,7 +115,7 @@ Practitioners mold energy through mental discipline to project radiant force.
     const scratchDir = path.join(testDir, '.scratch', 'old-planning-record');
     fs.mkdirSync(canonDir, { recursive: true });
     fs.mkdirSync(scratchDir, { recursive: true });
-    fs.writeFileSync(path.join(canonDir, 'Master_Chronology.md'), '# Current Alpha Chronology\nYear 26 is the narrative start.', 'utf8');
+    fs.writeFileSync(path.join(canonDir, 'Master_Chronology.md'), '# Current Alpha Chronology\nEpoch year 0 is the narrative start.', 'utf8');
     fs.writeFileSync(path.join(scratchDir, 'spec.md'), '# Superseded Planning Record\nYear -35 was an obsolete anchor.', 'utf8');
 
     const stats = syncVault(testDir, db);
@@ -165,5 +165,62 @@ Practitioners mold energy through mental discipline to project radiant force.
     rival = searchDocuments(db, 'ocular resonance');
     expect(rival.length).toBe(0);
   });
-});
 
+  it('should skip a file that disappears between the directory walk and the read', () => {
+    const dir = path.join(testDir, 'Canon', 'Universe_Primary', 'Baselines');
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, 'Stays.md'), ['# Stays', 'Stable entry.'].join(String.fromCharCode(10)), 'utf-8');
+    const vanishing = path.join(dir, 'Vanishes.md');
+    fs.writeFileSync(vanishing, ['# Vanishes', 'Transient fixture.'].join(String.fromCharCode(10)), 'utf-8');
+
+    const realStat = fs.statSync;
+    const spy = vi.spyOn(fs, 'statSync').mockImplementation((target, ...rest) => {
+      if (String(target) === vanishing) {
+        throw Object.assign(new Error('ENOENT: no such file or directory'), { code: 'ENOENT' });
+      }
+      return realStat(target, ...rest);
+    });
+    try {
+      const stats = syncVault(testDir, db);
+      expect(stats.indexed).toBe(1);
+      expect(searchDocuments(db, 'Transient').length).toBe(0);
+      expect(searchDocuments(db, 'Stable').length).toBe(1);
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('should rethrow stat errors other than ENOENT', () => {
+    const dir = path.join(testDir, 'Bible');
+    fs.mkdirSync(dir, { recursive: true });
+    const locked = path.join(dir, 'Locked.md');
+    fs.writeFileSync(locked, '# Locked', 'utf-8');
+    const realStat = fs.statSync;
+    const spy = vi.spyOn(fs, 'statSync').mockImplementation((target, ...rest) => {
+      if (String(target) === locked) throw Object.assign(new Error('EACCES'), { code: 'EACCES' });
+      return realStat(target, ...rest);
+    });
+    try {
+      expect(() => syncVault(testDir, db)).toThrow('EACCES');
+    } finally {
+      spy.mockRestore();
+    }
+  });
+
+  it('should not index the tools directory (code and template skeletons are not vault notes)', () => {
+    const toolsDir = path.join(testDir, 'tools', 'distribution', 'skeleton');
+    fs.mkdirSync(toolsDir, { recursive: true });
+    fs.writeFileSync(path.join(toolsDir, 'Skeleton_Note.md'), ['# Skeleton Note', 'should stay out of retrieval'].join(String.fromCharCode(10)), 'utf-8');
+    const stats = syncVault(testDir, db);
+    expect(stats.indexed).toBe(0);
+    expect(searchDocuments(db, 'retrieval').length).toBe(0);
+  });
+
+  it('should still index a folder named tools when it is not the vault root tools directory', () => {
+    const nested = path.join(testDir, 'Research', 'Notes', 'tools');
+    fs.mkdirSync(nested, { recursive: true });
+    fs.writeFileSync(path.join(nested, 'Hand_Tools.md'), ['# Hand Tools', 'Forged by apprentices.'].join(String.fromCharCode(10)), 'utf-8');
+    expect(syncVault(testDir, db).indexed).toBe(1);
+    expect(searchDocuments(db, 'apprentices').length).toBe(1);
+  });
+});

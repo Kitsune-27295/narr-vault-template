@@ -22,6 +22,6 @@ Inspect the manuscript draft or scene for:
 Format findings:
 | Setup / Clue | Location Introduced | Expected Payoff Window | Current Status | Action Needed |
 |---|---|---|---|---|
-| The sealed scroll | C01_S01 | Act I Academy Climax | Pending | Reinforce seal restriction |
+| The sealed scroll | C01_S01 | Act I Climax | Pending | Reinforce seal restriction |
 
 Update scene audit notes in `Manuscript/pt-BR/` accordingly.

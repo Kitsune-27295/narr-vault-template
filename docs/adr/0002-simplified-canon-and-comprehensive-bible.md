@@ -10,7 +10,7 @@ Under ADR 0001, each canonical universe directory (`Canon/<Franchise>/`) was par
 3. **Bible Gaps & Structural Asymmetry:** The `Bible/` alternate-universe layer lacked dedicated top-level homes for Factions, Locations, Items, and Terminology, while mixing locations and items in `04_World_Locations_Items/`.
 4. **Redundant Sourcing in AU Dossiers:** Fanfiction AU dossiers frequently linked to multiple raw captures instead of referencing a single consolidated canonical baseline.
 
-Following a comparative audit of 12 reference multiverse vaults and external skill collections (earlier project vaults), a streamlined, highly cohesive architecture was synthesized.
+Following a comparative audit of reference multiverse vaults and external skill collections (earlier project vaults), a streamlined, highly cohesive architecture was synthesized.
 
 ## Decision
 
@@ -33,7 +33,7 @@ The `Bible/` directory is standardized into 10 explicit numbered modules:
 6. **`06_Power_Systems_Mechanics/`**: Crossover energy conversion laws (`PWR_*`) and original techniques (`TECH_*`).
 7. **`07_Relationship_Matrix/`**: Dynamic factional, interpersonal, and affinity matrices (`REL_*`).
 8. **`08_Chronology_Calendar/`**: Master forward timeline measuring from the project epoch declared in `vault.yaml`.
-9. **`09_Plot_Threads_Arcs/`**: Master narrative roadmaps (`MULTIVERSE_Roadmap_Master.md`), active arcs (`ARC_*`), and open questions (`00_Open_Questions.md`).
+9. **`09_Plot_Threads_Arcs/`**: Master narrative roadmaps (`Roadmap_Master.md`), active arcs (`ARC_*`), and open questions (`00_Open_Questions.md`).
 10. **`10_Terminology_Glossary/`**: In-universe nomenclature, translation keys, and jargon registers (`00_Terminology_Index.md`).
 
 ### 3. Single-Link Baseline Workflow

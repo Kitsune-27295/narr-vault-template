@@ -3,30 +3,32 @@ import fs from 'node:fs';
 import path from 'node:path';
 
 /**
- * Test Suite: AI Coding Agent Harness Parity Monitor
- * Ensures AGENTS.md (generic agent harnesses) and CLAUDE.md (Claude Code)
- * maintain strict operational, architectural, and command parity.
+ * Test Suite: Agent contract integrity.
+ * AGENTS.md is the single source of truth for every agent harness; CLAUDE.md must only
+ * import it and add Claude Code specifics, so the contract is never maintained twice.
  */
-describe('AI Agent Harness Parity Monitor (AGENTS.md <-> CLAUDE.md)', () => {
+describe('Agent contract (AGENTS.md is the single source, CLAUDE.md imports it)', () => {
   const rootDir = process.cwd();
   const agentsPath = path.join(rootDir, 'AGENTS.md');
   const claudePath = path.join(rootDir, 'CLAUDE.md');
+  const agents = () => fs.readFileSync(agentsPath, 'utf8');
+  const claude = () => fs.readFileSync(claudePath, 'utf8');
 
-  it('both AGENTS.md and CLAUDE.md must exist and be non-empty', () => {
+  it('both files exist and AGENTS.md carries a substantial contract', () => {
     expect(fs.existsSync(agentsPath), 'AGENTS.md must exist in root').toBe(true);
     expect(fs.existsSync(claudePath), 'CLAUDE.md must exist in root').toBe(true);
-
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8').trim();
-    const claudeContent = fs.readFileSync(claudePath, 'utf8').trim();
-
-    expect(agentsContent.length).toBeGreaterThan(100);
-    expect(claudeContent.length).toBeGreaterThan(100);
+    expect(agents().trim().length).toBeGreaterThan(1000);
   });
 
-  it('must reference the identical Agent Skills infrastructure files', () => {
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8');
-    const claudeContent = fs.readFileSync(claudePath, 'utf8');
+  it('CLAUDE.md imports AGENTS.md and does not restate the contract', () => {
+    const content = claude();
+    expect(content).toMatch(/^@AGENTS\.md$/m);
+    expect(content.split('\n').length, 'CLAUDE.md must stay a short pointer').toBeLessThan(40);
+    expect(content).not.toContain('Invariant Rules for AI Agents');
+    expect(content).not.toContain('Cold-Start Sequence');
+  });
 
+  it('AGENTS.md references the agent skills infrastructure files', () => {
     const expectedReferences = [
       '.scratch/<feature-slug>/issues/',
       'docs/agents/issue-tracker.md',
@@ -36,17 +38,12 @@ describe('AI Agent Harness Parity Monitor (AGENTS.md <-> CLAUDE.md)', () => {
       'docs/agents/native-construction-workflow.md',
       'npm run validate:workflow',
     ];
-
     for (const ref of expectedReferences) {
-      expect(agentsContent, `AGENTS.md missing reference: ${ref}`).toContain(ref);
-      expect(claudeContent, `CLAUDE.md missing reference: ${ref}`).toContain(ref);
+      expect(agents(), `AGENTS.md missing reference: ${ref}`).toContain(ref);
     }
   });
 
-  it('must declare the identical CLI command lifecycle', () => {
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8');
-    const claudeContent = fs.readFileSync(claudePath, 'utf8');
-
+  it('AGENTS.md declares the CLI command lifecycle', () => {
     const requiredCommands = [
       'npm test',
       'npm run validate:templates',
@@ -61,64 +58,35 @@ describe('AI Agent Harness Parity Monitor (AGENTS.md <-> CLAUDE.md)', () => {
       'npm run rag:search',
       'npm run rag:context',
     ];
-
     for (const cmd of requiredCommands) {
-      expect(agentsContent, `AGENTS.md missing command: ${cmd}`).toContain(cmd);
-      expect(claudeContent, `CLAUDE.md missing command: ${cmd}`).toContain(cmd);
+      expect(agents(), `AGENTS.md missing command: ${cmd}`).toContain(cmd);
     }
   });
 
-  it('must enforce the exact same 3-Layer Vault Architectural boundaries and 10 Bible modules', () => {
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8');
-    const claudeContent = fs.readFileSync(claudePath, 'utf8');
-
+  it('AGENTS.md enforces the vault layers and the 10 Bible modules', () => {
     const requiredVaultLayers = [
-      '00_Cockpit/',
-      'Canon/',
-      'Sources/',
-      'Baselines/',
-      'Bible/',
-      '01_Divergences_AU/',
-      '02_Cast_Characters/',
-      '03_Factions_Organizations/',
-      '04_Locations/',
-      '05_Items_Artifacts/',
-      '06_Power_Systems_Mechanics/',
-      '07_Relationship_Matrix/',
-      '08_Chronology_Calendar/',
-      '09_Plot_Threads_Arcs/',
-      '10_Terminology_Glossary/',
-      'Manuscript/',
-      'pt-BR/',
-      'es/',
-      '99_System/',
+      '00_Cockpit/', 'Canon/', 'Sources/', 'Baselines/', 'Bible/',
+      '01_Divergences_AU/', '02_Cast_Characters/', '03_Factions_Organizations/', '04_Locations/',
+      '05_Items_Artifacts/', '06_Power_Systems_Mechanics/', '07_Relationship_Matrix/',
+      '08_Chronology_Calendar/', '09_Plot_Threads_Arcs/', '10_Terminology_Glossary/',
+      'Manuscript/', 'pt-BR/', 'es/', '99_System/',
     ];
-
     for (const layer of requiredVaultLayers) {
-      expect(agentsContent, `AGENTS.md missing layer: ${layer}`).toContain(layer);
-      expect(claudeContent, `CLAUDE.md missing layer: ${layer}`).toContain(layer);
+      expect(agents(), `AGENTS.md missing layer: ${layer}`).toContain(layer);
     }
   });
 
-  it('must declare the 15 consolidated vault skills', () => {
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8');
-    const claudeContent = fs.readFileSync(claudePath, 'utf8');
-
+  it('AGENTS.md declares the 15 consolidated vault skills', () => {
     const expectedSkills = [
       'research', 'triage', 'ingest', 'dossier-compile', 'query', 'consolidate', 'conflict-arbitration', 'decide',
       'story-arc', 'narrative-architecture-audit', 'foreshadowing-audit', 'tone-and-voice-audit', 'reader-sim', 'revision-pass', 'unblock',
     ];
-
     for (const skill of expectedSkills) {
-      expect(agentsContent, `AGENTS.md missing skill: ${skill}`).toContain(skill);
-      expect(claudeContent, `CLAUDE.md missing skill: ${skill}`).toContain(skill);
+      expect(agents(), `AGENTS.md missing skill: ${skill}`).toContain(skill);
     }
   });
 
-  it('must enforce identical invariant operational rules', () => {
-    const agentsContent = fs.readFileSync(agentsPath, 'utf8');
-    const claudeContent = fs.readFileSync(claudePath, 'utf8');
-
+  it('AGENTS.md states the invariant operational rules', () => {
     const invariantKeyPhrases = [
       'en-US',
       'Manuscript/pt-BR/',
@@ -133,11 +101,15 @@ describe('AI Agent Harness Parity Monitor (AGENTS.md <-> CLAUDE.md)', () => {
       'Standardized Information Architecture (SNIA) & UID Conventions',
       'docs/adr/0008-standardized-vault-information-architecture.md',
     ];
-
     for (const phrase of invariantKeyPhrases) {
-      expect(agentsContent, `AGENTS.md missing invariant rule phrase: ${phrase}`).toContain(phrase);
-      expect(claudeContent, `CLAUDE.md missing invariant rule phrase: ${phrase}`).toContain(phrase);
+      expect(agents(), `AGENTS.md missing invariant rule phrase: ${phrase}`).toContain(phrase);
     }
   });
-});
 
+  it('AGENTS.md stays within the line budget declared in vault.yaml', () => {
+    const vault = fs.readFileSync(path.join(rootDir, 'vault.yaml'), 'utf8');
+    const budget = Number(/agents_lines:\s*(\d+)/.exec(vault)?.[1]);
+    expect(budget).toBeGreaterThan(0);
+    expect(agents().split('\n').length).toBeLessThanOrEqual(budget);
+  });
+});

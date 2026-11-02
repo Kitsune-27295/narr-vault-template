@@ -8,7 +8,7 @@ This document is the primary operating contract for AI coding and writing agents
 
 ### Issue tracker
 Local markdown issues under `.scratch/<feature-slug>/issues/`. See `docs/agents/issue-tracker.md`.
-Superseded historical records in `.scratch/` are provenance only; do not treat their preserved body as active work or canon. Follow the authoritative chronology and current Canon/Bible records.
+A feature folder whose tickets are all `resolved` is removed in a cleanup commit; git history is the archive.
 
 ### Domain docs
 Single-context repository layout (`GLOSSARY.md` + `docs/adr/`). See `docs/agents/domain.md`.
@@ -136,7 +136,6 @@ The vault adheres to the expanded **Dual-Surface Vault Architecture** (see `docs
    - Declare the project's epoch and authoritative calendar baseline in `vault.yaml` (`story.epoch`, `story.authoritative_calendar`); that baseline governs every dated event.
    - Measure dated chronology forward from the declared epoch. Never mix competing dating systems (for example negative years, `BP`, or countdowns relative to a source work) unless the baseline explicitly defines them.
    - Derive character ages from documented birth years and the event year; do not carry forward conflicting legacy ages.
-
 7. **Vault Link Integrity:**
    - When editing Obsidian wikilinks, note paths, or reusable Markdown templates, run `npm run validate:links` and resolve all reported missing targets before completion.
 8. **Zero-CJK Policy:**

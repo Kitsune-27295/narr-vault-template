@@ -1,6 +1,6 @@
 {
   "name": "narrative-vault-framework-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Universal Narrative Vault Framework: an Obsidian vault template with a deterministic CLI toolchain, F-RAG search, continuity ledgers and an agent operating contract",
   "type": "module",
   "scripts": {

@@ -40,7 +40,7 @@ Analyzes narrative focus and character presence balance across all drafted scene
 ```dataview
 TABLE length(rows) AS "Total Chapters", rows.chapter_num AS "Chapters"
 FROM "Manuscript/pt-BR"
-WHERE note_type = "chapter-pt" OR note_type = "scene-pt"
+WHERE note_type = "chapter-pt"
 GROUP BY pov_char
 ```
 

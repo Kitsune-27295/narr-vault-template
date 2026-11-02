@@ -13,7 +13,7 @@ This distribution is built by extraction, not by archiving a working vault. The 
 | `.scratch/` (specs, tickets, one-off scripts) | Development artifacts of the original project |
 | `.obsidian/workspace.json`, caches, `.db` indexes, logs, `node_modules/`, `.git/` | Machine state and generated data |
 | Prior distribution archives (`*.zip`) | Obsolete versions |
-| `tools/distribution/` | Template-maintainer extraction pipeline; its patch rules are project-specific by nature |
+| `tools/distribution/`, `tests/distribution-*.test.js`, `tests/helpers/` | Template-maintainer extraction pipeline and its tests; its rules are project-specific by nature |
 | Tests that assert project facts (`vault-consistency`) | Would fail on any other project |
 
 Tools and tests that mentioned project franchises, characters, or terms were generalized in place (neutral fixtures, franchise-agnostic heuristics) rather than removed.

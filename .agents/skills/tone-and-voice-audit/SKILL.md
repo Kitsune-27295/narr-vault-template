@@ -10,7 +10,7 @@ Use this skill to audit manuscript prose against the vault's established charact
 ## 1. Character Voice & Dialogue Audit
 Compare spoken dialogue in drafts against `99_System/Lexicon_PT_ES/Character_Voice_Guide_ES.md` (and PT voice guides):
 - **<Protagonist>:** measured, analytical, understated (replace with your voice guide).
-- **<Deuteragonist>:** (one line of register per recurring character; source: `context/author.md` and the Bible cast profile).
+- **<Deuteragonist>:** one line of register per recurring character (source: `context/author.md` and the Bible cast profile).
 
 Flag lines where character dialogue sounds generic, interchangeable, or out-of-character.
 

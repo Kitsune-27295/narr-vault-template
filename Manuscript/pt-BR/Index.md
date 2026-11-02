@@ -27,4 +27,4 @@ Os capítulos são mantidos diretamente na raiz de `Manuscript/pt-BR/`, integran
 ---
 
 ## Capítulos Ativos
-- [[Manuscript/pt-BR/PT_Chapter_01_Template|Capítulo 01 — O Primeiro Despertar (Template pt-BR)]]
+- [[Manuscript/pt-BR/PT_Chapter_01_Template|Capítulo 01 — {{chapter_title}} (Template pt-BR)]]

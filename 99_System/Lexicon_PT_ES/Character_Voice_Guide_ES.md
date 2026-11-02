@@ -19,17 +19,17 @@ updated: '2026-11-02'
 
 ## Cast Voice Registries
 
-### SI Protagonista / The Protagonist
+### Protagonist
 - **Register:** Analytic, measured, guarded internal monologue; cautious, polite external dialogue.
 - **Pronoun Choice:** Uses *tú* with peers and younger operatives; defaults to respectful *usted* with elders, faction heads, and rulers.
 - **Mannerisms:** Avoids excessive in-world jargon in early chapters; internal thoughts reflect modern speculative literacy.
 
-### Native Canon Counterpart / Focal Peer
+### Focal Peer
 - **Register:** High-energy or resolute, emotionally transparent, direct phrasing.
 - **Pronoun Choice:** Universal *tú* in informal peer interaction; guarded when challenged.
 - **Mannerisms:** Uses emphatic sentence structures and proactive inquiries.
 
-### Senior Mentor / Faction Veteran
+### Mentor / Veteran
 - **Register:** Calm, deceptively measured pacing, concealing rigorous analytical observation.
 - **Pronoun Choice:** *Tú* with apprentices and juniors; measured formal respect (*usted*) with faction leadership.
 - **Mannerisms:** Punctuation includes deliberate pauses; tone remains steady even during tactical alerts.

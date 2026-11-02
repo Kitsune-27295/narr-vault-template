@@ -43,22 +43,22 @@
   WIKITEXT ARTICLE INVOCATION EXAMPLE:
   ============================================================
   {{Infobox_location
-  | title = Valley of the End
-  | image = Valley_End.png
-  | caption = View of the statues at sunset
+  | title = Location Name
+  | image = Location_Image.png
+  | caption = Short caption
   | type = Historical Landmark / Battlefield
-  | location = [[Fire Country]]
+  | location = [[Region Name]]
   | cosmology = Universe_Primary
   | governing_body = Disputed Border
   | inhabitants =
   * [[Character Alpha]]
   * [[Character Beta]]
   | connections =
-  * [[Northern Frontier Road]]
-  * [[River Valley Pass]]
+  * [[Connected Place A]]
+  * [[Connected Place B]]
   | amenities =
-  * Founder Statues
-  * Waterfall Gorge
+  * Notable feature A
+  * Notable feature B
   }}
 -->
 

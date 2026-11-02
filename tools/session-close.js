@@ -24,7 +24,23 @@ export function closeSession(options = {}, projectRoot = process.cwd()) {
   const journalPath = path.join(journalDir, `${monthStr}.md`);
 
   if (!fs.existsSync(journalPath)) {
-    fs.writeFileSync(journalPath, `# Session Journal — ${monthStr}\n\nAppend-only record of working sessions.\n\n`, 'utf8');
+    const frontmatter = [
+      '---',
+      'note_type: journal',
+      'type: memory',
+      `title: Session Journal ${monthStr}`,
+      `uid: MEM-JOURNAL-${monthStr}`,
+      'status: active',
+      'aliases:',
+      `  - MEM-JOURNAL-${monthStr}`,
+      'tags:',
+      "  - '#memory/journal'",
+      `created: '${dateStr}'`,
+      `updated: '${dateStr}'`,
+      '---',
+      '',
+    ].join('\n');
+    fs.writeFileSync(journalPath, `${frontmatter}\n# Session Journal — ${monthStr}\n\nAppend-only record of working sessions.\n\n`, 'utf8');
   }
   const journalEntry = `- [${dateStr}] session | ${completed}\n`;
   fs.appendFileSync(journalPath, journalEntry, 'utf8');
@@ -53,10 +69,11 @@ export function closeSession(options = {}, projectRoot = process.cwd()) {
   };
 }
 
-function parseCliArgs(args) {
+export function parseCliArgs(args) {
   const options = {};
   for (let i = 0; i < args.length; i++) {
-    if (args[i] === '--done' && args[i + 1]) options.done = args[++i];
+    if (args[i] === '--date' && args[i + 1]) options.date = args[++i];
+    else if (args[i] === '--done' && args[i + 1]) options.done = args[++i];
     else if (args[i] === '--in-flight' && args[i + 1]) options.inFlight = args[++i];
     else if (args[i] === '--next' && args[i + 1]) options.next = args[++i];
     else if (args[i] === '--operator' && args[i + 1]) options.operator = args[++i];
@@ -67,6 +84,11 @@ function parseCliArgs(args) {
 if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const root = process.cwd();
   const options = parseCliArgs(process.argv.slice(2));
+  if (!options.done) {
+    console.error('Usage: npm run session:close -- --done "<what was completed>" [--in-flight "<text>"] [--next "<text>"] [--date YYYY-MM-DD] [--operator "<name>"]');
+    console.error('Refusing to record a handoff without --done (a default row would add noise to the ledgers).');
+    process.exit(1);
+  }
   const res = closeSession(options, root);
 
   console.log(`\n📋 [SESSION CLOSE] Recorded handoff for ${res.date}`);

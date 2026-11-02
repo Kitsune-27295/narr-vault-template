@@ -18,17 +18,11 @@ Single-context repository layout:
 flowchart TD
     root["/"]
     gl["GLOSSARY.md"]
-    adr["docs/adr/"]
+    adr["docs/adr/<br/>NNNN-decision-title.md"]
     tools["tools/"]
-    a1["0001-three-layer-fanfiction-vault-architecture.md"]
-    a6["0006-native-sqlite-fts5-rag-engine.md"]
-    a3["0003-continuous-modular-dossier-ingestion.md"]
     root --> gl
     root --> adr
     root --> tools
-    adr --> a1
-    adr --> a6
-    adr --> a3
 ```
 
 ## Use the glossary's vocabulary

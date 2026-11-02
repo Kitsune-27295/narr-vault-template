@@ -10,9 +10,9 @@ Issues and specs for this repository live as markdown files in `.scratch/`.
 - Triage state is recorded as a `Status:` line near the top of each issue file (`ready-for-agent`, `claimed`, `resolved`)
 - Comments and conversation history append to the bottom of the file under a `## Comments` heading
 
-## Superseded historical records
+## Completed features
 
-When a completed planning record preserves requirements or chronology that a later decision replaced, keep the original body for provenance and put a supersession notice at the top. State that the body is archive-only, not an active task or current source of truth, and point to the authoritative current record. Keep resolved issue states resolved and do not leave unchecked acceptance items in archived tickets. The RAG sync excludes `.scratch/`; historical records remain available for human audit without entering writing context.
+When every ticket of a feature is `resolved` and its rationale lives in the owning docs or an ADR, delete the feature folder in a cleanup commit. Git history is the archive; tag the commit before a large cleanup. The RAG sync excludes `.scratch/`, so open work never enters writing context.
 
 ## When a skill says "publish to the issue tracker"
 

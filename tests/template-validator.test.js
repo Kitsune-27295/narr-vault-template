@@ -84,7 +84,7 @@ describe('Wiki Template Validator Engine', () => {
   });
 
   it('should reject content with missing mandatory note_type', () => {
-    const content = '---\ntype: character\n---\n# Title';
+    const content = '---\ntype: baseline\n---\n# Title';
     const result = validateContent(content);
 
     expect(result.valid).toBe(false);
@@ -93,7 +93,7 @@ describe('Wiki Template Validator Engine', () => {
 
   it('should reject content missing required fields for the note_type', () => {
     const content = `---
-note_type: "canon-character"
+note_type: "canon-baseline"
 type: "character"
 cosmology: "Universe_Primary"
 ---
@@ -107,7 +107,7 @@ cosmology: "Universe_Primary"
 
   it('should reject content with type mismatch against schema contract', () => {
     const content = `---
-note_type: "canon-character"
+note_type: "canon-baseline"
 type: "wrong_type"
 cosmology: "Universe_Primary"
 canon_tier: "G-Primary"
@@ -122,7 +122,7 @@ aliases: []
 
   it('should reject AU and fanon tiers on Canon dossiers', () => {
     for (const tier of ['AU-Override', 'F-Fanon']) {
-      const content = ['---', 'note_type: canon-character', 'type: character', 'cosmology: Universe_Alpha', `canon_tier: ${tier}`, 'status: known', 'aliases: []', '---', '## Summary', '## Source-backed details', '## Sources and scope'].join('\n');
+      const content = ['---', 'note_type: canon-baseline', 'type: baseline', 'cosmology: Universe_Alpha', `canon_tier: ${tier}`, 'status: known', 'aliases: []', '---', '## Summary', '## Source-backed details', '## Sources and scope'].join('\n');
       expect(validateContent(content).errors.some(error => error.includes('canon_tier'))).toBe(true);
     }
   });
@@ -144,8 +144,8 @@ aliases: []
 
   it('should reject invalid field shapes and vocabulary', () => {
     const content = `---
-note_type: canon-character
-type: character
+note_type: canon-baseline
+type: baseline
 cosmology: Universe_Alpha
 canon_tier: nonsense
 status: nonsense
@@ -165,7 +165,7 @@ aliases: 7
 
   it('should reject content missing mandatory section headings', () => {
     const content = `---
-note_type: "canon-character"
+note_type: "canon-baseline"
 type: "character"
 cosmology: "Universe_Primary"
 canon_tier: "G-Primary"
@@ -353,11 +353,7 @@ aliases: ["Test"]
       'cockpit-dashboard',
       'bible-index',
       'manuscript-index',
-      'manuscript-outline',
-      'chapter-pt-compiled',
       'seeds-inbox',
-      'incubator-index',
-      'incubator-lab',
       'bible-open-questions',
     ];
 

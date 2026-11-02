@@ -38,4 +38,26 @@ describe('Continuity Ledger Validator Suite', () => {
       fs.rmSync(tempDir, { recursive: true, force: true });
     }
   });
+
+  it('should treat an escaped pipe inside a wikilink alias as part of the cell, not a column break', () => {
+    const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), 'ledger-pipe-'));
+    try {
+      const ledgersDir = path.join(tempDir, 'Ledgers');
+      fs.mkdirSync(ledgersDir, { recursive: true });
+      fs.writeFileSync(path.join(ledgersDir, 'LDG-Chekhov.md'), [
+        '| Element | Planted in | Payoff in | Status | Note |',
+        '|---|---|---|---|---|',
+        '| [[Bible/04_Locations/Cache\\|Hidden cache]] discovery | C01 | C04 | planted | Linked element |',
+      ].join('\n'));
+      fs.writeFileSync(path.join(ledgersDir, 'LDG-Open_Threads.md'), [
+        '| ID | Thread / Investigation Scope | Opened in | Target Arc / Chapter | Status | Notes |',
+        '|---|---|---|---|---|---|',
+        '| THR-01 | [[Bible/04_Locations/Cache\\|Cache]] access | C01 | ARC_01 (C05) | active | Linked thread |',
+      ].join('\n'));
+      const report = validateLedgers(tempDir);
+      expect(report.issues.filter((issue) => /Chekhov|Open_Threads/.test(issue))).toEqual([]);
+    } finally {
+      fs.rmSync(tempDir, { recursive: true, force: true });
+    }
+  });
 });
